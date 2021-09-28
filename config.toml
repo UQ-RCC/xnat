@@ -1,4 +1,4 @@
-baseURL = "https://uq-rcc.github.io/xnat/"
+baseURL = "https://uq-rcc.github.io/xnat"
 title = "XNAT"
 
 enableRobotsTXT = true
