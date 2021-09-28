@@ -10,7 +10,7 @@ description: >
 1.	Open https://xnat.rcc.uq.edu.au
 2.	Login in with the AAF Single sign-on button (shown below)
 
-![text](/xnat/docs/user-guides/xnat-aaf-login-page.png)
+![text](/docs/user-guides/xnat-aaf-login-page.png)
 
 
 This will take you to your XNAT home page. 

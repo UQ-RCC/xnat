@@ -64,7 +64,7 @@ CTP installation steps
     * You should see the dicom listed as subject "1737775597"
 18. Use subject "1737775597" → "MR Session" → "View Images" to view the uploaded image
 19. Try a dicom send from the scanner using PC address and port 25055 (check windows firewall settings?)
-20. Enable CTP as a Windows Service. Instructions [here](/xnat/docs/facility-guides/ctp/windows-service)
+20. Enable CTP as a Windows Service. Instructions [here](/docs/facility-guides/ctp/windows-service)
 
 ### Further information
 If you need a different commit of CTP-installer

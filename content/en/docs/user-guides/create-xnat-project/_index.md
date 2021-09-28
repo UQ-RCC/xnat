@@ -14,9 +14,9 @@ If you have either, you can use the existing collection, and skip to the next se
 
 If you have a UQ-RDM collection that end in A**** or I**** (e.g. PROJ001-A0189, PROJ001-I0189), you will need to create a UQ-RDM Q-collection
 
-[UQ Users](/xnat/docs)
+[UQ Users](/docs/user-guides/create-xnat-project/create-q-collection-uq-users)
 
-[Non-UQ Users](xnat/docs)
+[Non-UQ Users](/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users)
 
 ## Creating an XNAT Project
 

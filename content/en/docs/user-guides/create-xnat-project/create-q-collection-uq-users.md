@@ -8,7 +8,7 @@ description: >
 
 Open https://rdm.uq.edu.au/create-record
 
-![text](/xnat/docs/user-guides/create-xnat-project/uqrdm-create-record.png)
+![text](/docs/user-guides/create-xnat-project/uqrdm-create-record.png)
 
 (1) and (2) are required fields
 
