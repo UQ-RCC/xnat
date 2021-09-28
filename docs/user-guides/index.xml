@@ -1,0 +1,30 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ-RCC XNAT – User Guides</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/</link><description>Recent content in User Guides on UQ-RCC XNAT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://uq-rcc.github.io/xnat/docs/user-guides/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Login to XNAT</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/login-to-xnat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/login-to-xnat/</guid><description>
+&lt;ol>
+&lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
+&lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://uq-rcc.github.io/xnat/xnat/docs/user-guides/xnat-aaf-login-page.png" alt="text">&lt;/p>
+&lt;p>This will take you to your XNAT home page.&lt;/p>
+&lt;p>First-time user will only see publically accessible project when they login&lt;/p></description></item><item><title>Docs: Create XNAT project</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/</guid><description>
+&lt;h2 id="pre-requisite">Pre-requisite&lt;/h2>
+&lt;p>To create an XNAT project, you’ll need a &lt;strong>QRISCloud Q-collection&lt;/strong>. These are&lt;/p>
+&lt;ol>
+&lt;li>QRISCloud collections that end in Q**** (e.g. Q0189)&lt;/li>
+&lt;li>UQ-RDM collections that end in Q**** (e.g. PROJ001-Q0189)&lt;/li>
+&lt;/ol>
+&lt;p>If you have either, you can use the existing collection, and skip to the next section.&lt;/p>
+&lt;p>If you have a UQ-RDM collection that end in A**** or I**** (e.g. PROJ001-A0189, PROJ001-I0189), you will need to create a UQ-RDM Q-collection&lt;/p>
+&lt;p>&lt;a href="https://uq-rcc.github.io/xnat/xnat/docs">UQ Users&lt;/a>&lt;/p>
+&lt;p>&lt;a href="xnat/docs">Non-UQ Users&lt;/a>&lt;/p>
+&lt;h2 id="creating-an-xnat-project">Creating an XNAT Project&lt;/h2>
+&lt;p>Open a ticket with QRIScloud support (&lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>)&lt;/p>
+&lt;ul>
+&lt;li>Ask them to make your Q-collection available to XNAT&lt;/li>
+&lt;li>Quote the collection number in the email&lt;/li>
+&lt;/ul>
+&lt;p>The support ticket will inform you when the project is set up.&lt;/p>
+&lt;ul>
+&lt;li>An XNAT project will be created with the matching Q**** name.&lt;/li>
+&lt;li>An “xnat” directory will be created in the Q**** collection for storing the XNAT data files.&lt;/li>
+&lt;li>Please do not write or modify anything under the “xnat” directory.&lt;/li>
+&lt;/ul></description></item></channel></rss>
