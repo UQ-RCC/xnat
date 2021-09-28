@@ -87,7 +87,7 @@ dcmsend localhost 25055 ../../dicom_viewer_Mrbrain/MRBRAIN.DCM
 &lt;/li>
 &lt;li>Use subject &amp;ldquo;1737775597&amp;rdquo; → &amp;ldquo;MR Session&amp;rdquo; → &amp;ldquo;View Images&amp;rdquo; to view the uploaded image&lt;/li>
 &lt;li>Try a dicom send from the scanner using PC address and port 25055 (check windows firewall settings?)&lt;/li>
-&lt;li>Enable CTP as a Windows Service. Instructions &lt;a href="https://uq-rcc.github.io/xnat/xnat/docs/facility-guides/ctp/windows-service">here&lt;/a>&lt;/li>
+&lt;li>Enable CTP as a Windows Service. Instructions &lt;a href="https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/windows-service">here&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;h3 id="further-information">Further information&lt;/h3>
 &lt;p>If you need a different commit of CTP-installer&lt;/p>

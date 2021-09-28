@@ -3,7 +3,7 @@
 &lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
 &lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://uq-rcc.github.io/xnat/xnat/docs/user-guides/xnat-aaf-login-page.png" alt="text">&lt;/p>
+&lt;p>&lt;img src="https://uq-rcc.github.io/xnat/docs/user-guides/xnat-aaf-login-page.png" alt="text">&lt;/p>
 &lt;p>This will take you to your XNAT home page.&lt;/p>
 &lt;p>First-time user will only see publically accessible project when they login&lt;/p></description></item><item><title>Docs: Create XNAT project</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/</guid><description>
 &lt;h2 id="pre-requisite">Pre-requisite&lt;/h2>
@@ -14,8 +14,8 @@
 &lt;/ol>
 &lt;p>If you have either, you can use the existing collection, and skip to the next section.&lt;/p>
 &lt;p>If you have a UQ-RDM collection that end in A**** or I**** (e.g. PROJ001-A0189, PROJ001-I0189), you will need to create a UQ-RDM Q-collection&lt;/p>
-&lt;p>&lt;a href="https://uq-rcc.github.io/xnat/xnat/docs">UQ Users&lt;/a>&lt;/p>
-&lt;p>&lt;a href="xnat/docs">Non-UQ Users&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/create-q-collection-uq-users">UQ Users&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users">Non-UQ Users&lt;/a>&lt;/p>
 &lt;h2 id="creating-an-xnat-project">Creating an XNAT Project&lt;/h2>
 &lt;p>Open a ticket with QRIScloud support (&lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>)&lt;/p>
 &lt;ul>
