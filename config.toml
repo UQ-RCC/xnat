@@ -1,6 +1,8 @@
 baseURL = "https://uq-rcc.github.io/xnat"
 title = "XNAT"
 
+canonifyURLs = true
+
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
@@ -133,9 +135,9 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://uq-rcc.github.io/xnat"
+github_repo = "https://github.com/UQ-RCC/xnat"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://uq-rcc.github.io/xnat"
+github_project_repo = "https://github.com/UQ-RCC/xnat"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
