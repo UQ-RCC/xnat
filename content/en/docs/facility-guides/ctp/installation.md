@@ -19,7 +19,7 @@ CTP installation steps
 3. Install CTP using:
     ```
     cd INSTALL_FOLDER (replace with your actual folder)
-    java -jar CTP-installer-210121.jar
+    java -jar CTP-installer.jar
     ```
 4. Replace CTP/config.xml with ctp_clinical_site_to_xnat_config.xml
 5. Edit CTP/config.xml
