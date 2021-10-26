@@ -11,7 +11,7 @@ CTP installation steps
 
 1. Create a new user for CTP on UQ RCC XNAT (not an AAF/OpenID user) with required project access, without admin access
 2. Download the following files
-    * [CTP-installer.jar](https://github.com/UQ-RCC/CTP/raw/4e617b1d1c4437a7c5631adc6bd6ae7204c7a0bb/products/CTP-installer.jar)
+    * [CTP-installer.jar](https://github.com/johnperry/CTP/raw/master/products/CTP-installer.jar)
     * [ctp_clinical_site_to_xnat_config.xml](https://github.com/Australian-Imaging-Service/configuration/raw/0c784a9bdd817ee5e0534034a5a108b4a1c6f4aa/CTP/ctp_clinical_site_to_xnat_config.xml)
     * [dcmtk-3.6.6-win64-dynamic.zip](https://dicom.offis.de/download/dcmtk/dcmtk366/bin/dcmtk-3.6.6-win64-dynamic.zip)
     * [dicom_viewer_Mrbrain.zip](http://www.rubomedical.com/dicom_files/dicom_viewer_Mrbrain.zip)
