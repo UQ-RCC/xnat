@@ -25,6 +25,19 @@ CTP installation steps
 5. Edit CTP/config.xml
     * Change "xxxx.xxxx" in two "url" tags to "xnat.rcc.uq.edu.au"
     * Change "xxxx" username and password tags to match new user from step 1
+    * If CTP internet access is via a proxy server, add the proxy server element to the Server config
+      ```
+      ...
+      <Server ...>
+        <ProxyServer
+          proxyIPAddress=""
+          proxyPort=""
+          proxyUsername=""
+          proxyPassword=""/>
+      </Server>
+      ...
+      ```
+      Once this element is added proxy server settings can be updated in the CTP Launcher GUI
 6. Add CTP the anonymiser script
     * Copy CTP/scripts/DicomServiceAnonymizer.script to CTP/scripts/dicom-anonymizer-sender.script
     * Add the PROJECTID parameter to the list of parameters at the start of the file
