@@ -31,6 +31,18 @@ java -jar CTP-installer.jar
 &lt;ul>
 &lt;li>Change &amp;ldquo;xxxx.xxxx&amp;rdquo; in two &amp;ldquo;url&amp;rdquo; tags to &amp;ldquo;xnat.rcc.uq.edu.au&amp;rdquo;&lt;/li>
 &lt;li>Change &amp;ldquo;xxxx&amp;rdquo; username and password tags to match new user from step 1&lt;/li>
+&lt;li>If CTP internet access is via a proxy server, add the proxy server element to the Server config
+&lt;pre tabindex="0">&lt;code>...
+&amp;lt;Server ...&amp;gt;
+&amp;lt;ProxyServer
+proxyIPAddress=&amp;quot;&amp;quot;
+proxyPort=&amp;quot;&amp;quot;
+proxyUsername=&amp;quot;&amp;quot;
+proxyPassword=&amp;quot;&amp;quot;/&amp;gt;
+&amp;lt;/Server&amp;gt;
+...
+&lt;/code>&lt;/pre>&lt;p>Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/p>
+&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Add CTP the anonymiser script

@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/installation/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-30T09:44:54+10:00"><meta property="og:site_name" content="UQ-RCC XNAT">
+<meta property="article:modified_time" content="2021-10-26T11:19:26+10:00"><meta property="og:site_name" content="UQ-RCC XNAT">
 <meta itemprop=name content="Installation">
 <meta itemprop=description content="CTP Installation 
 ">
-<meta itemprop=dateModified content="2021-09-30T09:44:54+10:00">
-<meta itemprop=wordCount content="420">
+<meta itemprop=dateModified content="2021-10-26T11:19:26+10:00">
+<meta itemprop=wordCount content="464">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Installation">
 <meta name=twitter:description content="CTP Installation 
@@ -171,6 +171,18 @@ java -jar CTP-installer.jar
 <ul>
 <li>Change &ldquo;xxxx.xxxx&rdquo; in two &ldquo;url&rdquo; tags to &ldquo;xnat.rcc.uq.edu.au&rdquo;</li>
 <li>Change &ldquo;xxxx&rdquo; username and password tags to match new user from step 1</li>
+<li>If CTP internet access is via a proxy server, add the proxy server element to the Server config
+<pre tabindex=0><code>...
+&lt;Server ...&gt;
+  &lt;ProxyServer
+    proxyIPAddress=&quot;&quot;
+    proxyPort=&quot;&quot;
+    proxyUsername=&quot;&quot;
+    proxyPassword=&quot;&quot;/&gt;
+&lt;/Server&gt;
+...
+</code></pre><p>Once this element is added proxy server settings can be updated in the CTP Launcher GUI</p>
+</li>
 </ul>
 </li>
 <li>Add CTP the anonymiser script
@@ -251,7 +263,7 @@ cd configuration/CTP
 <p><a href="http://mircwiki.rsna.org/index.php?title=MIRC_CTP">MIRC CTP Wiki</a></p>
 <p><a href="http://mircwiki.rsna.org/index.php?title=The_CTP_DICOM_Anonymizer">CTP DICOM Anonymizer</a></p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 30, 2021: <a href=https://github.com/UQ-RCC/xnat/commit/807f985bbcb40c051f1b39f693abebfd88addf40>Update CTP installer jar name (807f985)</a>
+Last modified October 26, 2021: <a href=https://github.com/UQ-RCC/xnat/commit/91867bf4071545b729c9fa5f6319a537481cd24c>Update installation.md (91867bf)</a>
 </div>
 </div>
 </main>
