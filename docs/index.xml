@@ -41,8 +41,7 @@ proxyUsername=&amp;quot;&amp;quot;
 proxyPassword=&amp;quot;&amp;quot;/&amp;gt;
 &amp;lt;/Server&amp;gt;
 ...
-&lt;/code>&lt;/pre>&lt;p>Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/p>
-&lt;/li>
+&lt;/code>&lt;/pre>Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Add CTP the anonymiser script
@@ -130,10 +129,10 @@ cd configuration/CTP
 &lt;p>This will take you to your XNAT home page.&lt;/p>
 &lt;p>First-time user will only see publically accessible project when they login&lt;/p></description></item><item><title>Docs: Create Q-collection (Non-UQ)</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users/</guid><description>
 &lt;h4 id="qcif-members">QCIF Members&lt;/h4>
-&lt;p>If your institution is listed in the following page &lt;a href="https://www.qcif.edu.au/about-us/our-members/,">https://www.qcif.edu.au/about-us/our-members/,&lt;/a> you are likely a QCIF member&lt;/p>
+&lt;p>If your institution is listed in the following page &lt;a href="https://www.qcif.edu.au/about-us/our-members/">https://www.qcif.edu.au/about-us/our-members/&lt;/a>, you are likely a QCIF member&lt;/p>
 &lt;p>Email: &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>&lt;/p>
 &lt;h4 id="non-qcif-members">Non-QCIF Members&lt;/h4>
-&lt;p>If your institution is &lt;strong>not&lt;/strong> listed in the following page &lt;a href="https://www.qcif.edu.au/about-us/our-members/,">https://www.qcif.edu.au/about-us/our-members/,&lt;/a> you are likely not a QCIF member&lt;/p>
+&lt;p>If your institution is &lt;strong>not&lt;/strong> listed in the following page &lt;a href="https://www.qcif.edu.au/about-us/our-members/">https://www.qcif.edu.au/about-us/our-members/&lt;/a>, you are likely not a QCIF member&lt;/p>
 &lt;p>Email: &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>&lt;/p></description></item><item><title>Docs: Windows Service</title><link>https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/windows-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/windows-service/</guid><description>
 &lt;p>The CTP install.bat script uses Apache procrun. Use the following steps to enable CTP as a Windows service, including an update to use a JRE other than system default (leave out step 2 if using the system default JRE)&lt;/p>
 &lt;ol>

@@ -31,8 +31,7 @@ proxyUsername=&amp;quot;&amp;quot;
 proxyPassword=&amp;quot;&amp;quot;/&amp;gt;
 &amp;lt;/Server&amp;gt;
 ...
-&lt;/code>&lt;/pre>&lt;p>Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/p>
-&lt;/li>
+&lt;/code>&lt;/pre>Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Add CTP the anonymiser script
