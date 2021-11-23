@@ -285,8 +285,8 @@ cd configuration/CTP
 <div class=lead>Updating CTP Proxy Server Settings</div>
 <p>If CTP uses a proxy server for internet access, you can update the CTP proxy server settings on Windows as follows</p>
 <ol>
-<li>Stop the CTP Windows service</li>
-</ol>
+<li>
+<p>Stop the CTP Windows service</p>
 <ul>
 <li>If you already have a Services short-cut on the Windows desktop, double-click the short-cut to start Windows Services</li>
 <li>If not, click the Windows start button, start typing &ldquo;services&rdquo; and the Services App icon should appear
@@ -296,35 +296,58 @@ cd configuration/CTP
 </li>
 <li>Locate the CTP service in the list of services, right-click and select <strong>Stop</strong> from the context menu</li>
 </ul>
-<ol start=2>
-<li>Start the CTP Launcher</li>
-</ol>
+</li>
+<li>
+<p>Start the CTP Launcher</p>
 <ul>
 <li>If you already have a CTP Launcher short-cut on the Windows desktop, double-click the short-cut to start the CTP Launcher</li>
 <li>If not, locate the CTP service in the list of services again, right-click and select <strong>Properties</strong> from the context menu
 <ol>
 <li>Use the <strong>Path to executable</strong> entry to find the installation folder for CTP. It will be in the form <code>&lt;install folder>\windows\CTP.exe</code></li>
-<li>Open a Windows Command prompt window</li>
+<li>Open a Windows Command prompt window
+<ol>
 <li>Click the Windows Start button, start typing &ldquo;cmd&rdquo; and the Command Prompt App icon should appear</li>
 <li>Click the Command Prompt App icon to start the Command Prompt</li>
+</ol>
+</li>
 <li>In the Command Prompt window, enter the following commands</li>
 </ol>
 <pre tabindex=0><code>cd &lt;install folder&gt;
 java -jar Launcher.jar
 </code></pre></li>
 </ul>
-<ol start=3>
-<li>Navigate to the CTP Launcher Configuration tab</li>
-<li>Use the navigation panel on the left to select <strong>Configuration</strong> -> <strong>Server</strong> -> <strong>ProxyServer</strong></li>
-<li>Update the proxy server settings in the right panel as required. You can set an IP address or host name in the proxyIPAddress field</li>
-<li>Select <strong>File</strong> -> <strong>Save</strong> from the main menu bar to save your changes</li>
-<li>Close the CTP Launcher using the Window close button at the top right</li>
-<li>Close the Command Prompt window</li>
-<li>Re-Start the CTP Windows service using Windows Services</li>
+</li>
+<li>
+<p>Navigate to the CTP Launcher Configuration tab</p>
+</li>
+<li>
+<p>Use the navigation panel on the left to select <strong>Configuration</strong> -> <strong>Server</strong> -> <strong>ProxyServer</strong>
+<img src=https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/proxy-config.png alt=text></p>
+</li>
+<li>
+<p>Update the proxy server settings in the right panel as required. You can set an IP address or host name in the proxyIPAddress field</p>
+</li>
+<li>
+<p>Select <strong>File</strong> -> <strong>Save</strong> from the main menu bar to save your changes</p>
+</li>
+<li>
+<p>Close the CTP Launcher using the Window close button at the top right
+<div class="alert alert-warning" role=alert>
+If the following prompt appears, select <strong>No</strong>.
+<img src=https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/close-launcher.png alt=text>
+If the CTP is stopped, restart it from the Windows services menu (See below)
+</div>
+</p>
+</li>
+<li>
+<p>Close the Command Prompt window</p>
+</li>
+<li>
+<p>Re-Start the CTP Windows service using Windows Services</p>
+<p>Locate the CTP service in the list of services, right-click and select <strong>Start</strong> from the context menu</p>
+<p><img src=https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/windows-service.png alt=text></p>
+</li>
 </ol>
-<ul>
-<li>Locate the CTP service in the list of services, right-click and select <strong>Start</strong> from the context menu</li>
-</ul>
 <h4 id=troubleshooting>Troubleshooting</h4>
 <ul>
 <li>If the CTP Windows service Stop is disabled, try restarting Windows Services as administrator by right-clicking the icon and selecting <strong>Run as administrator</strong></li>

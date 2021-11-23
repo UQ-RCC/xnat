@@ -113,8 +113,8 @@ cd configuration/CTP
 &lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=The_CTP_DICOM_Anonymizer">CTP DICOM Anonymizer&lt;/a>&lt;/p></description></item><item><title>Docs: Proxy Server Settings</title><link>https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/proxy-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/proxy-server/</guid><description>
 &lt;p>If CTP uses a proxy server for internet access, you can update the CTP proxy server settings on Windows as follows&lt;/p>
 &lt;ol>
-&lt;li>Stop the CTP Windows service&lt;/li>
-&lt;/ol>
+&lt;li>
+&lt;p>Stop the CTP Windows service&lt;/p>
 &lt;ul>
 &lt;li>If you already have a Services short-cut on the Windows desktop, double-click the short-cut to start Windows Services&lt;/li>
 &lt;li>If not, click the Windows start button, start typing &amp;ldquo;services&amp;rdquo; and the Services App icon should appear
@@ -124,35 +124,58 @@ cd configuration/CTP
 &lt;/li>
 &lt;li>Locate the CTP service in the list of services, right-click and select &lt;strong>Stop&lt;/strong> from the context menu&lt;/li>
 &lt;/ul>
-&lt;ol start="2">
-&lt;li>Start the CTP Launcher&lt;/li>
-&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>Start the CTP Launcher&lt;/p>
 &lt;ul>
 &lt;li>If you already have a CTP Launcher short-cut on the Windows desktop, double-click the short-cut to start the CTP Launcher&lt;/li>
 &lt;li>If not, locate the CTP service in the list of services again, right-click and select &lt;strong>Properties&lt;/strong> from the context menu
 &lt;ol>
 &lt;li>Use the &lt;strong>Path to executable&lt;/strong> entry to find the installation folder for CTP. It will be in the form &lt;code>&amp;lt;install folder&amp;gt;\windows\CTP.exe&lt;/code>&lt;/li>
-&lt;li>Open a Windows Command prompt window&lt;/li>
+&lt;li>Open a Windows Command prompt window
+&lt;ol>
 &lt;li>Click the Windows Start button, start typing &amp;ldquo;cmd&amp;rdquo; and the Command Prompt App icon should appear&lt;/li>
 &lt;li>Click the Command Prompt App icon to start the Command Prompt&lt;/li>
+&lt;/ol>
+&lt;/li>
 &lt;li>In the Command Prompt window, enter the following commands&lt;/li>
 &lt;/ol>
 &lt;pre tabindex="0">&lt;code>cd &amp;lt;install folder&amp;gt;
 java -jar Launcher.jar
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;/ul>
-&lt;ol start="3">
-&lt;li>Navigate to the CTP Launcher Configuration tab&lt;/li>
-&lt;li>Use the navigation panel on the left to select &lt;strong>Configuration&lt;/strong> -&amp;gt; &lt;strong>Server&lt;/strong> -&amp;gt; &lt;strong>ProxyServer&lt;/strong>&lt;/li>
-&lt;li>Update the proxy server settings in the right panel as required. You can set an IP address or host name in the proxyIPAddress field&lt;/li>
-&lt;li>Select &lt;strong>File&lt;/strong> -&amp;gt; &lt;strong>Save&lt;/strong> from the main menu bar to save your changes&lt;/li>
-&lt;li>Close the CTP Launcher using the Window close button at the top right&lt;/li>
-&lt;li>Close the Command Prompt window&lt;/li>
-&lt;li>Re-Start the CTP Windows service using Windows Services&lt;/li>
+&lt;/li>
+&lt;li>
+&lt;p>Navigate to the CTP Launcher Configuration tab&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use the navigation panel on the left to select &lt;strong>Configuration&lt;/strong> -&amp;gt; &lt;strong>Server&lt;/strong> -&amp;gt; &lt;strong>ProxyServer&lt;/strong>
+&lt;img src="https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/proxy-config.png" alt="text">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Update the proxy server settings in the right panel as required. You can set an IP address or host name in the proxyIPAddress field&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select &lt;strong>File&lt;/strong> -&amp;gt; &lt;strong>Save&lt;/strong> from the main menu bar to save your changes&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Close the CTP Launcher using the Window close button at the top right
+&lt;div class="alert alert-warning" role="alert">
+If the following prompt appears, select &lt;strong>No&lt;/strong>.
+&lt;img src="https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/close-launcher.png" alt="text">
+If the CTP is stopped, restart it from the Windows services menu (See below)
+&lt;/div>
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Close the Command Prompt window&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Re-Start the CTP Windows service using Windows Services&lt;/p>
+&lt;p>Locate the CTP service in the list of services, right-click and select &lt;strong>Start&lt;/strong> from the context menu&lt;/p>
+&lt;p>&lt;img src="https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/windows-service.png" alt="text">&lt;/p>
+&lt;/li>
 &lt;/ol>
-&lt;ul>
-&lt;li>Locate the CTP service in the list of services, right-click and select &lt;strong>Start&lt;/strong> from the context menu&lt;/li>
-&lt;/ul>
 &lt;h4 id="troubleshooting">Troubleshooting&lt;/h4>
 &lt;ul>
 &lt;li>If the CTP Windows service Stop is disabled, try restarting Windows Services as administrator by right-clicking the icon and selecting &lt;strong>Run as administrator&lt;/strong>&lt;/li>
