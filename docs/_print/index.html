@@ -285,7 +285,8 @@ cd configuration/CTP
 <div class=lead>Updating CTP Proxy Server Settings</div>
 <p>If CTP uses a proxy server for internet access, you can update the CTP proxy server settings on Windows as follows</p>
 <ol>
-<li>Stop the CTP Windows service
+<li>Stop the CTP Windows service</li>
+</ol>
 <ul>
 <li>If you already have a Services short-cut on the Windows desktop, double-click the short-cut to start Windows Services</li>
 <li>If not, click the Windows start button, start typing &ldquo;services&rdquo; and the Services App icon should appear
@@ -295,38 +296,38 @@ cd configuration/CTP
 </li>
 <li>Locate the CTP service in the list of services, right-click and select <strong>Stop</strong> from the context menu</li>
 </ul>
-</li>
-<li>Start the CTP Launcher
+<ol start=2>
+<li>Start the CTP Launcher</li>
+</ol>
 <ul>
 <li>If you already have a CTP Launcher short-cut on the Windows desktop, double-click the short-cut to start the CTP Launcher</li>
 <li>If not, locate the CTP service in the list of services again, right-click and select <strong>Properties</strong> from the context menu
 <ol>
-<li>Use the <strong>Path to executable</strong> entry to find the installation folder for CTP. It will be in the form &ldquo;<install folder>\windows\CTP.exe&rdquo;</li>
+<li>Use the <strong>Path to executable</strong> entry to find the installation folder for CTP. It will be in the form <code>&lt;install folder>\windows\CTP.exe</code></li>
 <li>Open a Windows Command prompt window</li>
 <li>Click the Windows Start button, start typing &ldquo;cmd&rdquo; and the Command Prompt App icon should appear</li>
 <li>Click the Command Prompt App icon to start the Command Prompt</li>
-<li>In the Command Prompt window enter the following commands</li>
+<li>In the Command Prompt window, enter the following commands</li>
 </ol>
 <pre tabindex=0><code>cd &lt;install folder&gt;
 java -jar Launcher.jar
 </code></pre></li>
 </ul>
-</li>
+<ol start=3>
 <li>Navigate to the CTP Launcher Configuration tab</li>
-<li>Use the navigation panel on the left to select Configuration -> Server -> ProxyServer</li>
+<li>Use the navigation panel on the left to select <strong>Configuration</strong> -> <strong>Server</strong> -> <strong>ProxyServer</strong></li>
 <li>Update the proxy server settings in the right panel as required. You can set an IP address or host name in the proxyIPAddress field</li>
-<li>Select File -> Save from the main menu bar to save your changes</li>
+<li>Select <strong>File</strong> -> <strong>Save</strong> from the main menu bar to save your changes</li>
 <li>Close the CTP Launcher using the Window close button at the top right</li>
 <li>Close the Command Prompt window</li>
-<li>Re-Start the CTP Windows service using Windows Services
+<li>Re-Start the CTP Windows service using Windows Services</li>
+</ol>
 <ul>
 <li>Locate the CTP service in the list of services, right-click and select <strong>Start</strong> from the context menu</li>
 </ul>
-</li>
-</ol>
 <h4 id=troubleshooting>Troubleshooting</h4>
 <ul>
-<li>If the CTP Windows service Stop is disabled, try restarting Windows Services as administrator, by right-clicking the icon and selecting &ldquo;Run as administrator&rdquo;</li>
+<li>If the CTP Windows service Stop is disabled, try restarting Windows Services as administrator by right-clicking the icon and selecting <strong>Run as administrator</strong></li>
 </ul>
 <h4 id=further-information>Further information</h4>
 <ul>
