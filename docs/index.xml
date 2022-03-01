@@ -35,10 +35,10 @@ java -jar CTP-installer.jar
 &lt;pre tabindex="0">&lt;code>...
 &amp;lt;Server ...&amp;gt;
 &amp;lt;ProxyServer
-proxyIPAddress=&amp;quot;&amp;quot;
-proxyPort=&amp;quot;&amp;quot;
-proxyUsername=&amp;quot;&amp;quot;
-proxyPassword=&amp;quot;&amp;quot;/&amp;gt;
+proxyIPAddress=&amp;#34;&amp;#34;
+proxyPort=&amp;#34;&amp;#34;
+proxyUsername=&amp;#34;&amp;#34;
+proxyPassword=&amp;#34;&amp;#34;/&amp;gt;
 &amp;lt;/Server&amp;gt;
 ...
 &lt;/code>&lt;/pre>Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/li>
@@ -213,8 +213,8 @@ If the CTP is stopped, restart it from the Windows services menu (See below)
 &lt;pre tabindex="0">&lt;code>java -jar CTP-installer.jar
 &lt;/code>&lt;/pre>&lt;/li>
 &lt;li>To use JRE other than system default, edit &lt;code>&amp;lt;ctp-home&amp;gt;/windows/install.bat&lt;/code>. Find the &amp;ndash;Jvm=auto, add &amp;ndash;JavaHome entry and set both as follows
-&lt;pre tabindex="0">&lt;code>--JavaHome=&amp;quot;&amp;lt;jre home&amp;gt; &amp;quot; ^
---Jvm=&amp;quot;&amp;lt;jre-home&amp;gt;\bin\server\jvm.dll&amp;quot; ^
+&lt;pre tabindex="0">&lt;code>--JavaHome=&amp;#34;&amp;lt;jre home&amp;gt; &amp;#34; ^
+--Jvm=&amp;#34;&amp;lt;jre-home&amp;gt;\bin\server\jvm.dll&amp;#34; ^
 &lt;/code>&lt;/pre>&lt;ul>
 &lt;li>^ is needed to wrap/continue command line in batch file&lt;/li>
 &lt;li>The jvm.dll location under &lt;jre-home> is the same for JRE 1.7 and 1.8 installs. Confirm this is the case for other JREs/JDKs&lt;/li>
