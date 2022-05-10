@@ -237,4 +237,18 @@ install
 &lt;ul>
 &lt;li>&lt;a href="https://mircwiki.rsna.org/index.php?title=Running_CTP_as_a_Windows_Service">Running CTP as a Windows service&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://commons.apache.org/proper/commons-daemon/procrun.html">Apache procrun&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Docs: Linux Service</title><link>https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/linux-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/facility-guides/ctp/linux-service/</guid><description>
+&lt;h2 id="ubuntu">Ubuntu&lt;/h2>
+&lt;p>Open &lt;code>./linux/ctpService-ubuntu.sh&lt;/code>. Update the following parameters:&lt;/p>
+&lt;pre tabindex="0">&lt;code>USER=ubuntu
+CTP_HOME=/opt/ctp/CTP
+JAVA_BIN=/usr/lib/jvm/java-17-openjdk-amd64/bin
+JAVA=$JAVA_BIN/java
+CTP_PID=$CTP_HOME/ctp.pid
+&lt;/code>&lt;/pre>&lt;p>Run the following to install the ctpService into init.d&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo ln -s ./linux/ctpService-ubuntu.sh /etc/init.d/ctpService
+sudo update-rc.d ctpService defaults 98 02
+&lt;/code>&lt;/pre>&lt;p>Start and stop CTP using the following commands&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo service ctpService start
+sudo service ctpService stop
+&lt;/code>&lt;/pre></description></item></channel></rss>
