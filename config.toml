@@ -1,4 +1,4 @@
-baseURL = "https://uq-rcc.github.io/xnat"
+baseURL = "https://docs.xnat.rcc.uq.edu.au"
 title = "XNAT"
 
 canonifyURLs = true
