@@ -1,11 +1,11 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ-RCC XNAT – User Guides</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/</link><description>Recent content in User Guides on UQ-RCC XNAT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://uq-rcc.github.io/xnat/docs/user-guides/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Login to XNAT</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/login-to-xnat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/login-to-xnat/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ-RCC XNAT – User Guides</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/</link><description>Recent content in User Guides on UQ-RCC XNAT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Login to XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/</guid><description>
 &lt;ol>
 &lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
 &lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://uq-rcc.github.io/xnat/docs/user-guides/xnat-aaf-login-page.png" alt="text">&lt;/p>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-aaf-login-page.png" alt="text">&lt;/p>
 &lt;p>This will take you to your XNAT home page.&lt;/p>
-&lt;p>First-time user will only see publically accessible project when they login&lt;/p></description></item><item><title>Docs: Create XNAT project</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/</guid><description>
+&lt;p>First-time user will only see publically accessible project when they login&lt;/p></description></item><item><title>Docs: Create XNAT project</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/</guid><description>
 &lt;h2 id="pre-requisite">Pre-requisite&lt;/h2>
 &lt;p>To create an XNAT project, you’ll need a &lt;strong>QRISCloud Q-collection&lt;/strong>. These are&lt;/p>
 &lt;ol>
@@ -14,8 +14,8 @@
 &lt;/ol>
 &lt;p>If you have either, you can use the existing collection, and skip to the next section.&lt;/p>
 &lt;p>If you have a UQ-RDM collection that end in A**** or I**** (e.g. PROJ001-A0189, PROJ001-I0189), you will need to create a UQ-RDM Q-collection&lt;/p>
-&lt;p>&lt;a href="https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/create-q-collection-uq-users">UQ Users&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://uq-rcc.github.io/xnat/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users">Non-UQ Users&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-uq-users">UQ Users&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users">Non-UQ Users&lt;/a>&lt;/p>
 &lt;h2 id="creating-an-xnat-project">Creating an XNAT Project&lt;/h2>
 &lt;p>Open a ticket with QRIScloud support (&lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>)&lt;/p>
 &lt;ul>
@@ -27,18 +27,18 @@
 &lt;li>An XNAT project will be created with the matching Q**** name.&lt;/li>
 &lt;li>An “xnat” directory will be created in the Q**** collection for storing the XNAT data files.&lt;/li>
 &lt;li>Please do not write or modify anything under the “xnat” directory.&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Browsing Data</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/browsing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/browsing-data/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Browsing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</guid><description>
 &lt;ol>
-&lt;li>&lt;a href="https://uq-rcc.github.io/xnat/docs/user-guides/login-to-xnat">Login to XNAT&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat">Login to XNAT&lt;/a>&lt;/li>
 &lt;li>Select Project &amp;gt; Subject &amp;gt; Session&lt;/li>
 &lt;/ol>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/using-the-standard-search/browsing-data-types">XNAT official guides on browsing data&lt;/a>&lt;/p></description></item><item><title>Docs: Downloading Data</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/downloading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/downloading-data/</guid><description>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/using-the-standard-search/browsing-data-types">XNAT official guides on browsing data&lt;/a>&lt;/p></description></item><item><title>Docs: Downloading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/downloading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/downloading-data/</guid><description>
 &lt;ol>
-&lt;li>Navigate to Scan or Sesssion (See guide on &lt;a href="https://uq-rcc.github.io/xnat/docs/user-guides/browsing-data">browsing data&lt;/a>)&lt;/li>
+&lt;li>Navigate to Scan or Sesssion (See guide on &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data">browsing data&lt;/a>)&lt;/li>
 &lt;li>Select &lt;code>Download&lt;/code> from controls on top right.&lt;/li>
-&lt;li>Use the following settings for downloading dataset as zip &lt;img src="https://uq-rcc.github.io/xnat/docs/user-guides/xnat-data-download-options.png" alt="text">&lt;/li>
+&lt;li>Use the following settings for downloading dataset as zip &lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-data-download-options.png" alt="text">&lt;/li>
 &lt;/ol>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/how-to-download-image-data-from-xnat-projects">XNAT official guide on downloading data&lt;/a>&lt;/p></description></item><item><title>Docs: Syncing Data</title><link>https://uq-rcc.github.io/xnat/docs/user-guides/syncing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://uq-rcc.github.io/xnat/docs/user-guides/syncing-data/</guid><description>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/how-to-download-image-data-from-xnat-projects">XNAT official guide on downloading data&lt;/a>&lt;/p></description></item><item><title>Docs: Syncing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/syncing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/syncing-data/</guid><description>
 &lt;p>The UQ-RCC XNAT may be able to sync datasets to other XNATs in Australia.&lt;/p>
 &lt;p>To see if your project is able to be synced, send a ticket to QRIScloud support (&lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>)&lt;/p>
 &lt;p>They will need the details of the XNAT that you wish to share data with.&lt;/p></description></item></channel></rss>
