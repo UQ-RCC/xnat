@@ -1,4 +1,17 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ-RCC XNAT – Documentation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/</link><description>Recent content in Documentation on UQ-RCC XNAT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Create Q-collection (UQ)</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-uq-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-uq-users/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ-RCC XNAT – Documentation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/</link><description>Recent content in Documentation on UQ-RCC XNAT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</guid><description>
+&lt;blockquote>
+&lt;p>AAF is the recommended way to sign up and login to XNAT. If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p>
+&lt;/blockquote>
+&lt;p>If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. Follow the steps below to sign-up/login using AAF.&lt;/p>
+&lt;ol>
+&lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
+&lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" alt="text">&lt;/p>
+&lt;p>This will take you to your XNAT home page.&lt;/p>
+&lt;blockquote>
+&lt;p>First-time user will only see publically accessible project when they login&lt;/p>
+&lt;/blockquote></description></item><item><title>Docs: Create Q-collection (UQ)</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-uq-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-uq-users/</guid><description>
 &lt;p>Open &lt;a href="https://rdm.uq.edu.au/create-record">https://rdm.uq.edu.au/create-record&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/uqrdm-create-record.png" alt="text">&lt;/p>
 &lt;p>(1) and (2) are required fields&lt;/p>
@@ -120,14 +133,30 @@ git checkout &amp;lt;commit&amp;gt; CTP-Installer.jar
 cd configuration/CTP
 &lt;/code>&lt;/pre>&lt;p>CTP documentation links:&lt;/p>
 &lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=MIRC_CTP">MIRC CTP Wiki&lt;/a>&lt;/p>
-&lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=The_CTP_DICOM_Anonymizer">CTP DICOM Anonymizer&lt;/a>&lt;/p></description></item><item><title>Docs: Login to XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/</guid><description>
+&lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=The_CTP_DICOM_Anonymizer">CTP DICOM Anonymizer&lt;/a>&lt;/p></description></item><item><title>Docs: RCC Authenticate</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login/</guid><description>
+&lt;p>To use this login, you would have received an email from a UQ XNAT administrator with the login information.&lt;/p>
+&lt;blockquote>
+&lt;p>If you have not received an email, either use &lt;a href="../aaf-login">AAF&lt;/a> or contact the respective XNAT support&lt;/p>
+&lt;p>RCC Authenticate credentials are &lt;strong>NOT&lt;/strong> your UQ or institutional username and password&lt;/p>
+&lt;/blockquote>
 &lt;ol>
-&lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
-&lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
+&lt;li>Login in with the RCC Authenticate button (shown below)&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-aaf-login-page.png" alt="text">&lt;/p>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login.jpg" alt="text">&lt;/p>
+&lt;ol start="2">
+&lt;li>You’ll be taken to a UQ RCC SERVICES (shown below)&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-signin.jpg" alt="text">&lt;/p>
+&lt;ol start="3">
+&lt;li>Enter your user name and password to sign in.&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>First time users: Use temporary username and temporary password to sign in. The next screen will allow you set your permanent password&lt;/p>
+&lt;/blockquote>
 &lt;p>This will take you to your XNAT home page.&lt;/p>
-&lt;p>First-time user will only see publically accessible project when they login&lt;/p></description></item><item><title>Docs: Create Q-collection (Non-UQ)</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users/</guid><description>
+&lt;blockquote>
+&lt;p>First-time user will only see publically accessible project when they login&lt;/p>
+&lt;/blockquote></description></item><item><title>Docs: Create Q-collection (Non-UQ)</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users/</guid><description>
 &lt;h4 id="qcif-members">QCIF Members&lt;/h4>
 &lt;p>If your institution is listed in the following page &lt;a href="https://www.qcif.edu.au/about-us/our-members/">https://www.qcif.edu.au/about-us/our-members/&lt;/a>, you are likely a QCIF member&lt;/p>
 &lt;p>Email: &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>&lt;/p>
