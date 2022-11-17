@@ -266,12 +266,7 @@ install
 &lt;ul>
 &lt;li>&lt;a href="https://mircwiki.rsna.org/index.php?title=Running_CTP_as_a_Windows_Service">Running CTP as a Windows service&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://commons.apache.org/proper/commons-daemon/procrun.html">Apache procrun&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Browsing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</guid><description>
-&lt;ol>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat">Login to XNAT&lt;/a>&lt;/li>
-&lt;li>Select Project &amp;gt; Subject &amp;gt; Session&lt;/li>
-&lt;/ol>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/using-the-standard-search/browsing-data-types">XNAT official guides on browsing data&lt;/a>&lt;/p></description></item><item><title>Docs: Linux Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Linux Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</guid><description>
 &lt;h2 id="ubuntu">Ubuntu&lt;/h2>
 &lt;p>Open &lt;code>./linux/ctpService-ubuntu.sh&lt;/code>. Update the following parameters:&lt;/p>
 &lt;pre tabindex="0">&lt;code>USER=ubuntu
@@ -285,7 +280,49 @@ sudo update-rc.d ctpService defaults 98 02
 &lt;/code>&lt;/pre>&lt;p>Start and stop CTP using the following commands&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo service ctpService start
 sudo service ctpService stop
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Downloading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/downloading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/downloading-data/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Browsing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</guid><description>
+&lt;ol>
+&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat">Login to XNAT&lt;/a>&lt;/li>
+&lt;li>Select Project &amp;gt; Subject &amp;gt; Session&lt;/li>
+&lt;/ol>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/using-the-standard-search/browsing-data-types">XNAT official guides on browsing data&lt;/a>&lt;/p></description></item><item><title>Docs: Web Upload</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/web-upload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/web-upload/</guid><description>
+&lt;h2 id="uploading-dicom-datasets">Uploading DICOM datasets&lt;/h2>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>This is for uploading &lt;strong>de-identified DICOM&lt;/strong> files using the uploader directly from the XNAT website&lt;/p>
+&lt;/div>
+&lt;ol>
+&lt;li>De-identify DICOM on scanner or upload pc&lt;/li>
+&lt;li>Zip DICOM files into a zip file&lt;/li>
+&lt;li>Login to XNAT (see &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/">Login to XNAT&lt;/a>)&lt;/li>
+&lt;li>From the top panel, select &lt;strong>Upload → Images → Compressed Uploader&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/upload-menu.png" alt="text">&lt;/p>
+&lt;ol start="5">
+&lt;li>Specify the following options:
+&lt;ul>
+&lt;li>&lt;strong>Project&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Destination&lt;/strong>: Select &lt;strong>Prearchive&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Choose file&lt;/strong> to select zipped file with DICOMs&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/compressed-uploader.png" alt="text">&lt;/p>
+&lt;ol start="6">
+&lt;li>Click &lt;strong>Begin Upload&lt;/strong>
+Wait for:
+&lt;ul>
+&lt;li>Upload percent bar to finish (**percent bar may not appear for small datasets)&lt;/li>
+&lt;li>&lt;strong>Background processes&lt;/strong> panel to appear on bottom right&lt;/li>
+&lt;li>Green tick on under &lt;strong>Upload extraction/review for archival&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/upload-success.png" alt="text">&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+In case of &lt;strong>Background process&lt;/strong> errors, expand panel using double arrows on bottom right for more details
+&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/upload-failure.png" alt="text">
+&lt;/div>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: Downloading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/downloading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/downloading-data/</guid><description>
 &lt;ol>
 &lt;li>Navigate to Scan or Sesssion (See guide on &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data">browsing data&lt;/a>)&lt;/li>
 &lt;li>Select &lt;code>Download&lt;/code> from controls on top right.&lt;/li>

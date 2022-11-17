@@ -32,7 +32,13 @@
 &lt;li>An XNAT project will be created with the matching Q**** name.&lt;/li>
 &lt;li>An “xnat” directory will be created in the Q**** collection for storing the XNAT data files.&lt;/li>
 &lt;li>Please do not write or modify anything under the “xnat” directory.&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Browsing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Uploading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/</guid><description>
+&lt;ol>
+&lt;li>Web Upload (Compressed image uploader)&lt;/li>
+&lt;li>XNAT data client&lt;/li>
+&lt;li>CTP&lt;/li>
+&lt;/ol>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat">image session upload methods in XNAT&lt;/a>&lt;/p></description></item><item><title>Docs: Browsing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</guid><description>
 &lt;ol>
 &lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat">Login to XNAT&lt;/a>&lt;/li>
 &lt;li>Select Project &amp;gt; Subject &amp;gt; Session&lt;/li>
