@@ -6,7 +6,6 @@ canonifyURLs = true
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["docsy"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
@@ -223,3 +222,9 @@ enable = false
 	# icon = "fa fa-envelope"
     #     desc = "Discuss development issues around the project"
 
+[module]
+proxy = "direct"
+[[module.imports]]
+path = "github.com/google/docsy"
+[[module.imports]]
+path = "github.com/google/docsy/dependencies"
