@@ -1,7 +1,7 @@
 ---
 title: "Create XNAT project"
 linkTitle: "Create XNAT project"
-weight: 2
+weight: 20
 description: >
   Create XNAT project
 ---

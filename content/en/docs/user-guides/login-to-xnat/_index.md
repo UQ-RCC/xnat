@@ -1,7 +1,7 @@
 ---
 title: "Login to XNAT"
 linkTitle: "Login to XNAT"
-weight: 1
+weight: 10
 description: >
   Login to XNAT
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Downloading Data"
 linkTitle: "Downloading Data"
-weight: 5
+weight: 50
 description: >
   Downloading data from XNAT Projects
 ---

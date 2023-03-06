@@ -1,7 +1,7 @@
 ---
 title: "Syncing Data"
 linkTitle: "Syncing Data"
-weight: 6
+weight: 60
 description: >
   Syncing data to other XNAT Projects
 ---
