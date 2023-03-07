@@ -6,8 +6,8 @@ description: >
   Create XNAT project
 ---
 ## Pre-requisite
-To create an XNAT project, you’ll need a **QRISCloud Q-collection**. These are
-1. QRISCloud collections that end in Q**** (e.g. Q0189)
+To create an XNAT project, you’ll need a **QRIScloud Q-collection**. These are
+1. QRIScloud collections that end in Q**** (e.g. Q0189)
 2. UQ-RDM collections that end in Q**** (e.g. PROJ001-Q0189)
 
 If you have either, you can use the existing collection, and skip to the next section.

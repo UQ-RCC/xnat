@@ -7,7 +7,7 @@ description: >
 ---
 
 ## Signing into XNAT
-
+---
 #### Step 1
 Open https://xnat.rcc.uq.edu.au
 
@@ -20,7 +20,7 @@ Login in with the AAF Single sign-on button (shown below)
 Use the AAF login process for your organisation
 
 {{% alert color="warning" %}}
-If you cannot find your organisation in the AAF list, follow the instructions for [non-aaf-members](../non-aaf-members)
+If you cannot find your organisation in the AAF list, try the instructions for [non-aaf-members](../non-aaf-members)
 {{% /alert %}}
 
 #### Step 3
@@ -36,9 +36,16 @@ There will be **no projects listed** when signing in for the first-time, as your
 Proceed to to next section for setting up an XNAT project
 
 ## Creating an XNAT Project
+---
+
+There are separate storage allocation processes depending on your affiliation
+UQ members are users with a UQ staff or student account.
+
+- [For UQ members](#for-uq-members)
+- [For Non-UQ HIRF Members](#for-non-uq-hirf-members)
 
 ### For UQ members
-
+---
 #### Step 1
 Create (or use an existing) **UQ-RDM HPC Collection**
 - **UQ-RDM HPC collections** ends with **-Q** and a 4-digit numerical identifier (e.g. PROJ001-**Q0189**)
@@ -64,7 +71,7 @@ XNAT Project setup typically takes around ~24 hours from ticket submission.
 An automated email from XNAT will be sent through when project is ready, and your user has been added
 
 ### For Non-UQ HIRF Members
-
+---
 {{% alert color="warning" %}}
 If you are a UQ HIRF member, use the process for [UQ members](#for-uq-members)
 {{% /alert %}}
@@ -72,9 +79,9 @@ If you are a UQ HIRF member, use the process for [UQ members](#for-uq-members)
 #### Step 1
 Open a ticket with QRIScloud support (Example below)
 
-{{< card header="To: support@qriscloud.org.au" subtitle="Subject: ">}}
-Require an XNAT project for data collected from HIRF for Project **Project**
+{{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT project for HIRF">}}
+Require an XNAT project for data collected from HIRF **Project**
 {{< /card >}}
 
 #### Step 2
-Qriscloud support
+QRIScloud support will reach out for futher details for provisioning the project
