@@ -11,7 +11,7 @@ description: >
 1. Open https://xnat.rcc.uq.edu.au
 2. Login in with the AAF Single sign-on button (shown below)
    {{% alert color="white" %}}
-   <img src="../xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey">
+   <img src="/docs/user-guides/getting-started/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey">
    {{% /alert %}}
 
 3. This will take you to the AAF central login page (shown below)
@@ -20,7 +20,7 @@ description: >
    - Sign in using your Organisation credentials
 
    {{% alert color="white" %}}
-   <img src="../aaf-central-login.png"  width="40%" height="30%" style="border: 1px solid grey">
+   <img src="/docs/user-guides/getting-started//aaf-central-login.png"  width="40%" height="30%" style="border: 1px solid grey">
    {{% /alert %}}
 
    {{% alert color="warning" %}}
@@ -30,7 +30,7 @@ description: >
 4. After the AAF sign-in, you should be redirected back to XNAT.
    There will be no projects listed for first-time sign-ins, as your user account would have just been created. Refer to next section for setting up an XNAT project
    {{% alert color="white" %}}
-   <img src="../xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey">
+   <img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey">
    {{% /alert %}}
 
 ## Creating an XNAT Project
