@@ -1,19 +1,17 @@
 ---
 title: "Non-AAF members"
 linkTitle: "Non-AAF members"
-weight: 40
+weight: 20
 description: >
   Non-University, non-AAF members and other users
 ---
-
 
 Non-University, non-AAF members
   - Non-University, non-AAF members and other users
   - e.g. QLD Health, TRI, QIMR, QLD Xray
 
-
 ## Signing into XNAT
-
+---
 1. Open a ticket with QRIScloud support (Example below)
 
    {{< card header="To: support@qriscloud.org.au" subtitle="Subject: User account for XNAT Project">}}
@@ -22,7 +20,7 @@ Non-University, non-AAF members
    {{< /card >}}
 
 ## Creating an XNAT Project
-
+---
 1. Create (or use an existing) **UQ-RDM HPC Collection**
    - **UQ-RDM HPC collections** ends with **-Q** and a 4-digit numerical identifier (e.g. PROJ001-**Q0189**)
    - UQ-RDM collections ending with **-A** (e.g. PROJ001-**A0189**) or **-I** (PROJ001-**I0189**) are **non-HPC collections**
