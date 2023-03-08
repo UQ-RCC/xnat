@@ -1,26 +1,44 @@
 ---
-title: "Non-AAF members"
-linkTitle: "Non-AAF members"
-weight: 20
+title: "HIRF users"
+linkTitle: "HIRF users"
+weight: 30
 description: >
-  Non-University, non-AAF members and other users
+  For users acquiring data at HIRF
 ---
+
+Data acquired at HIRF can be sent to the UQ-RCC XNAT repository
+
+## Signing into XNAT
+
+#### If you are an AAF member
+Use the [AAF Member](../aaf-members) guide if you are a member of one of the following:
+- Australian University - e.g. UQ, QUT, JCU, Griffith, USQ, USC, ACU, Bond, CQU
+- AAF member organisations - e.g. CSIRO
+- Any organisation on [this](https://aaf.edu.au/subscribers/) list
+
+#### If you are a non-AAF member
+Follow the [Non-AAF Member](../non-aaf-members) guide if your organisation is a non-AAF member
+- e.g. QLD Health, QLD Xray, Pacific Radiology
+- e.g. TRI, QIMR
+
+If you have any questions, contact either support@qriscloud.org.au or HIRFAdministration@health.qld.gov.au
+
+<br><br>
 
 Non-AAF members may include users from:
   - QLD Health, HIRF, TRI, QIMR, QLD Xray
 
-Non-AAF members may require XNAT access for: 
+Non-AAF members may require XNAT access for:
 - Data acquisition from sites including HIRF, 
 - Project collaboration
 
-## Signing into XNAT
 ---
 #### Step 1
 Send an email to QRIScloud support to open a ticket (Example below)
 
 {{< card header="To: support@qriscloud.org.au" subtitle="Subject: User account for XNAT Project">}}
-Data Acquisition site:
-Affiliated facility:
+Data Acquisition site: 
+Affiliated facility: 
 {{< /card >}}
 
 #### Step 2

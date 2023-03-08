@@ -7,9 +7,6 @@ description: >
 aliases:
     - /docs/user-guides/create-xnat-project/create-q-collection-non-uq-users
 ---
-{{% alert color="warning" %}}
-If you are a UQ HIRF member, use the process for [UQ members](#for-uq-members)
-{{% /alert %}}
 
 #### Step 1
 Open a ticket with QRIScloud support (Example below)
