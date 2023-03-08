@@ -6,9 +6,8 @@ description: >
   Non-University, non-AAF members and other users
 ---
 
-Non-University, non-AAF members
-  - Non-University, non-AAF members and other users
-  - e.g. QLD Health, TRI, QIMR, QLD Xray
+Non-AAF members may include users from:
+  - QLD Health, TRI, QIMR, QLD Xray
 
 ## Signing into XNAT
 ---

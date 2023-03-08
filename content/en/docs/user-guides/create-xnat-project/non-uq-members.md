@@ -1,6 +1,6 @@
 ---
-title: "For Non-UQ members"
-linkTitle: "For Non-UQ members"
+title: "Non-UQ members"
+linkTitle: "Non-UQ members"
 weight: 20
 description: >
   For Non-UQ members
