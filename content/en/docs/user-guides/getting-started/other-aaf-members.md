@@ -1,10 +1,16 @@
 ---
-title: "AAF members"
-linkTitle: "AAF members"
-weight: 10
+title: "Other AAF members"
+linkTitle: "Other AAF members"
+weight: 30
 description: >
-  Australian University or AAF members
+  Other AAF members
 ---
+
+This guide is for users from Australian Universities and AAF member organisations, including:
+- UQ, QUT, Griffith, CQU, JCU, USQ, USC
+- Interstate universities, CSIRO
+
+If your facility is not included above or on the [AAF subscribers list](https://aaf.edu.au/subscribers), refer to the guide for [non-AAF members](../non-aaf-members)
 
 ## Signing into XNAT
 ---
@@ -34,11 +40,12 @@ _Proceed to to next section for setting up an XNAT project_
 
 ## Creating an XNAT Project
 ---
+#### Step 1
+Open a ticket with QRIScloud support (Example below)
 
-There are separate project provisioning processes depending on your affiliation. Choose the link below that best applies to you
+{{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT HIRF project **PROJ001**">}}
+Creating an XNAT project for **PROJ001**
+{{< /card >}}
 
-- [UQ users](/docs/user-guides/create-xnat-project/uq-members)
-- [Non-UQ CAI users](/docs/user-guides/create-xnat-project/non-uq-members)
-- [Non-UQ HIRF users](/docs/user-guides/create-xnat-project/non-uq-members)
-- [Non-UQ TRI users](/docs/user-guides/create-xnat-project/non-uq-members)
-- [Others](/docs/user-guides/create-xnat-project/non-uq-members)
+#### Step 2
+QRIScloud support will reach out for futher details

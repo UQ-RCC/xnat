@@ -1,62 +1,82 @@
 ---
 title: "HIRF users"
 linkTitle: "HIRF users"
-weight: 30
+weight: 50
 description: >
   For users acquiring data at HIRF
 ---
 
 Data acquired at HIRF can be sent to the UQ-RCC XNAT repository
 
-## Signing into XNAT
+Refer to the relevant guide below:
 
-#### If you are an AAF member
-Use the [AAF Member](../aaf-members) guide if you are a member of one of the following:
-- Australian University - e.g. UQ, QUT, JCU, Griffith, USQ, USC, ACU, Bond, CQU
+- [UQ members](/docs/user-guides/getting-started/uq-members) - UQ Staff and Students
+- [QRIScloud members](/docs/user-guides/getting-started/qcif-members) - Griffith, CQU, JCU, USQ, USC
+- [Other AAF members](/docs/user-guides/getting-started/other-aaf-members) - CSIRO, QUT, Other Australian Universities
+- [Non-AAF members](/docs/user-guides/getting-started/non-aaf-members) - QLD Health, TRI, QIMR, QLD Xray, Pacific Radiology
+
+For all other organisations, use the [Non-AAF members](/docs/user-guides/getting-started/non-aaf-members) guide
+
+<!-- QCIF - Griffith, CQU, JCU, USQ, USC
+https://www.qcif.edu.au/about-us/our-members
+https://aaf.edu.au/subscribers -->
+
+<!-- ## Signing into XNAT
+---
+
+{{< cardpane >}}
+  {{< card header="AAF" >}}
+- Australian Universities - e.g. UQ, QUT, JCU, Griffith, USQ, USC, ACU, Bond, CQU
 - AAF member organisations - e.g. CSIRO
-- Any organisation on [this](https://aaf.edu.au/subscribers/) list
+- Any organisation on [this list](https://aaf.edu.au/subscribers/)
 
-#### If you are a non-AAF member
-Follow the [Non-AAF Member](../non-aaf-members) guide if your organisation is a non-AAF member
-- e.g. QLD Health, QLD Xray, Pacific Radiology
-- e.g. TRI, QIMR
+  {{< /card >}}
+  {{< card header="Non-AAF" >}}
+- QLD Health, TRI, QIMR, QLD Xray
+  {{< /card >}}
+{{< /cardpane >}}
+
+Use the guide for [AAF members](/docs/user-guides/getting-started/aaf-members) if you belong to any of the following:
+- Australian Universities - e.g. UQ, QUT, JCU, Griffith, USQ, USC, ACU, Bond, CQU
+- AAF member organisations - e.g. CSIRO
+- Any organisation on [this list](https://aaf.edu.au/subscribers/)
+
+Use the guide for [non-AAF members](/docs/user-guides/getting-started/non-aaf-members) if you belong to any of the following:
+- QLD Health, TRI, QIMR, QLD Xray
 
 If you have any questions, contact either support@qriscloud.org.au or HIRFAdministration@health.qld.gov.au
 
-<br><br>
-
-Non-AAF members may include users from:
-  - QLD Health, HIRF, TRI, QIMR, QLD Xray
-
-Non-AAF members may require XNAT access for:
-- Data acquisition from sites including HIRF, 
-- Project collaboration
-
+## Creating an XNAT Project
 ---
-#### Step 1
-Send an email to QRIScloud support to open a ticket (Example below)
 
-{{< card header="To: support@qriscloud.org.au" subtitle="Subject: User account for XNAT Project">}}
-Data Acquisition site: 
-Affiliated facility: 
+### UQ users
+---
+If you have a UQ affiliation, refer to the [UQ guide](/docs/user-guides/create-xnat-project/uq-members)
+
+### QCIF members
+---
+_Includes Griffith, CQU, JCU, USQ, USC_
+
+See [here](https://www.qcif.edu.au/about-us/our-members) for more details on QCIF
+
+#### Step 1
+Open a ticket with QRIScloud support (Example below)
+
+{{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT HIRF project **PROJ001**">}}
+Requesting a QRIScloud storage collection for **PROJ001**<br>
+Also creating an XNAT project for **PROJ001**
 {{< /card >}}
 
 #### Step 2
-QRIScloud support will reach out for futher details for provisioning the user account
-
-
-## Creating an XNAT Project
+QRIScloud support will reach out for futher details
+### Other users
 ---
-1. Open a ticket with QRIScloud support (Example below)
+#### Step 1
+Open a ticket with QRIScloud support (Example below)
 
-   {{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT project **PROJ001-Q0189**">}}
-   Please create an XNAT project for RDM collection **PROJ001-Q0189**
-   {{< /card >}}
+{{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT HIRF project **PROJ001**">}}
+Creating an XNAT project for **PROJ001**
+{{< /card >}}
 
-2. The support ticket will inform you when the project is set up.
-   - An XNAT project will be created with the matching **PROJXXX-QXXXX** name.
-   - An **xnat** directory will be created in the RDM collection for storing the XNAT data files.
-   - Please do not write or modify anything under the **xnat** directory.
-
-XNAT Project setup typically takes around ~24 hours from ticket submission.
-An automated email from XNAT will be sent through when project is ready, and your user has been added
+#### Step 2
+QRIScloud support will reach out for futher details -->

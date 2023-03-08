@@ -1,17 +1,17 @@
 ---
 title: "Non-AAF members"
 linkTitle: "Non-AAF members"
-weight: 20
+weight: 40
 description: >
   Non-University, non-AAF members and other users
 ---
 
-Non-AAF members may include users from:
-  - QLD Health, HIRF, TRI, QIMR, QLD Xray
+This guide is for users from non-AAF member organisations, including:
+  - QLD Health, TRI, QIMR, QLD Xray
 
-Non-AAF members may require XNAT access for: 
-- Data acquisition from sites including HIRF, 
-- Project collaboration
+Non-AAF members usually require XNAT access for: 
+- Management of data acquisition from sites such as CAI, HIRF, TRI
+- Collaborating on projects managed on UQ-RCC XNAT
 
 ## Signing into XNAT
 ---
@@ -19,26 +19,21 @@ Non-AAF members may require XNAT access for:
 Send an email to QRIScloud support to open a ticket (Example below)
 
 {{< card header="To: support@qriscloud.org.au" subtitle="Subject: User account for XNAT Project">}}
-Data Acquisition site:
-Affiliated facility:
+**Data Acquisition site** <br>
+**Organisation or Affiliation**
 {{< /card >}}
 
 #### Step 2
-QRIScloud support will reach out for futher details for provisioning the user account
-
+QRIScloud support will reach out for further details
 
 ## Creating an XNAT Project
 ---
-1. Open a ticket with QRIScloud support (Example below)
+#### Step 1
+Open a ticket with QRIScloud support (Example below)
 
-   {{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT project **PROJ001-Q0189**">}}
-   Please create an XNAT project for RDM collection **PROJ001-Q0189**
-   {{< /card >}}
+{{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT HIRF project **PROJ001**">}}
+Creating an XNAT project for **PROJ001**
+{{< /card >}}
 
-2. The support ticket will inform you when the project is set up.
-   - An XNAT project will be created with the matching **PROJXXX-QXXXX** name.
-   - An **xnat** directory will be created in the RDM collection for storing the XNAT data files.
-   - Please do not write or modify anything under the **xnat** directory.
-
-XNAT Project setup typically takes around ~24 hours from ticket submission.
-An automated email from XNAT will be sent through when project is ready, and your user has been added
+#### Step 2
+QRIScloud support will reach out for futher details
