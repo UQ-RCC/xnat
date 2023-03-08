@@ -1,11 +1,12 @@
 ---
 title: "Create XNAT project"
 linkTitle: "Create XNAT project"
-weight: 20
+weight: 10
 description: >
   Create XNAT project
 ---
-## Pre-requisite
+
+<!-- ## Pre-requisite
 To create an XNAT project, you’ll need a **QRIScloud Q-collection**. These are
 1. QRIScloud collections that end in Q**** (e.g. Q0189)
 2. UQ-RDM collections that end in Q**** (e.g. PROJ001-Q0189)
@@ -27,4 +28,4 @@ Open a ticket with QRIScloud support (support@qriscloud.org.au)
 The support ticket will inform you when the project is set up.
 - An XNAT project will be created with the matching Q**** name.
 - An “xnat” directory will be created in the Q**** collection for storing the XNAT data files.
-- Please do not write or modify anything under the “xnat” directory.
+- Please do not write or modify anything under the “xnat” directory. -->

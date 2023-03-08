@@ -9,8 +9,7 @@ description: >
 Choose the from the following links that best applies to you:
 
 - [AAF Members](aaf-members)
-  - Members of Australian Universities or AAF member organisations
-  - Full list of AAF members found [here](https://aaf.edu.au/subscribers)
+  - Members of Australian Universities or AAF member organisations. Full list of AAF members found [here](https://aaf.edu.au/subscribers)
   - e.g. UQ, QUT, JCU, Griffith, USQ, USC, ACU, Bond, CQU
   - e.g. CSIRO
 - [Non-AAF Members](non-aaf-members)

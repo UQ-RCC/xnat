@@ -4,9 +4,16 @@ linkTitle: "For UQ members"
 weight: 10
 description: >
   UQ Staff and Students
+aliases:
+    - /docs/user-guides/create-xnat-project/create-q-collection-uq-users
 ---
 
 #### Step 1
+
+{{% alert color="warning" %}}
+If you have an existing UQ-RDM HPC collection, skip to [Step 2](./Step-2)
+{{% /alert %}}
+
 Create (or use an existing) **UQ-RDM HPC Collection**
 - **UQ-RDM HPC collections** ends with **-Q** and a 4-digit numerical identifier (e.g. PROJ001-**Q0189**)
 - UQ-RDM collections ending with **-A** (e.g. PROJ001-**A0189**) or **-I** (PROJ001-**I0189**) are **non-HPC collections**

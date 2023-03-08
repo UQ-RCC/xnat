@@ -1,9 +1,11 @@
 ---
 title: "For Non-UQ members"
 linkTitle: "For Non-UQ members"
-weight: 10
+weight: 20
 description: >
-  
+  For Non-UQ members
+aliases:
+    - /docs/user-guides/create-xnat-project/create-q-collection-non-uq-users
 ---
 {{% alert color="warning" %}}
 If you are a UQ HIRF member, use the process for [UQ members](#for-uq-members)
@@ -18,3 +20,15 @@ Require an XNAT project for data collected from HIRF **Project**
 
 #### Step 2
 QRIScloud support will reach out for futher details for provisioning the project
+
+
+<!-- #### QCIF Members
+If your institution is listed in the following page https://www.qcif.edu.au/about-us/our-members/, you are likely a QCIF member
+
+Email: support@qriscloud.org.au
+
+#### Non-QCIF Members
+If your institution is **not** listed in the following page https://www.qcif.edu.au/about-us/our-members/, you are likely not a QCIF member
+
+Email: support@qriscloud.org.au
+ -->

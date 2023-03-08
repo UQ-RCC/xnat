@@ -12,12 +12,17 @@ Non-University, non-AAF members
 
 ## Signing into XNAT
 ---
-1. Open a ticket with QRIScloud support (Example below)
+#### Step 1
+Open a ticket with QRIScloud support (Example below)
 
-   {{< card header="To: support@qriscloud.org.au" subtitle="Subject: User account for XNAT Project">}}
-   Acquisition site:
-   Affiliated facility or project
-   {{< /card >}}
+{{< card header="To: support@qriscloud.org.au" subtitle="Subject: User account for XNAT Project">}}
+Acquisition site:
+Affiliated facility or project
+{{< /card >}}
+
+#### Step 2
+QRIScloud support will reach out for futher details for provisioning the user account
+
 
 ## Creating an XNAT Project
 ---
