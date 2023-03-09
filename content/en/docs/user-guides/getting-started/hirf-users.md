@@ -16,5 +16,3 @@ Refer to the relevant guide below:
 
 Full list of AAF members found [here](https://aaf.edu.au/subscribers)<br>
 For all other organisations, use the [Non-AAF members](/docs/user-guides/getting-started/non-aaf-members) guide
-
-{{% readfile "/docs/user-guides/getting-started/aaf-login.md" %}}
