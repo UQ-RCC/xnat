@@ -8,7 +8,27 @@ aliases:
     - /docs/user-guides/create-xnat-project/create-q-collection-uq-users
 ---
 
-{{% readfile "/docs/user-guides/getting-started/partials/aaf-login.md" %}}
+## Signing into XNAT
+---
+#### Step 1
+Open [https://xnat.rcc.uq.edu.au](https://xnat.rcc.uq.edu.au)
+
+#### Step 2
+Login in with the AAF Single sign-on button (shown below).
+
+Follow the AAF login process for your organisation
+
+<img src="/docs/user-guides/getting-started/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+
+#### Step 3
+
+After the AAF sign-in, you should be redirected back to XNAT (Example below)
+
+There will be **no projects listed** when signing in for the first-time, as your user account would have just been created.
+
+<img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+
+_Proceed to to next section for setting up an XNAT project_
 
 ## Creating XNAT project
 ---
@@ -22,7 +42,7 @@ Before creating an XNAT project, you'll require a UQ-RDM **HPC Collection**
 - **Non-HPC collections** end with **-A** (e.g. PROJ001-**A0189**) or **-I** (PROJ001-**I0189**)
 
 {{% alert color="warning" %}}
-If you have an existing UQ-RDM **HPC collection** (ending with **-Qxxxx**), skip to [Step 2](./#step-2)
+If you have an existing UQ-RDM **HPC collection** (ending with **-Qxxxx**), skip to the [next step](./#step-2-1)
 {{% /alert %}}
 
 To create a new UQ-RDM **HPC Collection**, proceed with the following
