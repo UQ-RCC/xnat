@@ -1,9 +1,11 @@
 ---
 title: "Non-AAF members"
 linkTitle: "Non-AAF members"
-weight: 40
+weight: 30
 description: >
   Non-University, non-AAF members and other users
+aliases:
+    - /docs/user-guides/create-xnat-project/create-q-collection-uq-users
 ---
 
 This guide is for users from non-AAF member organisations, including:
