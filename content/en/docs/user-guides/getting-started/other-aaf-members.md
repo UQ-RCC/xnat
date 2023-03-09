@@ -12,6 +12,10 @@ This guide is for users from Australian Universities and AAF member organisation
 - QUT, Griffith, CQU, JCU, USQ, USC
 - CSIRO, Australian Universities
 
+Other AAF members usually require XNAT access for: 
+- Management of data acquisition from sites such as CAI, HIRF, TRI
+- Collaborating on projects managed on UQ-RCC XNAT
+
 Full list of AAF members found [here](https://aaf.edu.au/subscribers)<br>
 For all other organisations, use the [Non-AAF members](/docs/user-guides/getting-started/non-aaf-members) guide
 
@@ -49,4 +53,4 @@ Creating an XNAT project for **PROJ001**
 {{< /card >}}
 
 #### Step 2
-QRIScloud support will reach out for futher details
+QRIScloud support will reach out for further details
