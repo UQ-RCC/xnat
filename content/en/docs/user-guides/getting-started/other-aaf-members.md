@@ -9,15 +9,16 @@ aliases:
 ---
 
 This guide is for users from Australian Universities and AAF member organisations, including:
-- UQ, QUT, Griffith, CQU, JCU, USQ, USC
-- Interstate universities, CSIRO
+- QUT, Griffith, CQU, JCU, USQ, USC
+- CSIRO, Australian Universities
 
-If your facility is not included above or on the [AAF subscribers list](https://aaf.edu.au/subscribers), refer to the guide for [non-AAF members](../non-aaf-members)
+Full list of AAF members found [here](https://aaf.edu.au/subscribers)<br>
+For all other organisations, use the [Non-AAF members](/docs/user-guides/getting-started/non-aaf-members) guide
 
 ## Signing into XNAT
 ---
 #### Step 1
-Open https://xnat.rcc.uq.edu.au
+Open [https://xnat.rcc.uq.edu.au](https://xnat.rcc.uq.edu.au)
 
 #### Step 2
 Login in with the AAF Single sign-on button (shown below).
@@ -43,7 +44,9 @@ _Proceed to to next section for setting up an XNAT project_
 ## Creating an XNAT Project
 ---
 #### Step 1
-Open a ticket with QRIScloud support (Example below)
+Open a ticket with QRIScloud support
+
+_Example below (replace the **bold** text with your details)_
 
 {{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT HIRF project **PROJ001**">}}
 Creating an XNAT project for **PROJ001**

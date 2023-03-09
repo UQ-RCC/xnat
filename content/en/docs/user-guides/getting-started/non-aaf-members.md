@@ -18,7 +18,9 @@ Non-AAF members usually require XNAT access for:
 ## Signing into XNAT
 ---
 #### Step 1
-Send an email to QRIScloud support to open a ticket (Example below)
+Open a ticket with QRIScloud support
+
+_Example below (replace the **bold** text with your details)_
 
 {{< card header="To: support@qriscloud.org.au" subtitle="Subject: User account for XNAT Project">}}
 **Data Acquisition site** <br>
@@ -31,7 +33,9 @@ QRIScloud support will reach out for further details
 ## Creating an XNAT Project
 ---
 #### Step 1
-Open a ticket with QRIScloud support (Example below)
+Open a ticket with QRIScloud support
+
+_Example below (replace the **bold** text with your details)_
 
 {{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT HIRF project **PROJ001**">}}
 Creating an XNAT project for **PROJ001**
