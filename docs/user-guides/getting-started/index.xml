@@ -16,14 +16,14 @@
 &lt;hr>
 &lt;p>For UQ users, XNAT uses UQ-RDM HPC collections for storage allocation.&lt;br>
 For any general questions about UQ-RDM, please refer to the &lt;a href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager">library guides&lt;/a>&lt;/p>
-&lt;h4 id="step-1">Step 1&lt;/h4>
+&lt;h4 id="step-1-1">Step 1&lt;/h4>
 &lt;p>Before creating an XNAT project, you&amp;rsquo;ll require a UQ-RDM &lt;strong>HPC Collection&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>HPC collections&lt;/strong> ends with &lt;strong>-Q&lt;/strong> and a 4-digit numerical identifier (e.g. PROJ001-&lt;strong>Q0189&lt;/strong>)&lt;/li>
 &lt;li>&lt;strong>Non-HPC collections&lt;/strong> end with &lt;strong>-A&lt;/strong> (e.g. PROJ001-&lt;strong>A0189&lt;/strong>) or &lt;strong>-I&lt;/strong> (PROJ001-&lt;strong>I0189&lt;/strong>)&lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-warning" role="alert">
-If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending with &lt;strong>-Qxxxx&lt;/strong>), skip to &lt;a href="./#step-2">Step 2&lt;/a>
+If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending with &lt;strong>-Qxxxx&lt;/strong>), skip to the &lt;a href="./#step-2-1">next step&lt;/a>
 &lt;/div>
 &lt;p>To create a new UQ-RDM &lt;strong>HPC Collection&lt;/strong>, proceed with the following&lt;/p>
 &lt;p>Open &lt;a href="https://rdm.uq.edu.au/create-record">https://rdm.uq.edu.au/create-record&lt;/a> and sign-in&lt;/p>
@@ -41,7 +41,7 @@ If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending wit
 &lt;/div>
 &lt;p>&lt;strong>REQUEST DATA STORAGE&lt;/strong> when complete&lt;br>
 Move on to the next step after the RDM collection is provisioned&lt;/p>
-&lt;h4 id="step-2">Step 2&lt;/h4>
+&lt;h4 id="step-2-1">Step 2&lt;/h4>
 &lt;p>Open a ticket with QRIScloud support&lt;/p>
 &lt;p>&lt;em>Example below (replace the &lt;strong>bold&lt;/strong> text with your details)&lt;/em>&lt;/p>
 &lt;div class="td-card card mb-4">
@@ -57,7 +57,7 @@ Please create an XNAT project for RDM collection &lt;strong>PROJ001-Q0189&lt;/st
 &lt;/p>
 &lt;/div>
 &lt;/div>
-&lt;h4 id="step-3">Step 3&lt;/h4>
+&lt;h4 id="step-3-1">Step 3&lt;/h4>
 &lt;p>The support ticket will inform you when the project is set up.&lt;/p>
 &lt;ul>
 &lt;li>An XNAT project will be created with the matching name (e.g. &lt;strong>PROJ001-Q0189&lt;/strong>)&lt;/li>
@@ -88,7 +88,7 @@ For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au
 &lt;p>&lt;em>Proceed to to next section for setting up an XNAT project&lt;/em>&lt;/p>
 &lt;h2 id="creating-an-xnat-project">Creating an XNAT Project&lt;/h2>
 &lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
+&lt;h4 id="step-1-1">Step 1&lt;/h4>
 &lt;p>Open a ticket with QRIScloud support&lt;/p>
 &lt;p>&lt;em>Example below (replace the &lt;strong>bold&lt;/strong> text with your details)&lt;/em>&lt;/p>
 &lt;div class="td-card card mb-4">
@@ -104,7 +104,7 @@ Creating an XNAT project for &lt;strong>PROJ001&lt;/strong>
 &lt;/p>
 &lt;/div>
 &lt;/div>
-&lt;h4 id="step-2">Step 2&lt;/h4>
+&lt;h4 id="step-2-1">Step 2&lt;/h4>
 &lt;p>QRIScloud support will reach out for futher details&lt;/p></description></item><item><title>Docs: Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>
 &lt;p>This guide is for users from non-AAF member organisations, including:&lt;/p>
 &lt;ul>
@@ -164,17 +164,4 @@ Creating an XNAT project for &lt;strong>PROJ001&lt;/strong>
 &lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members">Non-AAF members&lt;/a> - QLD Health, TRI, QIMR, QLD Xray, Pacific Radiology&lt;/li>
 &lt;/ul>
 &lt;p>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;br>
-For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members">Non-AAF members&lt;/a> guide&lt;/p></description></item><item><title>Docs:</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/partials/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/partials/aaf-login/</guid><description>
-&lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
-&lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/p>
-&lt;h4 id="step-2">Step 2&lt;/h4>
-&lt;p>Login in with the AAF Single sign-on button (shown below).&lt;/p>
-&lt;p>Follow the AAF login process for your organisation&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
-&lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p>
-&lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
-&lt;p>&lt;em>Proceed to to next section for setting up an XNAT project&lt;/em>&lt;/p></description></item></channel></rss>
+For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members">Non-AAF members&lt;/a> guide&lt;/p></description></item></channel></rss>
