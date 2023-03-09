@@ -3,7 +3,7 @@ title: "UQ members"
 linkTitle: "UQ members"
 weight: 10
 description: >
-  UQ Staff and Students
+  For UQ Staff and Students
 aliases:
     - /docs/user-guides/create-xnat-project/create-q-collection-uq-users
 ---
@@ -11,7 +11,7 @@ aliases:
 ## Signing into XNAT
 ---
 #### Step 1
-Open https://xnat.rcc.uq.edu.au
+Open [https://xnat.rcc.uq.edu.au](https://xnat.rcc.uq.edu.au)
 
 #### Step 2
 Login in with the AAF Single sign-on button (shown below).
@@ -30,7 +30,7 @@ After the AAF sign-in, you should be redirected back to XNAT (Example below)
 
 There will be **no projects listed** when signing in for the first-time, as your user account would have just been created.
 
-<img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/docs/user-guides/getting-started/xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
 
 _Proceed to to next section for setting up an XNAT project_
 
@@ -51,9 +51,9 @@ If you have an existing UQ-RDM **HPC collection** (ending with **-Qxxxx**), skip
 
 To create a new UQ-RDM **HPC Collection**, proceed with the following
 
-Open https://rdm.uq.edu.au/create-record and sign-in
+Open [https://rdm.uq.edu.au/create-record](https://rdm.uq.edu.au/create-record) and sign-in
 
-<img src="/docs/user-guides/create-xnat-project/uqrdm-create-record.png" width="40%" height="40%" style="border: 1px solid grey">
+<img src="../uqrdm-create-record.png" width="40%" height="40%" style="border: 1px solid grey">
 <br><br>
 <font color='Fuchsia'>(1)</font> and <font color='blue'>(2)</font> are required fields. Fill these and the rest of the record as per your project details.
 
@@ -65,10 +65,13 @@ For <font color='red'>(3)</font> Data storage:
 Any other combination will be incompatible with XNAT, requiring a new RDM request 
 {{% /alert %}}
 
-Proceed to **REQUEST DATA STORAGE** (bottom right)
+**REQUEST DATA STORAGE** when complete<br>
+Move on to the next step after the RDM collection is provisioned
 
 #### Step 2
-Open a ticket with QRIScloud support (Example below)
+Open a ticket with QRIScloud support
+
+_Example below (replace the **bold** text with your details)_
 
 {{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT project **PROJ001-Q0189**">}}
 Please create an XNAT project for RDM collection **PROJ001-Q0189**
@@ -76,7 +79,7 @@ Please create an XNAT project for RDM collection **PROJ001-Q0189**
 
 #### Step 3
 The support ticket will inform you when the project is set up.
-- An XNAT project will be created with the matching **PROJXXX-QXXXX** name.
+- An XNAT project will be created with the matching name (e.g. **PROJ001-Q0189**)
 - An **xnat** directory will be created in the RDM collection for storing the XNAT data files.
 - Please do not write or modify anything under the **xnat** directory.
 
