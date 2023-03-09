@@ -71,6 +71,11 @@ An automated email from XNAT will be sent through when project is ready, and you
 &lt;li>QUT, Griffith, CQU, JCU, USQ, USC&lt;/li>
 &lt;li>CSIRO, Australian Universities&lt;/li>
 &lt;/ul>
+&lt;p>Other AAF members usually require XNAT access for:&lt;/p>
+&lt;ul>
+&lt;li>Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li>
+&lt;li>Collaborating on projects managed on UQ-RCC XNAT&lt;/li>
+&lt;/ul>
 &lt;p>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;br>
 For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members">Non-AAF members&lt;/a> guide&lt;/p>
 &lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
@@ -105,7 +110,7 @@ Creating an XNAT project for &lt;strong>PROJ001&lt;/strong>
 &lt;/div>
 &lt;/div>
 &lt;h4 id="step-2-1">Step 2&lt;/h4>
-&lt;p>QRIScloud support will reach out for futher details&lt;/p></description></item><item><title>Docs: Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>
+&lt;p>QRIScloud support will reach out for further details&lt;/p></description></item><item><title>Docs: Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>
 &lt;p>This guide is for users from non-AAF member organisations, including:&lt;/p>
 &lt;ul>
 &lt;li>QLD Health, TRI, QIMR, QLD Xray&lt;/li>
@@ -118,7 +123,7 @@ Creating an XNAT project for &lt;strong>PROJ001&lt;/strong>
 &lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open a ticket with QRIScloud support&lt;/p>
+&lt;p>Open a ticket with QRIScloud support to request a user account&lt;/p>
 &lt;p>&lt;em>Example below (replace the &lt;strong>bold&lt;/strong> text with your details)&lt;/em>&lt;/p>
 &lt;div class="td-card card mb-4">
 &lt;div class="card-header">
@@ -126,20 +131,21 @@ To: &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>
 &lt;/div>
 &lt;div class="card-body">
 &lt;h6 class="card-title mb-2 text-muted">
-Subject: User account for XNAT Project
+Subject: User account for XNAT project &lt;strong>PROJ001&lt;/strong>
 &lt;/h6>
 &lt;p class="card-text">
-&lt;strong>Data Acquisition site&lt;/strong> &lt;br>
-&lt;strong>Organisation or Affiliation&lt;/strong>
+Member of &lt;strong>Organisation or Affiliation&lt;/strong>&lt;br>
+Acquiring data at &lt;strong>Data Acquisition site&lt;/strong>&lt;br>
 &lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>QRIScloud support will reach out for further details&lt;/p>
+&lt;p>&lt;em>Move on to the next step after the account is provisioned&lt;/em>&lt;/p>
 &lt;h2 id="creating-an-xnat-project">Creating an XNAT Project&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1-1">Step 1&lt;/h4>
-&lt;p>Open a ticket with QRIScloud support&lt;/p>
+&lt;p>Open a ticket with QRIScloud support to request an XNAT project&lt;/p>
 &lt;p>&lt;em>Example below (replace the &lt;strong>bold&lt;/strong> text with your details)&lt;/em>&lt;/p>
 &lt;div class="td-card card mb-4">
 &lt;div class="card-header">
