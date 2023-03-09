@@ -1,7 +1,7 @@
 ---
 title: "Browsing Data"
 linkTitle: "Browsing Data"
-weight: 4
+weight: 40
 description: >
   Browsing project data in XNAT
 ---
