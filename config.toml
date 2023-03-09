@@ -71,8 +71,8 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "UQ-RCC XNAT"
-description = "UQ-RCC XNAT"
+title = "UQ AIS XNAT"
+description = "UQ AIS XNAT"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
