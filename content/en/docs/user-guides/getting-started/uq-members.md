@@ -35,6 +35,10 @@ _Proceed to to next section for setting up an XNAT project_
 For UQ users, XNAT uses UQ-RDM HPC collections for storage allocation.<br>
 For any general questions about UQ-RDM, please refer to the [library guides](https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager)
 
+{{% alert title="Note" color="warning" %}}
+Only one member of the project team needs to request for the project
+{{% /alert %}}
+
 #### Step 1
 
 Before creating an XNAT project, you'll require a UQ-RDM **HPC Collection**
@@ -61,23 +65,27 @@ For <font color='red'>(3)</font> Data storage:
 Any other combination will be incompatible with XNAT, requiring a new RDM request 
 {{% /alert %}}
 
-**REQUEST DATA STORAGE** when complete<br>
-Move on to the next step after the RDM collection is provisioned
+**REQUEST DATA STORAGE** when complete
+
+Move on to the next step after the RDM collection is provisioned<br>
+You should have an RDM collection name ready (e.g. **PROJ001-Q0189**)
 
 #### Step 2
 Open a ticket with QRIScloud support
 
-_Example below (replace the **bold** text with your details)_
+_Example below (replace __________ with your details)_
 
-{{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT project **PROJ001-Q0189**">}}
-Please create an XNAT project for RDM collection **PROJ001-Q0189**
+{{< card header="To: support@qriscloud.org.au" subtitle="Subject: Create XNAT project __________">}}
+Hello QRIScloud support
+
+Can we create an XNAT project for RDM collection __________
 {{< /card >}}
 
 #### Step 3
 The support ticket will inform you when the project is set up.
 - An XNAT project will be created with the matching name (e.g. **PROJ001-Q0189**)
-- An **xnat** directory will be created in the RDM collection for storing the XNAT data files.
-- Please do not write or modify anything under the **xnat** directory.
+- An **xnat** directory will be created in the RDM collection for storing the XNAT data files
+- Please do not write or modify anything under the **xnat** directory
 
-XNAT Project setup typically takes around ~24 hours from ticket submission.<br>
+XNAT Project setup typically takes around ~24 hours from ticket submission<br>
 An automated email from XNAT will be sent through when project is ready, and your user has been added

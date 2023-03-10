@@ -11,10 +11,11 @@ aliases:
 This guide is for users from Australian Universities and AAF member organisations, including:
 - QUT, Griffith, CQU, JCU, USQ, USC
 - CSIRO, Australian Universities
+- AAF VHO accounts
 
-Other AAF members usually require XNAT access for: 
+Other AAF members usually require UQ AIS XNAT access for: 
 - Management of data acquisition from sites such as CAI, HIRF, TRI
-- Collaborating on projects managed on UQ-RCC XNAT
+- Collaborating on projects managed on UQ AIS XNAT
 
 Full list of AAF members found [here](https://aaf.edu.au/subscribers)<br>
 For all other organisations, use the [Non-AAF members](/docs/user-guides/getting-started/non-aaf-members) guide
@@ -25,7 +26,7 @@ For all other organisations, use the [Non-AAF members](/docs/user-guides/getting
 Open [https://xnat.rcc.uq.edu.au](https://xnat.rcc.uq.edu.au)
 
 #### Step 2
-Login in with the AAF Single sign-on button (shown below).
+Login in with the AAF Single sign-on button (_See below_).
 
 Follow the AAF login process for your organisation
 
@@ -33,24 +34,43 @@ Follow the AAF login process for your organisation
 
 #### Step 3
 
-After the AAF sign-in, you should be redirected back to XNAT (Example below)
+After the AAF sign-in, you should be redirected back to XNAT (_Example below_)
 
 There will be **no projects listed** when signing in for the first-time, as your user account would have just been created.
 
 <img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
 
-_Proceed to to next section for setting up an XNAT project_
-
-## Creating an XNAT Project
+## Accessing XNAT Project
 ---
+
+#### If you are Acquiring data at HIRF, CAI or TRI
+- The respective facility will organise the project creation.
+- You will receive a follow up email when access has been granted
+- Contact support@qriscloud.org.au if you have not received access within 5 working days
+#### If you are collaborating on an existing XNAT project
+- Contact the project lead to grant you access to the XNAT project
+
+
+<!-- ## Creating an XNAT Project
+---
+{{% alert title="Note" color="warning" %}}
+Only one member of the project team needs to request for the project
+{{% /alert %}}
+
 #### Step 1
 Open a ticket with QRIScloud support
 
-_Example below (replace the **bold** text with your details)_
+_Example below (replace __________ with your details)_
 
-{{< card header="To: support@qriscloud.org.au" subtitle="Subject: XNAT HIRF project **PROJ001**">}}
-Creating an XNAT project for **PROJ001**
+{{< card header="**To:** support@qriscloud.org.au" subtitle="**Subject:** Create XNAT project for project __________">}}
+Hello QRIScloud support
+
+I require 
+
+My details are below<br>
+Organisation: __________<br>
+Data Acquisition Site: __________<br>
 {{< /card >}}
 
 #### Step 2
-QRIScloud support will reach out for further details
+QRIScloud support will reach out for further details -->
