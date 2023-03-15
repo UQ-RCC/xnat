@@ -53,16 +53,14 @@ To create a new UQ-RDM **HPC Collection**, proceed with the following
 
 Open [https://rdm.uq.edu.au/create-record](https://rdm.uq.edu.au/create-record) and sign-in
 
-<img src="../uqrdm-create-record.png" width="40%" height="40%" style="border: 1px solid grey">
-<br><br>
-<font color='Fuchsia'>(1)</font> and <font color='blue'>(2)</font> are required fields. Fill these and the rest of the record as per your project details.
+Fill in the record as per your project details
+
+<img src="../uqrdm-create-record.png" width="70%" height="70%" style="border: 1px solid grey">
 
 {{% alert title="Important" color="warning" %}}
-For <font color='red'>(3)</font> Data storage:
-- [ ] Leave the 1st check box unticked (_The project will store identifiable human data_)
-- [x] Tick the 2nd checkbox (_The project data needs to be mounted on UQ HPC facilities_)
+For <font color='red'>(6) Data Storage Options</font>, select the second option (<font color='red'>_The project data needs to be mounted on UQ HPC facilities._</font>)
 
-Any other combination will be incompatible with XNAT, requiring a new RDM request 
+Any other option will be incompatible with XNAT, requiring a new RDM request 
 {{% /alert %}}
 
 **REQUEST DATA STORAGE** when complete
