@@ -334,17 +334,12 @@ If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending wit
 &lt;/div>
 &lt;p>To create a new UQ-RDM &lt;strong>HPC Collection&lt;/strong>, proceed with the following&lt;/p>
 &lt;p>Open &lt;a href="https://rdm.uq.edu.au/create-record">https://rdm.uq.edu.au/create-record&lt;/a> and sign-in&lt;/p>
-&lt;img src="../uqrdm-create-record.png" width="40%" height="40%" style="border: 1px solid grey">
-&lt;br>&lt;br>
-&lt;font color='Fuchsia'>(1)&lt;/font> and &lt;font color='blue'>(2)&lt;/font> are required fields. Fill these and the rest of the record as per your project details.
+&lt;p>Fill in the record as per your project details&lt;/p>
+&lt;img src="../uqrdm-create-record.png" width="70%" height="70%" style="border: 1px solid grey">
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Important&lt;/h4>
-&lt;p>For &lt;font color='red'>(3)&lt;/font> Data storage:&lt;/p>
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> Leave the 1st check box unticked (&lt;em>The project will store identifiable human data&lt;/em>)&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> Tick the 2nd checkbox (&lt;em>The project data needs to be mounted on UQ HPC facilities&lt;/em>)&lt;/li>
-&lt;/ul>
-&lt;p>Any other combination will be incompatible with XNAT, requiring a new RDM request&lt;/p>
+&lt;p>For &lt;font color='red'>(6) Data Storage Options&lt;/font>, select the second option (&lt;font color='red'>&lt;em>The project data needs to be mounted on UQ HPC facilities.&lt;/em>&lt;/font>)&lt;/p>
+&lt;p>Any other option will be incompatible with XNAT, requiring a new RDM request&lt;/p>
 &lt;/div>
 &lt;p>&lt;strong>REQUEST DATA STORAGE&lt;/strong> when complete&lt;/p>
 &lt;p>Move on to the next step after the RDM collection is provisioned&lt;br>
