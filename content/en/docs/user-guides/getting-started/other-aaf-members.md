@@ -30,7 +30,7 @@ Login in with the AAF Single sign-on button (_See below_).
 
 Follow the AAF login process for your organisation
 
-<img src="/docs/user-guides/getting-started/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
 
 #### Step 3
 
