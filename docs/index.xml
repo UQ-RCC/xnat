@@ -309,7 +309,7 @@ In case of &lt;strong>Background process&lt;/strong> errors, expand panel using 
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>Login in with the AAF Single sign-on button (shown below).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p>
 &lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
@@ -390,7 +390,7 @@ For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>Login in with the AAF Single sign-on button (&lt;em>See below&lt;/em>).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (&lt;em>Example below&lt;/em>)&lt;/p>
 &lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
