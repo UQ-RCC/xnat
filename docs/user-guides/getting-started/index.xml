@@ -42,18 +42,18 @@ If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending wit
 &lt;p>Move on to the next step after the RDM collection is provisioned&lt;br>
 You should have an RDM collection name ready (e.g. &lt;strong>PROJ001-Q0189&lt;/strong>)&lt;/p>
 &lt;h4 id="step-2-1">Step 2&lt;/h4>
-&lt;p>Open a ticket with QRIScloud support&lt;/p>
+&lt;p>Open a ticket with RCC support&lt;/p>
 &lt;p>&lt;em>Example below (replace __________ with your details)&lt;/em>&lt;/p>
 &lt;div class="td-card card mb-4">
 &lt;div class="card-header">
-To: &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>
+To: &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a>
 &lt;/div>
 &lt;div class="card-body">
 &lt;h6 class="card-title mb-2 text-muted">
 Subject: Create XNAT project __________
 &lt;/h6>
 &lt;p class="card-text">
-&lt;p>Hello QRIScloud support&lt;/p>
+&lt;p>Hello RCC support&lt;/p>
 &lt;p>Can we create an XNAT project for RDM collection __________&lt;/p>
 &lt;/p>
 &lt;/div>
@@ -98,40 +98,12 @@ For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au
 &lt;ul>
 &lt;li>The respective facility will organise the project creation.&lt;/li>
 &lt;li>You will receive a follow up email when access has been granted&lt;/li>
-&lt;li>Contact &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a> if you have not received access within 5 working days&lt;/li>
+&lt;li>Contact &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a> if you have not received access within 5 working days&lt;/li>
 &lt;/ul>
 &lt;h4 id="if-you-are-collaborating-on-an-existing-xnat-project">If you are collaborating on an existing XNAT project&lt;/h4>
 &lt;ul>
 &lt;li>Contact the project lead to grant you access to the XNAT project&lt;/li>
-&lt;/ul>
-&lt;!-- ## Creating an XNAT Project
----
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-Only one member of the project team needs to request for the project
-&lt;/div>
-#### Step 1
-Open a ticket with QRIScloud support
-_Example below (replace __________ with your details)_
-&lt;div class="td-card card mb-4">
-&lt;div class="card-header">
-&lt;strong>To:&lt;/strong> &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>
-&lt;/div>
-&lt;div class="card-body">
-&lt;h6 class="card-title mb-2 text-muted">
-&lt;strong>Subject:&lt;/strong> Create XNAT project for project __________
-&lt;/h6>
-&lt;p class="card-text">
-&lt;p>Hello QRIScloud support&lt;/p>
-&lt;p>I require&lt;/p>
-&lt;p>My details are below&lt;br>
-Organisation: __________&lt;br>
-Data Acquisition Site: __________&lt;br>&lt;/p>
-&lt;/p>
-&lt;/div>
-&lt;/div>
-#### Step 2
-QRIScloud support will reach out for further details --></description></item><item><title>Docs: Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>
 &lt;p>This is for users from non-AAF member organisations, including:&lt;/p>
 &lt;ul>
 &lt;li>QLD Health, TRI, QIMR, QLD Xray&lt;/li>
@@ -145,18 +117,18 @@ QRIScloud support will reach out for further details --></description></item><it
 &lt;h2 id="creating-an-aaf-vho-account">Creating an AAF VHO account&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open a ticket with QRIScloud support to request an AAF account&lt;/p>
+&lt;p>Open a ticket with RCC support to request an AAF account&lt;/p>
 &lt;p>&lt;em>Example below (replace __________ with your details)&lt;/em>&lt;/p>
 &lt;div class="td-card card mb-4">
 &lt;div class="card-header">
-&lt;strong>To:&lt;/strong> &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>
+&lt;strong>To:&lt;/strong> &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a>
 &lt;/div>
 &lt;div class="card-body">
 &lt;h6 class="card-title mb-2 text-muted">
 &lt;strong>Subject:&lt;/strong> XNAT AAF account for project __________
 &lt;/h6>
 &lt;p class="card-text">
-&lt;p>Hello QRIScloud support&lt;/p>
+&lt;p>Hello RCC support&lt;/p>
 &lt;p>I require an AAF account to access the UQ AIS XNAT service&lt;br>&lt;/p>
 &lt;p>My details are below&lt;br>
 Organisation: __________&lt;br>
@@ -165,30 +137,9 @@ Data Acquisition Site: __________&lt;br>&lt;/p>
 &lt;/div>
 &lt;/div>
 &lt;h4 id="step-2">Step 2&lt;/h4>
-&lt;p>QRIScloud support will reach out with AAF VHO account registration process&lt;/p>
+&lt;p>AAF&amp;rsquo;s VHO account will return an email regarding the VHO account registration process&lt;/p>
 &lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>&lt;em>After account is provisioned, continue on to the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members">Other AAF members guide&lt;/a>&lt;/em>&lt;/p>
-&lt;!--
-## Creating an XNAT Project
----
-#### Step 1
-Open a ticket with QRIScloud support to request an XNAT project
-_Example below (replace the **bold** text with your details)_
-&lt;div class="td-card card mb-4">
-&lt;div class="card-header">
-To: &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a>
-&lt;/div>
-&lt;div class="card-body">
-&lt;h6 class="card-title mb-2 text-muted">
-Subject: XNAT HIRF project &lt;strong>PROJ001&lt;/strong>
-&lt;/h6>
-&lt;p class="card-text">
-Creating an XNAT project for &lt;strong>PROJ001&lt;/strong>
-&lt;/p>
-&lt;/div>
-&lt;/div>
-#### Step 2
-QRIScloud support will reach out for futher details --></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
+&lt;p>&lt;em>After account is provisioned, continue on to the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members">Other AAF members guide&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
 &lt;p>Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p>
 &lt;p>To get started, refer to the relevant guide below:&lt;/p>
 &lt;ul>
@@ -214,4 +165,4 @@ QRIScloud support will reach out for futher details --></description></item><ite
 &lt;div class="alert alert-warning" role="alert">
 If you have multiple valid affiliations, we&amp;rsquo;d recommend using &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members">UQ&lt;/a> or &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members">AAF&lt;/a> affiliation where possible
 &lt;/div>
-&lt;p>If you have any questions, contact &lt;a href="mailto:support@qriscloud.org.au">support@qriscloud.org.au&lt;/a> or &lt;a href="mailto:HIRFAdministration@health.qld.gov.au">HIRFAdministration@health.qld.gov.au&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>If you have any questions, contact &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a> or &lt;a href="mailto:HIRFAdministration@health.qld.gov.au">HIRFAdministration@health.qld.gov.au&lt;/a>&lt;/p></description></item></channel></rss>
