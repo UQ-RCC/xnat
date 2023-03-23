@@ -69,12 +69,12 @@ Move on to the next step after the RDM collection is provisioned<br>
 You should have an RDM collection name ready (e.g. **PROJ001-Q0189**)
 
 #### Step 2
-Open a ticket with QRIScloud support
+Open a ticket with RCC support
 
 _Example below (replace __________ with your details)_
 
-{{< card header="To: support@qriscloud.org.au" subtitle="Subject: Create XNAT project __________">}}
-Hello QRIScloud support
+{{< card header="To: rcc-support@uq.edu.au" subtitle="Subject: Create XNAT project __________">}}
+Hello RCC support
 
 Can we create an XNAT project for RDM collection __________
 {{< /card >}}

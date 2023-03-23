@@ -46,31 +46,6 @@ There will be **no projects listed** when signing in for the first-time, as your
 #### If you are Acquiring data at HIRF, CAI or TRI
 - The respective facility will organise the project creation.
 - You will receive a follow up email when access has been granted
-- Contact support@qriscloud.org.au if you have not received access within 5 working days
+- Contact rcc-support@uq.edu.au if you have not received access within 5 working days
 #### If you are collaborating on an existing XNAT project
 - Contact the project lead to grant you access to the XNAT project
-
-
-<!-- ## Creating an XNAT Project
----
-{{% alert title="Note" color="warning" %}}
-Only one member of the project team needs to request for the project
-{{% /alert %}}
-
-#### Step 1
-Open a ticket with QRIScloud support
-
-_Example below (replace __________ with your details)_
-
-{{< card header="**To:** support@qriscloud.org.au" subtitle="**Subject:** Create XNAT project for project __________">}}
-Hello QRIScloud support
-
-I require 
-
-My details are below<br>
-Organisation: __________<br>
-Data Acquisition Site: __________<br>
-{{< /card >}}
-
-#### Step 2
-QRIScloud support will reach out for further details -->

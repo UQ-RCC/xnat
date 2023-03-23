@@ -24,4 +24,4 @@ To get started, refer to the relevant guide below:
 If you have multiple valid affiliations, we'd recommend using [UQ](/docs/user-guides/getting-started/uq-members) or [AAF](/docs/user-guides/getting-started/other-aaf-members) affiliation where possible
 {{% /alert %}}
 
-If you have any questions, contact support@qriscloud.org.au or HIRFAdministration@health.qld.gov.au
+If you have any questions, contact rcc-support@uq.edu.au or HIRFAdministration@health.qld.gov.au
