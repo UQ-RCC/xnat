@@ -2,7 +2,12 @@
 &lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/p>
+&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
+&lt;/div>
+&lt;/p>
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>Login in with the AAF Single sign-on button (shown below).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
@@ -83,7 +88,12 @@ For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au
 &lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/p>
+&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
+&lt;/div>
+&lt;/p>
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>Login in with the AAF Single sign-on button (&lt;em>See below&lt;/em>).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
@@ -139,7 +149,36 @@ Data Acquisition Site: __________&lt;br>&lt;/p>
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>AAF&amp;rsquo;s VHO account will return an email regarding the VHO account registration process&lt;/p>
 &lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>&lt;em>After account is provisioned, continue on to the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members">Other AAF members guide&lt;/a>&lt;/em>&lt;/p></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
+&lt;p>&lt;em>After account is provisioned, continue on to the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members#signing-into-xnat">Signing into XNAT guide&lt;/a>&lt;/em>&lt;/p>
+&lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
+&lt;hr>
+&lt;h4 id="step-1-1">Step 1&lt;/h4>
+&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
+&lt;/div>
+&lt;h4 id="step-2-1">Step 2&lt;/h4>
+&lt;p>Login in with the AAF Single sign-on button (&lt;em>See below&lt;/em>).&lt;/p>
+&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>Select the &lt;strong>AAF Virtual Home&lt;/strong> option (&lt;em>See below&lt;/em>) and login with your AAF VHO credentials.&lt;/p>
+&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-virtual-home-login.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;h4 id="step-3-1">Step 3&lt;/h4>
+&lt;p>After the AAF sign-in, you should be redirected back to XNAT (&lt;em>Example below&lt;/em>)&lt;/p>
+&lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
+&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;h2 id="accessing-xnat-project">Accessing XNAT Project&lt;/h2>
+&lt;hr>
+&lt;h4 id="if-you-are-acquiring-data-at-hirf-cai-or-tri">If you are Acquiring data at HIRF, CAI or TRI&lt;/h4>
+&lt;ul>
+&lt;li>The respective facility will organise the project creation.&lt;/li>
+&lt;li>You will receive a follow up email when access has been granted&lt;/li>
+&lt;li>Contact &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a> if you have not received access within 5 working days&lt;/li>
+&lt;/ul>
+&lt;h4 id="if-you-are-collaborating-on-an-existing-xnat-project">If you are collaborating on an existing XNAT project&lt;/h4>
+&lt;ul>
+&lt;li>Contact the project lead to grant you access to the XNAT project&lt;/li>
+&lt;/ul></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
 &lt;p>Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p>
 &lt;p>To get started, refer to the relevant guide below:&lt;/p>
 &lt;ul>
