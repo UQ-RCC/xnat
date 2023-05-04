@@ -24,6 +24,9 @@ For all other organisations, use the [Non-AAF members](/docs/user-guides/getting
 ---
 #### Step 1
 Open [https://xnat.rcc.uq.edu.au](https://xnat.rcc.uq.edu.au)
+{{% alert title="Note" color="warning" %}}
+This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
+{{% /alert %}}
 
 #### Step 2
 Login in with the AAF Single sign-on button (_See below_).

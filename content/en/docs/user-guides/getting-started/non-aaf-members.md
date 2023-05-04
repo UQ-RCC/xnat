@@ -39,4 +39,41 @@ Data Acquisition Site: __________<br>
 AAF's VHO account will return an email regarding the VHO account registration process
 
 #### Step 3
-_After account is provisioned, continue on to the [Other AAF members guide](/docs/user-guides/getting-started/other-aaf-members)_
+_After account is provisioned, continue on to the [Signing into XNAT guide](/docs/user-guides/getting-started/non-aaf-members#signing-into-xnat)_
+
+## Signing into XNAT
+---
+#### Step 1
+Open [https://xnat.rcc.uq.edu.au](https://xnat.rcc.uq.edu.au)
+
+{{% alert title="Note" color="warning" %}}
+This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
+{{% /alert %}}
+
+
+#### Step 2
+Login in with the AAF Single sign-on button (_See below_).
+
+<img src="/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+
+Select the **AAF Virtual Home** option (_See below_) and login with your AAF VHO credentials.
+
+<img src="/docs/user-guides/login-to-xnat/aaf-virtual-home-login.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+
+#### Step 3
+
+After the AAF sign-in, you should be redirected back to XNAT (_Example below_)
+
+There will be **no projects listed** when signing in for the first-time, as your user account would have just been created.
+
+<img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+
+## Accessing XNAT Project
+---
+
+#### If you are Acquiring data at HIRF, CAI or TRI
+- The respective facility will organise the project creation.
+- You will receive a follow up email when access has been granted
+- Contact rcc-support@uq.edu.au if you have not received access within 5 working days
+#### If you are collaborating on an existing XNAT project
+- Contact the project lead to grant you access to the XNAT project
