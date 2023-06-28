@@ -13,7 +13,7 @@ Learn more about AIS&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square f
 Documentation&nbsp&nbsp<i class="fas fa-book ml-2 fa-xs"></i>
 </a>
 <a class="btn btn-lg btn-light mr-3 mb-4" href="https://xnat.rcc.uq.edu.au">
-Go to xnat.rcc.uq.edu.au&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+Go to UQ AIS XNAT&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
 </a>
 <p>Project specific UQ XNAT repositories (may require UQ Network or VPN)</p>
 <a class="btn btn-sm btn-primary mr-3 mb-4" href="https://opex.qbi.uq.edu.au:8443">opex.qbi.uq.edu.au</a>

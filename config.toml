@@ -208,6 +208,19 @@ enable = false
 	# icon = "fa fa-envelope"
     #     desc = "Discuss development issues around the project"
 
+[menu]
+[[menu.main]]
+    name = "Link to XNAT"
+    weight = 10
+    url = "https://xnat.rcc.uq.edu.au"
+    pre = "<i class='fa-solid fa-arrow-up-right-from-square'></i>"
+
+[[menu.main]]
+    name = "Support Ticket"
+    weight = 20
+    url = "mailto:rcc-support@uq.edu.au"
+    pre = "<i class='fa fa-envelope'></i>"
+
 [module]
 proxy = "direct"
 [[module.imports]]
