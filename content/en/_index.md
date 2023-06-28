@@ -26,15 +26,15 @@ Go to UQ AIS XNAT&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-x
 <div class="container text-center">
 <div class="row">
 <div class="col">
-<img src="/slide-global.jpg" class="img-fluid rounded float-start" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/slide-global.jpg" class="img-fluid rounded" style="border: 1px solid grey; margin-bottom:10px">
 Multi-center Studies
 </div>
 <div class="col">
-<img src="/what-is-XNAT.jpg" class="img-fluid rounded float-start" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/what-is-XNAT.jpg" class="img-fluid rounded" style="border: 1px solid grey; margin-bottom:10px">
 Imaging and Clinical Data
 </div>
 <div class="col">
-<img src="/slide-sharing.jpg" class="img-fluid rounded float-start" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/slide-sharing.jpg" class="img-fluid rounded" style="border: 1px solid grey; margin-bottom:10px">
 Data sharing
 </div>
 </div>
