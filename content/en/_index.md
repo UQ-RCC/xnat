@@ -13,12 +13,12 @@ Learn more about AIS&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square f
 Documentation&nbsp&nbsp<i class="fas fa-book ml-2 fa-xs"></i>
 </a>
 <a class="btn btn-lg btn-light mr-3 mb-4" href="https://xnat.rcc.uq.edu.au">
-Go to UQ AIS XNAT&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+Go to xnat.rcc.uq.edu.au&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
 </a>
 <p>Project specific UQ XNAT repositories (may require UQ Network or VPN)</p>
-<a class="btn btn-sm btn-primary mr-3 mb-4" href="https://opex.qbi.uq.edu.au:8443">OPEX</a>
-<a class="btn btn-sm btn-primary mr-3 mb-4" href="https://irc5.qbi.uq.edu.au">IRC5</a>
-<a class="btn btn-sm btn-primary mr-3 mb-4" href="https://braininjury.qbi.uq.edu.au">BRAININJURY</a>
+<a class="btn btn-sm btn-primary mr-3 mb-4" href="https://opex.qbi.uq.edu.au:8443">opex.qbi.uq.edu.au</a>
+<a class="btn btn-sm btn-primary mr-3 mb-4" href="https://irc5.qbi.uq.edu.au">irc5.qbi.uq.edu.au</a>
+<a class="btn btn-sm btn-primary mr-3 mb-4" href="https://braininjury.qbi.uq.edu.au">braininjury.qbi.uq.edu.au</a>
 
 {{< /blocks/cover >}}
 
