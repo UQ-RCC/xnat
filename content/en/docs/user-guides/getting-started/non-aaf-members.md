@@ -59,6 +59,8 @@ Login in with the AAF Single sign-on button (_See below_).
 Select the **AAF Virtual Home** option (_See below_) and login with your AAF VHO credentials.
 
 <img src="/docs/user-guides/login-to-xnat/aaf-virtual-home-login.png" width="50%" style="border: 1px solid #ddd"></img>
+<i class="fa-solid fa-arrow-right fa-xl" style="color: black;"></i>
+<img src="/docs/user-guides/login-to-xnat/aaf-vho-signin.png" width="25%" style="border: 1px solid #ddd"></img>
 
 #### Step 3
 
