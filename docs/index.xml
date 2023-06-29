@@ -1,17 +1,19 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Documentation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/</link><description>Recent content in Documentation on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</guid><description>
-&lt;blockquote>
-&lt;p>AAF is the recommended way to sign up and login to XNAT. If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p>
-&lt;/blockquote>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Documentation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/</link><description>Recent content in Documentation on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</guid><description>
+&lt;div class="alert alert-primary" role="alert">
+&lt;p>AAF is the recommended way to sign up and login to XNAT.&lt;/p>
+&lt;p>If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p>
+&lt;/div>
 &lt;p>If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. Follow the steps below to sign-up/login using AAF.&lt;/p>
 &lt;ol>
 &lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
 &lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" alt="text">&lt;/p>
+&lt;p>&lt;img src="../xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>This will take you to your XNAT home page.&lt;/p>
-&lt;blockquote>
-&lt;p>First-time user will only see publically accessible project when they login&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs: Installation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</guid><description>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">First time users&lt;/h4>
+First time users will only see publically accessible project when they login
+&lt;/div></description></item><item><title>Docs: Installation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</guid><description>
 &lt;h3 id="installing-ctp-on-windows-10">Installing CTP on Windows 10&lt;/h3>
 &lt;p>CTP installation steps&lt;/p>
 &lt;ol>
@@ -125,28 +127,28 @@ cd configuration/CTP
 &lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=MIRC_CTP">MIRC CTP Wiki&lt;/a>&lt;/p>
 &lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=The_CTP_DICOM_Anonymizer">CTP DICOM Anonymizer&lt;/a>&lt;/p></description></item><item><title>Docs: RCC Authenticate</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login/</guid><description>
 &lt;p>To use this login, you would have received an email from a UQ XNAT administrator with the login information.&lt;/p>
-&lt;blockquote>
-&lt;p>If you have not received an email, either use &lt;a href="../aaf-login">AAF&lt;/a> or contact the respective XNAT support&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;p>If you have not received an email, either use &lt;a href="../aaf-login">AAF&lt;/a> or contact the respective XNAT support.&lt;/p>
 &lt;p>RCC Authenticate credentials are &lt;strong>NOT&lt;/strong> your UQ or institutional username and password&lt;/p>
-&lt;/blockquote>
+&lt;/div>
 &lt;ol>
 &lt;li>Login in with the RCC Authenticate button (shown below)&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login.jpg" alt="text">&lt;/p>
+&lt;p>&lt;img src="../rcc-login.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;ol start="2">
 &lt;li>You’ll be taken to a UQ RCC SERVICES (shown below)&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-signin.jpg" alt="text">&lt;/p>
+&lt;p>&lt;img src="../rcc-signin.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;ol start="3">
-&lt;li>Enter your user name and password to sign in.&lt;/li>
+&lt;li>Enter your user name and password to sign in.
+This will take you to your XNAT home page.&lt;/li>
 &lt;/ol>
-&lt;blockquote>
-&lt;p>First time users: Use temporary username and temporary password to sign in. The next screen will allow you set your permanent password&lt;/p>
-&lt;/blockquote>
-&lt;p>This will take you to your XNAT home page.&lt;/p>
-&lt;blockquote>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">For first time users&lt;/h4>
+&lt;p>Use your temporary username and temporary password to sign in.&lt;br>The next screen will allow you set your permanent password&lt;/p>
 &lt;p>First-time user will only see publically accessible project when they login&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs: Proxy Server Settings</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</guid><description>
+&lt;/div></description></item><item><title>Docs: Proxy Server Settings</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</guid><description>
 &lt;p>If CTP uses a proxy server for internet access, you can update the CTP proxy server settings on Windows as follows&lt;/p>
 &lt;ol>
 &lt;li>
@@ -314,11 +316,11 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>Login in with the AAF Single sign-on button (shown below).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p>
 &lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started//xnat-signed-in.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>&lt;em>Proceed to to next section for setting up an XNAT project&lt;/em>&lt;/p>
 &lt;h2 id="creating-xnat-project">Creating XNAT project&lt;/h2>
 &lt;hr>
@@ -340,7 +342,7 @@ If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending wit
 &lt;p>To create a new UQ-RDM &lt;strong>HPC Collection&lt;/strong>, proceed with the following&lt;/p>
 &lt;p>Open &lt;a href="https://rdm.uq.edu.au/create-record">https://rdm.uq.edu.au/create-record&lt;/a> and sign-in&lt;/p>
 &lt;p>Fill in the record as per your project details&lt;/p>
-&lt;img src="../uqrdm-create-record.png" width="70%" height="70%" style="border: 1px solid grey">
+&lt;p>&lt;img src="../uqrdm-create-record.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Important&lt;/h4>
 &lt;p>For &lt;font color='red'>(6) Data Storage Options&lt;/font>, select the second option (&lt;font color='red'>&lt;em>The project data needs to be mounted on UQ HPC facilities.&lt;/em>&lt;/font>)&lt;/p>
@@ -352,17 +354,16 @@ You should have an RDM collection name ready (e.g. &lt;strong>PROJ001-Q0189&lt;/
 &lt;h4 id="step-2-1">Step 2&lt;/h4>
 &lt;p>Open a ticket with RCC support&lt;/p>
 &lt;p>&lt;em>Example below (replace __________ with your details)&lt;/em>&lt;/p>
-&lt;div class="td-card card mb-4">
+&lt;div class="td-card card border me-4">
 &lt;div class="card-header">
 To: &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a>
 &lt;/div>
 &lt;div class="card-body">
-&lt;h6 class="card-title mb-2 text-muted">
-Subject: Create XNAT project __________
-&lt;/h6>
+&lt;h6 class="card-title ms-2 text-muted">
+Subject: Create XNAT project __________&lt;/h6>
 &lt;p class="card-text">
-&lt;p>Hello RCC support&lt;/p>
-&lt;p>Can we create an XNAT project for RDM collection __________&lt;/p>
+Hello RCC support
+Can we create an XNAT project for RDM collection __________
 &lt;/p>
 &lt;/div>
 &lt;/div>
@@ -400,11 +401,11 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>Login in with the AAF Single sign-on button (&lt;em>See below&lt;/em>).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (&lt;em>Example below&lt;/em>)&lt;/p>
 &lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/xnat-signed-in.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;h2 id="accessing-xnat-project">Accessing XNAT Project&lt;/h2>
 &lt;hr>
 &lt;h4 id="if-you-are-acquiring-data-at-hirf-cai-or-tri">If you are Acquiring data at HIRF, CAI or TRI&lt;/h4>
@@ -432,20 +433,19 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;h4 id="step-1">Step 1&lt;/h4>
 &lt;p>Open a ticket with RCC support to request an AAF account&lt;/p>
 &lt;p>&lt;em>Example below (replace __________ with your details)&lt;/em>&lt;/p>
-&lt;div class="td-card card mb-4">
+&lt;div class="td-card card border me-4">
 &lt;div class="card-header">
 &lt;strong>To:&lt;/strong> &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a>
 &lt;/div>
 &lt;div class="card-body">
-&lt;h6 class="card-title mb-2 text-muted">
-&lt;strong>Subject:&lt;/strong> XNAT AAF account for project __________
-&lt;/h6>
+&lt;h6 class="card-title ms-2 text-muted">
+&lt;strong>Subject:&lt;/strong> XNAT AAF account for project __________&lt;/h6>
 &lt;p class="card-text">
-&lt;p>Hello RCC support&lt;/p>
-&lt;p>I require an AAF account to access the UQ AIS XNAT service&lt;br>&lt;/p>
-&lt;p>My details are below&lt;br>
+Hello RCC support
+I require an AAF account to access the UQ AIS XNAT service&lt;br>
+My details are below&lt;br>
 Organisation: __________&lt;br>
-Data Acquisition Site: __________&lt;br>&lt;/p>
+Data Acquisition Site: __________&lt;br>
 &lt;/p>
 &lt;/div>
 &lt;/div>
@@ -463,13 +463,15 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;/div>
 &lt;h4 id="step-2-1">Step 2&lt;/h4>
 &lt;p>Login in with the AAF Single sign-on button (&lt;em>See below&lt;/em>).&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>Select the &lt;strong>AAF Virtual Home&lt;/strong> option (&lt;em>See below&lt;/em>) and login with your AAF VHO credentials.&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-virtual-home-login.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-virtual-home-login.png" width="50%" style="border: 1px solid #ddd">&lt;/img>
+&lt;i class="fa-solid fa-arrow-right fa-xl" style="color: black;">&lt;/i>
+&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-vho-signin.png" width="25%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;h4 id="step-3-1">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (&lt;em>Example below&lt;/em>)&lt;/p>
 &lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/xnat-signed-in.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;h2 id="accessing-xnat-project">Accessing XNAT Project&lt;/h2>
 &lt;hr>
 &lt;h4 id="if-you-are-acquiring-data-at-hirf-cai-or-tri">If you are Acquiring data at HIRF, CAI or TRI&lt;/h4>
