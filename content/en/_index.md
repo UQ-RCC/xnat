@@ -42,7 +42,7 @@ Data sharing
 {{< /blocks/section >}}
 
 {{% blocks/section color="dark" %}}
-Provided by:<br>
-- UQ Research Computing Centre (RCC)<br>
-- Australian National Imaging Facility (NIF)
+Provided by
+: UQ Research Computing Centre (RCC) and Australian National Imaging Facility (ANIF)
 {{< /blocks/section >}}
+
