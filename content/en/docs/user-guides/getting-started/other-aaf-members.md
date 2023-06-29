@@ -33,7 +33,8 @@ Login in with the AAF Single sign-on button (_See below_).
 
 Follow the AAF login process for your organisation
 
-<img src="/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"></img>
+
 
 #### Step 3
 
@@ -41,7 +42,8 @@ After the AAF sign-in, you should be redirected back to XNAT (_Example below_)
 
 There will be **no projects listed** when signing in for the first-time, as your user account would have just been created.
 
-<img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/docs/user-guides/getting-started/xnat-signed-in.png" width="100%" style="border: 1px solid #ddd"></img>
+
 
 ## Accessing XNAT Project
 ---

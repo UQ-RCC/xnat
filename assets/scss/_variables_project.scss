@@ -9,3 +9,5 @@ $secondary: lighten($primary, 10%);
 $enable-gradients: false;
 $enable-rounded: false;
 $enable-shadows: false;
+
+$light: lighten($primary, 70%);

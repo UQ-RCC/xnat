@@ -21,7 +21,8 @@ Login in with the AAF Single sign-on button (shown below).
 
 Follow the AAF login process for your organisation
 
-<img src="/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"></img>
+
 
 #### Step 3
 
@@ -29,7 +30,8 @@ After the AAF sign-in, you should be redirected back to XNAT (Example below)
 
 There will be **no projects listed** when signing in for the first-time, as your user account would have just been created.
 
-<img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="60%" height="30%" style="border: 1px solid grey; margin-bottom:10px">
+<img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="100%" style="border: 1px solid #ddd"></img>
+
 
 _Proceed to to next section for setting up an XNAT project_
 
@@ -58,7 +60,7 @@ Open [https://rdm.uq.edu.au/create-record](https://rdm.uq.edu.au/create-record) 
 
 Fill in the record as per your project details
 
-<img src="../uqrdm-create-record.png" width="70%" height="70%" style="border: 1px solid grey">
+<img src="../uqrdm-create-record.png" width="100%" style="border: 1px solid #ddd"></img>
 
 {{% alert title="Important" color="warning" %}}
 For <font color='red'>(6) Data Storage Options</font>, select the second option (<font color='red'>_The project data needs to be mounted on UQ HPC facilities._</font>)
