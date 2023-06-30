@@ -1,0 +1,38 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Managing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/</link><description>Recent content in Managing Data on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Viewing Images</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</guid><description>
+&lt;h2 id="xnat-ohif-viewer">XNAT OHIF Viewer&lt;/h2>
+&lt;p>AIS XNAT instances come with the XNAT OHIF Image viewer
+Which is a plugin developed by the Institute for Cancer Research in London&lt;/p>
+&lt;p>Just note, if your publication uses the OHIF viewer, they have an article for citation.
+This information is all available at the link below&lt;/p>
+&lt;dl>
+&lt;dt>Documentation&lt;/dt>
+&lt;dd>&lt;a href="https://wiki.xnat.org/documentation/xnat-ohif-viewer">https://wiki.xnat.org/documentation/xnat-ohif-viewer&lt;/a>&lt;/dd>
+&lt;dt>Using the XNAT OHIF Viewer&lt;/dt>
+&lt;dd>&lt;a href="https://wiki.xnat.org/documentation/xnat-ohif-viewer/using-the-xnat-ohif-viewer-122978515.html">https://wiki.xnat.org/documentation/xnat-ohif-viewer/using-the-xnat-ohif-viewer-122978515.html&lt;/a>&lt;/dd>
+&lt;/dl>
+&lt;p>&lt;img src="ohif-viewer-homepage.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;h2 id="opening-images-in-ohif-viewer">Opening images in OHIF viewer&lt;/h2>
+&lt;p>You can access the viewer from Session page&lt;/p>
+&lt;p>Just click &lt;strong>View Image&lt;/strong> on the actions panel&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+Ignore the &lt;em>View in Legacy Viewer&lt;/em>
+&lt;/div>
+&lt;p>&lt;img src="accessing-viewer.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>This will take you to the OHIF Viewer&lt;/p>
+&lt;p>&lt;img src="ohif-viewer.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Downloading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</guid><description>
+&lt;ol>
+&lt;li>Navigate to Scan or Sesssion (See guide on &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data">browsing data&lt;/a>)&lt;/li>
+&lt;li>Select &lt;code>Download&lt;/code> from controls on top right.&lt;/li>
+&lt;li>Use the following settings for downloading dataset as zip &lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-data-download-options.png" alt="text">&lt;/li>
+&lt;/ol>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/how-to-download-image-data-from-xnat-projects">XNAT official guide on downloading data&lt;/a>&lt;/p></description></item><item><title>Docs: Uploading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</guid><description>
+&lt;ol>
+&lt;li>Web Upload (Compressed image uploader)&lt;/li>
+&lt;li>XNAT data client&lt;/li>
+&lt;li>CTP&lt;/li>
+&lt;/ol>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat">image session upload methods in XNAT&lt;/a>&lt;/p></description></item><item><title>Docs: Syncing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/syncing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/syncing-data/</guid><description>
+&lt;p>The UQ-RCC XNAT may be able to sync datasets to other XNATs in Australia.&lt;/p>
+&lt;p>To see if your project is able to be synced, send a ticket to RCC support (&lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a>)&lt;/p>
+&lt;p>They will need the details of the XNAT that you wish to share data with.&lt;/p></description></item></channel></rss>
