@@ -1,7 +1,7 @@
 ---
 title: "Uploading Data"
 linkTitle: "Uploading Data"
-weight: 30
+weight: 40
 description: >
   Upload data to XNAT Projects
 ---

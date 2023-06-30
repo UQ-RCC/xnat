@@ -4,6 +4,8 @@ linkTitle: "RCC Authenticate"
 weight: 1
 description: >
   Login using RCC Authenticate
+aliases:
+    - /docs/user-guides/login-to-xnat/rcc-login
 ---
 
 To use this login, you would have received an email from a UQ XNAT administrator with the login information.
