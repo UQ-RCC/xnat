@@ -4,6 +4,8 @@ linkTitle: "AAF login"
 weight: 1
 description: >
   Login using Australian Access Federation (AAF)
+aliases:
+    - /docs/user-guides/login-to-xnat/aaf-login
 ---
 
 {{% alert %}}

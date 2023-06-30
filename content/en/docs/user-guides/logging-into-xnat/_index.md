@@ -1,9 +1,11 @@
 ---
-title: "Login to XNAT"
-linkTitle: "Login to XNAT"
+title: "Logging into XNAT"
+linkTitle: "Logging into XNAT"
 weight: 20
 description: >
-  Login to XNAT
+  Logging into XNAT
+aliases:
+    - /docs/user-guides/login-to-xnat
 ---
 
 ## [AAF](aaf-login)
