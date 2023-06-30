@@ -38,4 +38,12 @@ You click the button next to the Subject ID&lt;/p>
 &lt;li>Create a new subject, and move session to that subject&lt;/li>
 &lt;li>Fix invalid or blank session names&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="session-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="session-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Search</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/search/</guid><description>
+&lt;p>You can search across Projects, Subjects or Sessions
+And Sessions are broken up into MR, PET and CT&lt;/p>
+&lt;p>&lt;img src="search-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>For instance, we can fill a couple of fields on the MR Sessions search
+You don’t have to specify all the fields&lt;/p>
+&lt;p>&lt;img src="search-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>And XNAT will provide a list of results.&lt;/p>
+&lt;p>&lt;img src="search-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item></channel></rss>
