@@ -1,7 +1,7 @@
 ---
 title: "AAF login"
 linkTitle: "AAF login"
-weight: 1
+weight: 10
 description: >
   Login using Australian Access Federation (AAF)
 aliases:

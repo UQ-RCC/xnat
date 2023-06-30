@@ -1,7 +1,7 @@
 ---
 title: "RCC Authenticate"
 linkTitle: "RCC Authenticate"
-weight: 1
+weight: 20
 description: >
   Login using RCC Authenticate
 aliases:
