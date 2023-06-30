@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Documentation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/</link><description>Recent content in Documentation on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/aaf-login/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Documentation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/</link><description>Recent content in Documentation on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
 &lt;p>AAF is the recommended way to sign up and login to XNAT.&lt;/p>
 &lt;p>If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p>
@@ -125,7 +125,7 @@ git checkout &amp;lt;commit&amp;gt; CTP-Installer.jar
 cd configuration/CTP
 &lt;/code>&lt;/pre>&lt;p>CTP documentation links:&lt;/p>
 &lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=MIRC_CTP">MIRC CTP Wiki&lt;/a>&lt;/p>
-&lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=The_CTP_DICOM_Anonymizer">CTP DICOM Anonymizer&lt;/a>&lt;/p></description></item><item><title>Docs: RCC Authenticate</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/rcc-login/</guid><description>
+&lt;p>&lt;a href="http://mircwiki.rsna.org/index.php?title=The_CTP_DICOM_Anonymizer">CTP DICOM Anonymizer&lt;/a>&lt;/p></description></item><item><title>Docs: RCC Authenticate</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/rcc-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/rcc-login/</guid><description>
 &lt;p>To use this login, you would have received an email from a UQ XNAT administrator with the login information.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
@@ -303,7 +303,65 @@ Wait for:
 In case of &lt;strong>Background process&lt;/strong> errors, expand panel using double arrows on bottom right for more details
 &lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/upload-failure.png" alt="text">
 &lt;/div>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: UQ members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</guid><description>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: Granting Access</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/projects/granting-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/projects/granting-access/</guid><description>
+&lt;p>Switch to the Access tab. Use &lt;font color='red'>&lt;strong>Add User&lt;/strong>&lt;/font> or &lt;font color='red'>&lt;strong>Add Users from List&lt;/strong>&lt;/font> to select the user to add&lt;/p>
+&lt;p>&lt;img src="user-access.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select role from&lt;/p>
+&lt;ol>
+&lt;li>Owners&lt;/li>
+&lt;li>Members&lt;/li>
+&lt;li>Collaborators&lt;/li>
+&lt;/ol>
+&lt;h2 id="user-roles">User roles&lt;/h2>
+&lt;p>The following table outlines the permissions given to each role.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Permission&lt;/th>
+&lt;th>Owners&lt;/th>
+&lt;th>Members&lt;/th>
+&lt;th>Collaborators&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Data - Create&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data - Read/Download&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data - Update&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data - Delete&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>User - Add/Remove&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>User - Change role&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: UQ members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</guid><description>
 &lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1">Step 1&lt;/h4>
@@ -483,12 +541,14 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;h4 id="if-you-are-collaborating-on-an-existing-xnat-project">If you are collaborating on an existing XNAT project&lt;/h4>
 &lt;ul>
 &lt;li>Contact the project lead to grant you access to the XNAT project&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Browsing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data/</guid><description>
-&lt;ol>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat">Login to XNAT&lt;/a>&lt;/li>
-&lt;li>Select Project &amp;gt; Subject &amp;gt; Session&lt;/li>
-&lt;/ol>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/using-the-standard-search/browsing-data-types">XNAT official guides on browsing data&lt;/a>&lt;/p></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Scans</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/sessions/scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/sessions/scans/</guid><description>
+&lt;p>The Scans themselves are listed at the bottom with the relevant series descriptions and other information
+If you hover over one of them, and click the highlighted view details button. This will open up a more details and an image preview window&lt;/p>
+&lt;p>&lt;img src="session-scan.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Here we can also view View DICOM headers&lt;/p>
+&lt;p>&lt;img src="scan-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>And see the DICOM headers as shown on the right&lt;/p>
+&lt;p>&lt;img src="scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
 &lt;p>Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p>
 &lt;p>To get started, refer to the relevant guide below:&lt;/p>
 &lt;ul>

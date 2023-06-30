@@ -1,0 +1,8 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Sessions</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/sessions/</link><description>Recent content in Sessions on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/sessions/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Scans</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/sessions/scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/sessions/scans/</guid><description>
+&lt;p>The Scans themselves are listed at the bottom with the relevant series descriptions and other information
+If you hover over one of them, and click the highlighted view details button. This will open up a more details and an image preview window&lt;/p>
+&lt;p>&lt;img src="session-scan.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Here we can also view View DICOM headers&lt;/p>
+&lt;p>&lt;img src="scan-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>And see the DICOM headers as shown on the right&lt;/p>
+&lt;p>&lt;img src="scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item></channel></rss>

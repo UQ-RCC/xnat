@@ -1,0 +1,59 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Projects</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/projects/</link><description>Recent content in Projects on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Granting Access</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/projects/granting-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-xnat/projects/granting-access/</guid><description>
+&lt;p>Switch to the Access tab. Use &lt;font color='red'>&lt;strong>Add User&lt;/strong>&lt;/font> or &lt;font color='red'>&lt;strong>Add Users from List&lt;/strong>&lt;/font> to select the user to add&lt;/p>
+&lt;p>&lt;img src="user-access.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select role from&lt;/p>
+&lt;ol>
+&lt;li>Owners&lt;/li>
+&lt;li>Members&lt;/li>
+&lt;li>Collaborators&lt;/li>
+&lt;/ol>
+&lt;h2 id="user-roles">User roles&lt;/h2>
+&lt;p>The following table outlines the permissions given to each role.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Permission&lt;/th>
+&lt;th>Owners&lt;/th>
+&lt;th>Members&lt;/th>
+&lt;th>Collaborators&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Data - Create&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data - Read/Download&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data - Update&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data - Delete&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>User - Add/Remove&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>User - Change role&lt;/td>
+&lt;td>✓&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;td>✗&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>
