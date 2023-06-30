@@ -36,4 +36,41 @@ This will take you to your XNAT home page.&lt;/li>
 &lt;h4 class="alert-heading">For first time users&lt;/h4>
 &lt;p>Use your temporary username and temporary password to sign in.&lt;br>The next screen will allow you set your permanent password&lt;/p>
 &lt;p>First-time user will only see publically accessible project when they login&lt;/p>
-&lt;/div></description></item></channel></rss>
+&lt;/div></description></item><item><title>Docs: Alias tokens</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</guid><description>
+&lt;p>AAF is used for logging into the XNAT website itself.&lt;/p>
+&lt;p>But there are a lot of tools and services that will require a connect to the XNAT server externally&lt;/p>
+&lt;p>These could include&lt;/p>
+&lt;ul>
+&lt;li>Windows or Mac desktop clients, like XNAT Desktop&lt;/li>
+&lt;li>Command line tools such as xnatpy, pyxnat, xnatutils etc&lt;/li>
+&lt;li>XSYNC&lt;/li>
+&lt;/ul>
+&lt;p>All of these tools and services need a way to authenticating to your XNAT account without AAF&lt;/p>
+&lt;p>So this is where Alias tokens come in&lt;/p>
+&lt;p>An alias token is basically a temporarily generated, long randomised username and password
+For you to use for authenticating from external services, without compromising your AAF account or credentials
+They can be generated and revoked easily&lt;/p>
+&lt;p>&lt;img src="alias-tokens-1.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>We’ll look at how to generate them next&lt;/p>
+&lt;h2 id="generating-alias-tokens">Generating Alias tokens&lt;/h2>
+&lt;p>To access the alias token
+Click your name on the top right of the website.
+This will take you to your user profile management page&lt;/p>
+&lt;p>Then click the “Manage Alias Tokens” option&lt;/p>
+&lt;p>There, you’ll find the option to “Create an Alias Token”&lt;/p>
+&lt;p>&lt;img src="alias-tokens-2.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>When you create the alias token, it will appear as a new entry&lt;/p>
+&lt;p>Alias tokens expire 60 days after creation
+There will be an expiration date column.&lt;/p>
+&lt;p>You can have multiple alias tokens. And they can be deleted and created as needed to revoke permissions.
+Each one will be randomised and unique.&lt;/p>
+&lt;p>Lets have a look at the alias token details which you can access by clicking on the token.&lt;/p>
+&lt;p>&lt;img src="alias-tokens-3.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>The key attributes that we need are the alias and the secret
+The alias is your username
+And secret is your password&lt;/p>
+&lt;p>So you can use the alias and secret for any external clients requesting a username and password.&lt;/p>
+&lt;p>Just note, the alias and secret are effectively a temporary set of login credentials.
+Do not reveal the secret. It is effectively your temporary password.
+If you no longer require the alias token, or suspect a secret has been compromised, just delete the alias token.&lt;/p>
+&lt;p>&lt;img src="alias-tokens-4.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item></channel></rss>
