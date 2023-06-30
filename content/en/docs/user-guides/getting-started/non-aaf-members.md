@@ -54,13 +54,13 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 #### Step 2
 Login in with the AAF Single sign-on button (_See below_).
 
-<img src="/docs/user-guides/login-to-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"></img>
+<img src="/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"></img>
 
 Select the **AAF Virtual Home** option (_See below_) and login with your AAF VHO credentials.
 
-<img src="/docs/user-guides/login-to-xnat/aaf-virtual-home-login.png" width="50%" style="border: 1px solid #ddd"></img>
+<img src="/docs/user-guides/logging-into-xnat/aaf-virtual-home-login.png" width="50%" style="border: 1px solid #ddd"></img>
 <i class="fa-solid fa-arrow-right fa-xl" style="color: black;"></i>
-<img src="/docs/user-guides/login-to-xnat/aaf-vho-signin.png" width="25%" style="border: 1px solid #ddd"></img>
+<img src="/docs/user-guides/logging-into-xnat/aaf-vho-signin.png" width="25%" style="border: 1px solid #ddd"></img>
 
 #### Step 3
 
