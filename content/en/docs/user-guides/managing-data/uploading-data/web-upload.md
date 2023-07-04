@@ -16,14 +16,14 @@ This is for uploading **de-identified DICOM** files using the uploader directly 
 3. Login to XNAT (see [Login to XNAT](/docs/user-guides/login-to-xnat/))
 4. From the top panel, select **Upload &rarr; Images &rarr; Compressed Uploader**
 
-![text](/docs/user-guides/uploading-data/upload-menu.png)
+<img src="upload-menu.png" width="70%" style="border: 1px solid #ddd"></img>
 
 5. Specify the following options:
    - **Project**
    - **Destination**: Select **Prearchive**
    - **Choose file** to select zipped file with DICOMs
 
-![text](/docs/user-guides/uploading-data/compressed-uploader.png)
+<img src="compressed-uploader.png" width="70%" style="border: 1px solid #ddd"></img>
 
 6.	Click **Begin Upload**
   Wait for:
@@ -31,12 +31,11 @@ This is for uploading **de-identified DICOM** files using the uploader directly 
     - **Background processes** panel to appear on bottom right
     - Green tick on under **Upload extraction/review for archival**
 
-
-![text](/docs/user-guides/uploading-data/upload-success.png)
+<img src="upload-success.png" width="70%" style="border: 1px solid #ddd"></img>
 
 {{% alert title="" color="warning" %}}
 In case of **Background process** errors, expand panel using double arrows on bottom right for more details
-![text](/docs/user-guides/uploading-data/upload-failure.png)
+<img src="upload-failure.png" width="70%" style="border: 1px solid #ddd"></img>
 {{% /alert %}}
 
 
