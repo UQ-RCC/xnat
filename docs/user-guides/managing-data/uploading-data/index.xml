@@ -35,4 +35,23 @@ Wait for:
 In case of &lt;strong>Background process&lt;/strong> errors, expand panel using double arrows on bottom right for more details
 &lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/uploading-data/upload-failure.png" alt="text">
 &lt;/div>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: Prearchive</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</guid><description>
+&lt;p>If a dataset has not arrived into your XNAT project, the prearchive would be the place to check&lt;/p>
+&lt;p>This usually happens when:&lt;/p>
+&lt;ul>
+&lt;li>a DICOM dataset matching an existing session gets resent&lt;/li>
+&lt;li>a part of a session gets uploaded separately&lt;/li>
+&lt;/ul>
+&lt;h2 id="accessing-the-prearchive">Accessing the prearchive&lt;/h2>
+&lt;p>Go to &lt;strong>Upload&lt;/strong> on the top menu, and &lt;strong>Go to prearchive&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="prearchive-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>The following is an example of a session that is in conflict.
+We can select the session and choose &lt;strong>Details&lt;/strong>.&lt;/p>
+&lt;p>&lt;img src="prearchive-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Here we can download the session, or individual scans.
+And review the datasets&lt;/p>
+&lt;ul>
+&lt;li>Choose &lt;strong>Archive&lt;/strong> if you want the dataset merged into the existing one on the archive,&lt;/li>
+&lt;li>choose &lt;strong>Modify and Archive&lt;/strong> if any details need to be changed before archiving, or if you don’t want this dataset to merge with the existing one&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="prearchive-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item></channel></rss>
