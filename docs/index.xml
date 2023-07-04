@@ -618,11 +618,8 @@ Untick &lt;strong>Simply downloaded archive structure&lt;/strong> to keep scan n
 &lt;li>Command line tools such as xnatpy, pyxnat, xnatutils etc&lt;/li>
 &lt;li>XSYNC&lt;/li>
 &lt;/ul>
-&lt;p>All of these tools and services need a way to authenticating to your XNAT account without AAF&lt;/p>
-&lt;p>So this is where Alias tokens come in&lt;/p>
-&lt;p>An alias token is basically a temporarily generated, long randomised username and password
-For you to use for authenticating from external services, without compromising your AAF account or credentials
-They can be generated and revoked easily&lt;/p>
+&lt;p>All of these tools and services need a way to authenticating to your XNAT account without AAF.&lt;/p>
+&lt;p>An alias token is a time-limited, long, randomised username and password used for authenticating from external services, without compromising your AAF account or credentials. They can be generated and revoked easily&lt;/p>
 &lt;p>&lt;img src="alias-tokens-1.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>We’ll look at how to generate them next&lt;/p>
 &lt;h2 id="generating-alias-tokens">Generating Alias tokens&lt;/h2>
