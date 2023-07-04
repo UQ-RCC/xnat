@@ -15,13 +15,9 @@ These could include
 - Command line tools such as xnatpy, pyxnat, xnatutils etc
 - XSYNC
 
-All of these tools and services need a way to authenticating to your XNAT account without AAF
+All of these tools and services need a way to authenticating to your XNAT account without AAF.
 
-So this is where Alias tokens come in
-
-An alias token is basically a temporarily generated, long randomised username and password
-For you to use for authenticating from external services, without compromising your AAF account or credentials
-They can be generated and revoked easily
+An alias token is a time-limited, long, randomised username and password used for authenticating from external services, without compromising your AAF account or credentials. They can be generated and revoked easily
 
 <img src="alias-tokens-1.png" width="50%" style="border: 1px solid #ddd"></img>
 
