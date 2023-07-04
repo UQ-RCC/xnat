@@ -598,7 +598,18 @@ This will take you to your XNAT home page.&lt;/li>
 &lt;td>ReferringPhysicianPhoneNumbers&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Alias tokens</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</guid><description>
+&lt;/table></description></item><item><title>Docs: Zip Download</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</guid><description>
+&lt;p>The Project, Subject and Sessions page has the option to &lt;strong>Download Images&lt;/strong> from the right hand side menu&lt;/p>
+&lt;p>&lt;img src="downloading-data-1.png" width="50%" style="border: 1px solid #ddd">&lt;/img>
+&lt;img src="downloading-data-2.png" width="50%" style="border: 1px solid #ddd">&lt;/img>
+&lt;img src="downloading-data-3.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select &lt;strong>Option 2: ZIP download&lt;/strong>&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+Untick &lt;strong>Simply downloaded archive structure&lt;/strong> to keep scan names in scan folders
+&lt;/div>
+&lt;p>&lt;img src="downloading-data-zip.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Filter out the Session and scans from the first two columns and select &lt;strong>Submit&lt;/strong>&lt;/p></description></item><item><title>Docs: Alias tokens</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</guid><description>
 &lt;p>AAF is used for logging into the XNAT website itself.&lt;/p>
 &lt;p>But there are a lot of tools and services that will require a connect to the XNAT server externally&lt;/p>
 &lt;p>These could include&lt;/p>
@@ -635,7 +646,29 @@ And secret is your password&lt;/p>
 &lt;p>Just note, the alias and secret are effectively a temporary set of login credentials.
 Do not reveal the secret. It is effectively your temporary password.
 If you no longer require the alias token, or suspect a secret has been compromised, just delete the alias token.&lt;/p>
-&lt;p>&lt;img src="alias-tokens-4.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>
+&lt;p>&lt;img src="alias-tokens-4.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Desktop client</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</guid><description>
+&lt;p>The XNAT Desktop client is maintained by the XNAT development team. For information see the link below.&lt;/p>
+&lt;dl>
+&lt;dt>XNAT Desktop client&lt;/dt>
+&lt;dd>&lt;a href="https://www.xnat.org/download/desktop-client/">https://www.xnat.org/download/desktop-client/&lt;/a>&lt;/dd>
+&lt;/dl>
+&lt;h2 id="install-client">Install client&lt;/h2>
+&lt;p>Download and install the client for you operating system&lt;/p>
+&lt;p>&lt;img src="desktop-client-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;h2 id="download-images">Download images&lt;/h2>
+&lt;p>The Project, Subject and Sessions page has the option to &lt;strong>Download Images&lt;/strong> from the right hand side menu&lt;/p>
+&lt;p>&lt;img src="desktop-client-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select &lt;strong>Option 1: Download via Desktop Client&lt;/strong>&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+Untick &lt;strong>Simply downloaded archive structure&lt;/strong> to keep scan names in scan folders
+&lt;/div>
+&lt;p>&lt;img src="desktop-client-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Click &lt;strong>Download Via App&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="desktop-client-4.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select a local destination folder&lt;/p>
+&lt;p>&lt;img src="desktop-client-5.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Download should start, and progress can be monitored&lt;/p></description></item><item><title>Docs: Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>
 &lt;p>This is for users from non-AAF member organisations, including:&lt;/p>
 &lt;ul>
 &lt;li>QLD Health, TRI, QIMR, QLD Xray&lt;/li>
@@ -727,7 +760,11 @@ If you hover over one of them, and click the highlighted view details button. Th
 &lt;p>Here we can also view View DICOM headers&lt;/p>
 &lt;p>&lt;img src="scan-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>And see the DICOM headers as shown on the right&lt;/p>
-&lt;p>&lt;img src="scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
+&lt;p>&lt;img src="scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Download Scan</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</guid><description>
+&lt;p>Induvidual scans can be downloaded from the Sessions page&lt;/p>
+&lt;p>&lt;img src="downloading-data-scan-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Multiple scans can be selected and downloaded using &lt;strong>Bulk Actions&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="downloading-data-scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>
 &lt;p>Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p>
 &lt;p>To get started, refer to the relevant guide below:&lt;/p>
 &lt;ul>

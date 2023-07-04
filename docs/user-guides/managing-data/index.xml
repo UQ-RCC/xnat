@@ -1,4 +1,10 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Managing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/</link><description>Recent content in Managing Data on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Viewing Images</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Managing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/</link><description>Recent content in Managing Data on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Downloading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</guid><description>
+&lt;ol>
+&lt;li>Navigate to Scan or Session (See guide on &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data">browsing data&lt;/a>)&lt;/li>
+&lt;li>Select &lt;code>Download&lt;/code> from controls on top right.&lt;/li>
+&lt;li>Use the following settings for downloading dataset as zip &lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-data-download-options.png" alt="text">&lt;/li>
+&lt;/ol>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/how-to-download-image-data-from-xnat-projects">XNAT official guide on downloading data&lt;/a>&lt;/p></description></item><item><title>Docs: Viewing Images</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</guid><description>
 &lt;h2 id="xnat-ohif-viewer">XNAT OHIF Viewer&lt;/h2>
 &lt;p>AIS XNAT instances come with the XNAT OHIF Image viewer
 Which is a plugin developed by the Institute for Cancer Research in London&lt;/p>
@@ -20,13 +26,7 @@ Ignore the &lt;em>View in Legacy Viewer&lt;/em>
 &lt;/div>
 &lt;p>&lt;img src="accessing-viewer.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>This will take you to the OHIF Viewer&lt;/p>
-&lt;p>&lt;img src="ohif-viewer.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Downloading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</guid><description>
-&lt;ol>
-&lt;li>Navigate to Scan or Sesssion (See guide on &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data">browsing data&lt;/a>)&lt;/li>
-&lt;li>Select &lt;code>Download&lt;/code> from controls on top right.&lt;/li>
-&lt;li>Use the following settings for downloading dataset as zip &lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-data-download-options.png" alt="text">&lt;/li>
-&lt;/ol>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/how-to-download-image-data-from-xnat-projects">XNAT official guide on downloading data&lt;/a>&lt;/p></description></item><item><title>Docs: Uploading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</guid><description>
+&lt;p>&lt;img src="ohif-viewer.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Uploading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</guid><description>
 &lt;ol>
 &lt;li>Web Upload (Compressed image uploader)&lt;/li>
 &lt;li>XNAT data client&lt;/li>
