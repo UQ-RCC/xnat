@@ -1,9 +1,9 @@
 ---
-title: "Site anonymisers"
-linkTitle: "Site anonymisers"
-weight: 50
+title: "Site anonymiser"
+linkTitle: "Site anonymiser"
+weight: 20
 description: >
-  Site anonymisers
+  Site anonymiser
 ---
 
 HIRF and CAI data are anonymised on-site by default with the following protocols
