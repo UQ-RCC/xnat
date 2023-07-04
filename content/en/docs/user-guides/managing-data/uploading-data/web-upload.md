@@ -1,7 +1,7 @@
 ---
 title: "Web Upload"
 linkTitle: "Web Upload"
-weight: 4
+weight: 10
 description: >
   Upload using XNAT compressed uploader
 ---
