@@ -35,7 +35,20 @@ Wait for:
 In case of &lt;strong>Background process&lt;/strong> errors, expand panel using double arrows on bottom right for more details
 &lt;img src="upload-failure.png" width="70%" style="border: 1px solid #ddd">&lt;/img>
 &lt;/div>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: Prearchive</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</guid><description>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>
+&lt;p>This is to create a web upload form for repeated uploads of any data type.&lt;/p>
+&lt;p>Navigate to &lt;strong>Project → Manage → Project Resource Settings → Start&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="resource-uploader-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select &lt;strong>Image Sessions&lt;/strong>. Enter the following required fields&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Title&lt;/strong>: e.g. Rawdata&lt;/li>
+&lt;li>&lt;strong>Resource Folder&lt;/strong>: e.g. RAW&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;strong>Extract compressed files by default&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Select &lt;strong>Add&lt;/strong> when complete&lt;/p>
+&lt;p>&lt;img src="resource-uploader-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>To upload file(s) using the resource uploader, &lt;strong>Upload Additional Files&lt;/strong> from the Sessions page&lt;/p>
+&lt;p>&lt;img src="resource-uploader-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Prearchive</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</guid><description>
 &lt;p>If a dataset has not arrived into your XNAT project, the prearchive would be the place to check&lt;/p>
 &lt;p>This usually happens when:&lt;/p>
 &lt;ul>

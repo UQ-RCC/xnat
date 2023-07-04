@@ -228,44 +228,7 @@ If the CTP is stopped, restart it from the Windows services menu (See below)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start and stop CTP using the following commands&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>sudo service ctpService start
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo service ctpService stop
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Web Upload</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</guid><description>
-&lt;h2 id="uploading-dicom-datasets">Uploading DICOM datasets&lt;/h2>
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>This is for uploading &lt;strong>de-identified DICOM&lt;/strong> files using the uploader directly from the XNAT website&lt;/p>
-&lt;/div>
-&lt;ol>
-&lt;li>De-identify DICOM on scanner or upload pc&lt;/li>
-&lt;li>Zip DICOM files into a zip file&lt;/li>
-&lt;li>Login to XNAT (see &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/">Login to XNAT&lt;/a>)&lt;/li>
-&lt;li>From the top panel, select &lt;strong>Upload → Images → Compressed Uploader&lt;/strong>&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="upload-menu.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;ol start="5">
-&lt;li>Specify the following options:
-&lt;ul>
-&lt;li>&lt;strong>Project&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Destination&lt;/strong>: Select &lt;strong>Prearchive&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Choose file&lt;/strong> to select zipped file with DICOMs&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="compressed-uploader.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;ol start="6">
-&lt;li>Click &lt;strong>Begin Upload&lt;/strong>
-Wait for:
-&lt;ul>
-&lt;li>Upload percent bar to finish (**percent bar may not appear for small datasets)&lt;/li>
-&lt;li>&lt;strong>Background processes&lt;/strong> panel to appear on bottom right&lt;/li>
-&lt;li>Green tick on under &lt;strong>Upload extraction/review for archival&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="upload-success.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;div class="alert alert-warning" role="alert">
-In case of &lt;strong>Background process&lt;/strong> errors, expand panel using double arrows on bottom right for more details
-&lt;img src="upload-failure.png" width="70%" style="border: 1px solid #ddd">&lt;/img>
-&lt;/div>
-&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
 &lt;p>AAF is the recommended way to sign up and login to XNAT.&lt;/p>
 &lt;p>If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p>
@@ -440,7 +403,44 @@ Can we create an XNAT project for RDM collection __________
 &lt;li>Please do not write or modify anything under the &lt;strong>xnat&lt;/strong> directory&lt;/li>
 &lt;/ul>
 &lt;p>XNAT Project setup typically takes around ~24 hours from ticket submission&lt;br>
-An automated email from XNAT will be sent through when project is ready, and your user has been added&lt;/p></description></item><item><title>Docs: Other AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</guid><description>
+An automated email from XNAT will be sent through when project is ready, and your user has been added&lt;/p></description></item><item><title>Docs: Web Upload</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</guid><description>
+&lt;h2 id="uploading-dicom-datasets">Uploading DICOM datasets&lt;/h2>
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>This is for uploading &lt;strong>de-identified DICOM&lt;/strong> files using the uploader directly from the XNAT website&lt;/p>
+&lt;/div>
+&lt;ol>
+&lt;li>De-identify DICOM on scanner or upload pc&lt;/li>
+&lt;li>Zip DICOM files into a zip file&lt;/li>
+&lt;li>Login to XNAT (see &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/">Login to XNAT&lt;/a>)&lt;/li>
+&lt;li>From the top panel, select &lt;strong>Upload → Images → Compressed Uploader&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="upload-menu.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;ol start="5">
+&lt;li>Specify the following options:
+&lt;ul>
+&lt;li>&lt;strong>Project&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Destination&lt;/strong>: Select &lt;strong>Prearchive&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Choose file&lt;/strong> to select zipped file with DICOMs&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="compressed-uploader.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;ol start="6">
+&lt;li>Click &lt;strong>Begin Upload&lt;/strong>
+Wait for:
+&lt;ul>
+&lt;li>Upload percent bar to finish (**percent bar may not appear for small datasets)&lt;/li>
+&lt;li>&lt;strong>Background processes&lt;/strong> panel to appear on bottom right&lt;/li>
+&lt;li>Green tick on under &lt;strong>Upload extraction/review for archival&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="upload-success.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+In case of &lt;strong>Background process&lt;/strong> errors, expand panel using double arrows on bottom right for more details
+&lt;img src="upload-failure.png" width="70%" style="border: 1px solid #ddd">&lt;/img>
+&lt;/div>
+&lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat/using-the-compressed-image-uploader">XNAT official guide on using the compressed image uploader&lt;/a>&lt;/p></description></item><item><title>Docs: Other AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</guid><description>
 &lt;p>This guide is for users from Australian Universities and AAF member organisations, including:&lt;/p>
 &lt;ul>
 &lt;li>QUT, Griffith, CQU, JCU, USQ, USC&lt;/li>
@@ -505,7 +505,20 @@ This will take you to your XNAT home page.&lt;/li>
 &lt;h4 class="alert-heading">For first time users&lt;/h4>
 &lt;p>Use your temporary username and temporary password to sign in.&lt;br>The next screen will allow you set your permanent password&lt;/p>
 &lt;p>First-time user will only see publically accessible project when they login&lt;/p>
-&lt;/div></description></item><item><title>Docs: Site anonymiser</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</guid><description>
+&lt;/div></description></item><item><title>Docs: Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>
+&lt;p>This is to create a web upload form for repeated uploads of any data type.&lt;/p>
+&lt;p>Navigate to &lt;strong>Project → Manage → Project Resource Settings → Start&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="resource-uploader-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select &lt;strong>Image Sessions&lt;/strong>. Enter the following required fields&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Title&lt;/strong>: e.g. Rawdata&lt;/li>
+&lt;li>&lt;strong>Resource Folder&lt;/strong>: e.g. RAW&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;strong>Extract compressed files by default&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Select &lt;strong>Add&lt;/strong> when complete&lt;/p>
+&lt;p>&lt;img src="resource-uploader-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>To upload file(s) using the resource uploader, &lt;strong>Upload Additional Files&lt;/strong> from the Sessions page&lt;/p>
+&lt;p>&lt;img src="resource-uploader-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Docs: Site anonymiser</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</guid><description>
 &lt;p>HIRF and CAI data are anonymised on-site by default with the following protocols&lt;/p>
 &lt;h2 id="modified-tags">Modified Tags&lt;/h2>
 &lt;table>
