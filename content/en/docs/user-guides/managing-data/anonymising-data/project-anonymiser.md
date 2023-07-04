@@ -6,7 +6,6 @@ description: >
   Project anonymiser
 ---
 
-
 The Project level anonymiser uses a scripting syntax called DicomEdit to modify, reassign or blank DICOM tags.
 You can actually use this to create automated workflow for renaming DICOM metadata on datasets
 
@@ -39,7 +38,7 @@ If you need to trigger your anonymisation on an existing session
 
 This will trigger the anonymisation script.
 
-{{% alert color="warning" title="Note" %}}
+{{% alert color="warning" title="Warning" %}}
 Session edits take a bit of time, as the files and metadata are modified during edits, so allow some wait time if you use this method.
 {{% /alert %}}
 
