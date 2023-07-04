@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Processing Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/processing-data/</link><description>Recent content in Processing Data on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/processing-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Command line tools</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/processing-data/command-line-tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/processing-data/command-line-tools/</guid><description>
+&lt;h2 id="xnatutils">XnatUtils&lt;/h2>
+&lt;p>&lt;a href="https://github.com/Australian-Imaging-Service/xnatutils">https://github.com/Australian-Imaging-Service/xnatutils&lt;/a>&lt;/p>
+&lt;p>Install xnatutils using&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>pip3 install xnatutils
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="authenticating-using-netrc">Authenticating using &lt;code>.netrc&lt;/code>&lt;/h4>
+&lt;ol>
+&lt;li>Create an &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/">alias token&lt;/a>. Or use an existing alias token&lt;/li>
+&lt;li>Create a &lt;code>.netrc&lt;/code> file in your home directory with the following details&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>machine https://xnat.rcc.uq.edu.au
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user &amp;lt;your-alias-token&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>password &amp;lt;your-alias-secret&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="xnatpy">xnatpy&lt;/h2>
+&lt;p>&lt;a href="https://xnat.readthedocs.io/en/latest/">https://xnat.readthedocs.io/en/latest/&lt;/a>&lt;/p>
+&lt;h2 id="pyxnat">Pyxnat&lt;/h2>
+&lt;p>&lt;a href="https://pyxnat.github.io/pyxnat">https://pyxnat.github.io/pyxnat&lt;/a>&lt;/p></description></item></channel></rss>
