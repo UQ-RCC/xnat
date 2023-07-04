@@ -6,32 +6,33 @@ description: >
   Site anonymisers
 ---
 
-HIRF and CAI data are anonymised on-site with the following protocols
+HIRF and CAI data are anonymised on-site by default with the following protocols
+
+## Modified Tags
+
+| DICOM Tag                      | Original value | New value                                                     |
+|--------------------------------|----------------|---------------------------------------------------------------|
+| PatientBirthDate               | 10/12/2000     | 1/1/2000                                                      |
+| PatientComments                | XXXXXXXX       | Project:Proj001 Subject:TEST_MR Session:TEST_MR-20210405T1220 |
+| ReferringPhysicianName         | Proj001        | Proj001                                                       |
+| PatientName                    | XXXXXXXX       | TEST_MR                                                       |
+| PatientID                      | TEST_MR        | TEST_MR-20210405T1220                                         |
 
 ## Blanked Tags
-| DICOM Tag                     |
-|-------------------------------|
-|AccessionNumber                |
-|ImageComments                  |
-|OperatorName                   |
-|OtherPatientIDs                |
-|AdditionalPatientHistory       |
-|AdmittingDiagnosisDescription  |
-|MedicalRecordLocator           |
-|NameOfPhysicianReadingStudy    |
-|Occupation                     |
-|OtherPatientNames              |
-|PatientBirthTime               |
-|PerformingPhysicianName        |
-|PhysicianOfRecord              |
-|ReferringPhysicianAddress      |
-|ReferringPhysicianPhoneNumbers |
-
-## Modified tags
-| DICOM tag              | Example value                                               |
-|------------------------|-------------------------------------------------------------|
-| PatientBirthDate       | 1/1/2000                                                    |
-| PatientComments        | Project:QUTRT Subject:TEST_MR Session:TEST_MR-20210908T1448 |
-| ReferringPhysicianName | QUTRT                                                       |
-| PatientName            | TEST_MR                                                     |
-| PatientID              | TEST_MR-20210908T1448                                       |
+| DICOM Tag                      |
+|--------------------------------|
+| AccessionNumber                |
+| ImageComments                  |
+| OperatorName                   |
+| OtherPatientIDs                |
+| AdditionalPatientHistory       |
+| AdmittingDiagnosisDescription  |
+| MedicalRecordLocator           |
+| NameOfPhysicianReadingStudy    |
+| Occupation                     |
+| OtherPatientNames              |
+| PatientBirthTime               |
+| PerformingPhysicianName        |
+| PhysicianOfRecord              |
+| ReferringPhysicianAddress      |
+| ReferringPhysicianPhoneNumbers |
