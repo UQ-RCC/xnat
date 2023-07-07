@@ -23,6 +23,15 @@ If your organisation is part of the Australian Access Federation (AAF), you can 
 
 This will take you to your XNAT home page. 
 
+{{% alert color="warning" title="Unexpected error"%}}
+If you encounter the following error, refresh the page 2-3 times. The login should progress
+
+<img src="/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd"></img>
+
+Otherwise, if the error after multiple refreshes, contact support.
+{{% /alert %}}
+
+
 {{% alert color="warning" title="First time users" %}}
 First time users will only see publically accessible project when they login
 {{% /alert %}}

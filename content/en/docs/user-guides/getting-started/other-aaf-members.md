@@ -35,6 +35,13 @@ Follow the AAF login process for your organisation
 
 <img src="/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"></img>
 
+{{% alert color="warning" title="Unexpected error"%}}
+If you encounter the following error, refresh the page 2-3 times. The login should progress
+
+<img src="/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd"></img>
+
+Otherwise, if the error after multiple refreshes, contact support.
+{{% /alert %}}
 
 #### Step 3
 
