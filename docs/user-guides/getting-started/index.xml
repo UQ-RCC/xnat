@@ -16,7 +16,7 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;h4 class="alert-heading">Unexpected error&lt;/h4>
 &lt;p>If you encounter the following error, refresh the page 2-3 times. The login should progress&lt;/p>
 &lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Otherwise, if the error after multiple refreshes, contact support.&lt;/p>
+&lt;p>If the error remains after multiple refreshes, contact support.&lt;/p>
 &lt;/div>
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p>
@@ -107,7 +107,7 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;h4 class="alert-heading">Unexpected error&lt;/h4>
 &lt;p>If you encounter the following error, refresh the page 2-3 times. The login should progress&lt;/p>
 &lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Otherwise, if the error after multiple refreshes, contact support.&lt;/p>
+&lt;p>If the error remains after multiple refreshes, contact support.&lt;/p>
 &lt;/div>
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (&lt;em>Example below&lt;/em>)&lt;/p>
