@@ -40,7 +40,7 @@ If you encounter the following error, refresh the page 2-3 times. The login shou
 
 <img src="/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd"></img>
 
-Otherwise, if the error after multiple refreshes, contact support.
+If the error remains after multiple refreshes, contact support.
 {{% /alert %}}
 
 #### Step 3
