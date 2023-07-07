@@ -11,6 +11,12 @@
 &lt;p>&lt;img src="../xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>This will take you to your XNAT home page.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Unexpected error&lt;/h4>
+&lt;p>If you encounter the following error, refresh the page 2-3 times. The login should progress&lt;/p>
+&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Otherwise, if the error after multiple refreshes, contact support.&lt;/p>
+&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">First time users&lt;/h4>
 First time users will only see publically accessible project when they login
 &lt;/div></description></item><item><title>Docs: RCC Authenticate</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/rcc-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/rcc-login/</guid><description>
