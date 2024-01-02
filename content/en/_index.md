@@ -18,7 +18,7 @@ Go to UQ AIS XNAT&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-x
 <p>Project specific UQ XNAT repositories (may require UQ Network or VPN)</p>
 <a class="btn btn-sm btn-primary mr-3 mb-4" href="https://opex.qbi.uq.edu.au:8443">opex.qbi.uq.edu.au</a>
 <a class="btn btn-sm btn-primary mr-3 mb-4" href="https://irc5.qbi.uq.edu.au">irc5.qbi.uq.edu.au</a>
-<a class="btn btn-sm btn-primary mr-3 mb-4" href="https://braininjury.qbi.uq.edu.au">braininjury.qbi.uq.edu.au</a>
+<!-- <a class="btn btn-sm btn-primary mr-3 mb-4" href="https://braininjury.qbi.uq.edu.au">braininjury.qbi.uq.edu.au</a> -->
 
 {{< /blocks/cover >}}
 
