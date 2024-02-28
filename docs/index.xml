@@ -98,7 +98,7 @@
 &lt;/li>
 &lt;li>Use subject &amp;ldquo;1737775597&amp;rdquo; → &amp;ldquo;MR Session&amp;rdquo; → &amp;ldquo;View Images&amp;rdquo; to view the uploaded image&lt;/li>
 &lt;li>Try a dicom send from the scanner using PC address and port 25055 (check windows firewall settings?)&lt;/li>
-&lt;li>Enable CTP as a Windows Service. Instructions &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service">here&lt;/a>&lt;/li>
+&lt;li>Enable CTP as a Windows Service. Instructions &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/">here&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;h3 id="further-information">Further information&lt;/h3>
 &lt;p>If you need a different commit of CTP-installer&lt;/p>
@@ -150,7 +150,7 @@
 &lt;/li>
 &lt;li>
 &lt;p>Use the navigation panel on the left to select &lt;strong>Configuration&lt;/strong> -&amp;gt; &lt;strong>Server&lt;/strong> -&amp;gt; &lt;strong>ProxyServer&lt;/strong>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-config.png" alt="text">&lt;/p>
+&lt;img alt="text" src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-config.png">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Update the proxy server settings in the right panel as required. You can set an IP address or host name in the proxyIPAddress field&lt;/p>
@@ -162,7 +162,7 @@
 &lt;p>Close the CTP Launcher using the Window close button at the top right
 &lt;div class="alert alert-warning" role="alert">
 If the following prompt appears, select &lt;strong>No&lt;/strong>.
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/close-launcher.png" alt="text">
+&lt;img alt="text" src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/close-launcher.png">
 If the CTP is stopped, restart it from the Windows services menu (See below)
 &lt;/div>
 &lt;/p>
@@ -173,7 +173,7 @@ If the CTP is stopped, restart it from the Windows services menu (See below)
 &lt;li>
 &lt;p>Re-Start the CTP Windows service using Windows Services&lt;/p>
 &lt;p>Locate the CTP service in the list of services, right-click and select &lt;strong>Start&lt;/strong> from the context menu&lt;/p>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service.png" alt="text">&lt;/p>
+&lt;p>&lt;img alt="text" src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service.png">&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h4 id="troubleshooting">Troubleshooting&lt;/h4>
@@ -377,7 +377,7 @@ Only one member of the project team needs to request for the project
 &lt;li>&lt;strong>Non-HPC collections&lt;/strong> end with &lt;strong>-A&lt;/strong> (e.g. PROJ001-&lt;strong>A0189&lt;/strong>) or &lt;strong>-I&lt;/strong> (PROJ001-&lt;strong>I0189&lt;/strong>)&lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-warning" role="alert">
-If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending with &lt;strong>-Qxxxx&lt;/strong>), skip to the &lt;a href="./#step-2-1">next step&lt;/a>
+If you have an existing UQ-RDM &lt;strong>HPC collection&lt;/strong> (ending with &lt;strong>-Qxxxx&lt;/strong>), skip to the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/#step-2-1">next step&lt;/a>
 &lt;/div>
 &lt;p>To create a new UQ-RDM &lt;strong>HPC Collection&lt;/strong>, proceed with the following&lt;/p>
 &lt;p>Open &lt;a href="https://rdm.uq.edu.au/create-record">https://rdm.uq.edu.au/create-record&lt;/a> and sign-in&lt;/p>
@@ -465,7 +465,7 @@ In case of &lt;strong>Background process&lt;/strong> errors, expand panel using 
 &lt;li>Collaborating on projects managed on UQ AIS XNAT&lt;/li>
 &lt;/ul>
 &lt;p>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;br>
-For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members">Non-AAF members&lt;/a> guide&lt;/p>
+For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/">Non-AAF members&lt;/a> guide&lt;/p>
 &lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1">Step 1&lt;/h4>
@@ -731,7 +731,7 @@ Data Acquisition Site: __________&lt;br>
 &lt;h4 id="step-2">Step 2&lt;/h4>
 &lt;p>AAF&amp;rsquo;s VHO account will return an email regarding the VHO account registration process&lt;/p>
 &lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>&lt;em>After account is provisioned, continue on to the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members#signing-into-xnat">Signing into XNAT guide&lt;/a>&lt;/em>&lt;/p>
+&lt;p>&lt;em>After account is provisioned, continue on to the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/#signing-into-xnat">Signing into XNAT guide&lt;/a>&lt;/em>&lt;/p>
 &lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
 &lt;hr>
 &lt;h4 id="step-1-1">Step 1&lt;/h4>
@@ -796,19 +796,19 @@ If you hover over one of them, and click the highlighted view details button. Th
 &lt;p>Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p>
 &lt;p>To get started, refer to the relevant guide below:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members">UQ members&lt;/a>
+&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/">UQ members&lt;/a>
 &lt;ul>
 &lt;li>UQ Staff and Students&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members">Other AAF members&lt;/a>
+&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/">Other AAF members&lt;/a>
 &lt;ul>
 &lt;li>QUT, Griffith, CQU, JCU, USQ, USC, Bond&lt;/li>
 &lt;li>CSIRO, QCIF, Australian Universities&lt;/li>
 &lt;li>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members">Non-AAF members&lt;/a>
+&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/">Non-AAF members&lt;/a>
 &lt;ul>
 &lt;li>TRI, QIMR&lt;/li>
 &lt;li>QLD Health, QLD Xray, Pacific Radiology&lt;/li>
@@ -816,9 +816,16 @@ If you hover over one of them, and click the highlighted view details button. Th
 &lt;/li>
 &lt;/ul>
 &lt;div class="alert alert-warning" role="alert">
-If you have multiple valid affiliations, we&amp;rsquo;d recommend using &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members">UQ&lt;/a> or &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members">AAF&lt;/a> affiliation where possible
+If you have multiple valid affiliations, we&amp;rsquo;d recommend using &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/">UQ&lt;/a> or &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/">AAF&lt;/a> affiliation where possible
 &lt;/div>
 &lt;p>If you have any questions, contact &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a> or &lt;a href="mailto:HIRFAdministration@health.qld.gov.au">HIRFAdministration@health.qld.gov.au&lt;/a>&lt;/p></description></item><item><title>Docs:</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/faq/</guid><description>
+&lt;!-- ---
+title: "FAQ"
+linkTitle: "FAQ"
+weight: 1
+description: >
+Frequently Asked Questions
+--- -->
 &lt;div>
 &lt;nav id="TableOfContents">
 &lt;ul>

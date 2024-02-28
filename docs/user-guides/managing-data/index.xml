@@ -2,7 +2,7 @@
 &lt;ol>
 &lt;li>Navigate to Scan or Session (See guide on &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/browsing-data">browsing data&lt;/a>)&lt;/li>
 &lt;li>Select &lt;code>Download&lt;/code> from controls on top right.&lt;/li>
-&lt;li>Use the following settings for downloading dataset as zip &lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-data-download-options.png" alt="text">&lt;/li>
+&lt;li>Use the following settings for downloading dataset as zip &lt;img alt="text" src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/xnat-data-download-options.png">&lt;/li>
 &lt;/ol>
 &lt;p>For further information refer to the &lt;a href="https://wiki.xnat.org/documentation/how-to-use-xnat/how-to-download-image-data-from-xnat-projects">XNAT official guide on downloading data&lt;/a>&lt;/p></description></item><item><title>Docs: Viewing Images</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/viewing-images/</guid><description>
 &lt;h2 id="xnat-ohif-viewer">XNAT OHIF Viewer&lt;/h2>

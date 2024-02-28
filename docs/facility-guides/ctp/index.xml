@@ -98,7 +98,7 @@
 &lt;/li>
 &lt;li>Use subject &amp;ldquo;1737775597&amp;rdquo; → &amp;ldquo;MR Session&amp;rdquo; → &amp;ldquo;View Images&amp;rdquo; to view the uploaded image&lt;/li>
 &lt;li>Try a dicom send from the scanner using PC address and port 25055 (check windows firewall settings?)&lt;/li>
-&lt;li>Enable CTP as a Windows Service. Instructions &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service">here&lt;/a>&lt;/li>
+&lt;li>Enable CTP as a Windows Service. Instructions &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/">here&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;h3 id="further-information">Further information&lt;/h3>
 &lt;p>If you need a different commit of CTP-installer&lt;/p>
@@ -150,7 +150,7 @@
 &lt;/li>
 &lt;li>
 &lt;p>Use the navigation panel on the left to select &lt;strong>Configuration&lt;/strong> -&amp;gt; &lt;strong>Server&lt;/strong> -&amp;gt; &lt;strong>ProxyServer&lt;/strong>
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-config.png" alt="text">&lt;/p>
+&lt;img alt="text" src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-config.png">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Update the proxy server settings in the right panel as required. You can set an IP address or host name in the proxyIPAddress field&lt;/p>
@@ -162,7 +162,7 @@
 &lt;p>Close the CTP Launcher using the Window close button at the top right
 &lt;div class="alert alert-warning" role="alert">
 If the following prompt appears, select &lt;strong>No&lt;/strong>.
-&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/close-launcher.png" alt="text">
+&lt;img alt="text" src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/close-launcher.png">
 If the CTP is stopped, restart it from the Windows services menu (See below)
 &lt;/div>
 &lt;/p>
@@ -173,7 +173,7 @@ If the CTP is stopped, restart it from the Windows services menu (See below)
 &lt;li>
 &lt;p>Re-Start the CTP Windows service using Windows Services&lt;/p>
 &lt;p>Locate the CTP service in the list of services, right-click and select &lt;strong>Start&lt;/strong> from the context menu&lt;/p>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service.png" alt="text">&lt;/p>
+&lt;p>&lt;img alt="text" src="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service.png">&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h4 id="troubleshooting">Troubleshooting&lt;/h4>
