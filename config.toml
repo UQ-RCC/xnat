@@ -95,7 +95,7 @@ languageName ="English"
 section = ["HTML", "print", "RSS"]
 
 [params]
-# copyright = "The Docsy Authors"
+copyright = "UQ Research Computing Centre (RCC) & Australian National Imaging Facility (ANIF)"
 # privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.

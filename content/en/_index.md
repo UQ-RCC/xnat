@@ -40,9 +40,3 @@ Data sharing
 </div>
 </div>
 {{< /blocks/section >}}
-
-{{% blocks/section color="dark" %}}
-Provided by
-: UQ Research Computing Centre (RCC) and Australian National Imaging Facility (ANIF)
-{{< /blocks/section >}}
-
