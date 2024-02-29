@@ -240,12 +240,14 @@ If the CTP is stopped, restart it from the Windows services menu (See below)
 &lt;/ol>
 &lt;p>&lt;img src="../xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>This will take you to your XNAT home page.&lt;/p>
+&lt;!--
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Unexpected error&lt;/h4>
 &lt;p>If you encounter the following error, refresh the page 2-3 times. The login should progress&lt;/p>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>&lt;img src="../ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
 &lt;p>If the error remains after multiple refreshes, contact support.&lt;/p>
 &lt;/div>
+-->
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">First time users&lt;/h4>
 First time users will only see publically accessible project when they login
@@ -351,12 +353,6 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;p>Login in with the AAF Single sign-on button (shown below).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
 &lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Unexpected error&lt;/h4>
-&lt;p>If you encounter the following error, refresh the page 2-3 times. The login should progress&lt;/p>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>If the error remains after multiple refreshes, contact support.&lt;/p>
-&lt;/div>
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p>
 &lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
@@ -479,12 +475,6 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;p>Login in with the AAF Single sign-on button (&lt;em>See below&lt;/em>).&lt;/p>
 &lt;p>Follow the AAF login process for your organisation&lt;/p>
 &lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Unexpected error&lt;/h4>
-&lt;p>If you encounter the following error, refresh the page 2-3 times. The login should progress&lt;/p>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/ais-keycloak-login-error.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>If the error remains after multiple refreshes, contact support.&lt;/p>
-&lt;/div>
 &lt;h4 id="step-3">Step 3&lt;/h4>
 &lt;p>After the AAF sign-in, you should be redirected back to XNAT (&lt;em>Example below&lt;/em>)&lt;/p>
 &lt;p>There will be &lt;strong>no projects listed&lt;/strong> when signing in for the first-time, as your user account would have just been created.&lt;/p>
@@ -500,30 +490,7 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 &lt;h4 id="if-you-are-collaborating-on-an-existing-xnat-project">If you are collaborating on an existing XNAT project&lt;/h4>
 &lt;ul>
 &lt;li>Contact the project lead to grant you access to the XNAT project&lt;/li>
-&lt;/ul></description></item><item><title>Docs: RCC Authenticate</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/rcc-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/rcc-login/</guid><description>
-&lt;p>To use this login, you would have received an email from a UQ XNAT administrator with the login information.&lt;/p>
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-&lt;p>If you have not received an email, either use &lt;a href="../aaf-login">AAF&lt;/a> or contact the respective XNAT support.&lt;/p>
-&lt;p>RCC Authenticate credentials are &lt;strong>NOT&lt;/strong> your UQ or institutional username and password&lt;/p>
-&lt;/div>
-&lt;ol>
-&lt;li>Login in with the RCC Authenticate button (shown below)&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="../rcc-login.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;ol start="2">
-&lt;li>You’ll be taken to a UQ RCC SERVICES (shown below)&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="../rcc-signin.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;ol start="3">
-&lt;li>Enter your user name and password to sign in.
-This will take you to your XNAT home page.&lt;/li>
-&lt;/ol>
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">For first time users&lt;/h4>
-&lt;p>Use your temporary username and temporary password to sign in.&lt;br>The next screen will allow you set your permanent password&lt;/p>
-&lt;p>First-time user will only see publically accessible project when they login&lt;/p>
-&lt;/div></description></item><item><title>Docs: Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>
 &lt;p>This is to create a web upload form for repeated uploads of any data type.&lt;/p>
 &lt;p>Navigate to &lt;strong>Project → Manage → Project Resource Settings → Start&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="resource-uploader-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>

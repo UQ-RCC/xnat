@@ -6,7 +6,7 @@
 &lt;/div>
 &lt;p>If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. See &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/">here&lt;/a>&lt;/p>
 &lt;p>For more details on the Australian Access Federation, see &lt;a href="https://aaf.edu.au">https://aaf.edu.au&lt;/a>&lt;/p>
-&lt;h2 id="rcc-authenticatercc-login">&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/rcc-login/">RCC Authenticate&lt;/a>&lt;/h2>
+&lt;h2 id="rcc-authenticatercc-login">&lt;a href="rcc-login">RCC Authenticate&lt;/a>&lt;/h2>
 &lt;p>To use this login, you would have received an email from a UQ XNAT administrator with the login information.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
