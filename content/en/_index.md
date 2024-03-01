@@ -6,13 +6,13 @@ linkTitle: UQ AIS XNAT
 {{< blocks/cover height="min" color="secondary" >}}
 <h1 class="display-5">UQ AIS XNAT</h1><p></p>
 <p>Storing, managing and analysing de-identified imaging data for UQ projects and collaborators</p>
-<a class="btn btn-lg btn-light mr-1 mb-4" href="https://australian-imaging-service.github.io">
+<a class="btn btn-lg btn-light me-3 mb-4" href="https://australian-imaging-service.github.io">
 Learn more about AIS&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
 </a>
-<a class="btn btn-lg btn-light mr-1 mb-4" href="/docs/">
+<a class="btn btn-lg btn-light me-3 mb-4" href="/docs/">
 Documentation&nbsp&nbsp<i class="fas fa-book ml-2 fa-xs"></i>
 </a>
-<a class="btn btn-lg btn-light mr-1 mb-4" href="https://xnat.rcc.uq.edu.au">
+<a class="btn btn-lg btn-light me-3 mb-4" href="https://xnat.rcc.uq.edu.au">
 Go to UQ AIS XNAT&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
 </a>
 <p>Project specific UQ XNAT repositories (may require UQ Network or VPN)</p>
