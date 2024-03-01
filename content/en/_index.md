@@ -3,21 +3,26 @@ title: UQ AIS XNAT
 linkTitle: UQ AIS XNAT
 ---
 
-{{< blocks/cover height="min" color="secondary" >}}
-<h1 class="display-5">UQ AIS XNAT</h1><p></p>
+{{< blocks/cover title="UQ AIS XNAT" height="med" color="secondary" >}}
+
+<p></p>
 <p>Storing, managing and analysing de-identified imaging data for UQ projects and collaborators</p>
 <a class="btn btn-lg btn-light me-3 mb-4" href="https://australian-imaging-service.github.io">
 Learn more about AIS&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
 </a>
+
 <a class="btn btn-lg btn-light me-3 mb-4" href="/docs/">
 Documentation&nbsp&nbsp<i class="fas fa-book ml-2 fa-xs"></i>
 </a>
+
 <a class="btn btn-lg btn-light me-3 mb-4" href="https://xnat.rcc.uq.edu.au">
 Go to UQ AIS XNAT&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
 </a>
+
+<p></p>
 <p>Project specific UQ XNAT repositories (may require UQ Network or VPN)</p>
-<a class="btn btn-sm btn-primary mr-1 mb-6" href="https://opex.qbi.uq.edu.au:8443">opex.qbi.uq.edu.au</a>
-<a class="btn btn-sm btn-primary mr-1 mb-6" href="https://irc5.qbi.uq.edu.au">irc5.qbi.uq.edu.au</a>
+<a class="btn btn-primary mr-1 mb-6" href="https://opex.qbi.uq.edu.au:8443">opex.qbi.uq.edu.au</a>
+<a class="btn btn-primary mr-1 mb-6" href="https://irc5.qbi.uq.edu.au">irc5.qbi.uq.edu.au</a>
 
 {{< /blocks/cover >}}
 
