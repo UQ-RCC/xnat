@@ -1,38 +1,8 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT – Downloading Data</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</link><description>Recent content in Downloading Data on UQ AIS XNAT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Zip Download</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</guid><description>
-&lt;p>The Project, Subject and Sessions page has the option to &lt;strong>Download Images&lt;/strong> from the right hand side menu&lt;/p>
-&lt;p>&lt;img src="downloading-data-1.png" width="50%" style="border: 1px solid #ddd">&lt;/img>
-&lt;img src="downloading-data-2.png" width="50%" style="border: 1px solid #ddd">&lt;/img>
-&lt;img src="downloading-data-3.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select &lt;strong>Option 2: ZIP download&lt;/strong>&lt;/p>
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-Untick &lt;strong>Simply downloaded archive structure&lt;/strong> to keep scan names in scan folders
-&lt;/div>
-&lt;p>&lt;img src="downloading-data-zip.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Filter out the Session and scans from the first two columns and select &lt;strong>Submit&lt;/strong>&lt;/p></description></item><item><title>Docs: Desktop client</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</guid><description>
-&lt;p>The XNAT Desktop client is maintained by the XNAT development team. For information see the link below.&lt;/p>
-&lt;dl>
-&lt;dt>XNAT Desktop client&lt;/dt>
-&lt;dd>&lt;a href="https://www.xnat.org/download/desktop-client/">https://www.xnat.org/download/desktop-client/&lt;/a>&lt;/dd>
-&lt;/dl>
-&lt;h2 id="install-client">Install client&lt;/h2>
-&lt;p>Download and install the client for you operating system&lt;/p>
-&lt;p>&lt;img src="desktop-client-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;h2 id="download-images">Download images&lt;/h2>
-&lt;p>The Project, Subject and Sessions page has the option to &lt;strong>Download Images&lt;/strong> from the right hand side menu&lt;/p>
-&lt;p>&lt;img src="desktop-client-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select &lt;strong>Option 1: Download via Desktop Client&lt;/strong>&lt;/p>
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-Untick &lt;strong>Simply downloaded archive structure&lt;/strong> to keep scan names in scan folders
-&lt;/div>
-&lt;p>&lt;img src="desktop-client-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Click &lt;strong>Download Via App&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="desktop-client-4.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select a local destination folder&lt;/p>
-&lt;p>&lt;img src="desktop-client-5.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Download should start, and progress can be monitored&lt;/p></description></item><item><title>Docs: Download Scan</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</guid><description>
-&lt;p>Induvidual scans can be downloaded from the Sessions page&lt;/p>
-&lt;p>&lt;img src="downloading-data-scan-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Multiple scans can be selected and downloaded using &lt;strong>Bulk Actions&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="downloading-data-scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Downloading Data on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/</link><description>Recent content in Downloading Data on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Zip Download</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</guid><description>The Project, Subject and Sessions page has the option to Download Images from the right hand side menu
+Select Option 2: ZIP download
+Note Untick Simply downloaded archive structure to keep scan names in scan folders Filter out the Session and scans from the first two columns and select Submit</description></item><item><title>Desktop client</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</guid><description>The XNAT Desktop client is maintained by the XNAT development team. For information see the link below.
+XNAT Desktop client https://www.xnat.org/download/desktop-client/ Install client Download and install the client for you operating system
+Download images The Project, Subject and Sessions page has the option to Download Images from the right hand side menu
+Select Option 1: Download via Desktop Client
+Note Untick Simply downloaded archive structure to keep scan names in scan folders Click Download Via App</description></item><item><title>Download Scan</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</guid><description>Induvidual scans can be downloaded from the Sessions page
+Multiple scans can be selected and downloaded using Bulk Actions</description></item></channel></rss>
