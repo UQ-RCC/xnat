@@ -21,8 +21,8 @@ Go to UQ AIS XNAT&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square fa-x
 
 <p></p>
 <p>Project specific UQ XNAT repositories (may require UQ Network or VPN)</p>
-<a class="btn btn-primary mr-1 mb-6" href="https://opex.qbi.uq.edu.au:8443">opex.qbi.uq.edu.au</a>
-<a class="btn btn-primary mr-1 mb-6" href="https://irc5.qbi.uq.edu.au">irc5.qbi.uq.edu.au</a>
+<a class="btn btn-primary mr-1 mb-6" href="https://opex.xnat.rcc.uq.edu.au">opex.xnat.rcc.uq.edu.au</a>
+<a class="btn btn-primary mr-1 mb-6" href="https://irc5.xnat.rcc.uq.edu.au">irc5.xnat.rcc.uq.edu.au</a>
 
 {{< /blocks/cover >}}
 
