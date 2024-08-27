@@ -26,7 +26,7 @@ Click the **Request more storage** button (shown below)
 
 Fill the form with the relevant details and submit.
 
-E.g. For a project with 2 years data acquisition, collecting a total of 1TB and 1 million files, the request form could look like this:
+E.g. For a project with 2 years of data acquisition, collecting a total of 1TB and 1 million files, the request form could look like this:
 
 {{< card header="Description of the project">}}
 ...
