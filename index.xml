@@ -20,10 +20,10 @@ De-identify DICOM on scanner or upload pc Zip DICOM files into a zip file Login 
 QUT, Griffith, CQU, JCU, USQ, USC CSIRO, Australian Universities AAF VHO accounts Other AAF members usually require UQ AIS XNAT access for:
 Management of data acquisition from sites such as CAI, HIRF, TRI Collaborating on projects managed on UQ AIS XNAT Full list of AAF members found here
 For all other organisations, use the Non-AAF members guide</description></item><item><title>Request Storage</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</guid><description>Note Default limits on collections are 1TB storage and 1 million files.
-If either limit is reached, it will lock you out of your files. Use the following steps to request to request an increase in storage size and/or file count limit:
+If either limit is reached, you may not be able to add or update files. Use the following steps to request to request an increase in storage size and/or file count limit:
 Step 1 Go to rdm.uq.edu.au, login and select your RDM collection
 Step 2 Click the Request more storage button (shown below)
-Step 3 Fill the form with the relevant details and Submit.</description></item><item><title>Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>This is to create a web upload form for repeated uploads of any data type.
+Step 3 Fill the form with the relevant details and submit.</description></item><item><title>Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>This is to create a web upload form for repeated uploads of any data type.
 Navigate to Project → Manage → Project Resource Settings → Start
 Select Image Sessions. Enter the following required fields
 Title: e.g. Rawdata Resource Folder: e.g. RAW Extract compressed files by default Select Add when complete
