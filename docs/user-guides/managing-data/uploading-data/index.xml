@@ -1,9 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Uploading Data on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</link><description>Recent content in Uploading Data on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Web Upload</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</guid><description>Uploading DICOM datasets This is for uploading de-identified DICOM files using the uploader directly from the XNAT website
-De-identify DICOM on scanner or upload pc Zip DICOM files into a zip file Login to XNAT (see Login to XNAT) From the top panel, select Upload → Images → Compressed Uploader Specify the following options: Project Destination: Select Prearchive Choose file to select zipped file with DICOMs Click Begin Upload Wait for: Upload percent bar to finish (**percent bar may not appear for small datasets) Background processes panel to appear on bottom right Green tick on under Upload extraction/review for archival In case of Background process errors, expand panel using double arrows on bottom right for more details For further information refer to the XNAT official guide on using the compressed image uploader</description></item><item><title>Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>This is to create a web upload form for repeated uploads of any data type.
-Navigate to Project → Manage → Project Resource Settings → Start
-Select Image Sessions. Enter the following required fields
-Title: e.g. Rawdata Resource Folder: e.g. RAW Extract compressed files by default Select Add when complete
-To upload file(s) using the resource uploader, Upload Additional Files from the Sessions page</description></item><item><title>Prearchive</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</guid><description>If a dataset has not arrived into your XNAT project, the prearchive would be the place to check
-This usually happens when:
-a DICOM dataset matching an existing session gets resent a part of a session gets uploaded separately Accessing the prearchive Go to Upload on the top menu, and Go to prearchive
-The following is an example of a session that is in conflict. We can select the session and choose Details.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Uploading Data on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/</link><description>Recent content in Uploading Data on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/index.xml" rel="self" type="application/rss+xml"/><item><title>Web Upload</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</guid><description>&lt;h2 id="uploading-dicom-datasets">Uploading DICOM datasets&lt;/h2>
+
+
+&lt;div class="pageinfo pageinfo-primary">
+&lt;p>This is for uploading &lt;strong>de-identified DICOM&lt;/strong> files using the uploader directly from the XNAT website&lt;/p>
+
+&lt;/div>
+
+&lt;ol>
+&lt;li>De-identify DICOM on scanner or upload pc&lt;/li>
+&lt;li>Zip DICOM files into a zip file&lt;/li>
+&lt;li>Login to XNAT (see &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/">Login to XNAT&lt;/a>)&lt;/li>
+&lt;li>From the top panel, select &lt;strong>Upload → Images → Compressed Uploader&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="upload-menu.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;ol start="5">
+&lt;li>Specify the following options:
+&lt;ul>
+&lt;li>&lt;strong>Project&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Destination&lt;/strong>: Select &lt;strong>Prearchive&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Choose file&lt;/strong> to select zipped file with DICOMs&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="compressed-uploader.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>&lt;p>This is to create a web upload form for repeated uploads of any data type.&lt;/p>
+&lt;p>Navigate to &lt;strong>Project → Manage → Project Resource Settings → Start&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="resource-uploader-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>Select &lt;strong>Image Sessions&lt;/strong>. Enter the following required fields&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Title&lt;/strong>: e.g. Rawdata&lt;/li>
+&lt;li>&lt;strong>Resource Folder&lt;/strong>: e.g. RAW&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;strong>Extract compressed files by default&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Select &lt;strong>Add&lt;/strong> when complete&lt;/p>
+&lt;p>&lt;img src="resource-uploader-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>To upload file(s) using the resource uploader, &lt;strong>Upload Additional Files&lt;/strong> from the Sessions page&lt;/p></description></item><item><title>Prearchive</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</guid><description>&lt;p>If a dataset has not arrived into your XNAT project, the prearchive would be the place to check&lt;/p>
+&lt;p>This usually happens when:&lt;/p>
+&lt;ul>
+&lt;li>a DICOM dataset matching an existing session gets resent&lt;/li>
+&lt;li>a part of a session gets uploaded separately&lt;/li>
+&lt;/ul>
+&lt;h2 id="accessing-the-prearchive">Accessing the prearchive&lt;/h2>
+&lt;p>Go to &lt;strong>Upload&lt;/strong> on the top menu, and &lt;strong>Go to prearchive&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="prearchive-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
+&lt;p>The following is an example of a session that is in conflict.
+We can select the session and choose &lt;strong>Details&lt;/strong>.&lt;/p></description></item></channel></rss>
