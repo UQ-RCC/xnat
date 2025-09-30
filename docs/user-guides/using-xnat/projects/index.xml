@@ -1,73 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/</link><description>Recent content in Projects on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Granting Access</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</guid><description>&lt;p>Switch to the Access tab. Use &lt;font color='red'>&lt;strong>Add User&lt;/strong>&lt;/font> or &lt;font color='red'>&lt;strong>Add Users from List&lt;/strong>&lt;/font> to select the user to add&lt;/p>
-&lt;p>&lt;img src="user-access.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select role from&lt;/p>
-&lt;ol>
-&lt;li>Owners&lt;/li>
-&lt;li>Members&lt;/li>
-&lt;li>Collaborators&lt;/li>
-&lt;/ol>
-&lt;h2 id="user-roles">User roles&lt;/h2>
-&lt;p>The following table outlines the permissions given to each role.&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Permission&lt;/th>
- &lt;th>Owners&lt;/th>
- &lt;th>Members&lt;/th>
- &lt;th>Collaborators&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>Data - Create&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Data - Read/Download&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Data - Update&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Data - Delete&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>User - Add/Remove&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>User - Change role&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item><item><title>Request Storage</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</guid><description>&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/</link><description>Recent content in Projects on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>Granting Access</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</guid><description>&lt;p&gt;Switch to the Access tab. Use &lt;font color='red'&gt;&lt;strong&gt;Add User&lt;/strong&gt;&lt;/font&gt; or &lt;font color='red'&gt;&lt;strong&gt;Add Users from List&lt;/strong&gt;&lt;/font&gt; to select the user to add&lt;/p&gt;
+&lt;p&gt;&lt;img src="user-access.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Select role from&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Owners&lt;/li&gt;
+&lt;li&gt;Members&lt;/li&gt;
+&lt;li&gt;Collaborators&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="user-roles"&gt;User roles&lt;/h2&gt;
+&lt;p&gt;The following table outlines the permissions given to each role.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Permission&lt;/th&gt;
+ &lt;th&gt;Owners&lt;/th&gt;
+ &lt;th&gt;Members&lt;/th&gt;
+ &lt;th&gt;Collaborators&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Create&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Read/Download&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Update&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Delete&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;User - Add/Remove&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;User - Change role&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Request Storage</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</guid><description>&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
- Default limits on collections are &lt;strong>1TB storage&lt;/strong> and &lt;strong>1 million files&lt;/strong>.&lt;br>
+ Default limits on collections are &lt;strong&gt;1TB storage&lt;/strong&gt; and &lt;strong&gt;1 million files&lt;/strong&gt;.&lt;br&gt;
 If either limit is reached, you may not be able to add or update files.
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Use the following steps to request to request an increase in storage size and/or file count limit:&lt;/p>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Go to &lt;a href="https://rdm.uq.edu.au">rdm.uq.edu.au&lt;/a>, login and select your RDM collection&lt;/p>
-&lt;h4 id="step-2">Step 2&lt;/h4>
-&lt;p>Click the &lt;strong>Request more storage&lt;/strong> button (shown below)&lt;/p>
-&lt;p>&lt;img src="storage-instructions.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>Fill the form with the relevant details and submit.&lt;/p></description></item></channel></rss>
+&lt;p&gt;Use the following steps to request to request an increase in storage size and/or file count limit:&lt;/p&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Go to &lt;a href="https://rdm.uq.edu.au"&gt;rdm.uq.edu.au&lt;/a&gt;, login and select your RDM collection&lt;/p&gt;
+&lt;h4 id="step-2"&gt;Step 2&lt;/h4&gt;
+&lt;p&gt;Click the &lt;strong&gt;Request more storage&lt;/strong&gt; button (shown below)&lt;/p&gt;
+&lt;p&gt;&lt;img src="storage-instructions.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h4 id="step-3"&gt;Step 3&lt;/h4&gt;
+&lt;p&gt;Fill the form with the relevant details and submit.&lt;/p&gt;</description></item></channel></rss>

@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Logging into XNAT on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/</link><description>Recent content in Logging into XNAT on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/index.xml" rel="self" type="application/rss+xml"/><item><title>AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</guid><description>&lt;div class="alert alert-primary" role="alert">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Logging into XNAT on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/</link><description>Recent content in Logging into XNAT on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/index.xml" rel="self" type="application/rss+xml"/><item><title>AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
 
 
- &lt;p>AAF is the recommended way to sign up and login to XNAT.&lt;/p>
-&lt;p>If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p>
+ &lt;p&gt;AAF is the recommended way to sign up and login to XNAT.&lt;/p&gt;
+&lt;p&gt;If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p&gt;
 
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. Follow the steps below to sign-up/login using AAF.&lt;/p>
-&lt;ol>
-&lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
-&lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="../xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Alias tokens</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</guid><description>&lt;p>AAF is used for logging into the XNAT website itself.&lt;/p>
-&lt;p>But there are a lot of tools and services that will require a connect to the XNAT server externally&lt;/p>
-&lt;p>These could include&lt;/p>
-&lt;ul>
-&lt;li>Windows or Mac desktop clients, like XNAT Desktop&lt;/li>
-&lt;li>Command line tools such as xnatpy, pyxnat, xnatutils etc&lt;/li>
-&lt;li>XSYNC&lt;/li>
-&lt;/ul>
-&lt;p>All of these tools and services need a way to authenticating to your XNAT account without AAF.&lt;/p>
-&lt;p>An alias token is a time-limited, long, randomised username and password used for authenticating from external services, without compromising your AAF account or credentials. They can be generated and revoked easily&lt;/p></description></item></channel></rss>
+&lt;p&gt;If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. Follow the steps below to sign-up/login using AAF.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;a href="https://xnat.rcc.uq.edu.au"&gt;https://xnat.rcc.uq.edu.au&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Login in with the AAF Single sign-on button (shown below)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="../xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;</description></item><item><title>Alias tokens</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</guid><description>&lt;p&gt;AAF is used for logging into the XNAT website itself.&lt;/p&gt;
+&lt;p&gt;But there are a lot of tools and services that will require a connect to the XNAT server externally&lt;/p&gt;
+&lt;p&gt;These could include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows or Mac desktop clients, like XNAT Desktop&lt;/li&gt;
+&lt;li&gt;Command line tools such as xnatpy, pyxnat, xnatutils etc&lt;/li&gt;
+&lt;li&gt;XSYNC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these tools and services need a way to authenticating to your XNAT account without AAF.&lt;/p&gt;
+&lt;p&gt;An alias token is a time-limited, long, randomised username and password used for authenticating from external services, without compromising your AAF account or credentials. They can be generated and revoked easily&lt;/p&gt;</description></item></channel></rss>

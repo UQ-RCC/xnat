@@ -1,88 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/</link><description>Recent content in Getting Started on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>UQ members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</guid><description>&lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
-&lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started on UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/</link><description>Recent content in Getting Started on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>UQ members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</guid><description>&lt;h2 id="signing-into-xnat"&gt;Signing into XNAT&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Open &lt;a href="https://xnat.rcc.uq.edu.au"&gt;https://xnat.rcc.uq.edu.au&lt;/a&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-
- This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
-
-&lt;/div>
-&lt;/p>
-&lt;h4 id="step-2">Step 2&lt;/h4>
-&lt;p>Login in with the AAF Single sign-on button (shown below).&lt;/p>
-&lt;p>Follow the AAF login process for your organisation&lt;/p>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p></description></item><item><title>Other AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</guid><description>&lt;p>This guide is for users from Australian Universities and AAF member organisations, including:&lt;/p>
-&lt;ul>
-&lt;li>QUT, Griffith, CQU, JCU, USQ, USC&lt;/li>
-&lt;li>CSIRO, Australian Universities&lt;/li>
-&lt;li>AAF VHO accounts&lt;/li>
-&lt;/ul>
-&lt;p>Other AAF members usually require UQ AIS XNAT access for:&lt;/p>
-&lt;ul>
-&lt;li>Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li>
-&lt;li>Collaborating on projects managed on UQ AIS XNAT&lt;/li>
-&lt;/ul>
-&lt;p>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;br>
-For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/">Non-AAF members&lt;/a> guide&lt;/p>
-&lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
-&lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>
-
-
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
  This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
 
-&lt;/div>
-&lt;/p></description></item><item><title>Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>&lt;p>This is for users from non-AAF member organisations, including:&lt;/p>
-&lt;ul>
-&lt;li>QLD Health, TRI, QIMR, QLD Xray&lt;/li>
-&lt;/ul>
-&lt;p>Non-AAF members usually require XNAT access for:&lt;/p>
-&lt;ul>
-&lt;li>Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li>
-&lt;li>Collaborating on projects managed on UQ-RCC XNAT&lt;/li>
-&lt;/ul>
-&lt;p>XNAT uses AAF for login. QCIF/QRIScloud can provide AAF Virtual Home (VHO) accounts for non-AAF users.&lt;/p>
-&lt;h2 id="creating-an-aaf-vho-account">Creating an AAF VHO account&lt;/h2>
-&lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open a ticket with RCC support to request an AAF account&lt;/p></description></item><item><title>HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>&lt;p>Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p>
-&lt;p>To get started, refer to the relevant guide below:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/">UQ members&lt;/a>
-&lt;ul>
-&lt;li>UQ Staff and Students&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/">Other AAF members&lt;/a>
-&lt;ul>
-&lt;li>QUT, Griffith, CQU, JCU, USQ, USC, Bond&lt;/li>
-&lt;li>CSIRO, QCIF, Australian Universities&lt;/li>
-&lt;li>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/">Non-AAF members&lt;/a>
-&lt;ul>
-&lt;li>TRI, QIMR&lt;/li>
-&lt;li>QLD Health, QLD Xray, Pacific Radiology&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h4 id="step-2"&gt;Step 2&lt;/h4&gt;
+&lt;p&gt;Login in with the AAF Single sign-on button (shown below).&lt;/p&gt;
+&lt;p&gt;Follow the AAF login process for your organisation&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h4 id="step-3"&gt;Step 3&lt;/h4&gt;
+&lt;p&gt;After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p&gt;</description></item><item><title>Other AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</guid><description>&lt;p&gt;This guide is for users from Australian Universities and AAF member organisations, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;QUT, Griffith, CQU, JCU, USQ, USC&lt;/li&gt;
+&lt;li&gt;CSIRO, Australian Universities&lt;/li&gt;
+&lt;li&gt;AAF VHO accounts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other AAF members usually require UQ AIS XNAT access for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li&gt;
+&lt;li&gt;Collaborating on projects managed on UQ AIS XNAT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers"&gt;here&lt;/a&gt;&lt;br&gt;
+For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/"&gt;Non-AAF members&lt;/a&gt; guide&lt;/p&gt;
+&lt;h2 id="signing-into-xnat"&gt;Signing into XNAT&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Open &lt;a href="https://xnat.rcc.uq.edu.au"&gt;https://xnat.rcc.uq.edu.au&lt;/a&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
+
+ This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
+
+&lt;/div&gt;
+&lt;/p&gt;</description></item><item><title>Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>&lt;p&gt;This is for users from non-AAF member organisations, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;QLD Health, TRI, QIMR, QLD Xray&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Non-AAF members usually require XNAT access for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li&gt;
+&lt;li&gt;Collaborating on projects managed on UQ-RCC XNAT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;XNAT uses AAF for login. QCIF/QRIScloud can provide AAF Virtual Home (VHO) accounts for non-AAF users.&lt;/p&gt;
+&lt;h2 id="creating-an-aaf-vho-account"&gt;Creating an AAF VHO account&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Open a ticket with RCC support to request an AAF account&lt;/p&gt;</description></item><item><title>HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>&lt;p&gt;Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p&gt;
+&lt;p&gt;To get started, refer to the relevant guide below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/"&gt;UQ members&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;UQ Staff and Students&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/"&gt;Other AAF members&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;QUT, Griffith, CQU, JCU, USQ, USC, Bond&lt;/li&gt;
+&lt;li&gt;CSIRO, QCIF, Australian Universities&lt;/li&gt;
+&lt;li&gt;Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/"&gt;Non-AAF members&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;TRI, QIMR&lt;/li&gt;
+&lt;li&gt;QLD Health, QLD Xray, Pacific Radiology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 
 
- If you have multiple valid affiliations, we&amp;rsquo;d recommend using &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/">UQ&lt;/a> or &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/">AAF&lt;/a> affiliation where possible
+&lt;div class="alert alert-warning" role="alert"&gt;
 
-&lt;/div>
 
-&lt;p>If you have any questions, contact &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a> or &lt;a href="mailto:HIRFAdministration@health.qld.gov.au">HIRFAdministration@health.qld.gov.au&lt;/a>&lt;/p></description></item></channel></rss>
+ If you have multiple valid affiliations, we&amp;rsquo;d recommend using &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/"&gt;UQ&lt;/a&gt; or &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/"&gt;AAF&lt;/a&gt; affiliation where possible
+
+&lt;/div&gt;
+
+&lt;p&gt;If you have any questions, contact &lt;a href="mailto:rcc-support@uq.edu.au"&gt;rcc-support@uq.edu.au&lt;/a&gt; or &lt;a href="mailto:HIRFAdministration@health.qld.gov.au"&gt;HIRFAdministration@health.qld.gov.au&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

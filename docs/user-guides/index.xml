@@ -2,15 +2,15 @@
 title: "FAQ"
 linkTitle: "FAQ"
 weight: 1
-description: >
+description: &gt;
  Frequently Asked Questions
---- -->
-&lt;div>
- &lt;nav id="TableOfContents">
- &lt;ul>
- &lt;li>&lt;a href="#example">Example&lt;/a>&lt;/li>
- &lt;/ul>
-&lt;/nav>
-&lt;/div>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;p>Example&lt;/p></description></item></channel></rss>
+--- --&gt;
+&lt;div&gt;
+ &lt;nav id="TableOfContents"&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#example"&gt;Example&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;p&gt;Example&lt;/p&gt;</description></item></channel></rss>

@@ -1,552 +1,552 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/</link><description>Recent content on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</guid><description>&lt;h3 id="installing-ctp-on-windows-10">Installing CTP on Windows 10&lt;/h3>
-&lt;p>CTP installation steps&lt;/p>
-&lt;ol>
-&lt;li>Create a new user for CTP on UQ RCC XNAT (not an AAF/OpenID user) with required project access, without admin access&lt;/li>
-&lt;li>Download the following files
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/johnperry/CTP/raw/master/products/CTP-installer.jar">CTP-installer.jar&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/Australian-Imaging-Service/configuration/raw/0c784a9bdd817ee5e0534034a5a108b4a1c6f4aa/CTP/ctp_clinical_site_to_xnat_config.xml">ctp_clinical_site_to_xnat_config.xml&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://dicom.offis.de/download/dcmtk/dcmtk366/bin/dcmtk-3.6.6-win64-dynamic.zip">dcmtk-3.6.6-win64-dynamic.zip&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://www.rubomedical.com/dicom_files/dicom_viewer_Mrbrain.zip">dicom_viewer_Mrbrain.zip&lt;/a>&lt;/li>
-&lt;li>Optional if you need more DICOM samples: &lt;a href="https://download.nrg.wustl.edu/pub/data/sample1.zip">sample1.zip&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Install CTP using:
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>cd INSTALL_FOLDER (replace with your actual folder)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>java -jar CTP-installer.jar
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>Replace CTP/config.xml with ctp_clinical_site_to_xnat_config.xml&lt;/li>
-&lt;li>Edit CTP/config.xml
-&lt;ul>
-&lt;li>Change &amp;ldquo;xxxx.xxxx&amp;rdquo; in two &amp;ldquo;url&amp;rdquo; tags to &amp;ldquo;xnat.rcc.uq.edu.au&amp;rdquo;&lt;/li>
-&lt;li>Change &amp;ldquo;xxxx&amp;rdquo; username and password tags to match new user from step 1&lt;/li>
-&lt;li>If CTP internet access is via a proxy server, add the proxy server element to the Server config
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;Server ...&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;ProxyServer
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxyIPAddress=&amp;#34;&amp;#34;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxyPort=&amp;#34;&amp;#34;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxyUsername=&amp;#34;&amp;#34;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxyPassword=&amp;#34;&amp;#34;/&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/Server&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Add CTP the anonymiser script
-&lt;ul>
-&lt;li>Copy CTP/scripts/DicomServiceAnonymizer.script to CTP/scripts/dicom-anonymizer-sender.script&lt;/li>
-&lt;li>Add the PROJECTID parameter to the list of parameters at the start of the file
-&lt;ul>
-&lt;li>&lt;code>&amp;lt;p t=&amp;quot;PROJECTID&amp;quot;&amp;gt;my xnat project id&amp;lt;/p&amp;gt;&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Change the PatientComments element 0010,4000 to set XNAT project routing info
-&lt;ul>
-&lt;li>&lt;code>@always()@append(){Project:@param(@PROJECTID) Subject:@contents([0010,0010]) Session:@contents([0008,0050])}&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Review/set other parameters at the start of the file
-&lt;ul>
-&lt;li>PROFILENAME, eg. AIS-Clinical-Site-210604&lt;/li>
-&lt;li>DATEINC, eg. 0&lt;/li>
-&lt;li>PROJECTNAME, SITEID, SITENAME, TRIALNAME, TRIALSPONSOR as required&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Optional: review script to check anonymisation settings are appropriate&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Start CTP GUI
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>java -jar Launcher.jar
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>Click the CTP &amp;ldquo;Start&amp;rdquo; button&lt;/li>
-&lt;li>Click the &amp;ldquo;CTP Home Page&amp;rdquo; button to open the Web UI
-&lt;ul>
-&lt;li>If the browser can&amp;rsquo;t connect, check CTP is not already running, or try changing the Server port&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Login
-&lt;ul>
-&lt;li>Top RHS banner should show &amp;ldquo;Welcome admin&amp;rdquo;&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Optional: click &amp;ldquo;User Manager&amp;rdquo; to change default usernames/passwords&lt;/li>
-&lt;li>Optional: click &amp;ldquo;DICOM Anonymizer&amp;rdquo; to view/edit anonymiser script&lt;/li>
-&lt;li>Unzip DCMTK and MrBrain dicom sample&lt;/li>
-&lt;li>Try sending an dicom to CTP using dcmtk
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>cd dcmtk-3.6.5-win64-dynamic/bin
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dcmsend localhost 25055 ../../dicom_viewer_Mrbrain/MRBRAIN.DCM
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>Login to the XNAT server with an admin account to view Prearchive
-&lt;ul>
-&lt;li>Use &amp;ldquo;Upload&amp;rdquo; → &amp;ldquo;Go to prearchive&amp;rdquo;&lt;/li>
-&lt;li>DICOM should appear in &amp;ldquo;Receiving&amp;rdquo; status, with project id assigned from step 6
-&lt;ul>
-&lt;li>Optional: non-admin users need to search by subject/etc&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Use Refresh to check when &amp;ldquo;Ready&amp;rdquo; or it disappears from list (as it has been routed to the project)&lt;/li>
-&lt;li>Debugging: use dcm2xml from DCMTK to check anonymised dicom file under CTP/roots/FileAfterAnonymization25055&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Logout and login with the new XNAT user from step 1&lt;/li>
-&lt;li>Navigate to the project set in step 6
-&lt;ul>
-&lt;li>You should see the dicom listed as subject &amp;ldquo;1737775597&amp;rdquo;&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Use subject &amp;ldquo;1737775597&amp;rdquo; → &amp;ldquo;MR Session&amp;rdquo; → &amp;ldquo;View Images&amp;rdquo; to view the uploaded image&lt;/li>
-&lt;li>Try a dicom send from the scanner using PC address and port 25055 (check windows firewall settings?)&lt;/li>
-&lt;li>Enable CTP as a Windows Service. Instructions &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/">here&lt;/a>&lt;/li>
-&lt;/ol>
-&lt;h3 id="further-information">Further information&lt;/h3>
-&lt;p>If you need a different commit of CTP-installer&lt;/p></description></item><item><title>Proxy Server Settings</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</guid><description>&lt;p>If CTP uses a proxy server for internet access, you can update the CTP proxy server settings on Windows as follows&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>Stop the CTP Windows service&lt;/p>
-&lt;ul>
-&lt;li>If you already have a Services short-cut on the Windows desktop, double-click the short-cut to start Windows Services&lt;/li>
-&lt;li>If not, click the Windows start button, start typing &amp;ldquo;services&amp;rdquo; and the Services App icon should appear
-&lt;ul>
-&lt;li>Click the Services App icon to start Windows Services&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Locate the CTP service in the list of services, right-click and select &lt;strong>Stop&lt;/strong> from the context menu&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Start the CTP Launcher&lt;/p></description></item><item><title>Windows Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/</guid><description>&lt;p>The CTP install.bat script uses Apache procrun. Use the following steps to enable CTP as a Windows service, including an update to use a JRE other than system default (leave out step 2 if using the system default JRE)&lt;/p>
-&lt;ol>
-&lt;li>Install CTP
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>java -jar CTP-installer.jar
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>To use JRE other than system default, edit &lt;code>&amp;lt;ctp-home&amp;gt;/windows/install.bat&lt;/code>. Find the &amp;ndash;Jvm=auto, add &amp;ndash;JavaHome entry and set both as follows
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>--JavaHome=&amp;#34;&amp;lt;jre home&amp;gt; &amp;#34; ^
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--Jvm=&amp;#34;&amp;lt;jre-home&amp;gt;\bin\server\jvm.dll&amp;#34; ^
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>^ is needed to wrap/continue command line in batch file&lt;/li>
-&lt;li>The jvm.dll location under &lt;jre-home> is the same for JRE 1.7 and 1.8 installs. Confirm this is the case for other JREs/JDKs&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Run install.bat as Administrator to create the CTP windows service
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>cd &amp;lt;ctp-home&amp;gt;/windows
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>install
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>Open Windows Services as Administrator and start the CTP service&lt;/li>
-&lt;li>Open CTP administration page in Web browser&lt;/li>
-&lt;li>Confirm the correct JRE is reported in Admin → System Properties and/or Admin → Log Viewer → ctp.log&lt;/li>
-&lt;/ol>
-&lt;h4 id="troubleshooting">Troubleshooting&lt;/h4>
-&lt;ul>
-&lt;li>Installation paths are set in install.bat during CTP install so it won&amp;rsquo;t work if you move the CTP folder somewhere else after install&lt;/li>
-&lt;li>If removing the service (with uninstall.bat) leaves the service stuck in delete pending state, reboot the system to complete&lt;/li>
-&lt;/ul>
-&lt;h4 id="further-information">Further information&lt;/h4>
-&lt;ul>
-&lt;li>&lt;a href="https://mircwiki.rsna.org/index.php?title=Running_CTP_as_a_Windows_Service">Running CTP as a Windows service&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://commons.apache.org/proper/commons-daemon/procrun.html">Apache procrun&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Linux Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</guid><description>&lt;h2 id="ubuntu">Ubuntu&lt;/h2>
-&lt;p>Open &lt;code>./linux/ctpService-ubuntu.sh&lt;/code>. Update the following parameters:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>USER=ubuntu
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>CTP_HOME=/opt/ctp/CTP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>JAVA_BIN=/usr/lib/jvm/java-17-openjdk-amd64/bin
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>JAVA=$JAVA_BIN/java
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>CTP_PID=$CTP_HOME/ctp.pid
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run the following to install the ctpService into init.d&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>sudo ln -s ./linux/ctpService-ubuntu.sh /etc/init.d/ctpService
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo update-rc.d ctpService defaults 98 02
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start and stop CTP using the following commands&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>sudo service ctpService start
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo service ctpService stop
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</guid><description>&lt;div class="alert alert-primary" role="alert">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UQ AIS XNAT</title><link>https://docs.xnat.rcc.uq.edu.au/</link><description>Recent content on UQ AIS XNAT</description><generator>Hugo</generator><language>en</language><atom:link href="https://docs.xnat.rcc.uq.edu.au/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/installation/</guid><description>&lt;h3 id="installing-ctp-on-windows-10"&gt;Installing CTP on Windows 10&lt;/h3&gt;
+&lt;p&gt;CTP installation steps&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new user for CTP on UQ RCC XNAT (not an AAF/OpenID user) with required project access, without admin access&lt;/li&gt;
+&lt;li&gt;Download the following files
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/johnperry/CTP/raw/master/products/CTP-installer.jar"&gt;CTP-installer.jar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Australian-Imaging-Service/configuration/raw/0c784a9bdd817ee5e0534034a5a108b4a1c6f4aa/CTP/ctp_clinical_site_to_xnat_config.xml"&gt;ctp_clinical_site_to_xnat_config.xml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dicom.offis.de/download/dcmtk/dcmtk366/bin/dcmtk-3.6.6-win64-dynamic.zip"&gt;dcmtk-3.6.6-win64-dynamic.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.rubomedical.com/dicom_files/dicom_viewer_Mrbrain.zip"&gt;dicom_viewer_Mrbrain.zip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional if you need more DICOM samples: &lt;a href="https://download.nrg.wustl.edu/pub/data/sample1.zip"&gt;sample1.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Install CTP using:
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd INSTALL_FOLDER (replace with your actual folder)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar CTP-installer.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Replace CTP/config.xml with ctp_clinical_site_to_xnat_config.xml&lt;/li&gt;
+&lt;li&gt;Edit CTP/config.xml
+&lt;ul&gt;
+&lt;li&gt;Change &amp;ldquo;xxxx.xxxx&amp;rdquo; in two &amp;ldquo;url&amp;rdquo; tags to &amp;ldquo;xnat.rcc.uq.edu.au&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Change &amp;ldquo;xxxx&amp;rdquo; username and password tags to match new user from step 1&lt;/li&gt;
+&lt;li&gt;If CTP internet access is via a proxy server, add the proxy server element to the Server config
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;Server ...&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;ProxyServer
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; proxyIPAddress=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; proxyPort=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; proxyUsername=&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; proxyPassword=&amp;#34;&amp;#34;/&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;/Server&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;Once this element is added proxy server settings can be updated in the CTP Launcher GUI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add CTP the anonymiser script
+&lt;ul&gt;
+&lt;li&gt;Copy CTP/scripts/DicomServiceAnonymizer.script to CTP/scripts/dicom-anonymizer-sender.script&lt;/li&gt;
+&lt;li&gt;Add the PROJECTID parameter to the list of parameters at the start of the file
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;p t=&amp;quot;PROJECTID&amp;quot;&amp;gt;my xnat project id&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Change the PatientComments element 0010,4000 to set XNAT project routing info
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@always()@append(){Project:@param(@PROJECTID) Subject:@contents([0010,0010]) Session:@contents([0008,0050])}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Review/set other parameters at the start of the file
+&lt;ul&gt;
+&lt;li&gt;PROFILENAME, eg. AIS-Clinical-Site-210604&lt;/li&gt;
+&lt;li&gt;DATEINC, eg. 0&lt;/li&gt;
+&lt;li&gt;PROJECTNAME, SITEID, SITENAME, TRIALNAME, TRIALSPONSOR as required&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Optional: review script to check anonymisation settings are appropriate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Start CTP GUI
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar Launcher.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Click the CTP &amp;ldquo;Start&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;Click the &amp;ldquo;CTP Home Page&amp;rdquo; button to open the Web UI
+&lt;ul&gt;
+&lt;li&gt;If the browser can&amp;rsquo;t connect, check CTP is not already running, or try changing the Server port&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Login
+&lt;ul&gt;
+&lt;li&gt;Top RHS banner should show &amp;ldquo;Welcome admin&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Optional: click &amp;ldquo;User Manager&amp;rdquo; to change default usernames/passwords&lt;/li&gt;
+&lt;li&gt;Optional: click &amp;ldquo;DICOM Anonymizer&amp;rdquo; to view/edit anonymiser script&lt;/li&gt;
+&lt;li&gt;Unzip DCMTK and MrBrain dicom sample&lt;/li&gt;
+&lt;li&gt;Try sending an dicom to CTP using dcmtk
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd dcmtk-3.6.5-win64-dynamic/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dcmsend localhost 25055 ../../dicom_viewer_Mrbrain/MRBRAIN.DCM
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Login to the XNAT server with an admin account to view Prearchive
+&lt;ul&gt;
+&lt;li&gt;Use &amp;ldquo;Upload&amp;rdquo; → &amp;ldquo;Go to prearchive&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;DICOM should appear in &amp;ldquo;Receiving&amp;rdquo; status, with project id assigned from step 6
+&lt;ul&gt;
+&lt;li&gt;Optional: non-admin users need to search by subject/etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Use Refresh to check when &amp;ldquo;Ready&amp;rdquo; or it disappears from list (as it has been routed to the project)&lt;/li&gt;
+&lt;li&gt;Debugging: use dcm2xml from DCMTK to check anonymised dicom file under CTP/roots/FileAfterAnonymization25055&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Logout and login with the new XNAT user from step 1&lt;/li&gt;
+&lt;li&gt;Navigate to the project set in step 6
+&lt;ul&gt;
+&lt;li&gt;You should see the dicom listed as subject &amp;ldquo;1737775597&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Use subject &amp;ldquo;1737775597&amp;rdquo; → &amp;ldquo;MR Session&amp;rdquo; → &amp;ldquo;View Images&amp;rdquo; to view the uploaded image&lt;/li&gt;
+&lt;li&gt;Try a dicom send from the scanner using PC address and port 25055 (check windows firewall settings?)&lt;/li&gt;
+&lt;li&gt;Enable CTP as a Windows Service. Instructions &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="further-information"&gt;Further information&lt;/h3&gt;
+&lt;p&gt;If you need a different commit of CTP-installer&lt;/p&gt;</description></item><item><title>Proxy Server Settings</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/proxy-server/</guid><description>&lt;p&gt;If CTP uses a proxy server for internet access, you can update the CTP proxy server settings on Windows as follows&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Stop the CTP Windows service&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you already have a Services short-cut on the Windows desktop, double-click the short-cut to start Windows Services&lt;/li&gt;
+&lt;li&gt;If not, click the Windows start button, start typing &amp;ldquo;services&amp;rdquo; and the Services App icon should appear
+&lt;ul&gt;
+&lt;li&gt;Click the Services App icon to start Windows Services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Locate the CTP service in the list of services, right-click and select &lt;strong&gt;Stop&lt;/strong&gt; from the context menu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start the CTP Launcher&lt;/p&gt;</description></item><item><title>Windows Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/</guid><description>&lt;p&gt;The CTP install.bat script uses Apache procrun. Use the following steps to enable CTP as a Windows service, including an update to use a JRE other than system default (leave out step 2 if using the system default JRE)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install CTP
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar CTP-installer.jar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;To use JRE other than system default, edit &lt;code&gt;&amp;lt;ctp-home&amp;gt;/windows/install.bat&lt;/code&gt;. Find the &amp;ndash;Jvm=auto, add &amp;ndash;JavaHome entry and set both as follows
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;--JavaHome=&amp;#34;&amp;lt;jre home&amp;gt; &amp;#34; ^
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;--Jvm=&amp;#34;&amp;lt;jre-home&amp;gt;\bin\server\jvm.dll&amp;#34; ^
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;^ is needed to wrap/continue command line in batch file&lt;/li&gt;
+&lt;li&gt;The jvm.dll location under &lt;jre-home&gt; is the same for JRE 1.7 and 1.8 installs. Confirm this is the case for other JREs/JDKs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Run install.bat as Administrator to create the CTP windows service
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd &amp;lt;ctp-home&amp;gt;/windows
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Open Windows Services as Administrator and start the CTP service&lt;/li&gt;
+&lt;li&gt;Open CTP administration page in Web browser&lt;/li&gt;
+&lt;li&gt;Confirm the correct JRE is reported in Admin → System Properties and/or Admin → Log Viewer → ctp.log&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id="troubleshooting"&gt;Troubleshooting&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Installation paths are set in install.bat during CTP install so it won&amp;rsquo;t work if you move the CTP folder somewhere else after install&lt;/li&gt;
+&lt;li&gt;If removing the service (with uninstall.bat) leaves the service stuck in delete pending state, reboot the system to complete&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="further-information"&gt;Further information&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://mircwiki.rsna.org/index.php?title=Running_CTP_as_a_Windows_Service"&gt;Running CTP as a Windows service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://commons.apache.org/proper/commons-daemon/procrun.html"&gt;Apache procrun&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Linux Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</guid><description>&lt;h2 id="ubuntu"&gt;Ubuntu&lt;/h2&gt;
+&lt;p&gt;Open &lt;code&gt;./linux/ctpService-ubuntu.sh&lt;/code&gt;. Update the following parameters:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;USER=ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;CTP_HOME=/opt/ctp/CTP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;JAVA_BIN=/usr/lib/jvm/java-17-openjdk-amd64/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;JAVA=$JAVA_BIN/java
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;CTP_PID=$CTP_HOME/ctp.pid
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run the following to install the ctpService into init.d&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo ln -s ./linux/ctpService-ubuntu.sh /etc/init.d/ctpService
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo update-rc.d ctpService defaults 98 02
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Start and stop CTP using the following commands&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo service ctpService start
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo service ctpService stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>AAF login</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/aaf-login/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
 
 
- &lt;p>AAF is the recommended way to sign up and login to XNAT.&lt;/p>
-&lt;p>If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p>
+ &lt;p&gt;AAF is the recommended way to sign up and login to XNAT.&lt;/p&gt;
+&lt;p&gt;If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options&lt;/p&gt;
 
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. Follow the steps below to sign-up/login using AAF.&lt;/p>
-&lt;ol>
-&lt;li>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>&lt;/li>
-&lt;li>Login in with the AAF Single sign-on button (shown below)&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="../xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Granting Access</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</guid><description>&lt;p>Switch to the Access tab. Use &lt;font color='red'>&lt;strong>Add User&lt;/strong>&lt;/font> or &lt;font color='red'>&lt;strong>Add Users from List&lt;/strong>&lt;/font> to select the user to add&lt;/p>
-&lt;p>&lt;img src="user-access.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select role from&lt;/p>
-&lt;ol>
-&lt;li>Owners&lt;/li>
-&lt;li>Members&lt;/li>
-&lt;li>Collaborators&lt;/li>
-&lt;/ol>
-&lt;h2 id="user-roles">User roles&lt;/h2>
-&lt;p>The following table outlines the permissions given to each role.&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Permission&lt;/th>
- &lt;th>Owners&lt;/th>
- &lt;th>Members&lt;/th>
- &lt;th>Collaborators&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>Data - Create&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Data - Read/Download&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Data - Update&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Data - Delete&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>User - Add/Remove&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>User - Change role&lt;/td>
- &lt;td>✓&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;td>✗&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item><item><title>Project anonymiser</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/project-anonymiser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/project-anonymiser/</guid><description>&lt;p>The Project level anonymiser uses a scripting syntax called DicomEdit to modify, reassign or blank DICOM tags.
-You can actually use this to create automated workflow for renaming DICOM metadata on datasets&lt;/p>
-&lt;dl>
-&lt;dt>Dicomedit&lt;/dt>
-&lt;dd>&lt;a href="https://wiki.xnat.org/xnat-tools/dicomedit/dicomedit-6-3-language-reference">https://wiki.xnat.org/xnat-tools/dicomedit/dicomedit-6-3-language-reference&lt;/a>&lt;/dd>
-&lt;/dl>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">version&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;6.1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">project&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">!=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Unassigned&amp;#34;&lt;/span> &lt;span style="color:#a40000">?&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0008&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1030&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">project&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0010&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0010&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">subject&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0010&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0020&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">:=&lt;/span> &lt;span style="color:#000">session&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The example in this screenshot basically replicates the behaviour in the HIRF onsite anonymiser for remapping the ReferringPhysicianName, PatientName and PatientID&lt;/p>
-&lt;p>&lt;img src="project-anonymiser-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>You can use DICOMedit to enforce a particular naming and tagging scheme across your entire project this way.&lt;/p></description></item><item><title>UQ members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</guid><description>&lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
-&lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>
-
-
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-
- This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
-
-&lt;/div>
-&lt;/p>
-&lt;h4 id="step-2">Step 2&lt;/h4>
-&lt;p>Login in with the AAF Single sign-on button (shown below).&lt;/p>
-&lt;p>Follow the AAF login process for your organisation&lt;/p>
-&lt;p>&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p></description></item><item><title>Web Upload</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</guid><description>&lt;h2 id="uploading-dicom-datasets">Uploading DICOM datasets&lt;/h2>
+&lt;p&gt;If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. Follow the steps below to sign-up/login using AAF.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;a href="https://xnat.rcc.uq.edu.au"&gt;https://xnat.rcc.uq.edu.au&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Login in with the AAF Single sign-on button (shown below)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="../xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;</description></item><item><title>Granting Access</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/granting-access/</guid><description>&lt;p&gt;Switch to the Access tab. Use &lt;font color='red'&gt;&lt;strong&gt;Add User&lt;/strong&gt;&lt;/font&gt; or &lt;font color='red'&gt;&lt;strong&gt;Add Users from List&lt;/strong&gt;&lt;/font&gt; to select the user to add&lt;/p&gt;
+&lt;p&gt;&lt;img src="user-access.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Select role from&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Owners&lt;/li&gt;
+&lt;li&gt;Members&lt;/li&gt;
+&lt;li&gt;Collaborators&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="user-roles"&gt;User roles&lt;/h2&gt;
+&lt;p&gt;The following table outlines the permissions given to each role.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Permission&lt;/th&gt;
+ &lt;th&gt;Owners&lt;/th&gt;
+ &lt;th&gt;Members&lt;/th&gt;
+ &lt;th&gt;Collaborators&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Create&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Read/Download&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Update&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Data - Delete&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;User - Add/Remove&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;User - Change role&lt;/td&gt;
+ &lt;td&gt;✓&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;td&gt;✗&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Project anonymiser</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/project-anonymiser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/project-anonymiser/</guid><description>&lt;p&gt;The Project level anonymiser uses a scripting syntax called DicomEdit to modify, reassign or blank DICOM tags.
+You can actually use this to create automated workflow for renaming DICOM metadata on datasets&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Dicomedit&lt;/dt&gt;
+&lt;dd&gt;&lt;a href="https://wiki.xnat.org/xnat-tools/dicomedit/dicomedit-6-3-language-reference"&gt;https://wiki.xnat.org/xnat-tools/dicomedit/dicomedit-6-3-language-reference&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;version&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;6.1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;project&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;!=&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;Unassigned&amp;#34;&lt;/span&gt; &lt;span style="color:#a40000"&gt;?&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;0008&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;1030&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;:=&lt;/span&gt; &lt;span style="color:#000"&gt;project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;0010&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;0010&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;:=&lt;/span&gt; &lt;span style="color:#000"&gt;subject&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;0010&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;0020&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;:=&lt;/span&gt; &lt;span style="color:#000"&gt;session&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The example in this screenshot basically replicates the behaviour in the HIRF onsite anonymiser for remapping the ReferringPhysicianName, PatientName and PatientID&lt;/p&gt;
+&lt;p&gt;&lt;img src="project-anonymiser-1.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;You can use DICOMedit to enforce a particular naming and tagging scheme across your entire project this way.&lt;/p&gt;</description></item><item><title>UQ members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/</guid><description>&lt;h2 id="signing-into-xnat"&gt;Signing into XNAT&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Open &lt;a href="https://xnat.rcc.uq.edu.au"&gt;https://xnat.rcc.uq.edu.au&lt;/a&gt;
 
 
-&lt;div class="pageinfo pageinfo-primary">
-&lt;p>This is for uploading &lt;strong>de-identified DICOM&lt;/strong> files using the uploader directly from the XNAT website&lt;/p>
-
-&lt;/div>
-
-&lt;ol>
-&lt;li>De-identify DICOM on scanner or upload pc&lt;/li>
-&lt;li>Zip DICOM files into a zip file&lt;/li>
-&lt;li>Login to XNAT (see &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/">Login to XNAT&lt;/a>)&lt;/li>
-&lt;li>From the top panel, select &lt;strong>Upload → Images → Compressed Uploader&lt;/strong>&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="upload-menu.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;ol start="5">
-&lt;li>Specify the following options:
-&lt;ul>
-&lt;li>&lt;strong>Project&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Destination&lt;/strong>: Select &lt;strong>Prearchive&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Choose file&lt;/strong> to select zipped file with DICOMs&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="compressed-uploader.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Other AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</guid><description>&lt;p>This guide is for users from Australian Universities and AAF member organisations, including:&lt;/p>
-&lt;ul>
-&lt;li>QUT, Griffith, CQU, JCU, USQ, USC&lt;/li>
-&lt;li>CSIRO, Australian Universities&lt;/li>
-&lt;li>AAF VHO accounts&lt;/li>
-&lt;/ul>
-&lt;p>Other AAF members usually require UQ AIS XNAT access for:&lt;/p>
-&lt;ul>
-&lt;li>Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li>
-&lt;li>Collaborating on projects managed on UQ AIS XNAT&lt;/li>
-&lt;/ul>
-&lt;p>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;br>
-For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/">Non-AAF members&lt;/a> guide&lt;/p>
-&lt;h2 id="signing-into-xnat">Signing into XNAT&lt;/h2>
-&lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open &lt;a href="https://xnat.rcc.uq.edu.au">https://xnat.rcc.uq.edu.au&lt;/a>
-
-
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
  This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
 
-&lt;/div>
-&lt;/p></description></item><item><title>Request Storage</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</guid><description>&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h4 id="step-2"&gt;Step 2&lt;/h4&gt;
+&lt;p&gt;Login in with the AAF Single sign-on button (shown below).&lt;/p&gt;
+&lt;p&gt;Follow the AAF login process for your organisation&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h4 id="step-3"&gt;Step 3&lt;/h4&gt;
+&lt;p&gt;After the AAF sign-in, you should be redirected back to XNAT (Example below)&lt;/p&gt;</description></item><item><title>Web Upload</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/web-upload/</guid><description>&lt;h2 id="uploading-dicom-datasets"&gt;Uploading DICOM datasets&lt;/h2&gt;
 
- Default limits on collections are &lt;strong>1TB storage&lt;/strong> and &lt;strong>1 million files&lt;/strong>.&lt;br>
+
+&lt;div class="pageinfo pageinfo-primary"&gt;
+&lt;p&gt;This is for uploading &lt;strong&gt;de-identified DICOM&lt;/strong&gt; files using the uploader directly from the XNAT website&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;De-identify DICOM on scanner or upload pc&lt;/li&gt;
+&lt;li&gt;Zip DICOM files into a zip file&lt;/li&gt;
+&lt;li&gt;Login to XNAT (see &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/login-to-xnat/"&gt;Login to XNAT&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;From the top panel, select &lt;strong&gt;Upload → Images → Compressed Uploader&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="upload-menu.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;ol start="5"&gt;
+&lt;li&gt;Specify the following options:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Project&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Destination&lt;/strong&gt;: Select &lt;strong&gt;Prearchive&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choose file&lt;/strong&gt; to select zipped file with DICOMs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="compressed-uploader.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;</description></item><item><title>Other AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/</guid><description>&lt;p&gt;This guide is for users from Australian Universities and AAF member organisations, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;QUT, Griffith, CQU, JCU, USQ, USC&lt;/li&gt;
+&lt;li&gt;CSIRO, Australian Universities&lt;/li&gt;
+&lt;li&gt;AAF VHO accounts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other AAF members usually require UQ AIS XNAT access for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li&gt;
+&lt;li&gt;Collaborating on projects managed on UQ AIS XNAT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers"&gt;here&lt;/a&gt;&lt;br&gt;
+For all other organisations, use the &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/"&gt;Non-AAF members&lt;/a&gt; guide&lt;/p&gt;
+&lt;h2 id="signing-into-xnat"&gt;Signing into XNAT&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Open &lt;a href="https://xnat.rcc.uq.edu.au"&gt;https://xnat.rcc.uq.edu.au&lt;/a&gt;
+
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
+
+ This is the link to the UQ AIS XNAT. If you have been provided with a project specific XNAT link to use, use that one instead
+
+&lt;/div&gt;
+&lt;/p&gt;</description></item><item><title>Request Storage</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/projects/request-storage/</guid><description>&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
+
+ Default limits on collections are &lt;strong&gt;1TB storage&lt;/strong&gt; and &lt;strong&gt;1 million files&lt;/strong&gt;.&lt;br&gt;
 If either limit is reached, you may not be able to add or update files.
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Use the following steps to request to request an increase in storage size and/or file count limit:&lt;/p>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Go to &lt;a href="https://rdm.uq.edu.au">rdm.uq.edu.au&lt;/a>, login and select your RDM collection&lt;/p>
-&lt;h4 id="step-2">Step 2&lt;/h4>
-&lt;p>Click the &lt;strong>Request more storage&lt;/strong> button (shown below)&lt;/p>
-&lt;p>&lt;img src="storage-instructions.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;h4 id="step-3">Step 3&lt;/h4>
-&lt;p>Fill the form with the relevant details and submit.&lt;/p></description></item><item><title>Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>&lt;p>This is to create a web upload form for repeated uploads of any data type.&lt;/p>
-&lt;p>Navigate to &lt;strong>Project → Manage → Project Resource Settings → Start&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="resource-uploader-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select &lt;strong>Image Sessions&lt;/strong>. Enter the following required fields&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Title&lt;/strong>: e.g. Rawdata&lt;/li>
-&lt;li>&lt;strong>Resource Folder&lt;/strong>: e.g. RAW&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;strong>Extract compressed files by default&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>Select &lt;strong>Add&lt;/strong> when complete&lt;/p>
-&lt;p>&lt;img src="resource-uploader-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>To upload file(s) using the resource uploader, &lt;strong>Upload Additional Files&lt;/strong> from the Sessions page&lt;/p></description></item><item><title>Site anonymiser</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</guid><description>&lt;p>HIRF and CAI data are anonymised on-site by default with the following protocols&lt;/p>
-&lt;h2 id="modified-tags">Modified Tags&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>DICOM Tag&lt;/th>
- &lt;th>Original value&lt;/th>
- &lt;th>New value&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>PatientBirthDate&lt;/td>
- &lt;td>10/12/2000&lt;/td>
- &lt;td>1/1/2000&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>PatientComments&lt;/td>
- &lt;td>XXXXXXXX&lt;/td>
- &lt;td>Project:Proj001 Subject:TEST_MR Session:TEST_MR-20210405T1220&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>ReferringPhysicianName&lt;/td>
- &lt;td>Proj001&lt;/td>
- &lt;td>Proj001&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>PatientName&lt;/td>
- &lt;td>XXXXXXXX&lt;/td>
- &lt;td>TEST_MR&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>PatientID&lt;/td>
- &lt;td>TEST_MR&lt;/td>
- &lt;td>TEST_MR-20210405T1220&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="blanked-tags">Blanked Tags&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>DICOM Tag&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>AccessionNumber&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>ImageComments&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>OperatorName&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>OtherPatientIDs&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>AdditionalPatientHistory&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>AdmittingDiagnosisDescription&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>MedicalRecordLocator&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>NameOfPhysicianReadingStudy&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Occupation&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>OtherPatientNames&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>PatientBirthTime&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>PerformingPhysicianName&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>PhysicianOfRecord&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>ReferringPhysicianAddress&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>ReferringPhysicianPhoneNumbers&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item><item><title>Zip Download</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</guid><description>&lt;p>The Project, Subject and Sessions page has the option to &lt;strong>Download Images&lt;/strong> from the right hand side menu&lt;/p>
-&lt;p>&lt;img src="downloading-data-1.png" width="50%" style="border: 1px solid #ddd">&lt;/img>
-&lt;img src="downloading-data-2.png" width="50%" style="border: 1px solid #ddd">&lt;/img>
-&lt;img src="downloading-data-3.png" width="50%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select &lt;strong>Option 2: ZIP download&lt;/strong>&lt;/p>
-
-
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-
- Untick &lt;strong>Simply downloaded archive structure&lt;/strong> to keep scan names in scan folders
-
-&lt;/div>
-
-&lt;p>&lt;img src="downloading-data-zip.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Filter out the Session and scans from the first two columns and select &lt;strong>Submit&lt;/strong>&lt;/p></description></item><item><title>Alias tokens</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</guid><description>&lt;p>AAF is used for logging into the XNAT website itself.&lt;/p>
-&lt;p>But there are a lot of tools and services that will require a connect to the XNAT server externally&lt;/p>
-&lt;p>These could include&lt;/p>
-&lt;ul>
-&lt;li>Windows or Mac desktop clients, like XNAT Desktop&lt;/li>
-&lt;li>Command line tools such as xnatpy, pyxnat, xnatutils etc&lt;/li>
-&lt;li>XSYNC&lt;/li>
-&lt;/ul>
-&lt;p>All of these tools and services need a way to authenticating to your XNAT account without AAF.&lt;/p>
-&lt;p>An alias token is a time-limited, long, randomised username and password used for authenticating from external services, without compromising your AAF account or credentials. They can be generated and revoked easily&lt;/p></description></item><item><title>Desktop client</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</guid><description>&lt;p>The XNAT Desktop client is maintained by the XNAT development team. For information see the link below.&lt;/p>
-&lt;dl>
-&lt;dt>XNAT Desktop client&lt;/dt>
-&lt;dd>&lt;a href="https://www.xnat.org/download/desktop-client/">https://www.xnat.org/download/desktop-client/&lt;/a>&lt;/dd>
-&lt;/dl>
-&lt;h2 id="install-client">Install client&lt;/h2>
-&lt;p>Download and install the client for you operating system&lt;/p>
-&lt;p>&lt;img src="desktop-client-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;h2 id="download-images">Download images&lt;/h2>
-&lt;p>The Project, Subject and Sessions page has the option to &lt;strong>Download Images&lt;/strong> from the right hand side menu&lt;/p>
-&lt;p>&lt;img src="desktop-client-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Select &lt;strong>Option 1: Download via Desktop Client&lt;/strong>&lt;/p>
+&lt;p&gt;Use the following steps to request to request an increase in storage size and/or file count limit:&lt;/p&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Go to &lt;a href="https://rdm.uq.edu.au"&gt;rdm.uq.edu.au&lt;/a&gt;, login and select your RDM collection&lt;/p&gt;
+&lt;h4 id="step-2"&gt;Step 2&lt;/h4&gt;
+&lt;p&gt;Click the &lt;strong&gt;Request more storage&lt;/strong&gt; button (shown below)&lt;/p&gt;
+&lt;p&gt;&lt;img src="storage-instructions.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h4 id="step-3"&gt;Step 3&lt;/h4&gt;
+&lt;p&gt;Fill the form with the relevant details and submit.&lt;/p&gt;</description></item><item><title>Resource uploader</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/resource-uploader/</guid><description>&lt;p&gt;This is to create a web upload form for repeated uploads of any data type.&lt;/p&gt;
+&lt;p&gt;Navigate to &lt;strong&gt;Project → Manage → Project Resource Settings → Start&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="resource-uploader-1.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;strong&gt;Image Sessions&lt;/strong&gt;. Enter the following required fields&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: e.g. Rawdata&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resource Folder&lt;/strong&gt;: e.g. RAW&lt;/li&gt;
+&lt;li&gt;&lt;input checked="" disabled="" type="checkbox"&gt; &lt;strong&gt;Extract compressed files by default&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Select &lt;strong&gt;Add&lt;/strong&gt; when complete&lt;/p&gt;
+&lt;p&gt;&lt;img src="resource-uploader-2.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;To upload file(s) using the resource uploader, &lt;strong&gt;Upload Additional Files&lt;/strong&gt; from the Sessions page&lt;/p&gt;</description></item><item><title>Site anonymiser</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/anonymising-data/site-anonymiser/</guid><description>&lt;p&gt;HIRF and CAI data are anonymised on-site by default with the following protocols&lt;/p&gt;
+&lt;h2 id="modified-tags"&gt;Modified Tags&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;DICOM Tag&lt;/th&gt;
+ &lt;th&gt;Original value&lt;/th&gt;
+ &lt;th&gt;New value&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PatientBirthDate&lt;/td&gt;
+ &lt;td&gt;10/12/2000&lt;/td&gt;
+ &lt;td&gt;1/1/2000&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PatientComments&lt;/td&gt;
+ &lt;td&gt;XXXXXXXX&lt;/td&gt;
+ &lt;td&gt;Project:Proj001 Subject:TEST_MR Session:TEST_MR-20210405T1220&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ReferringPhysicianName&lt;/td&gt;
+ &lt;td&gt;Proj001&lt;/td&gt;
+ &lt;td&gt;Proj001&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PatientName&lt;/td&gt;
+ &lt;td&gt;XXXXXXXX&lt;/td&gt;
+ &lt;td&gt;TEST_MR&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PatientID&lt;/td&gt;
+ &lt;td&gt;TEST_MR&lt;/td&gt;
+ &lt;td&gt;TEST_MR-20210405T1220&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="blanked-tags"&gt;Blanked Tags&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;DICOM Tag&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;AccessionNumber&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ImageComments&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OperatorName&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OtherPatientIDs&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;AdditionalPatientHistory&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;AdmittingDiagnosisDescription&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MedicalRecordLocator&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;NameOfPhysicianReadingStudy&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Occupation&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OtherPatientNames&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PatientBirthTime&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PerformingPhysicianName&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PhysicianOfRecord&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ReferringPhysicianAddress&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ReferringPhysicianPhoneNumbers&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Zip Download</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/zip-download/</guid><description>&lt;p&gt;The Project, Subject and Sessions page has the option to &lt;strong&gt;Download Images&lt;/strong&gt; from the right hand side menu&lt;/p&gt;
+&lt;p&gt;&lt;img src="downloading-data-1.png" width="50%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;
+&lt;img src="downloading-data-2.png" width="50%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;
+&lt;img src="downloading-data-3.png" width="50%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;strong&gt;Option 2: ZIP download&lt;/strong&gt;&lt;/p&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
- Untick &lt;strong>Simply downloaded archive structure&lt;/strong> to keep scan names in scan folders
+ Untick &lt;strong&gt;Simply downloaded archive structure&lt;/strong&gt; to keep scan names in scan folders
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>&lt;img src="desktop-client-3.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>&lt;p>This is for users from non-AAF member organisations, including:&lt;/p>
-&lt;ul>
-&lt;li>QLD Health, TRI, QIMR, QLD Xray&lt;/li>
-&lt;/ul>
-&lt;p>Non-AAF members usually require XNAT access for:&lt;/p>
-&lt;ul>
-&lt;li>Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li>
-&lt;li>Collaborating on projects managed on UQ-RCC XNAT&lt;/li>
-&lt;/ul>
-&lt;p>XNAT uses AAF for login. QCIF/QRIScloud can provide AAF Virtual Home (VHO) accounts for non-AAF users.&lt;/p>
-&lt;h2 id="creating-an-aaf-vho-account">Creating an AAF VHO account&lt;/h2>
-&lt;hr>
-&lt;h4 id="step-1">Step 1&lt;/h4>
-&lt;p>Open a ticket with RCC support to request an AAF account&lt;/p></description></item><item><title>Prearchive</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</guid><description>&lt;p>If a dataset has not arrived into your XNAT project, the prearchive would be the place to check&lt;/p>
-&lt;p>This usually happens when:&lt;/p>
-&lt;ul>
-&lt;li>a DICOM dataset matching an existing session gets resent&lt;/li>
-&lt;li>a part of a session gets uploaded separately&lt;/li>
-&lt;/ul>
-&lt;h2 id="accessing-the-prearchive">Accessing the prearchive&lt;/h2>
-&lt;p>Go to &lt;strong>Upload&lt;/strong> on the top menu, and &lt;strong>Go to prearchive&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="prearchive-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>The following is an example of a session that is in conflict.
-We can select the session and choose &lt;strong>Details&lt;/strong>.&lt;/p></description></item><item><title>Scans</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/sessions/scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/sessions/scans/</guid><description>&lt;p>The Scans themselves are listed at the bottom with the relevant series descriptions and other information
-If you hover over one of them, and click the highlighted view details button. This will open up a more details and an image preview window&lt;/p>
-&lt;p>&lt;img src="session-scan.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Here we can also view View DICOM headers&lt;/p>
-&lt;p>&lt;img src="scan-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>And see the DICOM headers as shown on the right&lt;/p>
-&lt;p>&lt;img src="scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>Download Scan</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</guid><description>&lt;p>Induvidual scans can be downloaded from the Sessions page&lt;/p>
-&lt;p>&lt;img src="downloading-data-scan-1.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p>
-&lt;p>Multiple scans can be selected and downloaded using &lt;strong>Bulk Actions&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="downloading-data-scan-2.png" width="70%" style="border: 1px solid #ddd">&lt;/img>&lt;/p></description></item><item><title>HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>&lt;p>Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p>
-&lt;p>To get started, refer to the relevant guide below:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/">UQ members&lt;/a>
-&lt;ul>
-&lt;li>UQ Staff and Students&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/">Other AAF members&lt;/a>
-&lt;ul>
-&lt;li>QUT, Griffith, CQU, JCU, USQ, USC, Bond&lt;/li>
-&lt;li>CSIRO, QCIF, Australian Universities&lt;/li>
-&lt;li>Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers">here&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/">Non-AAF members&lt;/a>
-&lt;ul>
-&lt;li>TRI, QIMR&lt;/li>
-&lt;li>QLD Health, QLD Xray, Pacific Radiology&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
+&lt;p&gt;&lt;img src="downloading-data-zip.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Filter out the Session and scans from the first two columns and select &lt;strong&gt;Submit&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Alias tokens</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/logging-into-xnat/alias-tokens/</guid><description>&lt;p&gt;AAF is used for logging into the XNAT website itself.&lt;/p&gt;
+&lt;p&gt;But there are a lot of tools and services that will require a connect to the XNAT server externally&lt;/p&gt;
+&lt;p&gt;These could include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows or Mac desktop clients, like XNAT Desktop&lt;/li&gt;
+&lt;li&gt;Command line tools such as xnatpy, pyxnat, xnatutils etc&lt;/li&gt;
+&lt;li&gt;XSYNC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these tools and services need a way to authenticating to your XNAT account without AAF.&lt;/p&gt;
+&lt;p&gt;An alias token is a time-limited, long, randomised username and password used for authenticating from external services, without compromising your AAF account or credentials. They can be generated and revoked easily&lt;/p&gt;</description></item><item><title>Desktop client</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/desktop-client/</guid><description>&lt;p&gt;The XNAT Desktop client is maintained by the XNAT development team. For information see the link below.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;XNAT Desktop client&lt;/dt&gt;
+&lt;dd&gt;&lt;a href="https://www.xnat.org/download/desktop-client/"&gt;https://www.xnat.org/download/desktop-client/&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id="install-client"&gt;Install client&lt;/h2&gt;
+&lt;p&gt;Download and install the client for you operating system&lt;/p&gt;
+&lt;p&gt;&lt;img src="desktop-client-1.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h2 id="download-images"&gt;Download images&lt;/h2&gt;
+&lt;p&gt;The Project, Subject and Sessions page has the option to &lt;strong&gt;Download Images&lt;/strong&gt; from the right hand side menu&lt;/p&gt;
+&lt;p&gt;&lt;img src="desktop-client-2.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;strong&gt;Option 1: Download via Desktop Client&lt;/strong&gt;&lt;/p&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
+
+ Untick &lt;strong&gt;Simply downloaded archive structure&lt;/strong&gt; to keep scan names in scan folders
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src="desktop-client-3.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;</description></item><item><title>Non-AAF members</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/</guid><description>&lt;p&gt;This is for users from non-AAF member organisations, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;QLD Health, TRI, QIMR, QLD Xray&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Non-AAF members usually require XNAT access for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Management of data acquisition from sites such as CAI, HIRF, TRI&lt;/li&gt;
+&lt;li&gt;Collaborating on projects managed on UQ-RCC XNAT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;XNAT uses AAF for login. QCIF/QRIScloud can provide AAF Virtual Home (VHO) accounts for non-AAF users.&lt;/p&gt;
+&lt;h2 id="creating-an-aaf-vho-account"&gt;Creating an AAF VHO account&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4 id="step-1"&gt;Step 1&lt;/h4&gt;
+&lt;p&gt;Open a ticket with RCC support to request an AAF account&lt;/p&gt;</description></item><item><title>Prearchive</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/uploading-data/prearchive/</guid><description>&lt;p&gt;If a dataset has not arrived into your XNAT project, the prearchive would be the place to check&lt;/p&gt;
+&lt;p&gt;This usually happens when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a DICOM dataset matching an existing session gets resent&lt;/li&gt;
+&lt;li&gt;a part of a session gets uploaded separately&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="accessing-the-prearchive"&gt;Accessing the prearchive&lt;/h2&gt;
+&lt;p&gt;Go to &lt;strong&gt;Upload&lt;/strong&gt; on the top menu, and &lt;strong&gt;Go to prearchive&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="prearchive-1.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;The following is an example of a session that is in conflict.
+We can select the session and choose &lt;strong&gt;Details&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Scans</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/sessions/scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/using-xnat/sessions/scans/</guid><description>&lt;p&gt;The Scans themselves are listed at the bottom with the relevant series descriptions and other information
+If you hover over one of them, and click the highlighted view details button. This will open up a more details and an image preview window&lt;/p&gt;
+&lt;p&gt;&lt;img src="session-scan.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Here we can also view View DICOM headers&lt;/p&gt;
+&lt;p&gt;&lt;img src="scan-1.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;And see the DICOM headers as shown on the right&lt;/p&gt;
+&lt;p&gt;&lt;img src="scan-2.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;</description></item><item><title>Download Scan</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/managing-data/downloading-data/download-scan/</guid><description>&lt;p&gt;Induvidual scans can be downloaded from the Sessions page&lt;/p&gt;
+&lt;p&gt;&lt;img src="downloading-data-scan-1.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Multiple scans can be selected and downloaded using &lt;strong&gt;Bulk Actions&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="downloading-data-scan-2.png" width="70%" style="border: 1px solid #ddd"&gt;&lt;/img&gt;&lt;/p&gt;</description></item><item><title>HIRF users</title><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/hirf-users/</guid><description>&lt;p&gt;Data acquired at HIRF can be sent to the UQ-RCC XNAT repository&lt;/p&gt;
+&lt;p&gt;To get started, refer to the relevant guide below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/"&gt;UQ members&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;UQ Staff and Students&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/"&gt;Other AAF members&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;QUT, Griffith, CQU, JCU, USQ, USC, Bond&lt;/li&gt;
+&lt;li&gt;CSIRO, QCIF, Australian Universities&lt;/li&gt;
+&lt;li&gt;Full list of AAF members found &lt;a href="https://aaf.edu.au/subscribers"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/non-aaf-members/"&gt;Non-AAF members&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;TRI, QIMR&lt;/li&gt;
+&lt;li&gt;QLD Health, QLD Xray, Pacific Radiology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 
 
- If you have multiple valid affiliations, we&amp;rsquo;d recommend using &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/">UQ&lt;/a> or &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/">AAF&lt;/a> affiliation where possible
+&lt;div class="alert alert-warning" role="alert"&gt;
 
-&lt;/div>
 
-&lt;p>If you have any questions, contact &lt;a href="mailto:rcc-support@uq.edu.au">rcc-support@uq.edu.au&lt;/a> or &lt;a href="mailto:HIRFAdministration@health.qld.gov.au">HIRFAdministration@health.qld.gov.au&lt;/a>&lt;/p></description></item><item><title/><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/faq/</guid><description>&lt;!-- ---
+ If you have multiple valid affiliations, we&amp;rsquo;d recommend using &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/uq-members/"&gt;UQ&lt;/a&gt; or &lt;a href="https://docs.xnat.rcc.uq.edu.au/docs/user-guides/getting-started/other-aaf-members/"&gt;AAF&lt;/a&gt; affiliation where possible
+
+&lt;/div&gt;
+
+&lt;p&gt;If you have any questions, contact &lt;a href="mailto:rcc-support@uq.edu.au"&gt;rcc-support@uq.edu.au&lt;/a&gt; or &lt;a href="mailto:HIRFAdministration@health.qld.gov.au"&gt;HIRFAdministration@health.qld.gov.au&lt;/a&gt;&lt;/p&gt;</description></item><item><title/><link>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/user-guides/faq/</guid><description>&lt;!-- ---
 title: "FAQ"
 linkTitle: "FAQ"
 weight: 1
-description: >
+description: &gt;
  Frequently Asked Questions
---- -->
-&lt;div>
- &lt;nav id="TableOfContents">
- &lt;ul>
- &lt;li>&lt;a href="#example">Example&lt;/a>&lt;/li>
- &lt;/ul>
-&lt;/nav>
-&lt;/div>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;p>Example&lt;/p></description></item><item><title>Search Results</title><link>https://docs.xnat.rcc.uq.edu.au/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/search/</guid><description/></item></channel></rss>
+--- --&gt;
+&lt;div&gt;
+ &lt;nav id="TableOfContents"&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#example"&gt;Example&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;p&gt;Example&lt;/p&gt;</description></item><item><title>Search Results</title><link>https://docs.xnat.rcc.uq.edu.au/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/search/</guid><description/></item></channel></rss>
