@@ -1,0 +1,86 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="form-group mb-3">
+      <label for="rdm-collection-{{ .Ordinal }}"><strong>RDM Collection Name</strong></label>
+      <input type="text" class="form-control mt-1" id="rdm-collection-{{ .Ordinal }}" placeholder="e.g. PROJ001-Q0189">
+    </div>
+
+    <div id="email-output-{{ .Ordinal }}" style="display:none;">
+      <table class="table table-bordered mb-3">
+        <tr>
+          <th style="width:80px;">To</th>
+          <td>rcc-support@uq.edu.au</td>
+          <td style="width:70px; text-align:center; vertical-align:middle;">
+            <button class="btn btn-sm btn-outline-secondary copy-field-btn" data-copy="rcc-support@uq.edu.au">Copy</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Subject</th>
+          <td><span id="email-subject-{{ .Ordinal }}"></span></td>
+          <td style="width:70px; text-align:center; vertical-align:middle;">
+            <button class="btn btn-sm btn-outline-secondary copy-field-btn" id="copy-subject-{{ .Ordinal }}">Copy</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Body</th>
+          <td><span id="email-body-{{ .Ordinal }}" style="white-space:pre-line;"></span></td>
+          <td style="width:70px; text-align:center; vertical-align:middle;">
+            <button class="btn btn-sm btn-outline-secondary copy-field-btn" id="copy-body-{{ .Ordinal }}">Copy</button>
+          </td>
+        </tr>
+      </table>
+      <a id="email-link-{{ .Ordinal }}" class="btn btn-primary" href="#" role="button">
+        Open in Email Client
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ord = '{{ .Ordinal }}';
+  var input = document.getElementById('rdm-collection-' + ord);
+  var output = document.getElementById('email-output-' + ord);
+  var subjectEl = document.getElementById('email-subject-' + ord);
+  var bodyEl = document.getElementById('email-body-' + ord);
+  var link = document.getElementById('email-link-' + ord);
+
+  function getSubject() {
+    return 'Request new XNAT project for ' + input.value.trim();
+  }
+  function getBody() {
+    return 'Hello RCC support,\n\nCould you please create a new XNAT project for RDM collection ' + input.value.trim() + '?\n\nThank you';
+  }
+
+  input.addEventListener('input', function() {
+    var collection = input.value.trim();
+    if (collection) {
+      subjectEl.textContent = getSubject();
+      bodyEl.textContent = getBody();
+      link.href = 'mailto:rcc-support@uq.edu.au?subject=' + encodeURIComponent(getSubject()) + '&body=' + encodeURIComponent(getBody() + '\n');
+      output.style.display = 'block';
+    } else {
+      output.style.display = 'none';
+    }
+  });
+
+  function copyAndConfirm(btn, text) {
+    navigator.clipboard.writeText(text).then(function() {
+      var original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = original; }, 2000);
+    });
+  }
+
+  document.getElementById('copy-subject-' + ord).addEventListener('click', function() {
+    copyAndConfirm(this, getSubject());
+  });
+  document.getElementById('copy-body-' + ord).addEventListener('click', function() {
+    copyAndConfirm(this, getBody());
+  });
+
+  output.querySelector('[data-copy]').addEventListener('click', function() {
+    copyAndConfirm(this, this.getAttribute('data-copy'));
+  });
+})();
+</script>

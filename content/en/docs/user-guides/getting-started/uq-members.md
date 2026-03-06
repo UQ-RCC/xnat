@@ -75,13 +75,9 @@ You should have an RDM collection name ready (e.g. **PROJ001-Q0189**)
 #### Step 2
 Open a ticket with RCC support
 
-_Example below (replace __________ with your details)_
+Fill in your RDM collection name below and click to send a pre-filled email to RCC support
 
-{{< card header="To: rcc-support@uq.edu.au" subtitle="Subject: Create XNAT project __________">}}
-Hello RCC support
-
-Can we create an XNAT project for RDM collection __________
-{{< /card >}}
+{{< email-request-form >}}
 
 #### Step 3
 The support ticket will inform you when the project is set up.
