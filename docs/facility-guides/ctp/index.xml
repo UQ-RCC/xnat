@@ -12,7 +12,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Install CTP using:
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd INSTALL_FOLDER (replace with your actual folder)
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd INSTALL_FOLDER (replace with your actual folder)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar CTP-installer.jar
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Replace CTP/config.xml with ctp_clinical_site_to_xnat_config.xml&lt;/li&gt;
@@ -21,7 +21,7 @@
 &lt;li&gt;Change &amp;ldquo;xxxx.xxxx&amp;rdquo; in two &amp;ldquo;url&amp;rdquo; tags to &amp;ldquo;xnat.rcc.uq.edu.au&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;Change &amp;ldquo;xxxx&amp;rdquo; username and password tags to match new user from step 1&lt;/li&gt;
 &lt;li&gt;If CTP internet access is via a proxy server, add the proxy server element to the Server config
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;...
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;...
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;Server ...&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &amp;lt;ProxyServer
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; proxyIPAddress=&amp;#34;&amp;#34;
@@ -57,7 +57,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Start CTP GUI
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar Launcher.jar
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar Launcher.jar
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Click the CTP &amp;ldquo;Start&amp;rdquo; button&lt;/li&gt;
 &lt;li&gt;Click the &amp;ldquo;CTP Home Page&amp;rdquo; button to open the Web UI
@@ -74,7 +74,7 @@
 &lt;li&gt;Optional: click &amp;ldquo;DICOM Anonymizer&amp;rdquo; to view/edit anonymiser script&lt;/li&gt;
 &lt;li&gt;Unzip DCMTK and MrBrain dicom sample&lt;/li&gt;
 &lt;li&gt;Try sending an dicom to CTP using dcmtk
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd dcmtk-3.6.5-win64-dynamic/bin
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd dcmtk-3.6.5-win64-dynamic/bin
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;dcmsend localhost 25055 ../../dicom_viewer_Mrbrain/MRBRAIN.DCM
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Login to the XNAT server with an admin account to view Prearchive
@@ -118,10 +118,10 @@
 &lt;p&gt;Start the CTP Launcher&lt;/p&gt;</description></item><item><title>Windows Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/windows-service/</guid><description>&lt;p&gt;The CTP install.bat script uses Apache procrun. Use the following steps to enable CTP as a Windows service, including an update to use a JRE other than system default (leave out step 2 if using the system default JRE)&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Install CTP
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar CTP-installer.jar
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;java -jar CTP-installer.jar
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;To use JRE other than system default, edit &lt;code&gt;&amp;lt;ctp-home&amp;gt;/windows/install.bat&lt;/code&gt;. Find the &amp;ndash;Jvm=auto, add &amp;ndash;JavaHome entry and set both as follows
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;--JavaHome=&amp;#34;&amp;lt;jre home&amp;gt; &amp;#34; ^
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;--JavaHome=&amp;#34;&amp;lt;jre home&amp;gt; &amp;#34; ^
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;--Jvm=&amp;#34;&amp;lt;jre-home&amp;gt;\bin\server\jvm.dll&amp;#34; ^
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;^ is needed to wrap/continue command line in batch file&lt;/li&gt;
@@ -129,7 +129,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Run install.bat as Administrator to create the CTP windows service
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd &amp;lt;ctp-home&amp;gt;/windows
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cd &amp;lt;ctp-home&amp;gt;/windows
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;install
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Open Windows Services as Administrator and start the CTP service&lt;/li&gt;
@@ -147,15 +147,15 @@
 &lt;li&gt;&lt;a href="https://commons.apache.org/proper/commons-daemon/procrun.html"&gt;Apache procrun&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Linux Service</title><link>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://docs.xnat.rcc.uq.edu.au/docs/facility-guides/ctp/linux-service/</guid><description>&lt;h2 id="ubuntu"&gt;Ubuntu&lt;/h2&gt;
 &lt;p&gt;Open &lt;code&gt;./linux/ctpService-ubuntu.sh&lt;/code&gt;. Update the following parameters:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;USER=ubuntu
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;USER=ubuntu
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;CTP_HOME=/opt/ctp/CTP
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;JAVA_BIN=/usr/lib/jvm/java-17-openjdk-amd64/bin
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;JAVA=$JAVA_BIN/java
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;CTP_PID=$CTP_HOME/ctp.pid
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run the following to install the ctpService into init.d&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo ln -s ./linux/ctpService-ubuntu.sh /etc/init.d/ctpService
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo ln -s ./linux/ctpService-ubuntu.sh /etc/init.d/ctpService
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo update-rc.d ctpService defaults 98 02
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Start and stop CTP using the following commands&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo service ctpService start
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo service ctpService start
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo service ctpService stop
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
