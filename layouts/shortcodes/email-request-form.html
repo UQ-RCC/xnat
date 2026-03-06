@@ -65,11 +65,7 @@
   });
 
   function copyAndConfirm(btn, text) {
-    navigator.clipboard.writeText(text).then(function() {
-      var original = btn.textContent;
-      btn.textContent = 'Copied!';
-      setTimeout(function() { btn.textContent = original; }, 2000);
-    });
+    navigator.clipboard.writeText(text);
   }
 
   document.getElementById('copy-subject-' + ord).addEventListener('click', function() {
