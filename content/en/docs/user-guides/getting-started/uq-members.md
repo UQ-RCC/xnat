@@ -17,7 +17,7 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 {{% /alert %}}
 
 #### Step 2
-Login in with the AAF Single sign-on button (shown below).
+Log in with the AAF Single sign-on button (shown below).
 
 Follow the AAF login process for your organisation
 
@@ -29,10 +29,10 @@ After the AAF sign-in, you should be redirected back to XNAT (Example below)
 
 There will be **no projects listed** when signing in for the first-time, as your user account would have just been created.
 
-<img src="/docs/user-guides/getting-started//xnat-signed-in.png" width="100%" style="border: 1px solid #ddd"></img>
+<img src="/docs/user-guides/getting-started/xnat-signed-in.png" width="100%" style="border: 1px solid #ddd"></img>
 
 
-_Proceed to to next section for setting up an XNAT project_
+_Proceed to the next section for setting up an XNAT project_
 
 ## Creating XNAT project
 ---
@@ -46,7 +46,7 @@ Only one member of the project team needs to request for the project
 #### Step 1
 
 Before creating an XNAT project, you'll require a UQ-RDM **HPC Collection**
-- **HPC collections** ends with **-Q** and a 4-digit numerical identifier (e.g. PROJ001-**Q0189**)
+- **HPC collections** end with **-Q** and a 4-digit numerical identifier (e.g. PROJ001-**Q0189**)
 - **Non-HPC collections** end with **-A** (e.g. PROJ001-**A0189**) or **-I** (PROJ001-**I0189**)
 
 {{% alert color="warning" %}}
