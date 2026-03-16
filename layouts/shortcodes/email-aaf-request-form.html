@@ -1,0 +1,93 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="form-group mb-3">
+      <label for="aaf-project-{{ .Ordinal }}"><strong>XNAT Project Name</strong></label>
+      <input type="text" class="form-control mt-1" id="aaf-project-{{ .Ordinal }}" placeholder="e.g. MyProject">
+    </div>
+    <div class="form-group mb-3">
+      <label for="aaf-org-{{ .Ordinal }}"><strong>Organisation</strong></label>
+      <input type="text" class="form-control mt-1" id="aaf-org-{{ .Ordinal }}" placeholder="e.g. QLD Health">
+    </div>
+    <div class="form-group mb-3">
+      <label for="aaf-site-{{ .Ordinal }}"><strong>Data Acquisition Site</strong></label>
+      <input type="text" class="form-control mt-1" id="aaf-site-{{ .Ordinal }}" placeholder="e.g. HIRF, CAI, TRI">
+    </div>
+
+    <div id="aaf-output-{{ .Ordinal }}" style="display:none;">
+      <table class="table table-bordered mb-3">
+        <tr>
+          <th style="width:80px;">To</th>
+          <td>rcc-support@uq.edu.au</td>
+          <td style="width:70px; text-align:center; vertical-align:middle;">
+            <button class="btn btn-sm btn-outline-secondary" id="aaf-copy-to-{{ .Ordinal }}">Copy</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Subject</th>
+          <td><span id="aaf-subject-{{ .Ordinal }}"></span></td>
+          <td style="width:70px; text-align:center; vertical-align:middle;">
+            <button class="btn btn-sm btn-outline-secondary" id="aaf-copy-subject-{{ .Ordinal }}">Copy</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Body</th>
+          <td><span id="aaf-body-{{ .Ordinal }}" style="white-space:pre-line;"></span></td>
+          <td style="width:70px; text-align:center; vertical-align:middle;">
+            <button class="btn btn-sm btn-outline-secondary" id="aaf-copy-body-{{ .Ordinal }}">Copy</button>
+          </td>
+        </tr>
+      </table>
+      <a id="aaf-mailto-{{ .Ordinal }}" class="btn btn-primary" href="#" role="button">
+        Open in Email Client
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var ord = '{{ .Ordinal }}';
+  var projectInput = document.getElementById('aaf-project-' + ord);
+  var orgInput = document.getElementById('aaf-org-' + ord);
+  var siteInput = document.getElementById('aaf-site-' + ord);
+  var output = document.getElementById('aaf-output-' + ord);
+  var subjectEl = document.getElementById('aaf-subject-' + ord);
+  var bodyEl = document.getElementById('aaf-body-' + ord);
+  var mailto = document.getElementById('aaf-mailto-' + ord);
+
+  function getSubject() {
+    return 'XNAT AAF account for project ' + projectInput.value.trim();
+  }
+  function getBody() {
+    return 'Hello RCC support,\n\nI require an AAF account to access the UQ AIS XNAT service.\n\nMy details are below:\nOrganisation: ' + orgInput.value.trim() + '\nData Acquisition Site: ' + siteInput.value.trim() + '\n\nThank you';
+  }
+
+  function update() {
+    var project = projectInput.value.trim();
+    var org = orgInput.value.trim();
+    var site = siteInput.value.trim();
+    if (project && org && site) {
+      subjectEl.textContent = getSubject();
+      bodyEl.textContent = getBody();
+      mailto.href = 'mailto:rcc-support@uq.edu.au?subject=' + encodeURIComponent(getSubject()) + '&body=' + encodeURIComponent(getBody() + '\n');
+      output.style.display = 'block';
+    } else {
+      output.style.display = 'none';
+    }
+  }
+
+  projectInput.addEventListener('input', update);
+  orgInput.addEventListener('input', update);
+  siteInput.addEventListener('input', update);
+
+  document.getElementById('aaf-copy-to-' + ord).addEventListener('click', function() {
+    navigator.clipboard.writeText('rcc-support@uq.edu.au');
+  });
+  document.getElementById('aaf-copy-subject-' + ord).addEventListener('click', function() {
+    navigator.clipboard.writeText(getSubject());
+  });
+  document.getElementById('aaf-copy-body-' + ord).addEventListener('click', function() {
+    navigator.clipboard.writeText(getBody());
+  });
+})();
+</script>

@@ -29,7 +29,7 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 {{% /alert %}}
 
 #### Step 2
-Login in with the AAF Single sign-on button (_See below_).
+Log in with the AAF Single sign-on button (_See below_).
 
 Follow the AAF login process for your organisation
 

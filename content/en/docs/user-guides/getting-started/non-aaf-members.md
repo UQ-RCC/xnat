@@ -23,17 +23,9 @@ XNAT uses AAF for login. QCIF/QRIScloud can provide AAF Virtual Home (VHO) accou
 #### Step 1
 Open a ticket with RCC support to request an AAF account
 
-_Example below (replace __________ with your details)_
+Fill in your details below and click to send a pre-filled email to RCC support
 
-{{< card header="**To:** rcc-support@uq.edu.au" subtitle="**Subject:** XNAT AAF account for project __________" >}}
-Hello RCC support
-
-I require an AAF account to access the UQ AIS XNAT service<br>
-
-My details are below<br>
-Organisation: __________<br>
-Data Acquisition Site: __________<br>
-{{< /card >}}
+{{< email-aaf-request-form >}}
 
 #### Step 2
 AAF's VHO account will return an email regarding the VHO account registration process
@@ -52,7 +44,7 @@ This is the link to the UQ AIS XNAT. If you have been provided with a project sp
 
 
 #### Step 2
-Login in with the AAF Single sign-on button (_See below_).
+Log in with the AAF Single sign-on button (_See below_).
 
 <img src="/docs/user-guides/logging-into-xnat/xnat-aaf-login-page.png" width="100%" style="border: 1px solid #ddd"></img>
 
