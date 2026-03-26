@@ -11,27 +11,24 @@
           <th style="width:80px;">To</th>
           <td>rcc-support@uq.edu.au</td>
           <td style="width:70px; text-align:center; vertical-align:middle;">
-            <button class="btn btn-sm btn-outline-secondary copy-field-btn" data-copy="rcc-support@uq.edu.au">Copy</button>
+            <button class="btn btn-sm btn-outline-secondary" data-copy="rcc-support@uq.edu.au">Copy</button>
           </td>
         </tr>
         <tr>
           <th>Subject</th>
           <td><span id="email-subject-{{ .Ordinal }}"></span></td>
           <td style="width:70px; text-align:center; vertical-align:middle;">
-            <button class="btn btn-sm btn-outline-secondary copy-field-btn" id="copy-subject-{{ .Ordinal }}">Copy</button>
+            <button class="btn btn-sm btn-outline-secondary" id="copy-subject-{{ .Ordinal }}">Copy</button>
           </td>
         </tr>
         <tr>
           <th>Body</th>
           <td><span id="email-body-{{ .Ordinal }}" style="white-space:pre-line;"></span></td>
           <td style="width:70px; text-align:center; vertical-align:middle;">
-            <button class="btn btn-sm btn-outline-secondary copy-field-btn" id="copy-body-{{ .Ordinal }}">Copy</button>
+            <button class="btn btn-sm btn-outline-secondary" id="copy-body-{{ .Ordinal }}">Copy</button>
           </td>
         </tr>
       </table>
-      <a id="email-link-{{ .Ordinal }}" class="btn btn-primary" href="#" role="button">
-        Open in Email Client
-      </a>
     </div>
   </div>
 </div>
@@ -43,7 +40,6 @@
   var output = document.getElementById('email-output-' + ord);
   var subjectEl = document.getElementById('email-subject-' + ord);
   var bodyEl = document.getElementById('email-body-' + ord);
-  var link = document.getElementById('email-link-' + ord);
 
   function getSubject() {
     return 'Request new XNAT project for ' + input.value.trim();
@@ -57,26 +53,20 @@
     if (collection) {
       subjectEl.textContent = getSubject();
       bodyEl.textContent = getBody();
-      link.href = 'mailto:rcc-support@uq.edu.au?subject=' + encodeURIComponent(getSubject()) + '&body=' + encodeURIComponent(getBody() + '\n');
       output.style.display = 'block';
     } else {
       output.style.display = 'none';
     }
   });
 
-  function copyAndConfirm(btn, text) {
-    navigator.clipboard.writeText(text);
-  }
-
   document.getElementById('copy-subject-' + ord).addEventListener('click', function() {
-    copyAndConfirm(this, getSubject());
+    navigator.clipboard.writeText(getSubject());
   });
   document.getElementById('copy-body-' + ord).addEventListener('click', function() {
-    copyAndConfirm(this, getBody());
+    navigator.clipboard.writeText(getBody());
   });
-
   output.querySelector('[data-copy]').addEventListener('click', function() {
-    copyAndConfirm(this, this.getAttribute('data-copy'));
+    navigator.clipboard.writeText(this.getAttribute('data-copy'));
   });
 })();
 </script>

@@ -37,9 +37,6 @@
           </td>
         </tr>
       </table>
-      <a id="aaf-mailto-{{ .Ordinal }}" class="btn btn-primary" href="#" role="button">
-        Open in Email Client
-      </a>
     </div>
   </div>
 </div>
@@ -53,7 +50,6 @@
   var output = document.getElementById('aaf-output-' + ord);
   var subjectEl = document.getElementById('aaf-subject-' + ord);
   var bodyEl = document.getElementById('aaf-body-' + ord);
-  var mailto = document.getElementById('aaf-mailto-' + ord);
 
   function getSubject() {
     return 'XNAT AAF account for project ' + projectInput.value.trim();
@@ -69,7 +65,6 @@
     if (project && org && site) {
       subjectEl.textContent = getSubject();
       bodyEl.textContent = getBody();
-      mailto.href = 'mailto:rcc-support@uq.edu.au?subject=' + encodeURIComponent(getSubject()) + '&body=' + encodeURIComponent(getBody() + '\n');
       output.style.display = 'block';
     } else {
       output.style.display = 'none';
