@@ -1,0 +1,121 @@
+/* UQ AIS XNAT theme — UQ purple (#51247a) accent.
+   Overrides Starlight's default accent palette in both colour modes. */
+
+:root {
+  /* Dark mode accents (lighter purples for contrast on dark backgrounds) */
+  --sl-color-accent-low: #2a1340;
+  --sl-color-accent: #8b5fb5;
+  --sl-color-accent-high: #d6c2e8;
+}
+
+:root[data-theme='light'] {
+  /* Light mode accents derived from UQ purple #51247a */
+  --sl-color-accent-low: #e7ddf1;
+  --sl-color-accent: #51247a;
+  --sl-color-accent-high: #341553;
+}
+
+/* Frame screenshots consistently: light border and soft shadow (no rounding —
+   it looks off on screenshots whose own edges are square). */
+.sl-markdown-content img:not([data-no-border]) {
+  border: 1px solid var(--sl-color-gray-5);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- Homepage links below the feature cards ---- */
+.home-links {
+  text-align: center;
+  margin-top: 3rem;
+}
+.home-links p {
+  margin: 0.3rem 0;
+}
+.home-links__heading {
+  font-weight: 600;
+}
+.home-links__heading span {
+  color: var(--sl-color-gray-3);
+  font-weight: 400;
+}
+.home-links__repos a {
+  margin: 0 0.6rem;
+}
+.home-links__ais {
+  margin-top: 1.25rem !important;
+  font-size: var(--sl-text-sm);
+}
+
+/* Sidebar: keep only the top-level headers (User Guides, Facility Guides)
+   bold/large. Normalise every nested expandable group label so it matches the
+   plain single-page links beside it. (`.top-level ul .large` excludes the two
+   top headers, whose label sits in the summary, not inside a nested list.) */
+.top-level ul .large {
+  font-size: var(--sl-text-base);
+  font-weight: 400;
+}
+@media (min-width: 50rem) {
+  .top-level ul .large {
+    font-size: var(--sl-text-sm);
+  }
+}
+
+/* ---- Navbar (adapted from the Neurodesk Starlight site) ---- */
+
+/* Pagefind search trigger: Starlight styles it like a wide fake text input.
+   Restyle as a compact button — magnifier + "Search" + ⌘K hint — so the
+   affordance matches the modal it actually opens. */
+site-search button[data-open-modal] {
+  gap: 0.375rem;
+  font-size: var(--sl-text-xs);
+}
+
+@media (min-width: 50rem) {
+  site-search button[data-open-modal] {
+    width: auto;
+    max-width: none;
+    padding-inline: 0.5rem;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0.375rem;
+  }
+
+  site-search button[data-open-modal]:hover {
+    background-color: var(--sl-color-gray-6);
+    border-color: transparent;
+    color: var(--sl-color-white);
+  }
+
+  /* Pull the ⌘K chip in next to the label instead of pushing it to the edge. */
+  site-search button[data-open-modal] > :last-child {
+    margin-inline-start: 0;
+  }
+
+  site-search button[data-open-modal] kbd {
+    padding: 0 0.25rem;
+    font-size: var(--sl-text-xs);
+    background-color: var(--sl-color-gray-5);
+  }
+
+  /* Right-align search beside the nav links / theme toggle, with a divider. */
+  .header {
+    grid-template-columns: auto 1fr auto auto !important;
+  }
+
+  .header > div:has(site-search) {
+    grid-column: 3;
+    justify-self: end;
+  }
+
+  .header > .right-group {
+    grid-column: 4;
+    margin-inline-start: -0.75rem;
+  }
+
+  .header > .right-group::before {
+    content: '';
+    align-self: center;
+    height: 1.25rem;
+    border-inline-start: 1px solid var(--sl-color-gray-5);
+  }
+}
+

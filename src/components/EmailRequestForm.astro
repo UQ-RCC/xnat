@@ -1,0 +1,130 @@
+---
+// Interactive helper that builds a "request new XNAT project" email from an
+// RDM collection name, with copy-to-clipboard buttons. Ported from the Hugo
+// `email-request-form` shortcode; styled standalone (no Bootstrap).
+const uid = Math.random().toString(36).slice(2, 9);
+---
+
+<div class="erf-card" data-erf={uid}>
+  <div class="erf-field">
+    <label for={`rdm-collection-${uid}`}><strong>RDM Collection Name</strong></label>
+    <input type="text" id={`rdm-collection-${uid}`} placeholder="e.g. PROJ001-Q0189" />
+  </div>
+
+  <div class="erf-output" hidden>
+    <table>
+      <tr>
+        <th>To</th>
+        <td>rcc-support@uq.edu.au</td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy-to>Copy</button>
+        </td>
+      </tr>
+      <tr>
+        <th>Subject</th>
+        <td><span data-subject></span></td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy-subject>Copy</button>
+        </td>
+      </tr>
+      <tr>
+        <th>Body</th>
+        <td><span class="erf-body" data-body></span></td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy-body>Copy</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('[data-erf]').forEach((card) => {
+    const input = card.querySelector('input');
+    const output = card.querySelector('.erf-output');
+    const subjectEl = card.querySelector('[data-subject]');
+    const bodyEl = card.querySelector('[data-body]');
+    if (!input || !output || !subjectEl || !bodyEl) return;
+
+    const getSubject = () =>
+      `Request new XNAT project for ${input.value.trim()}`;
+    const getBody = () =>
+      `Hello RCC support,\n\nCould you please create a new XNAT project for RDM collection ${input.value.trim()}?\n\nThank you`;
+
+    input.addEventListener('input', () => {
+      if (input.value.trim()) {
+        subjectEl.textContent = getSubject();
+        bodyEl.textContent = getBody();
+        output.hidden = false;
+      } else {
+        output.hidden = true;
+      }
+    });
+
+    const copy = (text) => navigator.clipboard?.writeText(text);
+    card.querySelector('[data-copy-to]')?.addEventListener('click', () => copy('rcc-support@uq.edu.au'));
+    card.querySelector('[data-copy-subject]')?.addEventListener('click', () => copy(getSubject()));
+    card.querySelector('[data-copy-body]')?.addEventListener('click', () => copy(getBody()));
+  });
+</script>
+
+<style>
+  .erf-card {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-block: 1rem;
+    background: var(--sl-color-gray-7, var(--sl-color-black));
+  }
+  .erf-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+  .erf-field input {
+    padding: 0.5rem 0.65rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.35rem;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    font-size: var(--sl-text-base);
+  }
+  .erf-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+  }
+  .erf-output th,
+  .erf-output td {
+    border: 1px solid var(--sl-color-gray-5);
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .erf-output th {
+    width: 5rem;
+    white-space: nowrap;
+  }
+  .erf-body {
+    white-space: pre-line;
+  }
+  .erf-copy-cell {
+    width: 4.5rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .erf-output button {
+    cursor: pointer;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--sl-color-accent);
+    border-radius: 0.35rem;
+    background: transparent;
+    color: var(--sl-color-accent);
+    font-size: var(--sl-text-sm);
+  }
+  .erf-output button:hover {
+    background: var(--sl-color-accent);
+    color: var(--sl-color-white);
+  }
+</style>

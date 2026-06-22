@@ -1,0 +1,13 @@
+---
+title: Anonymising Data
+description: Site-level and project-level anonymisation of DICOM data
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+XNAT data can be anonymised at two levels: automatically on-site as it is acquired, and within your project using DicomEdit scripts.
+
+<CardGrid>
+  <LinkCard title="Site anonymiser" href="/user-guides/managing-data/anonymising-data/site-anonymiser" description="Automatic on-site anonymisation applied to HIRF and CAI data at acquisition." />
+  <LinkCard title="Project anonymiser" href="/user-guides/managing-data/anonymising-data/project-anonymiser" description="Enforce your own DICOM tag and naming scheme with DicomEdit scripts." />
+</CardGrid>

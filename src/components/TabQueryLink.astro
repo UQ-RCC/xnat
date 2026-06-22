@@ -1,0 +1,55 @@
+---
+// Makes Starlight <Tabs> deep-linkable: a `?member=<slug>` query param selects
+// the matching tab on load, and selecting a tab updates the URL so it can be
+// copied and shared. Slug is derived from the tab label (e.g. "Non-AAF members"
+// -> "non-aaf-members"). Works alongside heading anchors (#...) and syncKey.
+const param = Astro.props.param ?? 'member';
+---
+
+<script is:inline define:vars={{ param }}>
+  (() => {
+    const slugify = (s) =>
+      (s || '')
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+
+    function tabsFor(group) {
+      return Array.from(group.querySelectorAll('[role="tab"]'));
+    }
+
+    function activateFromUrl(groups) {
+      const want = new URLSearchParams(location.search).get(param);
+      if (!want) return;
+      const y = window.scrollY;
+      for (const group of groups) {
+        const match = tabsFor(group).find((t) => slugify(t.textContent) === want);
+        if (match && match.getAttribute('aria-selected') !== 'true') match.click();
+      }
+      window.scrollTo({ top: y }); // avoid the focus-induced scroll jump
+    }
+
+    function wireUrlUpdates(groups) {
+      for (const group of groups) {
+        for (const tab of tabsFor(group)) {
+          tab.addEventListener('click', () => {
+            const url = new URL(location.href);
+            url.searchParams.set(param, slugify(tab.textContent));
+            history.replaceState(null, '', url);
+          });
+        }
+      }
+    }
+
+    function init() {
+      const groups = document.querySelectorAll('starlight-tabs');
+      if (!groups.length) return;
+      activateFromUrl(groups);
+      wireUrlUpdates(groups);
+    }
+
+    if (document.readyState !== 'loading') init();
+    else document.addEventListener('DOMContentLoaded', init);
+  })();
+</script>

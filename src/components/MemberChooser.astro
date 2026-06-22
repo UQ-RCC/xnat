@@ -1,0 +1,117 @@
+---
+// Explainer cards that sit above the visible Starlight <Tabs> on Getting
+// Started. Each card maps to a tab by its slugified label; clicking a card
+// selects that tab (the tab bar stays visible as a second, explicit switcher).
+// Cards stay highlighted in sync with the active tab, however it was chosen
+// (card click, tab-bar click, or ?member= deep link via TabQueryLink).
+const options = [
+  { tab: 'UQ members', who: 'UQ staff and students' },
+  {
+    tab: 'Other AAF members',
+    who: 'QUT, Griffith, CQU, JCU, USQ, USC, Bond, CSIRO, QCIF and other AAF members',
+  },
+  { tab: 'Non-AAF members', who: 'TRI, QIMR, QLD Health, QLD Xray, Pacific Radiology' },
+];
+
+const slugify = (s) =>
+  s.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+---
+
+<div class="member-chooser not-content" role="group" aria-label="Choose your organisation type">
+  {
+    options.map((o) => (
+      <button type="button" class="member-card" data-slug={slugify(o.tab)} aria-pressed="false">
+        <span class="member-card__title">{o.tab}</span>
+        <span class="member-card__who">{o.who}</span>
+      </button>
+    ))
+  }
+</div>
+
+<script>
+  const slugify = (s) =>
+    (s || '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  function init() {
+    const chooser = document.querySelector('.member-chooser');
+    const group = document.querySelector('starlight-tabs');
+    if (!chooser || !group) return;
+
+    const tabs = Array.from(group.querySelectorAll('[role="tab"]'));
+    const cards = Array.from(chooser.querySelectorAll('.member-card'));
+
+    const syncCards = () => {
+      const active = tabs.find((t) => t.getAttribute('aria-selected') === 'true');
+      const slug = active ? slugify(active.textContent) : null;
+      cards.forEach((c) => {
+        const on = c.dataset.slug === slug;
+        c.classList.toggle('is-selected', on);
+        c.setAttribute('aria-pressed', String(on));
+      });
+    };
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const match = tabs.find((t) => slugify(t.textContent) === card.dataset.slug);
+        if (!match) return;
+        match.click(); // Starlight switches the panel; TabQueryLink updates the URL
+        syncCards();
+      });
+    });
+
+    // Keep cards highlighted in sync when the tab changes by any other means.
+    const observer = new MutationObserver(syncCards);
+    tabs.forEach((t) =>
+      observer.observe(t, { attributes: true, attributeFilter: ['aria-selected'] })
+    );
+    syncCards();
+  }
+
+  if (document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+</script>
+
+<style>
+  .member-chooser {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 1rem;
+    margin-block: 1rem 1.5rem;
+  }
+  .member-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: left;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    background: var(--sl-color-black);
+    color: var(--sl-color-white);
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+  .member-card:hover {
+    border-color: var(--sl-color-accent);
+  }
+  .member-card.is-selected {
+    border-color: var(--sl-color-accent);
+    background: var(--sl-color-accent-low);
+  }
+  .member-card.is-selected::after {
+    content: '✓ Selected';
+    margin-top: 0.25rem;
+    font-size: var(--sl-text-xs);
+    font-weight: 600;
+    color: var(--sl-color-accent-high);
+  }
+  .member-card__title {
+    font-size: var(--sl-text-h5);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .member-card__who {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-2);
+  }
+</style>

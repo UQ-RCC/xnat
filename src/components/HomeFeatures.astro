@@ -1,0 +1,84 @@
+---
+// Homepage value-prop cards: image header + title + blurb. Used on the splash
+// page below the Starlight hero.
+import { Image } from 'astro:assets';
+import slideGlobal from '../assets/slide-global.jpg';
+import whatIsXnat from '../assets/what-is-XNAT.jpg';
+import slideSharing from '../assets/slide-sharing.jpg';
+
+const features = [
+  {
+    image: slideGlobal,
+    title: 'Multi-center Studies',
+    body: 'Aggregate and manage imaging data across multiple sites and institutions.',
+  },
+  {
+    image: whatIsXnat,
+    title: 'Imaging and Clinical Data',
+    body: 'Store de-identified imaging alongside its associated clinical metadata.',
+  },
+  {
+    image: slideSharing,
+    title: 'Data sharing',
+    body: 'Share and sync datasets securely with collaborators and other XNATs.',
+  },
+];
+---
+
+<div class="feature-grid not-content">
+  {
+    features.map((f) => (
+      <article class="feature-card">
+        <div class="feature-image">
+          <Image src={f.image} alt={f.title} />
+        </div>
+        <div class="feature-body">
+          <h2>{f.title}</h2>
+          <p>{f.body}</p>
+        </div>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: var(--sl-color-black);
+  }
+  .feature-image {
+    height: 11rem;
+    background: var(--sl-color-gray-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-image :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .feature-body {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+  .feature-body h2 {
+    margin: 0 0 0.5rem;
+    font-size: var(--sl-text-h4);
+    line-height: 1.2;
+  }
+  .feature-body p {
+    margin: 0;
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-sm);
+  }
+</style>

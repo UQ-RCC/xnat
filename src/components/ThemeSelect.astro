@@ -1,0 +1,104 @@
+---
+// Replaces Starlight's dropdown theme picker with a single button that cycles
+// auto → light → dark. Reuses the same `starlight-theme` localStorage key and
+// theme-application logic so it stays compatible with Starlight's FOUC guard.
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<theme-toggle>
+  <button type="button" aria-label="Toggle colour theme">
+    <Icon name="laptop" class="auto" size="1.25rem" />
+    <Icon name="sun" class="light" size="1.25rem" />
+    <Icon name="moon" class="dark" size="1.25rem" />
+  </button>
+</theme-toggle>
+
+<script>
+  type Theme = 'auto' | 'dark' | 'light';
+
+  const storageKey = 'starlight-theme';
+  const order: Theme[] = ['auto', 'light', 'dark'];
+  const labels: Record<Theme, string> = { auto: 'Auto', light: 'Light', dark: 'Dark' };
+
+  const parseTheme = (t: unknown): Theme =>
+    t === 'auto' || t === 'dark' || t === 'light' ? t : 'auto';
+
+  const loadTheme = (): Theme =>
+    parseTheme(typeof localStorage !== 'undefined' && localStorage.getItem(storageKey));
+
+  function storeTheme(theme: Theme): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(storageKey, theme === 'light' || theme === 'dark' ? theme : '');
+    }
+  }
+
+  const getPreferredColorScheme = (): Theme =>
+    matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+  function applyTheme(theme: Theme): void {
+    document.documentElement.dataset.theme = theme === 'auto' ? getPreferredColorScheme() : theme;
+    storeTheme(theme);
+    document.querySelectorAll<HTMLElement>('theme-toggle').forEach((el) => {
+      el.dataset.themePref = theme;
+      const btn = el.querySelector('button');
+      if (btn) {
+        btn.title = `Theme: ${labels[theme]}`;
+        btn.setAttribute('aria-label', `Theme: ${labels[theme]}. Click to change.`);
+      }
+    });
+    // Keep any default Starlight pickers in sync (no-op if none present).
+    if ((window as any).StarlightThemeProvider) {
+      (window as any).StarlightThemeProvider.updatePickers(theme);
+    }
+  }
+
+  // React to system colour-scheme changes while in auto mode.
+  matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
+    if (loadTheme() === 'auto') applyTheme('auto');
+  });
+
+  class ThemeToggle extends HTMLElement {
+    constructor() {
+      super();
+      applyTheme(loadTheme());
+      this.querySelector('button')?.addEventListener('click', () => {
+        const next = order[(order.indexOf(loadTheme()) + 1) % order.length]!;
+        applyTheme(next);
+      });
+    }
+  }
+  customElements.define('theme-toggle', ThemeToggle);
+</script>
+
+<style>
+  theme-toggle button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.375rem;
+    background-color: transparent;
+    color: var(--sl-color-gray-2);
+    cursor: pointer;
+  }
+  theme-toggle button:hover {
+    color: var(--sl-color-white);
+    background-color: var(--sl-color-gray-6);
+  }
+  /* Show only the icon for the current preference. */
+  theme-toggle svg {
+    display: none;
+  }
+  theme-toggle[data-theme-pref='auto'] svg.auto,
+  theme-toggle[data-theme-pref='light'] svg.light,
+  theme-toggle[data-theme-pref='dark'] svg.dark {
+    display: inline-block;
+  }
+  /* Sensible default before JS sets the preference attribute. */
+  theme-toggle:not([data-theme-pref]) svg.auto {
+    display: inline-block;
+  }
+</style>
