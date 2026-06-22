@@ -59,7 +59,7 @@ const uid = Math.random().toString(36).slice(2, 9);
     const getSubject = () =>
       `XNAT AAF account for project ${projectInput.value.trim()}`;
     const getBody = () =>
-      `Hello RCC support,\n\nI require an AAF account to access the UQ AIS XNAT service.\n\nMy details are below:\nOrganisation: ${orgInput.value.trim()}\nData Acquisition Site: ${siteInput.value.trim()}\n\nThank you`;
+      `Hello RCC support,\n\nI require an AAF account to access the UQ XNAT service.\n\nMy details are below:\nOrganisation: ${orgInput.value.trim()}\nData Acquisition Site: ${siteInput.value.trim()}\n\nThank you`;
 
     const update = () => {
       if (projectInput.value.trim() && orgInput.value.trim() && siteInput.value.trim()) {

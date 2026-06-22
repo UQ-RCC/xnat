@@ -3,7 +3,7 @@ title: Syncing Data
 description: Request syncing of datasets to other XNATs in Australia
 ---
 
-The UQ-RCC XNAT may be able to sync datasets to other XNATs in Australia. This is set up by RCC support on request.
+The UQ XNAT may be able to sync datasets to other XNATs in Australia. This is set up by RCC support on request.
 
 ## Request data sync
 

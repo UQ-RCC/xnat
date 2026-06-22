@@ -100,7 +100,7 @@ export default defineConfig({
   redirects,
   integrations: [
     starlight({
-      title: 'UQ AIS XNAT',
+      title: 'UQ XNAT',
       description:
         'Storing, managing and analysing de-identified imaging data for UQ projects and collaborators',
       customCss: ['./src/styles/custom.css'],

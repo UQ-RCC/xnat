@@ -5,7 +5,7 @@ description: Viewing Images in the XNAT OHIF Viewer
 
 ## XNAT OHIF Viewer
 
-AIS XNAT instances come with the XNAT OHIF Image viewer
+UQ XNAT instances come with the XNAT OHIF Image viewer
 Which is a plugin developed by the Institute for Cancer Research in London
 
 Just note, if your publication uses the OHIF viewer, they have an article for citation.

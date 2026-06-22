@@ -1,4 +1,4 @@
-/* UQ AIS XNAT theme — UQ purple (#51247a) accent.
+/* UQ XNAT theme — UQ purple (#51247a) accent.
    Overrides Starlight's default accent palette in both colour modes. */
 
 :root {
@@ -57,6 +57,37 @@
   .top-level ul .large {
     font-size: var(--sl-text-sm);
   }
+}
+
+/* Starlight only positions the content column correctly when a TOC is present.
+   The tabbed Getting Started page disables its (duplicate-heading) TOC, which
+   left the content centred. Give the no-TOC main pane the same geometry as the
+   with-TOC pages so the content sits in the identical position. */
+@media (min-width: 72rem) {
+  [data-has-sidebar]:not([data-has-toc]) .main-pane {
+    --sl-content-margin-inline: auto 0;
+    width: calc(
+      var(--sl-content-width) + (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2
+    );
+  }
+}
+
+/* Hero logo: the XNAT mark has a white background, so frame it as a tidy badge
+   that reads on both light and dark mode. Rendered via hero.image.html so it
+   keeps its true aspect ratio (Starlight's default image box would crop it). */
+.hero .hero-html {
+  width: min(100%, 22rem);
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--sl-color-gray-5);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
 }
 
 /* ---- Navbar (adapted from the Neurodesk Starlight site) ---- */
