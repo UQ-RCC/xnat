@@ -1,0 +1,44 @@
+---
+title: Request Storage
+description: Request increase in storage and file count limits
+---
+
+import { Card, Steps } from '@astrojs/starlight/components';
+
+:::caution[Note]
+Default limits on collections are **1TB storage** and **1 million files**.<br/>
+If either limit is reached, you may not be able to add or update files.
+:::
+
+Use the following steps to request an increase in storage size and/or file count limit:
+
+<Steps>
+
+1. Go to [rdm.uq.edu.au](https://rdm.uq.edu.au), login and select your RDM collection
+
+2. Click the **Request more storage** button (shown below)
+
+   ![Request more storage](./request-storage/storage-instructions.png)
+
+3. Fill the form with the relevant details and submit.
+
+   E.g. For a project with 2 years of data acquisition, collecting a total of 1TB and 1 million files, the request form could look like this:
+
+   <Card title="Description of the project">
+   ...
+   </Card>
+   <Card title="Extra storage required">
+   Increase storage space by 1TB.<br/>
+   Increase file count limit by 1M files.<br/>
+   <br/>
+   Collection is connected to UQ XNAT so cannot zip/tar files
+   </Card>
+   <Card title="Estimated growth rate">
+   0.5TB per year<br/>
+   0.5M files per year<br/>
+   </Card>
+   <Card title="Rapid access requirements">
+   ...
+   </Card>
+
+</Steps>

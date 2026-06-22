@@ -1,0 +1,144 @@
+---
+// Interactive helper that builds an "AAF account request" email from project,
+// organisation and acquisition-site fields, with copy-to-clipboard buttons.
+// Ported from the Hugo `email-aaf-request-form` shortcode; styled standalone.
+const uid = Math.random().toString(36).slice(2, 9);
+---
+
+<div class="erf-card" data-aaf={uid}>
+  <div class="erf-field">
+    <label for={`aaf-project-${uid}`}><strong>XNAT Project Name</strong></label>
+    <input type="text" data-project id={`aaf-project-${uid}`} placeholder="e.g. MyProject" />
+  </div>
+  <div class="erf-field">
+    <label for={`aaf-org-${uid}`}><strong>Organisation</strong></label>
+    <input type="text" data-org id={`aaf-org-${uid}`} placeholder="e.g. QLD Health" />
+  </div>
+  <div class="erf-field">
+    <label for={`aaf-site-${uid}`}><strong>Data Acquisition Site</strong></label>
+    <input type="text" data-site id={`aaf-site-${uid}`} placeholder="e.g. HIRF, CAI, TRI" />
+  </div>
+
+  <div class="erf-output" hidden>
+    <table>
+      <tr>
+        <th>To</th>
+        <td>rcc-support@uq.edu.au</td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy-to>Copy</button>
+        </td>
+      </tr>
+      <tr>
+        <th>Subject</th>
+        <td><span data-subject></span></td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy-subject>Copy</button>
+        </td>
+      </tr>
+      <tr>
+        <th>Body</th>
+        <td><span class="erf-body" data-body></span></td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy-body>Copy</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('[data-aaf]').forEach((card) => {
+    const projectInput = card.querySelector('[data-project]');
+    const orgInput = card.querySelector('[data-org]');
+    const siteInput = card.querySelector('[data-site]');
+    const output = card.querySelector('.erf-output');
+    const subjectEl = card.querySelector('[data-subject]');
+    const bodyEl = card.querySelector('[data-body]');
+    if (!projectInput || !orgInput || !siteInput || !output || !subjectEl || !bodyEl) return;
+
+    const getSubject = () =>
+      `XNAT AAF account for project ${projectInput.value.trim()}`;
+    const getBody = () =>
+      `Hello RCC support,\n\nI require an AAF account to access the UQ AIS XNAT service.\n\nMy details are below:\nOrganisation: ${orgInput.value.trim()}\nData Acquisition Site: ${siteInput.value.trim()}\n\nThank you`;
+
+    const update = () => {
+      if (projectInput.value.trim() && orgInput.value.trim() && siteInput.value.trim()) {
+        subjectEl.textContent = getSubject();
+        bodyEl.textContent = getBody();
+        output.hidden = false;
+      } else {
+        output.hidden = true;
+      }
+    };
+
+    projectInput.addEventListener('input', update);
+    orgInput.addEventListener('input', update);
+    siteInput.addEventListener('input', update);
+
+    const copy = (text) => navigator.clipboard?.writeText(text);
+    card.querySelector('[data-copy-to]')?.addEventListener('click', () => copy('rcc-support@uq.edu.au'));
+    card.querySelector('[data-copy-subject]')?.addEventListener('click', () => copy(getSubject()));
+    card.querySelector('[data-copy-body]')?.addEventListener('click', () => copy(getBody()));
+  });
+</script>
+
+<style>
+  .erf-card {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-block: 1rem;
+    background: var(--sl-color-gray-7, var(--sl-color-black));
+  }
+  .erf-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+  .erf-field input {
+    padding: 0.5rem 0.65rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.35rem;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    font-size: var(--sl-text-base);
+  }
+  .erf-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+  }
+  .erf-output th,
+  .erf-output td {
+    border: 1px solid var(--sl-color-gray-5);
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .erf-output th {
+    width: 5rem;
+    white-space: nowrap;
+  }
+  .erf-body {
+    white-space: pre-line;
+  }
+  .erf-copy-cell {
+    width: 4.5rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .erf-output button {
+    cursor: pointer;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--sl-color-accent);
+    border-radius: 0.35rem;
+    background: transparent;
+    color: var(--sl-color-accent);
+    font-size: var(--sl-text-sm);
+  }
+  .erf-output button:hover {
+    background: var(--sl-color-accent);
+    color: var(--sl-color-white);
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+// Rendered in the Starlight header (overrides the SocialIcons slot) to provide
+// the top-nav links that the old Docsy navbar had.
+---
+
+<nav class="nav-links" aria-label="Quick links">
+  <a href="https://xnat.rcc.uq.edu.au" target="_blank" rel="noopener noreferrer">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </svg>
+    <span>Link to XNAT</span>
+  </a>
+  <a href="mailto:rcc-support@uq.edu.au">
+    <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>
+    <span>Support Ticket</span>
+  </a>
+</nav>
+
+<style>
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--sl-color-text);
+    font-size: var(--sl-text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav-links a:hover {
+    color: var(--sl-color-text-accent);
+  }
+  /* Drop the labels on narrow viewports so the header doesn't crowd. */
+  @media (max-width: 50rem) {
+    .nav-links a span {
+      display: none;
+    }
+  }
+</style>

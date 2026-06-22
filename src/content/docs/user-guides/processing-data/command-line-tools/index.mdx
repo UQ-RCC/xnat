@@ -1,0 +1,42 @@
+---
+title: Command line tools
+description: Command line tools
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+Several command line tools can connect to XNAT externally using an [alias token](/user-guides/processing-data/alias-tokens).
+
+<Tabs>
+<TabItem label="xnatutils">
+
+https://github.com/Australian-Imaging-Service/xnatutils
+
+Install xnatutils using
+
+```
+pip3 install xnatutils
+```
+
+#### Authenticating using `.netrc`
+1. Create an [alias token](/user-guides/processing-data/alias-tokens). Or use an existing alias token
+2. Create a `.netrc` file in your home directory with the following details
+
+```
+machine https://xnat.rcc.uq.edu.au
+user <your-alias-token>
+password <your-alias-secret>
+```
+
+</TabItem>
+<TabItem label="xnatpy">
+
+https://xnat.readthedocs.io/en/latest/
+
+</TabItem>
+<TabItem label="pyxnat">
+
+https://pyxnat.github.io/pyxnat
+
+</TabItem>
+</Tabs>

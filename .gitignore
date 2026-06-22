@@ -1,6 +1,12 @@
-/public
-resources/
+# build output
+dist/
+# generated types
+.astro/
+# dependencies
 node_modules/
-# package-lock.json
-hugo.exe
+# environment
+.env
+.env.production
+# macOS
+.DS_Store
 AGENTS.md
