@@ -2,8 +2,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// Canonical origin. Used for `site` and for the absolute social-card URLs,
-// which scrapers will not resolve if they are relative.
 const SITE = 'https://docs.xnat.rcc.uq.edu.au';
 
 // Every content page's slug (used to redirect the old Hugo `/docs/...` URLs).
@@ -107,16 +105,16 @@ export default defineConfig({
       title: 'UQ XNAT',
       description:
         'Storing, managing and analysing de-identified imaging data for UQ projects and collaborators',
-      customCss: ['./src/styles/custom.css'],
+      customCss: [
+        './src/styles/tokens.css',
+        './src/styles/base.css',
+        './src/styles/components.css',
+      ],
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
       favicon: '/favicon.svg',
       head: [
-        // Starlight emits no og:image of its own, but does set
-        // twitter:card=summary_large_image, so without these the card renders
-        // blank. One static card for every page: the sharing channels here are
-        // Slack, Teams and email, which all just want a recognisable banner.
-        // These URLs must be absolute - most scrapers will not resolve a
-        // relative path.
+        // Starlight sets twitter:card=summary_large_image but emits no
+        // og:image. Scrapers will not resolve a relative image URL.
         { tag: 'meta', attrs: { property: 'og:image', content: `${SITE}/og-default.png` } },
         { tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
         { tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
