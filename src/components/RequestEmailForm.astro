@@ -1,0 +1,235 @@
+---
+/**
+ * Builds a support-request email from a set of fields and copies the parts to
+ * the clipboard. Nothing is submitted anywhere and no mailto: link is used;
+ * the user pastes into their own mail client.
+ *
+ * `subject` and `body` take {fieldId} placeholders matching a field's id.
+ *
+ *   <RequestEmailForm
+ *     fields={[{ id: 'collection', label: 'RDM Collection Name', placeholder: 'e.g. PROJ001-Q0189' }]}
+ *     subject="Request new XNAT project for {collection}"
+ *     body={"Hello RCC support,\n\nPlease create a project for {collection}.\n\nThank you"}
+ *   />
+ */
+interface Field {
+  id: string;
+  label: string;
+  placeholder?: string;
+  /** Output stays hidden until every required field is filled. Default true. */
+  required?: boolean;
+}
+
+interface Props {
+  fields: Field[];
+  subject: string;
+  body: string;
+  to?: string;
+  intro?: string;
+}
+
+const { fields, subject, body, to = 'rcc-support@uq.edu.au', intro } = Astro.props;
+
+// Namespaces input ids so several instances can share a page.
+const uid = Math.random().toString(36).slice(2, 9);
+const config = JSON.stringify({ to, subject, body });
+---
+
+<request-email-form class="erf-card" data-config={config}>
+  {intro && <p class="erf-intro">{intro}</p>}
+
+  {
+    fields.map((field) => (
+      <div class="erf-field">
+        <label for={`${field.id}-${uid}`}>
+          <strong>{field.label}</strong>
+        </label>
+        <input
+          type="text"
+          id={`${field.id}-${uid}`}
+          data-field={field.id}
+          data-required={field.required === false ? 'false' : 'true'}
+          placeholder={field.placeholder}
+        />
+      </div>
+    ))
+  }
+
+  <div class="erf-output" hidden>
+    <table>
+      <tr>
+        <th scope="row">To</th>
+        <td data-slot="to">{to}</td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy="to" aria-label="Copy recipient address">Copy</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Subject</th>
+        <td data-slot="subject"></td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy="subject" aria-label="Copy subject line">Copy</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Body</th>
+        <td class="erf-body" data-slot="body"></td>
+        <td class="erf-copy-cell">
+          <button type="button" data-copy="body" aria-label="Copy message body">Copy</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <p class="erf-status sr-only" role="status" aria-live="polite"></p>
+</request-email-form>
+
+<script>
+  class RequestEmailForm extends HTMLElement {
+    connectedCallback() {
+      // Every query is scoped to `this`, so multiple instances on one page
+      // cannot wire themselves to each other's fields.
+      const { to, subject, body } = JSON.parse(this.dataset.config || '{}');
+      const inputs = [...this.querySelectorAll<HTMLInputElement>('input[data-field]')];
+      const output = this.querySelector<HTMLElement>('.erf-output');
+      const status = this.querySelector<HTMLElement>('.erf-status');
+      if (!inputs.length || !output || !status) return;
+
+      const values = () =>
+        Object.fromEntries(inputs.map((i) => [i.dataset.field, i.value.trim()]));
+
+      const fill = (template: string) =>
+        template.replace(/\{(\w+)\}/g, (_, key) => values()[key] ?? '');
+
+      const complete = () =>
+        inputs.every((i) => i.dataset.required === 'false' || i.value.trim());
+
+      const parts = () => ({ to, subject: fill(subject), body: fill(body) });
+
+      const render = () => {
+        if (!complete()) {
+          output.hidden = true;
+          return;
+        }
+        const p = parts();
+        this.querySelector('[data-slot="subject"]')!.textContent = p.subject;
+        this.querySelector('[data-slot="body"]')!.textContent = p.body;
+        output.hidden = false;
+      };
+
+      inputs.forEach((i) => i.addEventListener('input', render));
+
+      let timer: ReturnType<typeof setTimeout>;
+      this.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const key = btn.dataset.copy as 'to' | 'subject' | 'body';
+          const text = parts()[key];
+          const cell = this.querySelector<HTMLElement>(`[data-slot="${key}"]`);
+          try {
+            await navigator.clipboard.writeText(text);
+            btn.textContent = 'Copied';
+            status.textContent = `${key} copied to clipboard`;
+          } catch {
+            // Unsupported or insecure context: select the text so the reader
+            // can copy it by hand.
+            if (cell) {
+              const range = document.createRange();
+              range.selectNodeContents(cell);
+              const sel = window.getSelection();
+              sel?.removeAllRanges();
+              sel?.addRange(range);
+            }
+            btn.textContent = 'Select';
+            status.textContent = 'Copy is unavailable, text selected instead';
+          }
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            btn.textContent = 'Copy';
+          }, 2000);
+        });
+      });
+    }
+  }
+
+  customElements.define('request-email-form', RequestEmailForm);
+</script>
+
+<style>
+  .erf-card {
+    display: block;
+    border: 1px solid var(--xnat-surface-border);
+    border-radius: var(--xnat-radius-md);
+    padding: var(--xnat-space-4);
+    margin-block: var(--xnat-space-4);
+    background: var(--xnat-surface);
+  }
+  .erf-intro {
+    margin-top: 0;
+  }
+  .erf-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--xnat-space-1);
+    margin-bottom: var(--xnat-space-4);
+  }
+  .erf-field input {
+    padding: var(--xnat-space-2) var(--xnat-space-3);
+    border: 1px solid var(--xnat-surface-border);
+    border-radius: var(--xnat-radius-sm);
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    font-size: var(--sl-text-base);
+  }
+  .erf-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+  }
+  .erf-output th,
+  .erf-output td {
+    border: 1px solid var(--xnat-surface-border);
+    padding: var(--xnat-space-2) var(--xnat-space-3);
+    text-align: left;
+    vertical-align: top;
+  }
+  .erf-output th {
+    width: 5rem;
+    white-space: nowrap;
+  }
+  .erf-body {
+    white-space: pre-line;
+  }
+  .erf-copy-cell {
+    width: 5.5rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .erf-output button {
+    cursor: pointer;
+    /* Fixed width so "Copy" -> "Copied" does not reflow the table. */
+    min-width: 4.5rem;
+    padding: var(--xnat-space-1) var(--xnat-space-3);
+    border: 1px solid var(--sl-color-accent);
+    border-radius: var(--xnat-radius-sm);
+    background: transparent;
+    color: var(--sl-color-accent);
+    font-size: var(--sl-text-sm);
+    transition: background-color var(--xnat-transition), color var(--xnat-transition);
+  }
+  .erf-output button:hover {
+    background: var(--sl-color-accent);
+    /* text-invert, not white: white on the accent is 2.7:1. */
+    color: var(--sl-color-text-invert);
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
