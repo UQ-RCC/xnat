@@ -1,0 +1,53 @@
+/* Site-wide base behaviour: links, focus, motion, images.
+   Loaded after tokens.css and before components.css. */
+
+/* Starlight distinguishes prose links by colour alone, at ~1.05:1 against body
+   text (WCAG 1.4.1). Scoped to markdown content: cards, hero actions and nav
+   links are distinguishable by shape and position. */
+.sl-markdown-content a:not(:where(.not-content *)) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: from-font;
+}
+
+.sl-markdown-content a:not(:where(.not-content *)):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Headings that link to themselves shouldn't be underlined. */
+.sl-markdown-content :where(h1, h2, h3, h4, h5, h6) a {
+  text-decoration: none;
+}
+
+/* The restyled search button and borderless theme toggle have no visible user
+   agent focus indicator. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: var(--xnat-focus-ring);
+  outline-offset: var(--xnat-focus-offset);
+  border-radius: var(--xnat-radius-sm);
+}
+
+/* MemberChooser and the request forms animate borders and backgrounds on hover
+   with no guard of their own. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Frame screenshots consistently: light border and soft shadow (no rounding -
+   it looks off on screenshots whose own edges are square). */
+.sl-markdown-content img:not([data-no-border]) {
+  border: 1px solid var(--xnat-surface-border);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+}
+
+::selection {
+  background: var(--sl-color-accent);
+  color: var(--sl-color-text-invert);
+}

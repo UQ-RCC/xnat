@@ -1,14 +1,11 @@
 /**
- * Rasterises the branding SVGs in scripts/branding/ into the PNGs served from
- * public/.
- *
- * Run manually and commit the output - this is deliberately NOT part of
- * `npm run build`, so CI stays deterministic and needs no font packages:
+ * Rasterises scripts/branding/*.svg into the PNGs served from public/.
+ * Run manually and commit the output; not part of `npm run build`.
  *
  *   node scripts/generate-icons.mjs
  *
- * Requires DejaVu Sans for the social card text (fonts-dejavu-core on Debian
- * and Ubuntu). public/favicon.svg is hand-maintained and is not generated here.
+ * The social card text needs DejaVu Sans (fonts-dejavu-core).
+ * public/favicon.svg is hand-maintained, not generated here.
  */
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
