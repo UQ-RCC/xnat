@@ -1,6 +1,6 @@
 ---
 title: Alias tokens
-description: Alias tokens
+description: Generate a time-limited username and password so desktop clients, command line tools and XSync can connect to XNAT without your AAF login
 ---
 
 AAF is used for logging into the XNAT website itself.

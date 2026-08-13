@@ -1,6 +1,6 @@
 ---
 title: Resource uploader
-description: Resource uploader
+description: Create a reusable web upload form for repeated uploads of non-DICOM data, such as analysis outputs or behavioural files
 ---
 
 This is to create a web upload form for repeated uploads of any data type.

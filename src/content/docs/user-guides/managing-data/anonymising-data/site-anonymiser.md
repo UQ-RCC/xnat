@@ -1,6 +1,6 @@
 ---
 title: Site anonymiser
-description: Site anonymiser
+description: Which DICOM tags are modified and blanked when HIRF and CAI data is anonymised on-site before it reaches XNAT
 ---
 
 HIRF and CAI data are anonymised on-site by default with the following protocols

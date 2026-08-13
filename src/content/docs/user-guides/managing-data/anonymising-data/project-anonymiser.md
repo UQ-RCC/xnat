@@ -1,6 +1,6 @@
 ---
 title: Project anonymiser
-description: Project anonymiser
+description: Use a DicomEdit script to rename, retag or further anonymise sessions as they are archived into your project
 ---
 
 The Project level anonymiser uses a scripting syntax called DicomEdit to modify, reassign or blank DICOM tags.
@@ -21,7 +21,7 @@ The example in this screenshot basically replicates the behaviour in the HIRF on
 
 You can use DICOMedit to enforce a particular naming and tagging scheme across your entire project this way.
 
-## Anonymising existing sesssions
+## Anonymising existing sessions
 
 :::note[Note]
 If you’re planning to use the project level anonymiser, best solution would be to have your project’s renaming, retagging or anonymisation scheme established before starting data acquisition.
