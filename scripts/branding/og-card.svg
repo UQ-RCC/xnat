@@ -1,0 +1,37 @@
+<!-- Source for public/og-default.png (1200x630 social card).
+     Text uses DejaVu Sans, the only sans family installed on the build box.
+     If you regenerate this on a machine without DejaVu, the card will fall
+     back to a different face - install fonts-dejavu-core first. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#51247A"/>
+      <stop offset="1" stop-color="#2C1244"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Oversized watermark bleeding off the right edge, to balance the
+       left-aligned text block. Clipped by the viewBox. -->
+  <g transform="translate(880 40) scale(19)" opacity="0.07">
+    <circle cx="16" cy="16" r="8" fill="none" stroke="#fff" stroke-width="2.6"/>
+    <path d="M16 2.5v27M2.5 16h27" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Reticle mark, matching the favicon -->
+  <g transform="translate(90 84) scale(3.4)">
+    <circle cx="16" cy="16" r="8" fill="none" stroke="#fff" stroke-width="2.6"/>
+    <path d="M16 2.5v27M2.5 16h27" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+
+  <text x="90" y="330" font-family="DejaVu Sans" font-size="104" font-weight="bold"
+        fill="#ffffff" letter-spacing="-2">UQ XNAT</text>
+
+  <text x="90" y="398" font-family="DejaVu Sans" font-size="42" fill="#D2BAE8">Imaging data documentation</text>
+
+  <rect x="90" y="470" width="132" height="3" fill="#8B5FB5"/>
+
+  <text x="90" y="530" font-family="DejaVu Sans" font-size="25" fill="#C9B3DC">Research Computing Centre &#183; The University of Queensland</text>
+  <text x="90" y="570" font-family="DejaVu Sans" font-size="25" fill="#A98CC4">National Imaging Facility &#183; Australian Imaging Service</text>
+</svg>
