@@ -1,9 +1,9 @@
 ---
 title: Granting Access
-description: Granting project access to other users
+description: Add users to an XNAT project and choose whether they are an Owner, Member or Collaborator
 ---
 
-Switch to the Access tab. Use <font color="red">**Add User**</font> or <font color="red">**Add Users from List**</font> to select the user to add
+Switch to the Access tab. Use **Add User** or **Add Users from List** to select the user to add.
 
 ![Add user to project](./granting-access/user-access.png)
 

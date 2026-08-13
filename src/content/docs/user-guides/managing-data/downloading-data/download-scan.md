@@ -1,9 +1,9 @@
 ---
 title: Download Scan
-description: Downloading induvidual Scans using the XNAT UI
+description: Download a single scan, or several at once with Bulk Actions, from a session in the XNAT web interface
 ---
 
-Induvidual scans can be downloaded from the Sessions page
+Individual scans can be downloaded from the Sessions page.
 
 ![Download scan from session](./download-scan/downloading-data-scan-1.png)
 
