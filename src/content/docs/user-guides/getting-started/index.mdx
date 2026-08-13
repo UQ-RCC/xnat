@@ -5,8 +5,7 @@ tableOfContents: false
 ---
 
 import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
-import EmailRequestForm from '@components/EmailRequestForm.astro';
-import EmailAafRequestForm from '@components/EmailAafRequestForm.astro';
+import RequestEmailForm from '@components/RequestEmailForm.astro';
 import SignInAaf from '@partials/sign-in-aaf.mdx';
 import AccessingProject from '@partials/accessing-project.mdx';
 import TabQueryLink from '@components/TabQueryLink.astro';
@@ -55,7 +54,13 @@ Only one member of the project team needs to request for the project
 
 2. Open a ticket with RCC support. Fill in your RDM collection name below and click to send a pre-filled email.
 
-   <EmailRequestForm />
+   <RequestEmailForm
+     fields={[
+       { id: 'collection', label: 'RDM Collection Name', placeholder: 'e.g. PROJ001-Q0189' },
+     ]}
+     subject="Request new XNAT project for {collection}"
+     body={"Hello RCC support,\n\nCould you please create a new XNAT project for RDM collection {collection}?\n\nThank you"}
+   />
 
 3. The support ticket will inform you when the project is set up. XNAT project setup typically takes around ~24 hours from ticket submission.
 
@@ -87,7 +92,15 @@ For users from non-AAF organisations (QLD Health, TRI, QIMR, QLD Xray). QCIF/QRI
 
 1. Open a ticket with RCC support to request an AAF account. Fill in your details below and click to send a pre-filled email.
 
-   <EmailAafRequestForm />
+   <RequestEmailForm
+     fields={[
+       { id: 'project', label: 'XNAT Project Name', placeholder: 'e.g. MyProject' },
+       { id: 'org', label: 'Organisation', placeholder: 'e.g. QLD Health' },
+       { id: 'site', label: 'Data Acquisition Site', placeholder: 'e.g. HIRF, CAI, TRI' },
+     ]}
+     subject="XNAT AAF account for project {project}"
+     body={"Hello RCC support,\n\nI require an AAF account to access the UQ XNAT service.\n\nMy details are below:\nOrganisation: {org}\nData Acquisition Site: {site}\n\nThank you"}
+   />
 
 2. AAF's VHO service will return an email regarding the account registration process.
 

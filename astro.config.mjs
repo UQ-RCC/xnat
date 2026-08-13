@@ -19,9 +19,6 @@ const slugs = [
   'user-guides/using-xnat/search',
   'user-guides/managing-data',
   'user-guides/managing-data/downloading-data',
-  'user-guides/managing-data/downloading-data/zip-download',
-  'user-guides/managing-data/downloading-data/desktop-client',
-  'user-guides/managing-data/downloading-data/download-scan',
   'user-guides/managing-data/viewing-images',
   'user-guides/managing-data/uploading-data',
   'user-guides/managing-data/uploading-data/web-upload',
@@ -78,6 +75,22 @@ const redirects = {
     '/user-guides/using-xnat/sessions/#viewing-scans',
   '/docs/user-guides/using-xnat/sessions/scans':
     '/user-guides/using-xnat/sessions/#viewing-scans',
+
+  // The three download method pages merged into one tabbed page. The ?method=
+  // values are the tab labels slugified by TabQueryLink; they must match the
+  // labels in downloading-data/index.mdx.
+  '/user-guides/managing-data/downloading-data/zip-download':
+    '/user-guides/managing-data/downloading-data/?method=zip-download',
+  '/user-guides/managing-data/downloading-data/desktop-client':
+    '/user-guides/managing-data/downloading-data/?method=desktop-client',
+  '/user-guides/managing-data/downloading-data/download-scan':
+    '/user-guides/managing-data/downloading-data/?method=individual-scans',
+  '/docs/user-guides/managing-data/downloading-data/zip-download':
+    '/user-guides/managing-data/downloading-data/?method=zip-download',
+  '/docs/user-guides/managing-data/downloading-data/desktop-client':
+    '/user-guides/managing-data/downloading-data/?method=desktop-client',
+  '/docs/user-guides/managing-data/downloading-data/download-scan':
+    '/user-guides/managing-data/downloading-data/?method=individual-scans',
 
   // CTP Windows/Linux service pages merged into one OS-tabbed page.
   '/facility-guides/ctp/windows-service': '/facility-guides/ctp/run-as-service',
@@ -138,79 +151,99 @@ export default defineConfig({
         // Cycling theme toggle (auto → light → dark) instead of the dropdown.
         ThemeSelect: './src/components/ThemeSelect.astro',
       },
+      // Groups are ordered by the order a new user meets them: get in, meet
+      // your obligations, put data in, find it, take it out, automate.
+      // Labels are free to change; slugs are not, since ~60 legacy redirects
+      // point at them.
       sidebar: [
         {
-          label: 'User Guides',
+          label: 'Start here',
           items: [
-            // FAQ hidden from the sidebar until it has real content.
-            // The page still exists at /user-guides/faq (kept for old redirects).
-            // Getting Started is now a single tabbed page (member type via tabs).
-            { label: 'Getting Started', slug: 'user-guides/getting-started' },
-            // Logging into XNAT is now a single page (AAF + RCC Authenticate tabs).
-            { label: 'Logging into XNAT', slug: 'user-guides/logging-into-xnat' },
+            // Getting Started is a single tabbed page (member type via tabs).
+            { label: 'Getting started', slug: 'user-guides/getting-started' },
+            // Logging into XNAT is a single page (AAF + RCC Authenticate tabs).
+            { label: 'Logging in', slug: 'user-guides/logging-into-xnat' },
+          ],
+        },
+        {
+          label: 'Working with de-identified data',
+          items: [
+            { label: 'Overview', slug: 'user-guides/managing-data/anonymising-data' },
             {
-              label: 'Using XNAT',
-              items: [
-                { label: 'Overview', slug: 'user-guides/using-xnat' },
-                {
-                  label: 'Projects',
-                  items: [
-                    { label: 'Overview', slug: 'user-guides/using-xnat/projects' },
-                    { label: 'Granting Access', slug: 'user-guides/using-xnat/projects/granting-access' },
-                    { label: 'Request Storage', slug: 'user-guides/using-xnat/projects/request-storage' },
-                  ],
-                },
-                { label: 'Subjects', slug: 'user-guides/using-xnat/subjects' },
-                { label: 'Sessions', slug: 'user-guides/using-xnat/sessions' },
-                { label: 'Search', slug: 'user-guides/using-xnat/search' },
-              ],
+              label: 'On-site anonymisation',
+              slug: 'user-guides/managing-data/anonymising-data/site-anonymiser',
             },
             {
-              label: 'Managing Data',
-              items: [
-                {
-                  label: 'Downloading Data',
-                  items: [
-                    { label: 'Overview', slug: 'user-guides/managing-data/downloading-data' },
-                    { label: 'Zip Download', slug: 'user-guides/managing-data/downloading-data/zip-download' },
-                    { label: 'Desktop client', slug: 'user-guides/managing-data/downloading-data/desktop-client' },
-                    { label: 'Download Scan', slug: 'user-guides/managing-data/downloading-data/download-scan' },
-                  ],
-                },
-                { label: 'Viewing Images', slug: 'user-guides/managing-data/viewing-images' },
-                {
-                  label: 'Uploading Data',
-                  items: [
-                    { label: 'Overview', slug: 'user-guides/managing-data/uploading-data' },
-                    { label: 'Web Upload', slug: 'user-guides/managing-data/uploading-data/web-upload' },
-                    { label: 'Resource uploader', slug: 'user-guides/managing-data/uploading-data/resource-uploader' },
-                    { label: 'Prearchive', slug: 'user-guides/managing-data/uploading-data/prearchive' },
-                  ],
-                },
-                { label: 'Syncing Data', slug: 'user-guides/managing-data/syncing-data' },
-                {
-                  label: 'Anonymising Data',
-                  items: [
-                    { label: 'Overview', slug: 'user-guides/managing-data/anonymising-data' },
-                    { label: 'Project anonymiser', slug: 'user-guides/managing-data/anonymising-data/project-anonymiser' },
-                    { label: 'Site anonymiser', slug: 'user-guides/managing-data/anonymising-data/site-anonymiser' },
-                  ],
-                },
-              ],
-            },
-            {
-              label: 'Processing Data',
-              items: [
-                { label: 'Alias tokens', slug: 'user-guides/processing-data/alias-tokens' },
-                { label: 'Command line tools', slug: 'user-guides/processing-data/command-line-tools' },
-                { label: 'Interactive Analysis', slug: 'user-guides/processing-data/interactive-analysis' },
-              ],
+              label: 'Project anonymiser',
+              slug: 'user-guides/managing-data/anonymising-data/project-anonymiser',
             },
           ],
         },
         {
-          label: 'Facility Guides',
+          label: 'Getting data in',
           items: [
+            {
+              label: 'Choosing an upload method',
+              slug: 'user-guides/managing-data/uploading-data',
+            },
+            {
+              label: 'Upload from the browser',
+              slug: 'user-guides/managing-data/uploading-data/web-upload',
+            },
+            { label: 'The prearchive', slug: 'user-guides/managing-data/uploading-data/prearchive' },
+            {
+              label: 'Custom upload forms',
+              slug: 'user-guides/managing-data/uploading-data/resource-uploader',
+            },
+          ],
+        },
+        {
+          label: 'Browsing and organising',
+          items: [
+            { label: 'Overview', slug: 'user-guides/using-xnat' },
+            {
+              label: 'Projects',
+              items: [
+                { label: 'Overview', slug: 'user-guides/using-xnat/projects' },
+                {
+                  label: 'Granting access',
+                  slug: 'user-guides/using-xnat/projects/granting-access',
+                },
+                {
+                  label: 'Requesting more storage',
+                  slug: 'user-guides/using-xnat/projects/request-storage',
+                },
+              ],
+            },
+            { label: 'Subjects', slug: 'user-guides/using-xnat/subjects' },
+            { label: 'Sessions and scans', slug: 'user-guides/using-xnat/sessions' },
+            { label: 'Finding data', slug: 'user-guides/using-xnat/search' },
+          ],
+        },
+        {
+          label: 'Getting data out',
+          items: [
+            { label: 'Downloading data', slug: 'user-guides/managing-data/downloading-data' },
+            { label: 'Viewing images', slug: 'user-guides/managing-data/viewing-images' },
+            { label: 'Sharing and syncing', slug: 'user-guides/managing-data/syncing-data' },
+          ],
+        },
+        {
+          label: 'Analysis and automation',
+          items: [
+            { label: 'Overview', slug: 'user-guides/processing-data' },
+            { label: 'Alias tokens', slug: 'user-guides/processing-data/alias-tokens' },
+            { label: 'Command line tools', slug: 'user-guides/processing-data/command-line-tools' },
+            {
+              label: 'Jupyter environment',
+              slug: 'user-guides/processing-data/interactive-analysis',
+            },
+          ],
+        },
+        {
+          label: 'Facility guides',
+          items: [
+            { label: 'Overview', slug: 'facility-guides' },
             {
               label: 'Clinical Trials Processor (CTP)',
               items: [
