@@ -1,5 +1,5 @@
 ---
-title: Site anonymiser
+title: On-site anonymisation
 description: Which DICOM tags are modified and blanked when HIRF and CAI data is anonymised on-site before it reaches XNAT
 ---
 

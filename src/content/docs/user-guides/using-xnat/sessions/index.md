@@ -1,5 +1,5 @@
 ---
-title: Sessions
+title: Sessions and scans
 description: Managing Scan Sessions
 ---
 

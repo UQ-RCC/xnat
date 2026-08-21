@@ -1,5 +1,5 @@
 ---
-title: Resource uploader
+title: Custom upload forms
 description: Create a reusable web upload form for repeated uploads of non-DICOM data, such as analysis outputs or behavioural files
 ---
 

@@ -1,0 +1,143 @@
+---
+/**
+ * Explainer cards that sit above a Starlight <Tabs> block and let the reader
+ * self-select a path. Each card maps to a tab by its slugified label; clicking
+ * a card selects that tab. Cards stay in sync however the tab was chosen
+ * (card, tab bar, or a ?param= deep link via TabQueryLink).
+ *
+ *   <ChoiceCards
+ *     label="Choose your organisation type"
+ *     options={[{ tab: 'UQ members', who: 'UQ staff and students' }]}
+ *   />
+ *   <Tabs syncKey="member-type"> ... </Tabs>
+ */
+interface Option {
+  /** Must match the <TabItem label> exactly. */
+  tab: string;
+  /** Supporting line under the title. */
+  who: string;
+}
+
+interface Props {
+  options: Option[];
+  label: string;
+}
+
+const { options, label } = Astro.props;
+
+const slugify = (s: string) =>
+  s
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+---
+
+<choice-cards class="choice-cards not-content" role="group" aria-label={label}>
+  {
+    options.map((o) => (
+      <button type="button" class="choice-card" data-slug={slugify(o.tab)} aria-pressed="false">
+        <span class="choice-card__title">{o.tab}</span>
+        <span class="choice-card__who">{o.who}</span>
+      </button>
+    ))
+  }
+</choice-cards>
+
+<script>
+  class ChoiceCards extends HTMLElement {
+    connectedCallback() {
+      const slugify = (s: string | null) =>
+        (s || '')
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/(^-|-$)/g, '');
+
+      // Bind to the next tab group in document order, so several choosers can
+      // coexist on one page.
+      let node: Element | null = this;
+      let group: Element | null = null;
+      while (node && !group) {
+        node = node.nextElementSibling;
+        group = node?.matches('starlight-tabs')
+          ? node
+          : (node?.querySelector('starlight-tabs') ?? null);
+      }
+      if (!group) return;
+
+      const tabs = [...group.querySelectorAll<HTMLElement>('[role="tab"]')];
+      const cards = [...this.querySelectorAll<HTMLButtonElement>('.choice-card')];
+
+      const sync = () => {
+        const active = tabs.find((t) => t.getAttribute('aria-selected') === 'true');
+        const slug = active ? slugify(active.textContent) : null;
+        cards.forEach((c) => {
+          const on = c.dataset.slug === slug;
+          c.classList.toggle('is-selected', on);
+          c.setAttribute('aria-pressed', String(on));
+        });
+      };
+
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          tabs.find((t) => slugify(t.textContent) === card.dataset.slug)?.click();
+          sync();
+        });
+      });
+
+      const observer = new MutationObserver(sync);
+      tabs.forEach((t) =>
+        observer.observe(t, { attributes: true, attributeFilter: ['aria-selected'] })
+      );
+      sync();
+    }
+  }
+
+  customElements.define('choice-cards', ChoiceCards);
+</script>
+
+<style>
+  .choice-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: var(--xnat-space-4);
+    margin-block: var(--xnat-space-4) var(--xnat-space-5);
+  }
+  .choice-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--xnat-space-1);
+    text-align: left;
+    padding: var(--xnat-space-4);
+    border: 1px solid var(--xnat-surface-border);
+    border-radius: var(--xnat-radius-md);
+    background: var(--xnat-surface);
+    color: var(--sl-color-white);
+    cursor: pointer;
+    transition: border-color var(--xnat-transition), background-color var(--xnat-transition);
+  }
+  .choice-card:hover {
+    border-color: var(--sl-color-accent);
+  }
+  .choice-card.is-selected {
+    border-color: var(--sl-color-accent);
+    background: var(--sl-color-accent-low);
+  }
+  .choice-card.is-selected::after {
+    content: '✓ Selected';
+    margin-top: var(--xnat-space-1);
+    font-size: var(--sl-text-xs);
+    font-weight: 600;
+    color: var(--sl-color-accent-high);
+  }
+  .choice-card__title {
+    font-size: var(--sl-text-h5);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .choice-card__who {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-2);
+  }
+</style>

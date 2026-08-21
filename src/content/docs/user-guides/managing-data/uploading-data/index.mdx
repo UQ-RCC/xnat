@@ -1,14 +1,39 @@
 ---
-title: Uploading Data
-description: Upload data to XNAT Projects
+title: Uploading and downloading data
+description: Compare the ways of getting imaging data into and out of XNAT, and pick the one that suits your data and tools
 ---
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
+There are several ways to move data in and out of XNAT. Which one suits you
+depends on how much data you have and whether you are working in the browser or
+from a script.
+
+## Getting data in
+
 <CardGrid>
-  <LinkCard title="Web Upload" href="/user-guides/managing-data/uploading-data/web-upload" description="Upload using the XNAT compressed image uploader." />
-  <LinkCard title="Resource uploader" href="/user-guides/managing-data/uploading-data/resource-uploader" description="A reusable web form for repeated uploads of any data type." />
-  <LinkCard title="Prearchive" href="/user-guides/managing-data/uploading-data/prearchive" description="Resolve and archive conflicting or partial sessions." />
+  <LinkCard title="Upload from the browser" href="/user-guides/managing-data/uploading-data/web-upload" description="The compressed image uploader. Best for a session or two at a time." />
+  <LinkCard title="Custom upload forms" href="/user-guides/managing-data/uploading-data/resource-uploader" description="A reusable form for repeated uploads of non-DICOM data, such as analysis outputs." />
+  <LinkCard title="The prearchive" href="/user-guides/managing-data/uploading-data/prearchive" description="Where uploads land before they are archived. Resolve conflicts and partial sessions here." />
 </CardGrid>
 
-Data can also be uploaded via the XNAT data client or CTP. For further information refer to the [image session upload methods in XNAT](https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat).
+## Getting data out
+
+<CardGrid>
+  <LinkCard title="Downloading data" href="/user-guides/managing-data/downloading-data" description="A whole project, a single session, or individual scans — as a zip or via the Desktop client." />
+  <LinkCard title="Syncing between XNATs" href="/user-guides/managing-data/syncing-data" description="Send a project to another XNAT in Australia. Arranged by RCC support." />
+</CardGrid>
+
+## From the command line
+
+Scripted uploads and downloads use the same tools in both directions, and need
+an alias token rather than your AAF login.
+
+<CardGrid>
+  <LinkCard title="Alias tokens" href="/user-guides/processing-data/alias-tokens" description="The credential external tools use to connect. Set this up first." />
+  <LinkCard title="Command line tools" href="/user-guides/processing-data/command-line-tools" description="xnatutils, xnatpy and pyxnat, for uploading and downloading from a terminal or script." />
+</CardGrid>
+
+## Further reading
+
+- [Image session upload methods in XNAT](https://wiki.xnat.org/documentation/how-to-use-xnat/image-session-upload-methods-in-xnat)

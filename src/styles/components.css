@@ -128,3 +128,9 @@ site-search button[data-open-modal] {
     border-inline-start: 1px solid var(--xnat-surface-border);
   }
 }
+
+/* Hero and link buttons. Starlight makes these full pills (999rem); square them
+   off to match the cards and framed screenshots. */
+.sl-link-button:is(.primary, .secondary, .minimal) {
+  border-radius: var(--xnat-radius-md);
+}

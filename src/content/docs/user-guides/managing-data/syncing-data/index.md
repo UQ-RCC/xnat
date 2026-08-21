@@ -1,5 +1,5 @@
 ---
-title: Syncing Data
+title: Syncing between XNATs
 description: Request syncing of datasets to other XNATs in Australia
 ---
 
