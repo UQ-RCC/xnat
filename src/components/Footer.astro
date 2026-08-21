@@ -1,0 +1,39 @@
+---
+// Wraps Starlight's own footer rather than replacing it, so Pagination,
+// EditLink and LastUpdated are preserved. Renders on splash pages too.
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default><slot /></Default>
+
+<div class="site-footer">
+  <p class="site-footer__attribution">
+    {/* Kept on one line per clause: Astro strips whitespace where a line break
+        sits next to an element, which silently joins words. */}
+    UQ XNAT is operated by the <a href="https://rcc.uq.edu.au" target="_blank" rel="noopener noreferrer">Research Computing Centre</a> at <a href="https://uq.edu.au" target="_blank" rel="noopener noreferrer">The University of Queensland</a>, as part of the <a href="https://anif.org.au" target="_blank" rel="noopener noreferrer">National Imaging Facility</a> and the <a href="https://australian-imaging-service.github.io" target="_blank" rel="noopener noreferrer">Australian Imaging Service</a>.
+  </p>
+</div>
+
+<style>
+  .site-footer {
+    margin-top: var(--xnat-space-5);
+    padding-top: var(--xnat-space-5);
+    border-top: 1px solid var(--sl-color-hairline-light);
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+  .site-footer__attribution {
+    margin: 0;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .site-footer__attribution a {
+    color: var(--sl-color-gray-2);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+  .site-footer__attribution a:hover {
+    color: var(--sl-color-text-accent);
+  }
+</style>

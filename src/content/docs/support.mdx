@@ -1,0 +1,44 @@
+---
+title: Get support
+description: How to contact RCC support about UQ XNAT, and what to include so your request can be actioned quickly
+---
+
+import RequestEmailForm from '@components/RequestEmailForm.astro';
+
+Before contacting support, it is worth checking the guides — the most common
+questions have their own pages:
+
+- [I cannot see my project](/user-guides/using-xnat/projects/your-project)
+- [My upload has not appeared](/user-guides/managing-data/uploading-data/prearchive)
+- [I have run out of storage](/user-guides/using-xnat/projects/request-storage)
+
+## Contacting RCC support
+
+Email `rcc-support@uq.edu.au`. Fill in the form below and copy the result into
+your mail client.
+
+<RequestEmailForm
+  fields={[
+    { id: 'summary', label: 'What do you need help with?', placeholder: 'e.g. Cannot upload to project Q1234' },
+    { id: 'project', label: 'XNAT project name', placeholder: 'e.g. Q1234', required: false },
+  ]}
+  subject="UQ XNAT: {summary}"
+  body={"Hello RCC support,\n\n{summary}\n\nXNAT project: {project}\n\nWhat I did:\n\nWhat I expected:\n\nWhat happened instead:\n\nThank you"}
+/>
+
+## What to include
+
+The more of this you provide, the less back and forth:
+
+- The **XNAT project name**, and the subject or session if it is specific to one
+- **What you did**, step by step, and what you expected to happen
+- **What happened instead**, including the exact wording of any error
+- A **screenshot** if the problem is visible on screen — with no patient
+  identifiers in it
+- Whether it worked before, and roughly when it stopped
+
+## Data acquired at a facility
+
+If your question is about data acquired at HIRF, CAI or TRI — whether a session
+has been sent, or when a project will be created — contact the facility that
+acquired it. They can see the acquisition side, which RCC cannot.
