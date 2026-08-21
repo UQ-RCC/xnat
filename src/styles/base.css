@@ -27,7 +27,7 @@
   border-radius: var(--xnat-radius-sm);
 }
 
-/* MemberChooser and the request forms animate borders and backgrounds on hover
+/* ChoiceCards and the request forms animate borders and backgrounds on hover
    with no guard of their own. */
 @media (prefers-reduced-motion: reduce) {
   *,

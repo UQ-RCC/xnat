@@ -1,31 +1,25 @@
 ---
-title: Logging into XNAT
-description: Logging into XNAT with AAF or RCC Authenticate
+title: Logging in
+description: Log in to UQ XNAT with your organisation's AAF credentials
 ---
 
-import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
-import TabQueryLink from '@components/TabQueryLink.astro';
+import { Steps } from '@astrojs/starlight/components';
 
-<TabQueryLink param="login" />
-
-There are two ways to log into XNAT. AAF is the recommended option for most users.
-
-<Tabs>
-<TabItem label="AAF (recommended)">
+If your organisation is part of the Australian Access Federation (AAF), you can
+use your existing institutional credentials to log in.
 
 :::note
-AAF is the recommended way to sign up and login to XNAT.
-
-If your organisation is not in the AAF list during the sign-up process, please contact the respective XNAT support for further options
+If your organisation is not in the AAF list during sign-up, contact RCC support
+for other options.
 :::
 
-If your organisation is part of the Australian Access Federation (AAF), you can use your AAF credentials to sign up. Follow the steps below to sign-up/login using AAF.
+## Logging in with AAF
 
 <Steps>
 
 1. Open [https://xnat.rcc.uq.edu.au](https://xnat.rcc.uq.edu.au)
 
-2. Log in with the AAF Single sign-on button (shown below)
+2. Log in with the AAF Single sign-on button.
 
    ![XNAT AAF login page](./xnat-aaf-login-page.png)
 
@@ -33,22 +27,12 @@ If your organisation is part of the Australian Access Federation (AAF), you can 
 
 </Steps>
 
-:::caution[First time users]
-First time users will only see publicly accessible projects when they log in.
+:::note[First time users]
+You will not see any projects the first time you log in — your account has only
+just been created. See [Your project](/user-guides/using-xnat/projects/your-project)
+for how to get access to one.
 :::
 
-For more details on the Australian Access Federation, see https://aaf.edu.au
+## Further reading
 
-</TabItem>
-<TabItem label="RCC Authenticate">
-
-To use this login, you would have received an email from a UQ XNAT administrator with the login information.
-
-:::caution[Note]
-If you have not received an email, either use **AAF** (see the other tab) or contact the respective XNAT support.
-
-RCC Authenticate credentials are **NOT** your UQ or institutional username and password
-:::
-
-</TabItem>
-</Tabs>
+- [Australian Access Federation](https://aaf.edu.au)

@@ -1,0 +1,41 @@
+---
+title: Guides
+description: Find the guide for what you are trying to do in UQ XNAT, from getting access through to running analysis
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+Find what you are trying to do below, or use the sidebar to browse everything.
+
+## Getting set up
+
+<CardGrid>
+  <LinkCard title="I need an account" href="/user-guides/getting-started" description="Sign up with your AAF credentials, or request an account if your organisation is not an AAF member." />
+  <LinkCard title="I need a project" href="/user-guides/using-xnat/projects/your-project" description="Request a new project, or get access to one that already exists." />
+  <LinkCard title="I cannot see my project" href="/user-guides/using-xnat/projects/your-project" description="Projects only appear once an Owner has granted you access." />
+</CardGrid>
+
+## Getting data in and out
+
+<CardGrid>
+  <LinkCard title="I want to upload imaging data" href="/user-guides/managing-data/uploading-data" description="Compare the upload methods and pick the one that suits your data." />
+  <LinkCard title="I want to download my data" href="/user-guides/managing-data/downloading-data" description="A whole project, a single session, or individual scans." />
+  <LinkCard title="My upload is not in the project" href="/user-guides/managing-data/uploading-data/prearchive" description="Uploads land in the prearchive until they are archived." />
+  <LinkCard title="I need to de-identify data" href="/user-guides/managing-data/anonymising-data" description="What is anonymised on-site, and how to set a project anonymiser." />
+</CardGrid>
+
+## Working with your data
+
+<CardGrid>
+  <LinkCard title="I want to view images" href="/user-guides/managing-data/viewing-images" description="Open scans in the OHIF viewer in your browser." />
+  <LinkCard title="I want to find something" href="/user-guides/using-xnat/search" description="Search across projects, subjects and sessions." />
+  <LinkCard title="I want to add a collaborator" href="/user-guides/using-xnat/projects/granting-access" description="Add users as Owners, Members or Collaborators." />
+  <LinkCard title="I have run out of storage" href="/user-guides/using-xnat/projects/request-storage" description="Raise the 1TB and 1 million file limits on your collection." />
+</CardGrid>
+
+## Scripting and analysis
+
+<CardGrid>
+  <LinkCard title="I want to use the command line" href="/user-guides/processing-data/alias-tokens" description="Set up an alias token first, then use xnatutils, xnatpy or pyxnat." />
+  <LinkCard title="I want to run analysis" href="/user-guides/processing-data/interactive-analysis" description="Request access to a Jupyter environment connected to your project data." />
+</CardGrid>

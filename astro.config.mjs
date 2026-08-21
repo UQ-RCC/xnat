@@ -31,10 +31,6 @@ const slugs = [
   'user-guides/processing-data',
   'user-guides/processing-data/command-line-tools',
   'user-guides/processing-data/interactive-analysis',
-  'facility-guides',
-  'facility-guides/ctp',
-  'facility-guides/ctp/installation',
-  'facility-guides/ctp/proxy-server',
 ];
 
 // Old Hugo `/docs/<slug>` -> new `/<slug>`, plus the legacy Hugo aliases.
@@ -46,16 +42,16 @@ const redirects = {
   // every old per-member URL (both the Astro and original Hugo `/docs/` forms)
   // and the legacy Hugo aliases to the matching tab.
   '/user-guides/getting-started/uq-members':
-    '/user-guides/getting-started/?member=uq-members',
+    '/user-guides/getting-started/?member=aaf-members',
   '/user-guides/getting-started/other-aaf-members':
-    '/user-guides/getting-started/?member=other-aaf-members',
+    '/user-guides/getting-started/?member=aaf-members',
   '/user-guides/getting-started/non-aaf-members':
     '/user-guides/getting-started/?member=non-aaf-members',
   '/user-guides/getting-started/hirf-users': '/user-guides/getting-started/',
   '/docs/user-guides/getting-started/uq-members':
-    '/user-guides/getting-started/?member=uq-members',
+    '/user-guides/getting-started/?member=aaf-members',
   '/docs/user-guides/getting-started/other-aaf-members':
-    '/user-guides/getting-started/?member=other-aaf-members',
+    '/user-guides/getting-started/?member=aaf-members',
   '/docs/user-guides/getting-started/non-aaf-members':
     '/user-guides/getting-started/?member=non-aaf-members',
   '/docs/user-guides/getting-started/hirf-users': '/user-guides/getting-started/',
@@ -92,18 +88,32 @@ const redirects = {
   '/docs/user-guides/managing-data/downloading-data/download-scan':
     '/user-guides/managing-data/downloading-data/?method=individual-scans',
 
-  // CTP Windows/Linux service pages merged into one OS-tabbed page.
-  '/facility-guides/ctp/windows-service': '/facility-guides/ctp/run-as-service',
-  '/facility-guides/ctp/linux-service': '/facility-guides/ctp/run-as-service',
-  '/docs/facility-guides/ctp/windows-service': '/facility-guides/ctp/run-as-service',
-  '/docs/facility-guides/ctp/linux-service': '/facility-guides/ctp/run-as-service',
+  // CTP was retired; its pages are gone. Send the old URLs to the remaining
+  // upload methods rather than 404.
+  '/facility-guides': '/user-guides/managing-data/uploading-data',
+  '/facility-guides/ctp': '/user-guides/managing-data/uploading-data',
+  '/facility-guides/ctp/installation': '/user-guides/managing-data/uploading-data',
+  '/facility-guides/ctp/proxy-server': '/user-guides/managing-data/uploading-data',
+  '/facility-guides/ctp/run-as-service': '/user-guides/managing-data/uploading-data',
+  '/facility-guides/ctp/windows-service': '/user-guides/managing-data/uploading-data',
+  '/facility-guides/ctp/linux-service': '/user-guides/managing-data/uploading-data',
+  '/docs/facility-guides': '/user-guides/managing-data/uploading-data',
+  '/docs/facility-guides/ctp': '/user-guides/managing-data/uploading-data',
+  '/docs/facility-guides/ctp/installation': '/user-guides/managing-data/uploading-data',
+  '/docs/facility-guides/ctp/proxy-server': '/user-guides/managing-data/uploading-data',
+  '/docs/facility-guides/ctp/run-as-service': '/user-guides/managing-data/uploading-data',
+  '/docs/facility-guides/ctp/windows-service': '/user-guides/managing-data/uploading-data',
+  '/docs/facility-guides/ctp/linux-service': '/user-guides/managing-data/uploading-data',
 
   // Legacy aliases declared in the original Hugo front matter.
-  '/docs/user-guides/create-xnat-project': '/user-guides/getting-started',
+  // Project creation now has its own page; these legacy URLs were always about
+  // creating a project rather than onboarding.
+  '/docs/user-guides/create-xnat-project':
+    '/user-guides/using-xnat/projects/your-project',
   '/docs/user-guides/create-xnat-project/create-q-collection-uq-users':
-    '/user-guides/getting-started/?member=uq-members',
+    '/user-guides/using-xnat/projects/your-project',
   '/docs/user-guides/create-xnat-project/create-q-collection-non-uq-users':
-    '/user-guides/getting-started/?member=other-aaf-members',
+    '/user-guides/using-xnat/projects/your-project',
   '/docs/user-guides/browsing-xnat': '/user-guides/using-xnat',
   '/docs/user-guides/login-to-xnat': '/user-guides/logging-into-xnat',
   '/docs/user-guides/login-to-xnat/aaf-login': '/user-guides/logging-into-xnat/',
@@ -151,49 +161,45 @@ export default defineConfig({
         // Cycling theme toggle (auto → light → dark) instead of the dropdown.
         ThemeSelect: './src/components/ThemeSelect.astro',
       },
-      // Groups are ordered by the order a new user meets them: get in, meet
-      // your obligations, put data in, find it, take it out, automate.
-      // Labels are free to change; slugs are not, since ~60 legacy redirects
-      // point at them.
+      // Single axis: every group is a task, ordered the way a new user meets
+      // them. Labels are free to change; slugs are not, since the legacy
+      // redirects point at them.
       sidebar: [
         {
-          label: 'Start here',
+          label: 'Getting started',
           items: [
-            // Getting Started is a single tabbed page (member type via tabs).
-            { label: 'Getting started', slug: 'user-guides/getting-started' },
-            // Logging into XNAT is a single page (AAF + RCC Authenticate tabs).
+            // Tabbed by member type; covers requesting a project and an account.
+            { label: 'Signing up', slug: 'user-guides/getting-started' },
             { label: 'Logging in', slug: 'user-guides/logging-into-xnat' },
-          ],
-        },
-        {
-          label: 'Working with de-identified data',
-          items: [
-            { label: 'Overview', slug: 'user-guides/managing-data/anonymising-data' },
             {
-              label: 'On-site anonymisation',
-              slug: 'user-guides/managing-data/anonymising-data/site-anonymiser',
-            },
-            {
-              label: 'Project anonymiser',
-              slug: 'user-guides/managing-data/anonymising-data/project-anonymiser',
+              label: 'Your project',
+              slug: 'user-guides/using-xnat/projects/your-project',
             },
           ],
         },
         {
-          label: 'Getting data in',
+          label: 'Uploading and downloading',
           items: [
             {
-              label: 'Choosing an upload method',
+              label: 'Overview',
               slug: 'user-guides/managing-data/uploading-data',
             },
             {
               label: 'Upload from the browser',
               slug: 'user-guides/managing-data/uploading-data/web-upload',
             },
-            { label: 'The prearchive', slug: 'user-guides/managing-data/uploading-data/prearchive' },
+            {
+              label: 'Fixing stuck uploads',
+              slug: 'user-guides/managing-data/uploading-data/prearchive',
+            },
             {
               label: 'Custom upload forms',
               slug: 'user-guides/managing-data/uploading-data/resource-uploader',
+            },
+            { label: 'Downloading data', slug: 'user-guides/managing-data/downloading-data' },
+            {
+              label: 'Syncing between XNATs',
+              slug: 'user-guides/managing-data/syncing-data',
             },
           ],
         },
@@ -217,23 +223,28 @@ export default defineConfig({
             },
             { label: 'Subjects', slug: 'user-guides/using-xnat/subjects' },
             { label: 'Sessions and scans', slug: 'user-guides/using-xnat/sessions' },
-            { label: 'Finding data', slug: 'user-guides/using-xnat/search' },
-          ],
-        },
-        {
-          label: 'Getting data out',
-          items: [
-            { label: 'Downloading data', slug: 'user-guides/managing-data/downloading-data' },
             { label: 'Viewing images', slug: 'user-guides/managing-data/viewing-images' },
-            { label: 'Sharing and syncing', slug: 'user-guides/managing-data/syncing-data' },
+            { label: 'Search', slug: 'user-guides/using-xnat/search' },
           ],
         },
         {
-          label: 'Analysis and automation',
+          label: 'Anonymising data',
           items: [
-            { label: 'Overview', slug: 'user-guides/processing-data' },
-            { label: 'Alias tokens', slug: 'user-guides/processing-data/alias-tokens' },
-            { label: 'Command line tools', slug: 'user-guides/processing-data/command-line-tools' },
+            { label: 'Overview', slug: 'user-guides/managing-data/anonymising-data' },
+            {
+              label: 'On-site anonymisation',
+              slug: 'user-guides/managing-data/anonymising-data/site-anonymiser',
+            },
+            {
+              label: 'Project anonymiser',
+              slug: 'user-guides/managing-data/anonymising-data/project-anonymiser',
+            },
+          ],
+        },
+        {
+          // Plugins layered on top of XNAT, rather than core platform features.
+          label: 'Analysis and pipelines',
+          items: [
             {
               label: 'Jupyter environment',
               slug: 'user-guides/processing-data/interactive-analysis',
@@ -241,18 +252,11 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Facility guides',
+          label: 'Command line access',
           items: [
-            { label: 'Overview', slug: 'facility-guides' },
-            {
-              label: 'Clinical Trials Processor (CTP)',
-              items: [
-                { label: 'Overview', slug: 'facility-guides/ctp' },
-                { label: 'Installation', slug: 'facility-guides/ctp/installation' },
-                { label: 'Run CTP as a service', slug: 'facility-guides/ctp/run-as-service' },
-                { label: 'Proxy Server Settings', slug: 'facility-guides/ctp/proxy-server' },
-              ],
-            },
+            { label: 'Overview', slug: 'user-guides/processing-data' },
+            { label: 'Alias tokens', slug: 'user-guides/processing-data/alias-tokens' },
+            { label: 'Command line tools', slug: 'user-guides/processing-data/command-line-tools' },
           ],
         },
       ],
