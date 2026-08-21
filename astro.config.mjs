@@ -163,6 +163,8 @@ export default defineConfig({
         SocialIcons: './src/components/NavLinks.astro',
         // Cycling theme toggle (auto → light → dark) instead of the dropdown.
         ThemeSelect: './src/components/ThemeSelect.astro',
+        // Wraps the built-in footer to add RCC / NIF / AIS attribution.
+        Footer: './src/components/Footer.astro',
       },
       // Single axis: every group is a task, ordered the way a new user meets
       // them. Labels are free to change; slugs are not, since the legacy

@@ -19,10 +19,6 @@
 .home-links__repos a {
   margin: 0 0.6rem;
 }
-.home-links__ais {
-  margin-top: var(--xnat-space-5) !important;
-  font-size: var(--sl-text-sm);
-}
 
 /* Sidebar: keep only the top-level headers bold/large. Normalise every nested
    expandable group label so it matches the plain single-page links beside it.
