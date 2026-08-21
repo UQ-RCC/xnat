@@ -65,6 +65,14 @@ XNAT documentation. Grouped by what they block.
 - [ ] **FAQ content.** `user-guides/faq.md` is an honest placeholder. Real
       questions from the ticket queue would be better than invented ones.
 
+## Upstream documentation gaps
+
+- [ ] **How to use Neurodesk from an XNAT notebook.** neurodesk.org has an
+      applications list and install-focused getting-started docs, but nothing
+      covering day-to-day use for someone handed a running notebook server.
+      `processing-data/interactive-analysis` currently points at
+      `neurodesk.org/getting-started/hosted/xnat/` as the improvable target.
+
 ## Drafted content awaiting sign-off
 
 Pages drafted from screenshots and public XNAT docs are marked either
