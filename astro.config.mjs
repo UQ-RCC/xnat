@@ -170,6 +170,8 @@ export default defineConfig({
       // them. Labels are free to change; slugs are not, since the legacy
       // redirects point at them.
       sidebar: [
+        // Hub page of task-shaped links, also the homepage's "Docs" target.
+        { label: 'All guides', slug: 'user-guides' },
         {
           label: 'Getting started',
           items: [
