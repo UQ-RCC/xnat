@@ -7,7 +7,6 @@ const SITE = 'https://docs.xnat.rcc.uq.edu.au';
 // Every content page's slug (used to redirect the old Hugo `/docs/...` URLs).
 const slugs = [
   'user-guides',
-  'user-guides/faq',
   'user-guides/getting-started',
   'user-guides/logging-into-xnat',
   'user-guides/using-xnat',
@@ -17,7 +16,6 @@ const slugs = [
   'user-guides/using-xnat/subjects',
   'user-guides/using-xnat/sessions',
   'user-guides/using-xnat/search',
-  'user-guides/managing-data',
   'user-guides/managing-data/downloading-data',
   'user-guides/managing-data/viewing-images',
   'user-guides/managing-data/uploading-data',
@@ -37,6 +35,11 @@ const slugs = [
 const redirects = {
   '/docs': '/',
   ...Object.fromEntries(slugs.map((s) => [`/docs/${s}`, `/${s}`])),
+  // Retired placeholder and duplicate hub pages.
+  '/user-guides/faq': '/support',
+  '/docs/user-guides/faq': '/support',
+  '/user-guides/managing-data': '/user-guides/managing-data/uploading-data',
+  '/docs/user-guides/managing-data': '/user-guides/managing-data/uploading-data',
   // Getting Started was split into per-member pages; it's now a single tabbed
   // page that selects the member type via a `?member=` query param. Redirect
   // every old per-member URL (both the Astro and original Hugo `/docs/` forms)
@@ -128,6 +131,7 @@ export default defineConfig({
       title: 'UQ XNAT',
       description:
         'Storing, managing and analysing de-identified imaging data for UQ projects and collaborators',
+      locales: { root: { label: 'English', lang: 'en-AU' } },
       customCss: [
         './src/styles/tokens.css',
         './src/styles/base.css',

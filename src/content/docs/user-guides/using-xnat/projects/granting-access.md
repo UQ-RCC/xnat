@@ -1,5 +1,5 @@
 ---
-title: Granting Access
+title: Granting access
 description: Add users to an XNAT project and choose whether they are an Owner, Member or Collaborator
 ---
 

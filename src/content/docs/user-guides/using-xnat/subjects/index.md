@@ -1,6 +1,6 @@
 ---
 title: Subjects
-description: Managing Subjects
+description: Find subjects within an XNAT project, review DICOM-derived metadata, rename subject IDs and use subject-level actions
 ---
 
 The Project page will have a list of Subjects

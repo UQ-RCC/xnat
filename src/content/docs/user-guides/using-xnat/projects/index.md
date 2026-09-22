@@ -1,6 +1,6 @@
 ---
 title: Projects
-description: Managing Projects
+description: Find projects available to your account, understand project-level access, and follow guides for requesting, sharing and expanding a project
 ---
 
 When you login into the home page, the list of projects that you have access to will be on the left

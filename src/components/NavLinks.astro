@@ -4,7 +4,7 @@
 ---
 
 <nav class="nav-links" aria-label="Quick links">
-  <a href="https://xnat.rcc.uq.edu.au" target="_blank" rel="noopener noreferrer">
+  <a href="https://xnat.rcc.uq.edu.au" target="_blank" rel="noopener noreferrer" title="Open UQ XNAT">
     <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
       <polyline points="15 3 21 3 21 9"></polyline>
@@ -12,7 +12,7 @@
     </svg>
     <span>Link to XNAT</span>
   </a>
-  <a href="/support">
+  <a href="/support" title="Get support">
     <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
       <polyline points="22,6 12,13 2,6"></polyline>
@@ -40,10 +40,18 @@
   .nav-links a:hover {
     color: var(--sl-color-text-accent);
   }
-  /* Drop the labels on narrow viewports so the header doesn't crowd. */
+  /* Visually hide labels on narrow viewports without removing accessible names. */
   @media (max-width: 50rem) {
     .nav-links a span {
-      display: none;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   }
 </style>

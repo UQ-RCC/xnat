@@ -1,6 +1,6 @@
 ---
 title: Search
-description: Search across Projects, Subjects and Sessions
+description: Search XNAT projects, subjects and MR, CT or PET sessions by criteria, then review and refine matching imaging records
 ---
 
 You can search across Projects, Subjects or Sessions

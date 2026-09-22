@@ -1,6 +1,6 @@
 ---
 title: Sessions and scans
-description: Managing Scan Sessions
+description: Understand MR, CT and PET imaging sessions, edit session metadata, inspect scans and open scan files from an XNAT project
 ---
 
 Sessions are divided into three types, based on modality information extracted from the DICOM metadata

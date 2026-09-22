@@ -1,6 +1,6 @@
 ---
-title: Viewing Images
-description: Viewing Images in the XNAT OHIF Viewer
+title: Viewing images
+description: Open imaging sessions in the browser-based XNAT OHIF Viewer, navigate scan data and review DICOM headers without downloading files
 ---
 
 ## XNAT OHIF Viewer
