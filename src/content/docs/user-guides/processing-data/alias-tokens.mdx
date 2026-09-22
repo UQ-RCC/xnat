@@ -3,6 +3,8 @@ title: Alias tokens
 description: Generate a time-limited username and password so desktop clients, command line tools and XSync can connect to XNAT without your AAF login
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 AAF is used for logging into the XNAT website itself.
 
 But there are a lot of tools and services that will require a connect to the XNAT server externally
@@ -55,3 +57,11 @@ Do not reveal the secret. It is effectively your temporary password.
 If you no longer require the alias token, or suspect a secret has been compromised, just delete the alias token.
 
 ![Delete alias token](./alias-tokens/alias-tokens-4.png)
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Command line tools" href="/user-guides/processing-data/command-line-tools" description="Use an alias token with xnatutils, xnatpy or pyxnat." />
+  <LinkCard title="XNAT Desktop client" href="/user-guides/managing-data/downloading-data/?method=desktop-client" description="Download larger datasets with resumable transfers." />
+  <LinkCard title="Syncing between XNATs" href="/user-guides/managing-data/syncing-data" description="Use an alias token to authenticate XSync to a destination XNAT." />
+</CardGrid>

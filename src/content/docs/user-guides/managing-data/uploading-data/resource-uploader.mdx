@@ -3,6 +3,8 @@ title: Custom upload forms
 description: Create a reusable web upload form for repeated uploads of non-DICOM data, such as analysis outputs or behavioural files
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 This is to create a web upload form for repeated uploads of any data type.
 
 Navigate to **Project &rarr; Manage &rarr; Project Resource Settings &rarr; Start**
@@ -21,3 +23,10 @@ Select **Add** when complete
 To upload file(s) using the resource uploader, **Upload Additional Files** from the Sessions page
 
 ![Upload Additional Files](./resource-uploader/resource-uploader-3.png)
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Upload from the browser" href="/user-guides/managing-data/uploading-data/web-upload" description="Upload a de-identified DICOM ZIP archive through the compressed uploader." />
+  <LinkCard title="Fix a stuck upload" href="/user-guides/managing-data/uploading-data/prearchive" description="Review, modify or archive data waiting in the prearchive." />
+</CardGrid>

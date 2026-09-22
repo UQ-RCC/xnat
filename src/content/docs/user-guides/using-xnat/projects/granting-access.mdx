@@ -3,6 +3,8 @@ title: Granting access
 description: Add users to an XNAT project and choose whether they are an Owner, Member or Collaborator
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 Switch to the Access tab. Use **Add User** or **Add Users from List** to select the user to add.
 
 ![Add user to project](./granting-access/user-access.png)
@@ -24,3 +26,10 @@ The following table outlines the permissions given to each role.
 | Data - Delete        | &check; | &cross; | &cross;       |
 | User - Add/Remove    | &check; | &cross; | &cross;       |
 | User - Change role   | &check; | &cross; | &cross;       |
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Your project" href="/user-guides/using-xnat/projects/your-project" description="Request a project or get access to an existing one." />
+  <LinkCard title="Request more storage" href="/user-guides/using-xnat/projects/request-storage" description="Increase the storage or file capacity of an XNAT-connected collection." />
+</CardGrid>

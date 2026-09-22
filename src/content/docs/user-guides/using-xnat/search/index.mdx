@@ -3,6 +3,8 @@ title: Search
 description: Search XNAT projects, subjects and MR, CT or PET sessions by criteria, then review and refine matching imaging records
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 You can search across Projects, Subjects or Sessions
 And Sessions are broken up into MR, PET and CT
 
@@ -16,3 +18,10 @@ You don’t have to specify all the fields
 And XNAT will provide a list of results.
 
 ![Search results](./search-3.png)
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Subjects" href="/user-guides/using-xnat/subjects" description="Review subject metadata and subject-level actions." />
+  <LinkCard title="Sessions and scans" href="/user-guides/using-xnat/sessions" description="Inspect imaging sessions, scans and DICOM headers." />
+</CardGrid>

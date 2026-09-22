@@ -3,6 +3,8 @@ title: Subjects
 description: Find subjects within an XNAT project, review DICOM-derived metadata, rename subject IDs and use subject-level actions
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 The Project page will have a list of Subjects
 If we click one of the subjects… it will take us to the subject page
 
@@ -27,3 +29,9 @@ Click modify, and then submit for the changes to take effect.
 Just note, subject renaming can take a few minutes to take effect
 
 ![Subject rename dialog](./subjects4.png)
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Sessions and scans" href="/user-guides/using-xnat/sessions" description="Open a subject's imaging sessions, inspect scans and edit session metadata." />
+</CardGrid>

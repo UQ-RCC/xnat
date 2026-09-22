@@ -3,6 +3,8 @@ title: On-site anonymisation
 description: Which DICOM tags are modified and blanked when HIRF and CAI data is anonymised on-site before it reaches XNAT
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 HIRF and CAI data are anonymised on-site by default with the following protocols
 
 ## Modified Tags
@@ -33,3 +35,10 @@ HIRF and CAI data are anonymised on-site by default with the following protocols
 | PhysicianOfRecord              |
 | ReferringPhysicianAddress      |
 | ReferringPhysicianPhoneNumbers |
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Project anonymiser" href="/user-guides/managing-data/anonymising-data/project-anonymiser" description="Apply a project-specific DICOM tag and naming scheme during archiving." />
+  <LinkCard title="Uploading and downloading data" href="/user-guides/managing-data/uploading-data" description="Compare the available methods for moving data into and out of XNAT." />
+</CardGrid>

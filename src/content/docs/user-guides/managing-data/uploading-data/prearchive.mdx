@@ -3,6 +3,8 @@ title: Fixing stuck uploads
 description: What to do when uploaded data does not appear in your project, and how to archive or merge a session waiting in the prearchive
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 If data you uploaded has not appeared in your XNAT project, it is probably
 waiting in the **prearchive** — a holding area that uploads pass through before
 they are archived into a project.
@@ -43,3 +45,10 @@ If you are not sure whether the data belongs to the existing session, download
 it and check before archiving. Merging the wrong data into a session is harder
 to unpick than archiving it separately.
 :::
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Upload from the browser" href="/user-guides/managing-data/uploading-data/web-upload" description="Prepare a de-identified DICOM archive and send it to the prearchive." />
+  <LinkCard title="Get support" href="/support" description="Contact RCC if you cannot resolve an upload or archive conflict." />
+</CardGrid>

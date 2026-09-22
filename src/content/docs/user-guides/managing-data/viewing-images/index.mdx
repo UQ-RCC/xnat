@@ -3,6 +3,8 @@ title: Viewing images
 description: Open imaging sessions in the browser-based XNAT OHIF Viewer, navigate scan data and review DICOM headers without downloading files
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 ## XNAT OHIF Viewer
 
 UQ XNAT instances come with the XNAT OHIF Image viewer
@@ -34,3 +36,10 @@ Ignore the *View in Legacy Viewer*
 This will take you to the OHIF Viewer
 
 ![OHIF viewer](./ohif-viewer.png)
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Sessions and scans" href="/user-guides/using-xnat/sessions" description="Inspect session metadata, scans and DICOM headers." />
+  <LinkCard title="Download data" href="/user-guides/managing-data/downloading-data" description="Download a project, session or individual scans from XNAT." />
+</CardGrid>

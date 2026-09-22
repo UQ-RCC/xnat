@@ -3,7 +3,7 @@ title: Syncing between XNATs
 description: Configure XSync to copy sessions from a UQ XNAT project to a project on another XNAT, using an alias token for authentication
 ---
 
-import { Steps, Aside } from '@astrojs/starlight/components';
+import { Aside, CardGrid, LinkCard, Steps } from '@astrojs/starlight/components';
 
 XSync copies data from a project on this XNAT to a project on another XNAT. Once
 it is configured, new sessions archived into the source project are transferred
@@ -105,3 +105,9 @@ mismatched labels between sites are difficult to reconcile later.
 If the destination site is not reachable, or you are unsure whether syncing is
 appropriate for your project, contact RCC support at `rcc-support@uq.edu.au` with
 your project ID and the destination XNAT.
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Project anonymiser" href="/user-guides/managing-data/anonymising-data/project-anonymiser" description="Create a DicomEdit script to modify data as it is archived or synced." />
+</CardGrid>

@@ -3,6 +3,8 @@ title: Sessions and scans
 description: Understand MR, CT and PET imaging sessions, edit session metadata, inspect scans and open scan files from an XNAT project
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 Sessions are divided into three types, based on modality information extracted from the DICOM metadata
 - MR
 - CT
@@ -41,3 +43,10 @@ Here we can also view View DICOM headers
 And see the DICOM headers as shown on the right
 
 ![DICOM headers panel](./scans/scan-2.png)
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="View images" href="/user-guides/managing-data/viewing-images" description="Open an imaging session in the browser-based OHIF Viewer." />
+  <LinkCard title="Download data" href="/user-guides/managing-data/downloading-data" description="Download a session or individual scans from XNAT." />
+</CardGrid>
