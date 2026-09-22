@@ -16,7 +16,7 @@ npm run preview  # preview the production build locally
 ## Structure
 
 - `src/content/docs/` — documentation pages (Markdown / MDX), colocated with their images
-- `src/components/` — interactive components (email request forms)
-- `src/styles/custom.css` — UQ purple theme overrides
+- `src/components/` — interactive components and Starlight component overrides
+- `src/styles/` — design tokens, base styles and component styles
 - `astro.config.mjs` — site config, sidebar and redirects from the old Hugo `/docs/` URLs
 - `public/CNAME` — custom domain

@@ -17,8 +17,6 @@ const out = join(root, 'public');
 
 const targets = [
   { src: 'icon-square.svg', file: 'apple-touch-icon.png', size: 180 },
-  { src: 'icon-square.svg', file: 'icon-192.png', size: 192 },
-  { src: 'icon-square.svg', file: 'icon-512.png', size: 512 },
 ];
 
 for (const { src, file, size } of targets) {
