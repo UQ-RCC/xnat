@@ -5,43 +5,39 @@ description: Use a DicomEdit script to rename, retag or further anonymise sessio
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-The Project level anonymiser uses a scripting syntax called DicomEdit to modify, reassign or blank DICOM tags.
-You can actually use this to create automated workflow for renaming DICOM metadata on datasets
+Use a project-level anonymiser to modify, replace or blank DICOM tags as sessions enter your project. XNAT runs the rules as a DicomEdit script, so you can enforce a consistent naming and tagging scheme across the project.
 
-Dicomedit
-: https://wiki.xnat.org/xnat-tools/dicomedit/dicomedit-6-3-language-reference
-```python
+See the [DicomEdit language reference](https://wiki.xnat.org/xnat-tools/dicomedit/dicomedit-6-3-language-reference) for the available syntax and operations.
+
+## Configure the script
+
+The following example sets the study description to the project ID, the patient name to the subject ID and the patient ID to the session ID:
+
+```text
 version "6.1"
 project != "Unassigned" ? (0008,1030) := project
 (0010,0010) := subject
 (0010,0020) := session
 ```
 
-The example in this screenshot basically replicates the behaviour in the HIRF onsite anonymiser for remapping the ReferringPhysicianName, PatientName and PatientID
+The XNAT interface lets a project Owner enable, edit and save the script for the project.
 
-![Project anonymiser script](./project-anonymiser/project-anonymiser-1.png)
+![Project anonymiser script in XNAT](./project-anonymiser/project-anonymiser-1.png)
 
-You can use DICOMedit to enforce a particular naming and tagging scheme across your entire project this way.
+Configure and test your project's renaming, retagging and anonymisation rules before data acquisition begins whenever possible.
 
-## Anonymising existing sessions
+## Apply the script to an existing session
 
-:::note[Note]
-If you’re planning to use the project level anonymiser, best solution would be to have your project’s renaming, retagging or anonymisation scheme established before starting data acquisition.
-:::
+The project anonymiser runs when a dataset enters the XNAT archive or when a session is renamed. It does not automatically revisit sessions already in the archive.
 
-The Project level anonymiser works best for new sessions, as it runs when the dataset is being ingested into the XNAT archive, or when sessions are renamed. By default, it does not anonymise sessions that are sitting in the archive already.
+To trigger the script for an existing session:
 
-If you need to trigger your anonymisation on an existing session
-- Edit a session name. Modify
-- Then edit it back to its original name
+1. Edit the session label and save the change.
+2. Change the session label back to its original value and save it again.
 
-This will trigger the anonymisation script.
+XNAT updates the files and metadata during each edit, so allow time for both changes to finish.
 
-:::caution[Warning]
-Session edits take a bit of time, as the files and metadata are modified during edits, so allow some wait time if you use this method.
-:::
-
-![Editing a session to trigger anonymisation](./project-anonymiser/project-anonymiser-2.png)
+![Editing a session to trigger the project anonymiser](./project-anonymiser/project-anonymiser-2.png)
 
 ## Next steps
 

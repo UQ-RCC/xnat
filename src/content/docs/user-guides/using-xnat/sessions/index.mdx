@@ -5,44 +5,39 @@ description: Understand MR, CT and PET imaging sessions, edit session metadata, 
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-Sessions are divided into three types, based on modality information extracted from the DICOM metadata
-- MR
-- CT
-- PET
+XNAT organises imaging sessions by the modality recorded in their DICOM metadata, such as MR, CT or PET. Open a session to review its metadata, scans and files.
 
+![Example MR imaging session](./session-1.png)
 
-The following is an example MR session
+## Edit a session
 
-![Example MR session](./session-1.png)
+Use the actions panel on the right of the session page to edit session details and metadata.
 
-## Editing Sessions
-We can edit session details and metadata from the actions panel on the right
+![Actions for editing an imaging session](./session-2.png)
 
-![Edit session actions panel](./session-2.png)
+The available actions let you:
 
-Here we can change some of the key properties of the sessions, such as
-- Change session name
-- Move sessions to other projects
-- Move sessions to other subjects
-- Create a new subject, and move session to that subject
-- Fix invalid or blank session names
+- change the session label
+- move the session to another project
+- move the session to another subject
+- create a subject and move the session to it
+- correct an invalid or blank session label
 
-![Session properties](./session-3.png)
+![Dialog for editing session properties](./session-3.png)
 
-## Viewing scans
+## Inspect scans
 
-The Scans themselves are listed at the bottom with the relevant series descriptions and other information
-If you hover over one of them, and click the highlighted view details button. This will open up a more details and an image preview window
+The **Scans** table lists the scans in the session, including their series descriptions. Point to a scan and select its view-details button to open its details and image preview.
 
-![Session scan list](./scans/session-scan.png)
+![Scan list with the view-details button highlighted](./scans/session-scan.png)
 
-Here we can also view View DICOM headers
+## View DICOM headers
 
-![View DICOM headers](./scans/scan-1.png)
+Select **View DICOM headers** from the scan details to display the header values in the panel on the right.
 
-And see the DICOM headers as shown on the right
+![View DICOM headers action](./scans/scan-1.png)
 
-![DICOM headers panel](./scans/scan-2.png)
+![DICOM headers displayed in the scan details panel](./scans/scan-2.png)
 
 ## Next steps
 

@@ -1,62 +1,48 @@
 ---
 title: Alias tokens
-description: Generate a time-limited username and password so desktop clients, command line tools and XSync can connect to XNAT without your AAF login
+description: Generate temporary credentials so desktop clients, command line tools and XSync can connect to XNAT without your AAF login
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { CardGrid, LinkCard, Steps } from '@astrojs/starlight/components';
 
-AAF is used for logging into the XNAT website itself.
+Use your Australian Access Federation (AAF) account to log in to the XNAT website. For an external application, generate an alias token instead of entering your AAF credentials.
 
-But there are a lot of tools and services that will require a connect to the XNAT server externally
+An alias token is a temporary, randomised username and password pair associated with your XNAT account. Actions performed with the token are recorded as actions by your account. You can create separate tokens for desktop clients, command line tools and XSync, then revoke each token independently.
 
-These could include
-- Windows or Mac desktop clients, like XNAT Desktop
-- Command line tools such as xnatpy, pyxnat, xnatutils etc
-- XSYNC
+## Generate an alias token
 
-All of these tools and services need a way to authenticating to your XNAT account without AAF.
+<Steps>
 
-An alias token is a time-limited, long, randomised username and password used for authenticating from external services, without compromising your AAF account or credentials. They can be generated and revoked easily
+1. Log in to XNAT and select your username in the top-right corner to open your profile.
 
-![Alias tokens](./alias-tokens/alias-tokens-1.png)
+   ![Username link in the XNAT header](./alias-tokens/alias-tokens-1.png)
 
-We’ll look at how to generate them next
+2. Select **Manage Alias Tokens**, then select **Create Alias Token**.
 
-## Generating Alias tokens
+   ![Manage Alias Tokens page with the Create Alias Token button](./alias-tokens/alias-tokens-2.png)
 
-To access the alias token
-Click your name on the top right of the website. 
-This will take you to your user profile management page
+3. Find the new token in the table. Check its status and expiry date before using it.
 
-Then click the “Manage Alias Tokens” option
+   ![Alias token table showing the token status and expiry date](./alias-tokens/alias-tokens-3.png)
 
-There, you’ll find the option to “Create an Alias Token”
+4. Select **View** to display the token details. Copy the `alias` and `secret` values to the application that needs them.
 
-![Create an alias token](./alias-tokens/alias-tokens-2.png)
+   ![Alias token details showing the alias and secret values](./alias-tokens/alias-tokens-4.png)
 
-When you create the alias token, it will appear as a new entry
+</Steps>
 
-Alias tokens expire 60 days after creation
-There will be an expiration date column. 
+## Use the token
 
-You can have multiple alias tokens. And they can be deleted and created as needed to revoke permissions.
-Each one will be randomised and unique.
+When an external application asks for XNAT credentials, use:
 
-Lets have a look at the alias token details which you can access by clicking on the token.
+- `alias` as the username
+- `secret` as the password
 
-![Alias token details](./alias-tokens/alias-tokens-3.png)
+Treat both values as credentials. Do not share the secret, include it in screenshots or commit it to a repository. Create a replacement token when the current token approaches the expiry date shown in XNAT.
 
-The key attributes that we need are the alias and the secret
-The alias is your username
-And secret is your password
+## Revoke a token
 
-So you can use the alias and secret for any external clients requesting a username and password.
-
-Just note, the alias and secret are effectively a temporary set of login credentials.
-Do not reveal the secret. It is effectively your temporary password.
-If you no longer require the alias token, or suspect a secret has been compromised, just delete the alias token.
-
-![Delete alias token](./alias-tokens/alias-tokens-4.png)
+Return to **Manage Alias Tokens** and select **Delete** beside a token when you no longer need it. Delete it immediately if its secret may have been exposed. Applications using that token will no longer be able to connect.
 
 ## Next steps
 

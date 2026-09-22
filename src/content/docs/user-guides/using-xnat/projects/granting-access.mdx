@@ -5,18 +5,21 @@ description: Add users to an XNAT project and choose whether they are an Owner, 
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-Switch to the Access tab. Use **Add User** or **Add Users from List** to select the user to add.
+Project Owners can grant access to other XNAT users. Give each person the least-permissive role that allows them to complete their work.
 
-![Add user to project](./granting-access/user-access.png)
+## Add a user
 
-Select role from
-1. Owners
-2. Members
-3. Collaborators
+Open the project and select the **Access** tab. Select **Add User** to add one person or **Add Users from List** to add several people, then assign each person a role.
 
-## User roles
+![Access tab with controls for adding users to a project](./granting-access/user-access.png)
 
-The following table outlines the permissions given to each role.
+## Choose a role
+
+- **Owner** can create, view, update and delete project data. Owners can also add or remove users and change their roles.
+- **Member** can create, view and update project data, but cannot delete data or manage access.
+- **Collaborator** can view and download project data, but cannot add or change data or manage access.
+
+The permissions for each role are summarised below.
 
 | Permission           | Owners  | Members | Collaborators |
 |----------------------|---------|---------|---------------|

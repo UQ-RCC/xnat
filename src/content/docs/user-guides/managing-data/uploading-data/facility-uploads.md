@@ -22,8 +22,7 @@ facility sends it to XNAT for you.
 
 ## If your data has not arrived
 
-- Check the prearchive — data waiting there has arrived but not been archived.
-  See [Fixing stuck uploads](/user-guides/managing-data/uploading-data/prearchive).
+- Check the [prearchive](/user-guides/managing-data/uploading-data/prearchive). Data waiting there has arrived but has not been archived.
 - Check you have access to the project. Data can be in XNAT before you are added
   to the project. See [Your project](/user-guides/using-xnat/projects/your-project).
 - If neither applies, contact the facility that acquired the data.

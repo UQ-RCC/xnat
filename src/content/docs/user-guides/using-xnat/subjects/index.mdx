@@ -5,30 +5,29 @@ description: Find subjects within an XNAT project, review DICOM-derived metadata
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-The Project page will have a list of Subjects
-If we click one of the subjects… it will take us to the subject page
+## Open a subject
 
-![Subject list](./subjects.png)
+Open a project to see its subjects. Select a subject from the list to open its page and review the associated imaging sessions and metadata extracted from the DICOM files.
 
-The Subject will have some associated metadata and name extracted from the DICOM headers of the datasets
+![Subject list on an XNAT project page](./subjects.png)
 
-## Editing Subjects
+## Edit subject details
 
-We can edit subject details and metadata from the actions panel on the right
+Use the actions panel on the right of the subject page to edit its details and metadata.
 
-![Edit subject actions panel](./subjects2.png)
+![Subject page actions for editing subject details](./subjects2.png)
 
-For instance, if you want to rename the subject
-You click the button next to the Subject ID
+## Rename a subject
 
-![Rename subject](./subjects3.png)
+1. Select the edit button beside **Subject ID**.
+2. Enter the new subject ID in the dialog.
+3. Select **Modify**, then submit the change.
 
-This will pop-up the following dialog box for you enter the new subject.
-Click modify, and then submit for the changes to take effect.
+![Edit button beside the Subject ID](./subjects3.png)
 
-Just note, subject renaming can take a few minutes to take effect
+Renaming may take a few minutes because XNAT updates the subject and its associated data.
 
-![Subject rename dialog](./subjects4.png)
+![Dialog for entering a new subject ID](./subjects4.png)
 
 ## Next steps
 

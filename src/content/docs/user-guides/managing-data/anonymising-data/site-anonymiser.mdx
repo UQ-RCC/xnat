@@ -1,13 +1,21 @@
 ---
 title: On-site anonymisation
-description: Which DICOM tags are modified and blanked when HIRF and CAI data is anonymised on-site before it reaches XNAT
+description: See which DICOM tags are modified or blanked when data from participating facilities is anonymised before reaching XNAT
 ---
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-HIRF and CAI data are anonymised on-site by default with the following protocols
+Data from participating facilities can be anonymised before it reaches XNAT. The on-site protocol documented here applies to data from HIRF and CAI.
 
-## Modified Tags
+## How on-site anonymisation fits
+
+On-site anonymisation changes selected DICOM values before the files are transferred. It provides a baseline transformation before any [project anonymiser](/user-guides/managing-data/anonymising-data/project-anonymiser) runs during ingestion into an XNAT project.
+
+Confirm that the values produced by the protocol match your project's approved naming and anonymisation requirements before transferring data.
+
+## Modified tags
+
+The protocol replaces the following tag values. The example values illustrate the resulting format.
 
 | DICOM Tag                      | Original value | New value                                                     |
 |--------------------------------|----------------|---------------------------------------------------------------|
@@ -17,7 +25,10 @@ HIRF and CAI data are anonymised on-site by default with the following protocols
 | PatientName                    | XXXXXXXX       | TEST_MR                                                       |
 | PatientID                      | TEST_MR        | TEST_MR-20210405T1220                                         |
 
-## Blanked Tags
+## Blanked tags
+
+The protocol removes the values from the following tags.
+
 | DICOM Tag                      |
 |--------------------------------|
 | AccessionNumber                |

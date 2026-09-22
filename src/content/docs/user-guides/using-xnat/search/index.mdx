@@ -5,19 +5,33 @@ description: Search XNAT projects, subjects and MR, CT or PET sessions by criter
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-You can search across Projects, Subjects or Sessions
-And Sessions are broken up into MR, PET and CT
+Use XNAT search to find projects, subjects or imaging sessions that match known metadata or identifiers.
 
-![Search across data types](./search-1.png)
+## Choose what to search
 
-For instance, we can fill a couple of fields on the MR Sessions search
-You don’t have to specify all the fields
+Open **Advanced** search, then select a data type. You can search **Projects**, **Subjects**, **MR**, **PET** or **CT**. The available fields change with the selected data type.
 
-![MR Sessions search fields](./search-2.png)
+![Search tabs for projects, subjects and imaging modalities](./search-1.png)
 
-And XNAT will provide a list of results.
+## Search by criteria
 
-![Search results](./search-3.png)
+Select **Search by Criteria**, then enter one or more values in the form. You do not need to complete every field. For example, an MR search can combine a project, subject, session ID, date range, scanner or subject metadata.
+
+Select **Submit** to run the search.
+
+![MR search form with Search by Criteria selected](./search-2.png)
+
+## Search by exact IDs
+
+Select **Search by Exact IDs** when you already know the identifiers you need. Enter the identifiers in the field provided, then select **Submit**.
+
+Switch back to **Search by Criteria** when you need to find records from partial metadata instead.
+
+## Review the results
+
+The results table shows matching records and their project, subject, date, modality and scanner details. Select a linked label or subject to open that record. Use **Options** to work with the result set, or **Reload** after changing the search.
+
+![Search results table showing matching imaging sessions](./search-3.png)
 
 ## Next steps
 
