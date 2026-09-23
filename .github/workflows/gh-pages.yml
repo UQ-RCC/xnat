@@ -6,9 +6,15 @@ on:
       - main # Set a branch to deploy
   pull_request:
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -24,6 +30,12 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Check Astro
+        run: npm run check
+
+      - name: Check internal links
+        run: npm run check:links
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
