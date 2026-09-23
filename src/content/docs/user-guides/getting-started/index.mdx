@@ -10,8 +10,6 @@ import RequestEmailForm from '@components/RequestEmailForm.astro';
 import SignInAaf from '@partials/sign-in-aaf.mdx';
 import TabQueryLink from '@components/TabQueryLink.astro';
 
-<TabQueryLink />
-
 Logging in to XNAT uses the Australian Access Federation (AAF). How you start
 depends on whether your organisation is an AAF member.
 
@@ -28,6 +26,8 @@ depends on whether your organisation is an AAF member.
     },
   ]}
 />
+
+<TabQueryLink />
 
 <Tabs syncKey="member-type">
 

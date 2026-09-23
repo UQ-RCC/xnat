@@ -9,18 +9,21 @@ import slideSharing from '../assets/slide-sharing.jpg';
 const features = [
   {
     image: slideGlobal,
-    title: 'Multi-center Studies',
+    title: 'Multi-centre studies',
     body: 'Aggregate and manage imaging data across multiple sites and institutions.',
+    href: '/user-guides/managing-data/syncing-data',
   },
   {
     image: whatIsXnat,
-    title: 'Imaging and Clinical Data',
+    title: 'Imaging and clinical data',
     body: 'Store de-identified imaging alongside its associated clinical metadata.',
+    href: '/user-guides/managing-data/uploading-data',
   },
   {
     image: slideSharing,
     title: 'Data sharing',
     body: 'Share and sync datasets securely with collaborators and other XNATs.',
+    href: '/user-guides/using-xnat/projects/granting-access',
   },
 ];
 ---
@@ -28,15 +31,15 @@ const features = [
 <div class="feature-grid not-content">
   {
     features.map((f) => (
-      <article class="feature-card">
+      <a class="feature-card" href={f.href}>
         <div class="feature-image">
-          <Image src={f.image} alt={f.title} />
+          <Image src={f.image} alt="" />
         </div>
         <div class="feature-body">
           <h2>{f.title}</h2>
           <p>{f.body}</p>
         </div>
-      </article>
+      </a>
     ))
   }
 </div>
@@ -55,6 +58,13 @@ const features = [
     border-radius: 0.5rem;
     overflow: hidden;
     background: var(--sl-color-black);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color var(--xnat-transition);
+  }
+  .feature-card:hover,
+  .feature-card:focus-visible {
+    border-color: var(--sl-color-accent);
   }
   .feature-image {
     height: 11rem;

@@ -1,6 +1,6 @@
 /**
- * Rasterises scripts/branding/*.svg into the PNGs served from public/.
- * Run manually and commit the output; not part of `npm run build`.
+ * Generates the raster branding assets served from public/. Run manually and
+ * commit the output; this is not part of `npm run build`.
  *
  *   node scripts/generate-icons.mjs
  *
@@ -32,3 +32,9 @@ await sharp(join(branding, 'og-card.svg'), { density: 96 })
   .png({ compressionLevel: 9 })
   .toFile(join(out, 'og-default.png'));
 console.log('og-default.png  1200x630');
+
+await sharp(join(out, 'xnat-logo.png'))
+  .resize({ width: 704, withoutEnlargement: true })
+  .webp({ quality: 85 })
+  .toFile(join(out, 'xnat-logo.webp'));
+console.log('xnat-logo.webp  704px wide');

@@ -6,7 +6,9 @@
 const param = Astro.props.param ?? 'member';
 ---
 
-<script is:inline define:vars={{ param }}>
+<tab-query-link data-param={param} hidden></tab-query-link>
+
+<script is:inline>
   (() => {
     const slugify = (s) =>
       (s || '')
@@ -19,34 +21,47 @@ const param = Astro.props.param ?? 'member';
       return Array.from(group.querySelectorAll('[role="tab"]'));
     }
 
-    function activateFromUrl(groups) {
+    function nextTabGroup(marker) {
+      let node = marker;
+      while (node) {
+        node = node.nextElementSibling;
+        if (!node) return null;
+        if (node.matches('starlight-tabs')) return node;
+        const group = node.querySelector('starlight-tabs');
+        if (group) return group;
+      }
+      return null;
+    }
+
+    function activateFromUrl(group, param) {
       const want = new URLSearchParams(location.search).get(param);
       if (!want) return;
       const y = window.scrollY;
-      for (const group of groups) {
-        const match = tabsFor(group).find((t) => slugify(t.textContent) === want);
-        if (match && match.getAttribute('aria-selected') !== 'true') match.click();
-      }
+      const match = tabsFor(group).find((t) => slugify(t.textContent) === want);
+      if (match && match.getAttribute('aria-selected') !== 'true') match.click();
       window.scrollTo({ top: y }); // avoid the focus-induced scroll jump
     }
 
-    function wireUrlUpdates(groups) {
-      for (const group of groups) {
-        for (const tab of tabsFor(group)) {
-          tab.addEventListener('click', () => {
-            const url = new URL(location.href);
-            url.searchParams.set(param, slugify(tab.textContent));
-            history.replaceState(null, '', url);
-          });
-        }
+    function wireUrlUpdates(group, param) {
+      for (const tab of tabsFor(group)) {
+        tab.addEventListener('click', () => {
+          const url = new URL(location.href);
+          url.searchParams.set(param, slugify(tab.textContent));
+          history.replaceState(null, '', url);
+        });
       }
     }
 
     function init() {
-      const groups = document.querySelectorAll('starlight-tabs');
-      if (!groups.length) return;
-      activateFromUrl(groups);
-      wireUrlUpdates(groups);
+      const markers = document.querySelectorAll('tab-query-link:not([data-wired])');
+      for (const marker of markers) {
+        const group = nextTabGroup(marker);
+        if (!group) continue;
+        marker.dataset.wired = 'true';
+        const param = marker.dataset.param || 'member';
+        activateFromUrl(group, param);
+        wireUrlUpdates(group, param);
+      }
     }
 
     if (document.readyState !== 'loading') init();

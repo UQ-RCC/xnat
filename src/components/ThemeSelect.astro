@@ -58,8 +58,9 @@ import { Icon } from '@astrojs/starlight/components';
   });
 
   class ThemeToggle extends HTMLElement {
-    constructor() {
-      super();
+    connectedCallback() {
+      if (this.dataset.initialised === 'true') return;
+      this.dataset.initialised = 'true';
       applyTheme(loadTheme());
       this.querySelector('button')?.addEventListener('click', () => {
         const next = order[(order.indexOf(loadTheme()) + 1) % order.length]!;
