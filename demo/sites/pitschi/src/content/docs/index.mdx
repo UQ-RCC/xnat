@@ -1,0 +1,28 @@
+---
+title: UQ Pitschi
+description: Demo landing page for the Pitschi documentation site
+template: splash
+hero:
+  title: UQ Pitschi
+  tagline: Demo landing page. This site has its own content, sidebar and colours, and shares its styling and components with the other sites.
+  actions:
+    - text: Browse the guides
+      link: /guides/getting-started/
+      icon: open-book
+      variant: primary
+    - text: Go to Pitschi
+      link: https://pitschi.rcc.uq.edu.au
+      icon: external
+      variant: secondary
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Own content" icon="document">
+    Pages live in `demo/sites/pitschi/src/content/docs`.
+  </Card>
+  <Card title="Shared framework" icon="puzzle">
+    Styles and the theme toggle come from `demo/shared`.
+  </Card>
+</CardGrid>
