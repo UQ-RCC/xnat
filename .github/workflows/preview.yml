@@ -1,9 +1,6 @@
 name: Preview
 
-# Builds every site under demo/sites/ for a pull request and deploys each to
-# its own Cloudflare Pages project (uq-rcc-<site>). Each preview is served at
-# the root of its own hostname, so root-relative links need no base path.
-# Production stays on GitHub Pages; this workflow never deploys main.
+# Deploys each site under demo/sites/ to Cloudflare Pages project uq-rcc-<site>.
 
 on:
   pull_request:
@@ -32,6 +29,24 @@ jobs:
           list=$(find demo/sites -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort | jq -Rsc 'split("\n") | map(select(length > 0))')
           echo "list=$list" >> "$GITHUB_OUTPUT"
 
+  pending:
+    needs: sites
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: .github/scripts
+
+      - name: Mark preview as pending
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const panel = require('./.github/scripts/preview-panel.cjs');
+            await panel.update({ github, context }, panel.pending());
+
   deploy:
     needs: sites
     runs-on: ubuntu-24.04
@@ -58,6 +73,7 @@ jobs:
         run: npx astro build
 
       - name: Deploy to Cloudflare Pages
+        id: deploy
         uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -65,45 +81,63 @@ jobs:
           command: >-
             pages deploy demo/sites/${{ matrix.site }}/dist
             --project-name=uq-rcc-${{ matrix.site }}
-            --branch=pr-${{ github.event.pull_request.number }}
+            --branch=${{ github.head_ref }}
 
-  comment:
-    needs: [sites, deploy]
+      # Matrix jobs cannot merge outputs, so pass results on as artifacts.
+      - name: Record preview result
+        if: always()
+        env:
+          SITE: ${{ matrix.site }}
+          STATUS: ${{ steps.deploy.outcome }}
+          COMMIT_URL: ${{ steps.deploy.outputs.deployment-url }}
+          BRANCH_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+        run: |
+          jq -n '{site: env.SITE, status: env.STATUS, commit: env.COMMIT_URL, branch: env.BRANCH_URL}' > preview.json
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        if: always()
+        with:
+          name: preview-${{ matrix.site }}
+          path: preview.json
+          retention-days: 1
+
+  panel:
+    needs: [sites, pending, deploy]
+    if: always() && needs.sites.result == 'success'
     runs-on: ubuntu-24.04
     permissions:
+      contents: read
       pull-requests: write
     steps:
-      - name: Post preview links
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: .github/scripts
+
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          pattern: preview-*
+          path: previews
+
+      - name: Update preview panel
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         env:
           SITES: ${{ needs.sites.outputs.list }}
         with:
           script: |
-            const pr = context.payload.pull_request;
-            const marker = '<!-- preview-links -->';
-            const sha = pr.head.sha.substring(0, 7);
-            // --branch=pr-N gives each project a stable alias for this PR.
-            const rows = JSON.parse(process.env.SITES).map(
-              (site) => `| ${site} | https://pr-${pr.number}.uq-rcc-${site}.pages.dev |`,
-            );
-            const body = [
-              marker,
-              `**Previews** for \`${sha}\``,
-              '',
-              '| Site | URL |',
-              '| --- | --- |',
-              ...rows,
-            ].join('\n');
+            const fs = require('node:fs');
+            const path = require('node:path');
+            const panel = require('./.github/scripts/preview-panel.cjs');
 
-            const { owner, repo } = context.repo;
-            const comments = await github.paginate(github.rest.issues.listComments, {
-              owner, repo, issue_number: pr.number,
+            const previews = JSON.parse(process.env.SITES).map((site) => {
+              const file = path.join('previews', `preview-${site}`, 'preview.json');
+              return fs.existsSync(file)
+                ? JSON.parse(fs.readFileSync(file, 'utf8'))
+                : { site, status: 'failure' };
             });
-            const existing = comments.find(
-              (c) => c.user?.type === 'Bot' && c.body?.startsWith(marker),
-            );
-            if (existing) {
-              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
-            } else {
-              await github.rest.issues.createComment({ owner, repo, issue_number: pr.number, body });
-            }
+
+            const logs = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const sha = context.payload.pull_request.head.sha;
+            await panel.update({ github, context }, panel.result(previews, { sha, logs }));
+
+            const failed = previews.filter((p) => p.status !== 'success');
+            if (failed.length) core.setFailed(`Preview failed for ${failed.map((p) => p.site).join(', ')}`);
