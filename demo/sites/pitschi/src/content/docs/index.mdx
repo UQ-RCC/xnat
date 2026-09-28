@@ -16,5 +16,15 @@ hero:
       variant: secondary
 ---
 
-- **Shared:** the theme toggle, set in `demo/shared/define-site.mjs`.
-- **This site only:** the "Go to Pitschi" header link, set in `demo/sites/pitschi/astro.config.mjs` from `demo/sites/pitschi/src/components/HeaderLink.astro`.
+import { LinkCard } from '@astrojs/starlight/components';
+
+<LinkCard
+  title="Shared: styles and components"
+  description="From demo/shared/define-site.mjs, used by every site"
+  href="https://github.com/UQ-RCC/xnat/blob/multisite-demo/demo/shared/define-site.mjs"
+/>
+<LinkCard
+  title="This site only: the Go to Pitschi header link"
+  description="From demo/sites/pitschi/src/components/HeaderLink.astro"
+  href="https://github.com/UQ-RCC/xnat/blob/multisite-demo/demo/sites/pitschi/src/components/HeaderLink.astro"
+/>
