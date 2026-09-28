@@ -1,6 +1,4 @@
-// Shared config for every demo site. A site passes only what differs; the
-// styles and theme toggle come straight from the live XNAT site in src/, to
-// show the framework can be shared without copying it.
+// Shared config for the demo sites, reusing the live site's styles from src/.
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
@@ -10,7 +8,6 @@ const repo = (path) => fileURLToPath(new URL(`../../${path}`, import.meta.url));
 export function defineSite({ url, title, description, sidebar }) {
   return defineConfig({
     site: url,
-    // Sites import shared files from outside their own folder.
     vite: { server: { fs: { allow: [repo('')] } } },
     integrations: [
       starlight({
