@@ -16,5 +16,13 @@ hero:
       variant: secondary
 ---
 
-- **Shared:** the theme toggle, set in `demo/shared/define-site.mjs`.
-- **This site only:** the "Go to XNAT" header link, set in `demo/sites/xnat/astro.config.mjs` from `demo/sites/xnat/src/components/HeaderLink.astro`.
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Shared" icon="puzzle">
+    Styles and components from `demo/shared/define-site.mjs`, used by every site.
+  </Card>
+  <Card title="This site only" icon="setting">
+    The "Go to XNAT" header link, from `demo/sites/xnat/src/components/HeaderLink.astro`.
+  </Card>
+</CardGrid>
