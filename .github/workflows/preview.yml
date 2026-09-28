@@ -45,7 +45,7 @@ jobs:
         with:
           script: |
             const panel = require('./.github/scripts/preview-panel.cjs');
-            await panel.update({ github, context }, panel.pending());
+            await panel.update({ github, context }, panel.pending(context.payload.pull_request.head.sha));
 
   deploy:
     needs: sites
@@ -85,7 +85,7 @@ jobs:
 
       # Matrix jobs cannot merge outputs, so pass results on as artifacts.
       - name: Record preview result
-        if: always()
+        if: ${{ !cancelled() }}
         env:
           SITE: ${{ matrix.site }}
           STATUS: ${{ steps.deploy.outcome }}
@@ -95,7 +95,7 @@ jobs:
           jq -n '{site: env.SITE, status: env.STATUS, commit: env.COMMIT_URL, branch: env.BRANCH_URL}' > preview.json
 
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
-        if: always()
+        if: ${{ !cancelled() }}
         with:
           name: preview-${{ matrix.site }}
           path: preview.json
@@ -103,7 +103,7 @@ jobs:
 
   panel:
     needs: [sites, pending, deploy]
-    if: always() && needs.sites.result == 'success'
+    if: ${{ !cancelled() && needs.sites.result == 'success' }}
     runs-on: ubuntu-24.04
     permissions:
       contents: read

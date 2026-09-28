@@ -8,8 +8,8 @@ function alert(kind, heading, lines = []) {
   return [`> [!${kind}]`, `> **${heading}**`, ...(lines.length ? ['>', ...lines.map((l) => `> ${l}`)] : [])];
 }
 
-function pending() {
-  return alert('NOTE', 'Preview deployment pending', [
+function pending(sha) {
+  return alert('NOTE', `Preview deployment pending for \`${sha.substring(0, 7)}\``, [
     'This panel updates automatically when the Cloudflare previews finish building.',
   ]);
 }
