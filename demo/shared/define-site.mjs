@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 
 const repo = (path) => fileURLToPath(new URL(`../../${path}`, import.meta.url));
 
-export function defineSite({ url, title, description, sidebar }) {
+export function defineSite({ url, title, description, sidebar, components = {} }) {
   return defineConfig({
     site: url,
     vite: { server: { fs: { allow: [repo('')] } } },
@@ -20,7 +20,7 @@ export function defineSite({ url, title, description, sidebar }) {
           repo('src/styles/base.css'),
           repo('src/styles/components.css'),
         ],
-        components: { ThemeSelect: repo('src/components/ThemeSelect.astro') },
+        components: { ThemeSelect: repo('src/components/ThemeSelect.astro'), ...components },
         sidebar,
       }),
     ],

@@ -16,13 +16,5 @@ hero:
       variant: secondary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-
-<CardGrid>
-  <Card title="Own content" icon="document">
-    Pages live in `demo/sites/pitschi/src/content/docs`.
-  </Card>
-  <Card title="Shared framework" icon="puzzle">
-    Styles and the theme toggle come from `demo/shared`.
-  </Card>
-</CardGrid>
+- **Shared:** the theme toggle, set in `demo/shared/define-site.mjs`.
+- **This site only:** the "Go to Pitschi" header link, set in `demo/sites/pitschi/astro.config.mjs` from `demo/sites/pitschi/src/components/HeaderLink.astro`.

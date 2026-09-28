@@ -16,13 +16,5 @@ hero:
       variant: secondary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-
-<CardGrid>
-  <Card title="Own content" icon="document">
-    Pages live in `demo/sites/xnat/src/content/docs`.
-  </Card>
-  <Card title="Shared framework" icon="puzzle">
-    Styles and the theme toggle come from `demo/shared`.
-  </Card>
-</CardGrid>
+- **Shared:** the theme toggle, set in `demo/shared/define-site.mjs`.
+- **This site only:** the "Go to XNAT" header link, set in `demo/sites/xnat/astro.config.mjs` from `demo/sites/xnat/src/components/HeaderLink.astro`.
