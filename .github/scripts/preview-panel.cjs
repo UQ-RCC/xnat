@@ -14,7 +14,8 @@ function pending(sha) {
   ]);
 }
 
-function result(previews, { sha, logs }) {
+function result(previews, { sha, logs, commitUrl }) {
+  const short = sha.substring(0, 7);
   const failed = previews.filter((p) => p.status !== 'success');
   const head = failed.length
     ? alert('CAUTION', `Preview deployment failed for ${failed.map((p) => p.site).join(', ')}`, [
@@ -23,10 +24,10 @@ function result(previews, { sha, logs }) {
     : alert('IMPORTANT', 'Preview ready', [`[View workflow logs](${logs})`]);
   const rows = previews.map((p) =>
     p.status === 'success'
-      ? `| ${p.site} | [Latest on branch](${p.branch}) | [This commit](${p.commit}) | ✅ Deployed |`
+      ? `| ${p.site} | [Latest on branch](${p.branch}) | [\`${short}\`](${p.commit}) | ✅ Deployed |`
       : `| ${p.site} | | | ❌ Failed |`,
   );
-  return [...head, '', `Commit \`${sha.substring(0, 7)}\``, '', '| Site | Branch | Commit | Status |', '| --- | --- | --- | --- |', ...rows];
+  return [...head, '', `Commit [\`${short}\`](${commitUrl})`, '', '| Site | Branch | Commit | Status |', '| --- | --- | --- | --- |', ...rows];
 }
 
 async function update({ github, context }, lines) {
