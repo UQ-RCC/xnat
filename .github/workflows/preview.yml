@@ -135,9 +135,11 @@ jobs:
                 : { site, status: 'failure' };
             });
 
-            const logs = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const repoUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}`;
+            const logs = `${repoUrl}/actions/runs/${context.runId}`;
             const sha = context.payload.pull_request.head.sha;
-            await panel.update({ github, context }, panel.result(previews, { sha, logs }));
+            const commitUrl = `${repoUrl}/commit/${sha}`;
+            await panel.update({ github, context }, panel.result(previews, { sha, logs, commitUrl }));
 
             const failed = previews.filter((p) => p.status !== 'success');
             if (failed.length) core.setFailed(`Preview failed for ${failed.map((p) => p.site).join(', ')}`);
