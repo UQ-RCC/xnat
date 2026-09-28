@@ -10,4 +10,4 @@ node_modules/
 # macOS
 .DS_Store
 AGENTS.md
-PLAN.md
+PLAN*.md
