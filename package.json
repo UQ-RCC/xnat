@@ -3,17 +3,17 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "check": "astro check",
-    "check:links": "node scripts/check-links.mjs dist",
-    "preview": "astro preview",
-    "astro": "astro",
-    "demo:xnat": "cd demo/sites/xnat && astro dev --port 4321 --host",
-    "demo:pitschi": "cd demo/sites/pitschi && astro dev --port 4322 --host",
-    "demo:build": "(cd demo/sites/xnat && astro build) && (cd demo/sites/pitschi && astro build)",
-    "demo:stop": "(cd demo/sites/xnat && astro dev stop); (cd demo/sites/pitschi && astro dev stop)"
+    "dev": "npm run dev:xnat",
+    "dev:xnat": "cd sites/xnat && astro dev --port 4321 --host",
+    "start": "npm run dev",
+    "build": "npm run build:xnat",
+    "build:xnat": "cd sites/xnat && astro build",
+    "check": "npm run check:xnat",
+    "check:xnat": "cd sites/xnat && astro check",
+    "check:links": "npm run check:links:xnat",
+    "check:links:xnat": "node scripts/check-links.mjs sites/xnat/dist",
+    "preview": "cd sites/xnat && astro preview",
+    "astro": "cd sites/xnat && astro"
   },
   "engines": {
     "node": ">=22"
