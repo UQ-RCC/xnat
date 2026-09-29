@@ -115,13 +115,13 @@ jobs:
           COMMIT_URL: ${{ steps.deploy.outputs.deployment-url }}
           BRANCH_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
         run: |
-          jq -n '{site: env.SITE, status: env.STATUS, commit: env.COMMIT_URL, branch: env.BRANCH_URL}' > preview.json
+          jq -n '{site: env.SITE, status: env.STATUS, commit: env.COMMIT_URL, branch: env.BRANCH_URL}' > "preview-$SITE.json"
 
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         if: ${{ !cancelled() }}
         with:
           name: preview-${{ matrix.site }}
-          path: preview.json
+          path: preview-${{ matrix.site }}.json
           retention-days: 1
 
   panel:
@@ -140,6 +140,7 @@ jobs:
         with:
           pattern: preview-*
           path: previews
+          merge-multiple: true
 
       - name: Update preview panel
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
@@ -152,7 +153,7 @@ jobs:
             const panel = require('./.github/scripts/preview-panel.cjs');
 
             const previews = JSON.parse(process.env.SITES).map((site) => {
-              const file = path.join('previews', `preview-${site}`, 'preview.json');
+              const file = path.join('previews', `preview-${site}.json`);
               return fs.existsSync(file)
                 ? JSON.parse(fs.readFileSync(file, 'utf8'))
                 : { site, status: 'failure' };
