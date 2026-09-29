@@ -1,0 +1,168 @@
+name: Preview
+
+# Deploys each configured site under sites/ to Cloudflare Pages project uq-rcc-<site>.
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions: {}
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  sites:
+    # Fork PRs get no secrets, so they cannot deploy a preview.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    outputs:
+      list: ${{ steps.list.outputs.list }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - id: list
+        run: |
+          list=$(find sites -mindepth 2 -maxdepth 2 -type f -name astro.config.mjs -printf '%h\n' | sed 's|.*/||' | sort | jq -Rsc 'split("\n") | map(select(length > 0))')
+          echo "list=$list" >> "$GITHUB_OUTPUT"
+
+  pending:
+    needs: sites
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: .github/scripts
+
+      - name: Mark preview as pending
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const panel = require('./.github/scripts/preview-panel.cjs');
+            await panel.update({ github, context }, panel.pending(context.payload.pull_request.head.sha));
+
+  deploy:
+    needs: sites
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        site: ${{ fromJSON(needs.sites.outputs.list) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # lastUpdated reads commit dates
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Build
+        working-directory: sites/${{ matrix.site }}
+        run: npx astro build
+
+      - name: Ensure Pages project exists
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT: uq-rcc-${{ matrix.site }}
+        run: |
+          set -euo pipefail
+          endpoint="https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects"
+          status=$(curl -sS -o project.json -w '%{http_code}' \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            "${endpoint}/${PROJECT}")
+          case "$status" in
+            200) jq -e '.success == true' project.json > /dev/null ;;
+            404)
+              jq -n '{name: env.PROJECT, production_branch: "main"}' |
+                curl -fsS -X POST "$endpoint" \
+                  -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+                  -H 'Content-Type: application/json' \
+                  --data @- |
+                jq -e '.success == true and .result.name == env.PROJECT' > /dev/null ;;
+            *) echo "Cloudflare project lookup returned HTTP $status" >&2; exit 1 ;;
+          esac
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: >-
+            pages deploy sites/${{ matrix.site }}/dist
+            --project-name=uq-rcc-${{ matrix.site }}
+            --branch=${{ github.head_ref }}
+
+      # Matrix jobs cannot merge outputs, so pass results on as artifacts.
+      - name: Record preview result
+        if: ${{ !cancelled() }}
+        env:
+          SITE: ${{ matrix.site }}
+          STATUS: ${{ steps.deploy.outcome }}
+          COMMIT_URL: ${{ steps.deploy.outputs.deployment-url }}
+          BRANCH_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+        run: |
+          jq -n '{site: env.SITE, status: env.STATUS, commit: env.COMMIT_URL, branch: env.BRANCH_URL}' > preview.json
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        if: ${{ !cancelled() }}
+        with:
+          name: preview-${{ matrix.site }}
+          path: preview.json
+          retention-days: 1
+
+  panel:
+    needs: [sites, pending, deploy]
+    if: ${{ !cancelled() && needs.sites.result == 'success' }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: .github/scripts
+
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          pattern: preview-*
+          path: previews
+
+      - name: Update preview panel
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        env:
+          SITES: ${{ needs.sites.outputs.list }}
+        with:
+          script: |
+            const fs = require('node:fs');
+            const path = require('node:path');
+            const panel = require('./.github/scripts/preview-panel.cjs');
+
+            const previews = JSON.parse(process.env.SITES).map((site) => {
+              const file = path.join('previews', `preview-${site}`, 'preview.json');
+              return fs.existsSync(file)
+                ? JSON.parse(fs.readFileSync(file, 'utf8'))
+                : { site, status: 'failure' };
+            });
+
+            const repoUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}`;
+            const logs = `${repoUrl}/actions/runs/${context.runId}`;
+            const sha = context.payload.pull_request.head.sha;
+            const commitUrl = `${repoUrl}/commit/${sha}`;
+            await panel.update({ github, context }, panel.result(previews, { sha, logs, commitUrl }));
+
+            const failed = previews.filter((p) => p.status !== 'success');
+            if (failed.length) core.setFailed(`Preview failed for ${failed.map((p) => p.site).join(', ')}`);
