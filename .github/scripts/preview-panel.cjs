@@ -30,10 +30,17 @@ function result(previews, { sha, logs, commitUrl }) {
   return [...head, '', `Commit [\`${short}\`](${commitUrl})`, '', '| Site | Branch | Commit | Status |', '| --- | --- | --- | --- |', ...rows];
 }
 
-async function update({ github, context }, lines) {
+// The open PR for this branch, if any.
+async function findPull({ github, context }, branch) {
+  if (context.payload.pull_request) return context.payload.pull_request.number;
+  const { owner, repo } = context.repo;
+  const { data } = await github.rest.pulls.list({ owner, repo, state: 'open', head: `${owner}:${branch}` });
+  return data[0]?.number ?? null;
+}
+
+async function update({ github, context }, pull_number, lines) {
   const block = [START, ...lines, END].join('\n');
   const { owner, repo } = context.repo;
-  const pull_number = context.payload.pull_request.number;
   // Re-read so edits made during the build are kept.
   const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number });
   const current = pr.body || '';
@@ -42,4 +49,4 @@ async function update({ github, context }, lines) {
   await github.rest.pulls.update({ owner, repo, pull_number, body });
 }
 
-module.exports = { pending, result, update };
+module.exports = { pending, result, findPull, update };
