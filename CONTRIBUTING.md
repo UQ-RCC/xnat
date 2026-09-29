@@ -2,6 +2,7 @@
 
 This repository holds the documentation for [UQ XNAT](https://docs.xnat.rcc.uq.edu.au),
 operated by the Research Computing Centre at The University of Queensland.
+It also holds Pitschi and HPC content copies for future site work.
 
 Corrections are welcome from anyone who uses the service. If a screenshot is out
 of date or a step no longer matches what XNAT does, that is worth reporting even
@@ -21,9 +22,10 @@ npm run dev      # http://localhost:4321
 npm run build    # production build, run this before opening a PR
 ```
 
-Content lives in `src/content/docs/`, one directory per section. Screenshots sit
+XNAT content lives in `sites/xnat/src/content/docs/`, one directory per section. Screenshots sit
 beside the page that uses them. The sidebar and the URL redirects are both in
-`astro.config.mjs`.
+`sites/xnat/astro.config.mjs`. Pitschi and HPC files under `sites/` are content
+copies and are not yet built as sites.
 
 ## Writing conventions
 
@@ -51,7 +53,7 @@ beside the page that uses them. The sidebar and the URL redirects are both in
 
 A page's URL comes from its filename, so renaming a file changes its URL. The
 site carries around 60 redirects for URLs that already exist in the wild
-(`astro.config.mjs`). If you move or rename a page, add a redirect from the old
+(`sites/xnat/astro.config.mjs`). If you move or rename a page, add a redirect from the old
 path and check the build still passes.
 
 ## Review

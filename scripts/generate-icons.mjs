@@ -1,19 +1,19 @@
 /**
- * Generates the raster branding assets served from public/. Run manually and
+ * Generates the raster branding assets served from sites/xnat/public/. Run manually and
  * commit the output; this is not part of `npm run build`.
  *
  *   node scripts/generate-icons.mjs
  *
  * The social card text needs DejaVu Sans (fonts-dejavu-core).
- * public/favicon.svg is hand-maintained, not generated here.
+ * sites/xnat/public/favicon.svg is hand-maintained, not generated here.
  */
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import sharp from 'sharp';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const branding = join(root, 'scripts', 'branding');
-const out = join(root, 'public');
+const branding = join(root, 'sites', 'xnat', 'branding');
+const out = join(root, 'sites', 'xnat', 'public');
 
 const targets = [
   { src: 'icon-square.svg', file: 'apple-touch-icon.png', size: 180 },
