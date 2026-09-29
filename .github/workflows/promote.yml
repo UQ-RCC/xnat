@@ -1,0 +1,101 @@
+name: Promote to production
+
+# Publishes the ticked sites from main to the gh-pages branch of their Pages repo, UQ-RCC/docs.<site>.rcc.uq.edu.au.
+
+on:
+  workflow_dispatch:
+    inputs:
+      xnat:
+        description: XNAT
+        type: boolean
+        default: false
+      pitschi:
+        description: Pitschi
+        type: boolean
+        default: false
+      hpc:
+        description: HPC
+        type: boolean
+        default: false
+
+permissions: {}
+
+jobs:
+  sites:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    outputs:
+      list: ${{ steps.list.outputs.list }}
+    steps:
+      - id: list
+        env:
+          INPUTS: ${{ toJSON(inputs) }}
+        run: |
+          list=$(jq -c '[to_entries[] | select(.value == true) | .key]' <<< "$INPUTS")
+          if [ "$list" = "[]" ]; then echo "::error::Tick at least one site to promote." >&2; exit 1; fi
+          echo "list=$list" >> "$GITHUB_OUTPUT"
+
+  promote:
+    needs: sites
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        site: ${{ fromJSON(needs.sites.outputs.list) }}
+    concurrency:
+      group: promote-${{ matrix.site }}
+      cancel-in-progress: false
+    steps:
+      - name: Pick deploy key
+        id: key
+        env:
+          SITE: ${{ matrix.site }}
+        run: echo "name=DEPLOY_KEY_${SITE^^}" >> "$GITHUB_OUTPUT"
+
+      - name: Check deploy key
+        env:
+          KEY: ${{ secrets[steps.key.outputs.name] }}
+          NAME: ${{ steps.key.outputs.name }}
+          REPO: UQ-RCC/docs.${{ matrix.site }}.rcc.uq.edu.au
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "::error title=Missing deploy key::Secret $NAME is not set. Add the public key to $REPO under Settings > Deploy keys with write access, and the private key to ${{ github.repository }} as Actions secret $NAME."
+            exit 1
+          fi
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # lastUpdated reads commit dates
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Build
+        working-directory: sites/${{ matrix.site }}
+        run: npx astro build
+
+      - name: Check Astro
+        working-directory: sites/${{ matrix.site }}
+        run: npx astro check
+
+      - name: Check internal links
+        run: node scripts/check-links.mjs sites/${{ matrix.site }}/dist
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
+        with:
+          deploy_key: ${{ secrets[steps.key.outputs.name] }}
+          external_repository: UQ-RCC/docs.${{ matrix.site }}.rcc.uq.edu.au
+          publish_branch: gh-pages
+          publish_dir: ./sites/${{ matrix.site }}/dist
+          full_commit_message: Promote ${{ github.repository }}@${{ github.sha }}
+
+      - name: Summary
+        run: |
+          echo "Published [\`${GITHUB_SHA::7}\`](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}) to https://docs.${{ matrix.site }}.rcc.uq.edu.au" >> "$GITHUB_STEP_SUMMARY"
