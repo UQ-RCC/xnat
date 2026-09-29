@@ -1,21 +1,32 @@
 name: Preview
 
-# Deploys each configured site under sites/ to Cloudflare Pages project uq-rcc-<site>.
+# Deploys each configured site under sites/ to Cloudflare Pages project uq-rcc-<site>,
+# for pushes to main and for pull requests.
 
 on:
+  push:
+    branches: [main]
   pull_request:
     types: [opened, reopened, synchronize]
 
 permissions: {}
 
+env:
+  BRANCH: ${{ github.head_ref || github.ref_name }}
+  SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+
 concurrency:
-  group: preview-${{ github.event.pull_request.number }}
+  group: preview-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 jobs:
   sites:
-    # Fork PRs get no secrets, so they cannot deploy a preview.
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    # Fork and Dependabot PRs get no secrets, so they cannot deploy a preview.
+    if: >-
+      github.event_name == 'push' || (
+        github.event.pull_request.head.repo.full_name == github.repository &&
+        github.event.pull_request.user.login != 'dependabot[bot]'
+      )
     runs-on: ubuntu-24.04
     permissions:
       contents: read
@@ -45,7 +56,8 @@ jobs:
         with:
           script: |
             const panel = require('./.github/scripts/preview-panel.cjs');
-            await panel.update({ github, context }, panel.pending(context.payload.pull_request.head.sha));
+            const pull = await panel.findPull({ github, context }, process.env.BRANCH);
+            if (pull) await panel.update({ github, context }, pull, panel.pending(process.env.SHA));
 
   deploy:
     needs: sites
@@ -104,7 +116,7 @@ jobs:
           command: >-
             pages deploy sites/${{ matrix.site }}/dist
             --project-name=uq-rcc-${{ matrix.site }}
-            --branch=${{ github.head_ref }}
+            --branch=${{ env.BRANCH }}
 
       # Matrix jobs cannot merge outputs, so pass results on as artifacts.
       - name: Record preview result
@@ -113,7 +125,8 @@ jobs:
           SITE: ${{ matrix.site }}
           STATUS: ${{ steps.deploy.outcome }}
           COMMIT_URL: ${{ steps.deploy.outputs.deployment-url }}
-          BRANCH_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+          # main is the project's production branch, served at the project root.
+          BRANCH_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url || format('https://uq-rcc-{0}.pages.dev', matrix.site) }}
         run: |
           jq -n '{site: env.SITE, status: env.STATUS, commit: env.COMMIT_URL, branch: env.BRANCH_URL}' > "preview-$SITE.json"
 
@@ -161,9 +174,12 @@ jobs:
 
             const repoUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}`;
             const logs = `${repoUrl}/actions/runs/${context.runId}`;
-            const sha = context.payload.pull_request.head.sha;
+            const sha = process.env.SHA;
             const commitUrl = `${repoUrl}/commit/${sha}`;
-            await panel.update({ github, context }, panel.result(previews, { sha, logs, commitUrl }));
+            const lines = panel.result(previews, { sha, logs, commitUrl });
+            await core.summary.addRaw(lines.join('\n')).write();
+            const pull = await panel.findPull({ github, context }, process.env.BRANCH);
+            if (pull) await panel.update({ github, context }, pull, lines);
 
             const failed = previews.filter((p) => p.status !== 'success');
             if (failed.length) core.setFailed(`Preview failed for ${failed.map((p) => p.site).join(', ')}`);

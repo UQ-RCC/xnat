@@ -15,6 +15,20 @@ npm run check:links # check XNAT internal links and redirects
 npm run preview  # preview the production build locally
 ```
 
+## Previews
+
+Every push to any branch builds each site and deploys a preview to Cloudflare Pages. The `main` branch previews are:
+
+| Site | Preview |
+| --- | --- |
+| XNAT | https://uq-rcc-xnat.pages.dev |
+| Pitschi | https://uq-rcc-pitschi.pages.dev |
+| HPC | https://uq-rcc-hpc.pages.dev |
+
+Other branches are at `https://<branch>.uq-rcc-<site>.pages.dev`, where `<branch>` is the branch name in lower case.
+
+If the branch has an open pull request, the preview links also appear at the top of the pull request description.
+
 ## Structure
 
 - `sites/xnat/src/content/docs/`: live XNAT pages and colocated images
