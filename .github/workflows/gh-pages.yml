@@ -1,19 +1,19 @@
-name: github pages
+name: Build
 
 on:
   push:
     branches:
-      - main # Set a branch to deploy
+      - main
   pull_request:
 
 concurrency:
-  group: pages
+  group: build-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     permissions:
-      contents: write
+      contents: read
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -37,9 +37,3 @@ jobs:
       - name: Check internal links
         run: npm run check:links
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./sites/xnat/dist
