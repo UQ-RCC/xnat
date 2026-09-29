@@ -1,13 +1,14 @@
 name: Preview
 
 # Deploys each configured site under sites/ to Cloudflare Pages project uq-rcc-<site>,
-# for pushes to main and for pull requests.
+# for pushes to main, pull requests, and manual runs on any branch.
 
 on:
   push:
     branches: [main]
   pull_request:
     types: [opened, reopened, synchronize]
+  workflow_dispatch:
 
 permissions: {}
 
@@ -23,7 +24,7 @@ jobs:
   sites:
     # Fork and Dependabot PRs get no secrets, so they cannot deploy a preview.
     if: >-
-      github.event_name == 'push' || (
+      github.event_name != 'pull_request' || (
         github.event.pull_request.head.repo.full_name == github.repository &&
         github.event.pull_request.user.login != 'dependabot[bot]'
       )
