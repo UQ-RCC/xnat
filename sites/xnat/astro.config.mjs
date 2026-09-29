@@ -138,7 +138,7 @@ export default defineConfig({
         './src/styles/components.css',
       ],
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
-      editLink: { baseUrl: 'https://github.com/UQ-RCC/xnat/edit/main/sites/xnat/' },
+      editLink: { baseUrl: 'https://github.com/UQ-RCC/platform-docs/edit/main/sites/xnat/' },
       // Reads git commit times, so CI needs full history (fetch-depth: 0).
       lastUpdated: true,
       favicon: '/favicon.svg',
