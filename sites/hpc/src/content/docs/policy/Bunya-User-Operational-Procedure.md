@@ -1,0 +1,36 @@
+## Bunya User Operational Procedure 
+
+Dated March 2024 
+
+ 
+
+In below clauses:  
+
+**“UQ”** refers to the University of Queensland. 
+
+**“RCC”** refers to the University of Queensland Research Computing Centre.  
+
+**“Approved Customer”** refers to UQ Approved Customer or any other organisation as approved in writing by UQ.  
+
+**“Bunya”** refers to University of Queensland High Performance Computing Cluster Bunya. 
+
+**“Bunya application process”** refers to the process outlined at https://rcc.uq.edu.au/systems/high-performance-computing/bunya.
+
+<br>
+
+
+1) A Bunya user must have UQ credentials or credentials of an Approved Customer. Other credentials are not permitted. 
+
+2) A user must use their UQ or Approved Customer credentials to apply for access to Bunya through the Bunya application process. Requests for access to Bunya will not be considered if made outside of the Bunya application process.  
+
+3) A user will be given access to Bunya for research projects only and the project should contribute to publishable research. UQ or Approved Customer credentials alone and simply applying for access does not guarantee access to Bunya.  
+
+4) A user must only have one single user account on Bunya. A user with more than one institutional credential, for example a user with student and staff credentials, may only use one of these credentials to gain access to Bunya. In the case where a user is found to have more than one single Bunya user account all Bunya user accounts but one will be disabled in consultation with the user. If a user does not choose within a reasonable time frame, RCC will choose the accounts to disable.  
+
+5) Users must agree to the Bunya Access Conditions (https://github.com/UQ-RCC/hpc-docs/blob/main/policy/Bunya-Conditions-of-Access.md) and the UQ Conditions of Access to RCC Infrastructure (https://github.com/UQ-RCC/hpc-docs/blob/main/policy/UQ-Conditions-of-Access-to-RCC-Infrastructure.pdf) when applying for access to Bunya through the Bunya application process. 
+
+6) Bunya users must comply with the Bunya Access Conditions (https://github.com/UQ-RCC/hpc-docs/blob/main/policy/Bunya-Conditions-of-Access.md) and the UQ Conditions of Access to RCC Infrastructure (https://github.com/UQ-RCC/hpc-docs/blob/main/policy/UQ-Conditions-of-Access-to-RCC-Infrastructure.pdf).  
+
+7) Bunya users should acknowledge their usage of Bunya resources and support in their resulting research output. Suitable acknowledgements are outlined under [acknowledging RCC and Bunya](https://rcc.uq.edu.au/about/acknowledging-rcc).
+
+8) Bunya users agree to report on their Bunya usage and resulting research output when requested by the RCC. 
