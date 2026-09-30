@@ -1,5 +1,6 @@
 ---
-title: "README"
+title: "Overview"
+slug: overview
 ---
 
 # hpc-docs
