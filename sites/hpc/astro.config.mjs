@@ -7,6 +7,7 @@ export default defineConfig({
     starlight({
       title: 'UQ RCC HPC',
       locales: { root: { label: 'English', lang: 'en-AU' } },
+      editLink: { baseUrl: 'https://github.com/UQ-RCC/platform-docs/edit/main/sites/hpc/' },
       customCss: ['../../shared/styles/navbar.css'],
       components: {
         ThemeSelect: '../../shared/components/ThemeSelect.astro',
