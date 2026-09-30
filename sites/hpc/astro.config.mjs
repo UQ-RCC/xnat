@@ -7,6 +7,10 @@ export default defineConfig({
     starlight({
       title: 'UQ RCC HPC',
       locales: { root: { label: 'English', lang: 'en-AU' } },
+      customCss: ['../../shared/styles/navbar.css'],
+      components: {
+        ThemeSelect: '../../shared/components/ThemeSelect.astro',
+      },
       sidebar: [
         { label: 'Overview', slug: 'overview' },
         { label: 'Bunya updates', slug: 'bunya-updates' },
