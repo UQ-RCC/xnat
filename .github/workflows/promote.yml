@@ -48,20 +48,16 @@ jobs:
       group: promote-${{ matrix.site }}
       cancel-in-progress: false
     steps:
-      - name: Pick deploy key
-        id: key
-        env:
-          SITE: ${{ matrix.site }}
-        run: echo "name=DEPLOY_KEY_${SITE^^}" >> "$GITHUB_OUTPUT"
-
+      # Secrets are named statically so the runner only receives the deploy keys.
       - name: Check deploy key
         env:
-          KEY: ${{ secrets[steps.key.outputs.name] }}
-          NAME: ${{ steps.key.outputs.name }}
+          KEY: ${{ matrix.site == 'xnat' && secrets.DEPLOY_KEY_XNAT || matrix.site == 'pitschi' && secrets.DEPLOY_KEY_PITSCHI || matrix.site == 'hpc' && secrets.DEPLOY_KEY_HPC || '' }}
+          SITE: ${{ matrix.site }}
           REPO: UQ-RCC/docs.${{ matrix.site }}.rcc.uq.edu.au
         run: |
           if [ -z "$KEY" ]; then
-            echo "::error title=Missing deploy key::Secret $NAME is not set. Add the public key to $REPO under Settings > Deploy keys with write access, and the private key to ${{ github.repository }} as Actions secret $NAME."
+            name="DEPLOY_KEY_${SITE^^}"
+            echo "::error title=Missing deploy key::Secret $name is not set. Add the public key to $REPO under Settings > Deploy keys with write access, and the private key to ${{ github.repository }} as Actions secret $name."
             exit 1
           fi
 
@@ -90,7 +86,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
-          deploy_key: ${{ secrets[steps.key.outputs.name] }}
+          deploy_key: ${{ matrix.site == 'xnat' && secrets.DEPLOY_KEY_XNAT || matrix.site == 'pitschi' && secrets.DEPLOY_KEY_PITSCHI || matrix.site == 'hpc' && secrets.DEPLOY_KEY_HPC || '' }}
           external_repository: UQ-RCC/docs.${{ matrix.site }}.rcc.uq.edu.au
           publish_branch: gh-pages
           publish_dir: ./sites/${{ matrix.site }}/dist
