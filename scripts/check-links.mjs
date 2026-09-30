@@ -32,7 +32,7 @@ const pageUrl = (file) => {
 };
 
 const decodeAttribute = (value) =>
-  value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'");
+  value.replaceAll('&quot;', '"').replaceAll('&#39;', "'").replaceAll('&amp;', '&');
 
 const resolveLink = (raw, source) => {
   const value = decodeAttribute(raw.trim());
