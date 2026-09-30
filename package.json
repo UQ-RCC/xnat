@@ -11,7 +11,7 @@
     "check": "npm run check:xnat",
     "check:xnat": "cd sites/xnat && astro check",
     "check:links": "npm run check:links:xnat",
-    "check:links:xnat": "node scripts/check-links.mjs sites/xnat/dist",
+    "check:links:xnat": "node .github/scripts/check-links.mjs sites/xnat/dist",
     "preview": "cd sites/xnat && astro preview",
     "astro": "cd sites/xnat && astro"
   },

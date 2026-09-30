@@ -17,7 +17,7 @@ npx astro dev          # start the site at http://localhost:4321
 npx astro build        # build the site to dist/
 npx astro check        # type-check the site
 npx astro preview      # preview the production build
-node ../../scripts/check-links.mjs dist   # check internal links and redirects
+node ../../.github/scripts/check-links.mjs dist   # check internal links and redirects
 ```
 
 The dev server keeps running in the background after the command returns. Stop it with `npx astro dev stop` from the same folder. The `npm run` scripts in the root `package.json` run the XNAT site.
@@ -50,6 +50,6 @@ For a pull request, the preview links also appear at the top of the pull request
     ├── <a href="sites/hpc/astro.config.mjs">astro.config.mjs</a>     site config and sidebar
     └── <a href="sites/hpc/src/content/docs">src/content/docs/</a>    pages, with guides/ and policy/ sections
 <a href="shared">shared/</a>                      navbar shared by every site
-<a href="scripts">scripts/</a>                     link checker, branding asset generator
 <a href=".github/workflows">.github/workflows/</a>           Build, Preview and Promote to production
+<a href=".github/scripts">.github/scripts/</a>             link checker and preview panel
 </pre>
