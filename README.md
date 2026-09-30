@@ -6,7 +6,35 @@ Documentation for UQ Research Computing Centre (RCC) platforms, built with [Astr
 | Pitschi | `sites/pitschi` | Not yet published | https://uq-rcc-pitschi.pages.dev |
 | HPC | `sites/hpc` | Not yet published | https://uq-rcc-hpc.pages.dev |
 
-## Local development
+> [!NOTE]
+> The preview links always show the latest version of `main`. Production only changes when someone runs **Promote to production**.
+
+## Updating the docs
+
+There are three ways to update the docs
+
+### 1. Editing on GitHub
+
+1. Open the page on its site and select **Edit page** at the bottom. GitHub opens the page's source file in its editor. If you do not have write access, GitHub offers to fork the repository first.
+2. Make your changes. Use the **Preview** tab to check the formatting.
+3. Select **Commit changes**, add a short message, and choose **Commit directly to the `main` branch**. The `main` preview updates in a few minutes. The live site only changes when someone runs **Promote to production**.
+
+To have a change reviewed before it reaches `main`, see [2. Using branches and pull requests](#2-using-branches-and-pull-requests).
+
+Keep the block between the `---` lines at the top of the file. A page without a `title` there stops the whole site from building.
+
+### 2. Using branches and pull requests
+
+To review a change before it reaches `main`, choose **Create a new branch for this commit and start a pull request** when you commit, then open the pull request.
+
+- The pull request builds a preview of the branch at `https://<branch>.uq-rcc-<site>.pages.dev`, where `<branch>` is the branch name in lower case.
+- A panel at the top of the pull request description shows the build's progress, then links to the branch preview and to a preview of that exact commit.
+- Every further push to the branch updates the preview and the panel.
+- Merging the pull request brings the change into `main` and updates the `main` preview. Production still only changes when someone runs **Promote to production**.
+
+To preview a branch without a pull request, run the **Preview** workflow for it from the **Actions** tab.
+
+### 3. Local development
 
 Install once from the repository root, then run Astro from the site's folder:
 
@@ -21,14 +49,6 @@ node ../../.github/scripts/check-links.mjs dist   # check internal links and red
 ```
 
 The dev server keeps running in the background after the command returns. Stop it with `npx astro dev stop` from the same folder. The `npm run` scripts in the root `package.json` run the XNAT site.
-
-## Previews
-
-Pushes to `main`, pull requests and manual runs of the **Preview** workflow deploy each site to Cloudflare Pages. The `main` previews are in the table above.
-
-Other branches are at `https://<branch>.uq-rcc-<site>.pages.dev`, where `<branch>` is the branch name in lower case. A branch gets a preview when it has a pull request, or when you run **Preview** for it from the **Actions** tab.
-
-For a pull request, the preview links also appear at the top of the pull request description.
 
 ## Structure
 
