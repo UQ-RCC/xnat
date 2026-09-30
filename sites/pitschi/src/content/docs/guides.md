@@ -1,5 +1,5 @@
 ---
-title: "User guides"
+title: "Guides"
 ---
 
 ## Introduction
