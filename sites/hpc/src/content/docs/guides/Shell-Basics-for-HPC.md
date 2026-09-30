@@ -1,3 +1,7 @@
+---
+title: "Shell basics for HPC"
+---
+
 # Shell Basics for HPC
 
 ## Workshop Objective

@@ -1,3 +1,7 @@
+---
+title: "Laptop 2 HPC"
+---
+
 ### Using R on Bunya - Making the move from Laptop to HPC
 
 _This document was the basis of a presentation to The University of Queensland R Users Group meetup on April 24 2024 by Dr David Green UQ RCC_

@@ -1,3 +1,7 @@
+---
+title: "List of software"
+---
+
 # List of Additional Software on Bunya
 
 **Updated: 26 August 2026**

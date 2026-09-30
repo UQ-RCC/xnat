@@ -1,3 +1,7 @@
+---
+title: "Software status"
+---
+
 # Status of Major Software Installations
 
 ## Graphical or Browser Software

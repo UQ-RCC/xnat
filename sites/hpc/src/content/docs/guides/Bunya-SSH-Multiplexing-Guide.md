@@ -1,3 +1,7 @@
+---
+title: "Bunya SSH multiplexing guide"
+---
+
 # SSH multiplexing on Bunya
 
 ## Quick links

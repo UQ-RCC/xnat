@@ -1,3 +1,7 @@
+---
+title: "Bunya quick start guide"
+---
+
 # UQ Bunya HPC Quick Start Guide
 
 ## 1. Access Bunya

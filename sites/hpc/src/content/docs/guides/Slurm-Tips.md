@@ -1,3 +1,7 @@
+---
+title: "Slurm tips"
+---
+
 # Slurm tips for submitting on Bunya
 
 A collection of practical Slurm submission tips for getting the most out of Bunya's scheduling and GPU resources. 

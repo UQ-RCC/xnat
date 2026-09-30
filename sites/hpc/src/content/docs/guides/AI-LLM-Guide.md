@@ -1,3 +1,7 @@
+---
+title: "AI LLM guide"
+---
+
 # AI and LLMs on Bunya
 There are a variety of research workloads on Bunya working with artificial intelligence and machine learning. UQ RCC is working to establish and support these workloads with research integrity and security in mind.
 

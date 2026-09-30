@@ -1,3 +1,7 @@
+---
+title: "CryoSPARC"
+---
+
 # CryoSPARC User Guide
 
 ## Introduction

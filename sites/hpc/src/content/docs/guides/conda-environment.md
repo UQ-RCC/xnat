@@ -1,3 +1,7 @@
+---
+title: "Conda environment"
+---
+
 # Conda, Conda modules and Conda environments
 
 Conda is a Python environment and package manager. It supports isolated environments and allows you to manage dependencies for different Python projects

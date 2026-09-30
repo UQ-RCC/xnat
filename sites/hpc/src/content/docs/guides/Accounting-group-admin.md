@@ -1,3 +1,7 @@
+---
+title: "Accounting group admin"
+---
+
 # Accounting Group and Administration
 
 ## Accounting group policy
