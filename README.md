@@ -1,45 +1,51 @@
 Documentation for UQ Research Computing Centre (RCC) platforms, built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
 
-## Sites
+# Sites and preview links
 
-| Site | Folder | Production | Preview of `main` |
+| Site | Folder | Production | Site preview |
 | --- | --- | --- | --- |
 | XNAT | `sites/xnat` | https://docs.xnat.rcc.uq.edu.au | https://uq-rcc-xnat.pages.dev |
 | Pitschi | `sites/pitschi` | Not yet published | https://uq-rcc-pitschi.pages.dev |
 | HPC | `sites/hpc` | Not yet published | https://uq-rcc-hpc.pages.dev |
 
 > [!NOTE]
-> The preview links always show the latest version of `main`. Production only changes when someone runs **Promote to production**.
+> Site previews always show the latest version of `main`. Production only changes when someone runs **Promote to production**.
 
-## Updating the docs
-
-There are three ways to update the docs
-
-### Editing on GitHub
+# Editing a page using GitHub
 
 > [!NOTE]
-> If you do not have write access to this repository, GitHub automatically asks you to fork it first, and your change arrives as a pull request instead.
+> If you do not have write access to this repository, GitHub automatically asks you to fork it first, and your change gets submitted as a pull request.
 
-1. Open the page on its site and select **Edit page** at the bottom. GitHub opens the page's source file in its editor.
+1. Go to the page on its [site preview](#sites-and-preview-links) and select **Edit page** at the bottom. GitHub opens the page's source file in its editor.
 2. Make your changes. Use the **Preview** tab to check the formatting.
-3. Select **Commit changes**, add a short message, and choose **Commit directly to the `main` branch**. The [`main` preview](#sites) updates in 1 to 2 minutes. The live site only changes when someone runs **Promote to production**.
+3. Select **Commit changes**, add a short message, and choose **Commit directly to the `main` branch**. The site preview updates in 1 to 2 minutes. The live site only changes when someone runs **Promote to production**.
 
-To have a change reviewed before it reaches `main`, see [Using branches and pull requests](#using-branches-and-pull-requests).
+To have a change reviewed before it reaches `main`, see [Site development with branches and pull requests](#site-development-with-branches-and-pull-requests).
 
-Keep the block between the `---` lines at the top of the file. A page without a `title` there stops the whole site from building.
+Every page starts with a frontmatter block like this:
 
-### Using branches and pull requests
+```md
+---
+title: Page title
+---
+
+The page content starts here.
+```
+
+Keep this block when you edit a page. A page without a `title` stops the whole site from building.
+
+# Site development with branches and pull requests
 
 To review a change before it reaches `main`, choose **Create a new branch for this commit and start a pull request** when you commit, then open the pull request.
 
-- The pull request builds a preview of the branch at `https://<branch>.uq-rcc-<site>.pages.dev`, where `<branch>` is the branch name in lower case.
+- The pull request builds a branch preview at `https://<branch>.uq-rcc-<site>.pages.dev`, where `<branch>` is the branch name in lower case.
 - A panel at the top of the pull request description shows the build's progress, then links to the branch preview and to a preview of that exact commit.
-- Every further push to the branch updates the preview and the panel.
-- Merging the pull request brings the change into `main` and updates the `main` preview. Production still only changes when someone runs **Promote to production**.
+- Every further push to the branch updates the branch preview and the panel.
+- Merging the pull request brings the change into `main` and updates the site preview. Production still only changes when someone runs **Promote to production**.
 
-To preview a branch without a pull request, run the **Preview** workflow for it from the **Actions** tab.
+To get a branch preview without a pull request, run the **Preview** workflow for it from the **Actions** tab.
 
-### Local development
+# Running the sites locally
 
 Install once from the repository root, then run Astro from the site's folder:
 
@@ -55,7 +61,7 @@ node ../../.github/scripts/check-links.mjs dist   # check internal links and red
 
 The dev server keeps running in the background after the command returns. Stop it with `npx astro dev stop` from the same folder. The `npm run` scripts in the root `package.json` run the XNAT site.
 
-## Structure
+# Repository structure
 
 <pre>
 <a href="sites">sites/</a>
