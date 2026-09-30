@@ -1,8 +1,8 @@
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { docsSchema } from '@astrojs/starlight/schema';
+import { docsLoader, i18nLoader } from '@astrojs/starlight/loaders';
+import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
 
 export const collections = {
-  // Landing page only until the copied pages have frontmatter; then use docsLoader().
-  docs: defineCollection({ loader: glob({ base: './src/landing', pattern: '*.mdx' }), schema: docsSchema() }),
+  docs: defineCollection({ loader: docsLoader(), schema: docsSchema() }),
+  i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
 };

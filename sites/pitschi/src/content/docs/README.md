@@ -1,3 +1,7 @@
+---
+title: "README"
+---
+
 ## Introduction
 
 <img src="images/pitschiLogoWithCopyright.png" alt="pitschilogo" style="max-height:200px;max-width: 280px;float: right;"/>  

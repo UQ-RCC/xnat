@@ -1,3 +1,7 @@
+---
+title: "Checklist Pitschi"
+---
+
 <div align="center">
 
 ![image](images/pitschiLogo.jpg)

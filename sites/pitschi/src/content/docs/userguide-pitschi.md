@@ -1,3 +1,7 @@
+---
+title: "User guide Pitschi"
+---
+
 <!---
 > ### Dos and Don'ts
 >

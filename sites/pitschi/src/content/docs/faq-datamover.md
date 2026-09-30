@@ -1,3 +1,7 @@
+---
+title: "FAQ datamover"
+---
+
 ## 1. Once logged in, the "Start new experiment" is greyed out. Is it normal ?
 
 It means there is a mitmatch between your email address in RIMS and AAF (many IMB users face this problem).

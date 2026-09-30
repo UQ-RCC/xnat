@@ -1,3 +1,7 @@
+---
+title: "FAQ"
+---
+
 # What is the difference between Clowder, 4ceed and Pitschi?
 
 **[Clowder](https://clowderframework.org/)** is a customizable and scalable data management framework to support any data format and multiple research domains. 

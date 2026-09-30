@@ -1,3 +1,7 @@
+---
+title: "FAQ UQRDM collection"
+---
+
 ## What is PITSCHI?
 
 **Particle Imaging depoT using Storage caCHing Infrastructure (PITSCHI)** is a data repository for the Centre for Microscopy and Microanalysis developed and established with UQ’s partner RCC and digital services. We plan to roll out PITSCHI on all CMM data acquisition instruments. The benefit for users is your data will be copied and hosted in your “own research RDM”. So there won’t be any worries of data transfer/loss etc. An 8-month test phase has proven its functionality and ease of use.

@@ -1,3 +1,7 @@
+---
+title: "Technical guide"
+---
+
 # Status
 In construction
 

@@ -1,3 +1,7 @@
+---
+title: "User guide Pitschi datamover"
+---
+
 <!-- Pitschi datamover is a Web service in charge of syncing data from the instrument computer to the project's RDM collection via an intermediate computer (support machines or preprocessing machines). This guide is to show the steps to register your project with Pitschi and how Pitschi datamover is used. -->
 
 

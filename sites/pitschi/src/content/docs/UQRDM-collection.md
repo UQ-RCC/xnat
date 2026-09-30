@@ -1,3 +1,7 @@
+---
+title: "UQRDM collection"
+---
+
 ## How do I link/create an UQRDM collection for my project?
 
 ### Option 1: If you have an existing UQRDM collection (Q-collection)
