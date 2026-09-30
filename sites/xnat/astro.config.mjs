@@ -135,6 +135,7 @@ export default defineConfig({
       customCss: [
         './src/styles/tokens.css',
         './src/styles/base.css',
+        '../../shared/styles/navbar.css',
         './src/styles/components.css',
       ],
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
@@ -166,7 +167,7 @@ export default defineConfig({
         // Replace the header's social-icons slot with our top-nav links.
         SocialIcons: './src/components/NavLinks.astro',
         // Cycling theme toggle (auto → light → dark) instead of the dropdown.
-        ThemeSelect: './src/components/ThemeSelect.astro',
+        ThemeSelect: '../../shared/components/ThemeSelect.astro',
         // Wraps the built-in footer to add RCC / NIF / AIS attribution.
         Footer: './src/components/Footer.astro',
       },

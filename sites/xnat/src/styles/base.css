@@ -19,14 +19,6 @@
   text-decoration: none;
 }
 
-/* The restyled search button and borderless theme toggle have no visible user
-   agent focus indicator. */
-:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-  outline: var(--xnat-focus-ring);
-  outline-offset: var(--xnat-focus-offset);
-  border-radius: var(--xnat-radius-sm);
-}
-
 /* ChoiceCards and the request forms animate borders and backgrounds on hover
    with no guard of their own. */
 @media (prefers-reduced-motion: reduce) {

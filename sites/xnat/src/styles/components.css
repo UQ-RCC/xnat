@@ -65,66 +65,6 @@
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
 }
 
-/* ---- Navbar (adapted from the Neurodesk Starlight site) ---- */
-
-/* Pagefind search trigger: Starlight styles it like a wide fake text input.
-   Restyle as a compact button - magnifier + "Search" + ⌘K hint - so the
-   affordance matches the modal it actually opens. */
-site-search button[data-open-modal] {
-  gap: 0.375rem;
-  font-size: var(--sl-text-xs);
-}
-
-@media (min-width: 50rem) {
-  site-search button[data-open-modal] {
-    width: auto;
-    max-width: none;
-    padding-inline: var(--xnat-space-2);
-    background-color: transparent;
-    border-color: transparent;
-    border-radius: 0.375rem;
-  }
-
-  site-search button[data-open-modal]:hover {
-    background-color: var(--sl-color-gray-6);
-    border-color: transparent;
-    color: var(--sl-color-white);
-  }
-
-  /* Pull the ⌘K chip in next to the label instead of pushing it to the edge. */
-  site-search button[data-open-modal] > :last-child {
-    margin-inline-start: 0;
-  }
-
-  site-search button[data-open-modal] kbd {
-    padding: 0 var(--xnat-space-1);
-    font-size: var(--sl-text-xs);
-    background-color: var(--sl-color-gray-5);
-  }
-
-  /* Right-align search beside the nav links / theme toggle, with a divider. */
-  .header {
-    grid-template-columns: auto 1fr auto auto;
-  }
-
-  .header > div:has(site-search) {
-    grid-column: 3;
-    justify-self: end;
-  }
-
-  .header > .right-group {
-    grid-column: 4;
-    margin-inline-start: -0.75rem;
-  }
-
-  .header > .right-group::before {
-    content: '';
-    align-self: center;
-    height: 1.25rem;
-    border-inline-start: 1px solid var(--xnat-surface-border);
-  }
-}
-
 /* Hero and link buttons. Starlight makes these full pills (999rem); square them
    off to match the cards and framed screenshots. */
 .sl-link-button:is(.primary, .secondary, .minimal) {
