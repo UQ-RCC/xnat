@@ -4,6 +4,12 @@ _Information on the **UQ XNAT** is available at [docs.xnat.rcc.uq.edu.au](https:
 
 The XNAT documentation site is built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build). The repository also holds copied Pitschi and HPC documentation for future site work.
 
+| Site | Folder | Production | Preview of `main` |
+| --- | --- | --- | --- |
+| XNAT | `sites/xnat` | https://docs.xnat.rcc.uq.edu.au | https://uq-rcc-xnat.pages.dev |
+| Pitschi | `sites/pitschi` | Not yet published | https://uq-rcc-pitschi.pages.dev |
+| HPC | `sites/hpc` | Not yet published | https://uq-rcc-hpc.pages.dev |
+
 ## Local development
 
 ```
