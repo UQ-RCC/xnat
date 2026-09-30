@@ -1,8 +1,4 @@
-_Information on the **UQ XNAT** is available at [docs.xnat.rcc.uq.edu.au](https://docs.xnat.rcc.uq.edu.au)_
-
----
-
-The XNAT documentation site is built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build). The repository also holds copied Pitschi and HPC documentation for future site work.
+Documentation for UQ Research Computing Centre (RCC) platforms, built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
 
 | Site | Folder | Production | Preview of `main` |
 | --- | --- | --- | --- |
@@ -12,33 +8,48 @@ The XNAT documentation site is built with [Astro](https://astro.build) and [Star
 
 ## Local development
 
+Install once from the repository root, then run Astro from the site's folder:
+
 ```
 npm install
-npm run dev      # start XNAT at http://localhost:4321
-npm run build    # build XNAT to sites/xnat/dist
-npm run check    # check XNAT source
-npm run check:links # check XNAT internal links and redirects
-npm run preview  # preview the production build locally
+cd sites/<site>
+npx astro dev          # start the site at http://localhost:4321
+npx astro build        # build the site to dist/
+npx astro check        # type-check the site
+npx astro preview      # preview the production build
+node ../../scripts/check-links.mjs dist   # check internal links and redirects
 ```
+
+The dev server keeps running in the background after the command returns. Stop it with `npx astro dev stop` from the same folder. The `npm run` scripts in the root `package.json` run the XNAT site.
 
 ## Previews
 
-Every push to any branch builds each site and deploys a preview to Cloudflare Pages. The `main` branch previews are:
+Pushes to `main`, pull requests and manual runs of the **Preview** workflow deploy each site to Cloudflare Pages. The `main` previews are in the table above.
 
-| Site | Preview |
-| --- | --- |
-| XNAT | https://uq-rcc-xnat.pages.dev |
-| Pitschi | https://uq-rcc-pitschi.pages.dev |
-| HPC | https://uq-rcc-hpc.pages.dev |
+Other branches are at `https://<branch>.uq-rcc-<site>.pages.dev`, where `<branch>` is the branch name in lower case. A branch gets a preview when it has a pull request, or when you run **Preview** for it from the **Actions** tab.
 
-Other branches are at `https://<branch>.uq-rcc-<site>.pages.dev`, where `<branch>` is the branch name in lower case.
-
-If the branch has an open pull request, the preview links also appear at the top of the pull request description.
+For a pull request, the preview links also appear at the top of the pull request description.
 
 ## Structure
 
-- `sites/xnat/src/content/docs/`: live XNAT pages and colocated images
-- `sites/xnat/src/components/` and `sites/xnat/src/styles/`: XNAT components and styling
-- `sites/xnat/astro.config.mjs`: XNAT site config, sidebar and legacy redirects
-- `sites/xnat/public/CNAME`: XNAT custom domain
-- `sites/pitschi/src/content/docs/` and `sites/hpc/src/content/docs/`: source copies awaiting site review; neither is built yet
+```
+sites/
+├── xnat/
+│   ├── astro.config.mjs     site config, sidebar and legacy redirects
+│   ├── public/              files served as-is, including the CNAME custom domain
+│   └── src/
+│       ├── content/docs/    pages and colocated images
+│       ├── components/      site components
+│       └── styles/          site styling
+├── pitschi/
+│   ├── astro.config.mjs     site config
+│   └── src/
+│       ├── content/docs/    pages and images
+│       └── components/      navbar links
+└── hpc/
+    ├── astro.config.mjs     site config and sidebar
+    └── src/content/docs/    pages, with guides/ and policy/ sections
+shared/                      navbar shared by every site
+scripts/                     link checker, branding asset generator
+.github/workflows/           Build, Preview and Promote to production
+```
