@@ -32,24 +32,24 @@ For a pull request, the preview links also appear at the top of the pull request
 
 ## Structure
 
-```
-sites/
-├── xnat/
-│   ├── astro.config.mjs     site config, sidebar and legacy redirects
-│   ├── public/              files served as-is, including the CNAME custom domain
-│   └── src/
-│       ├── content/docs/    pages and colocated images
-│       ├── components/      site components
-│       └── styles/          site styling
-├── pitschi/
-│   ├── astro.config.mjs     site config
-│   └── src/
-│       ├── content/docs/    pages and images
-│       └── components/      navbar links
-└── hpc/
-    ├── astro.config.mjs     site config and sidebar
-    └── src/content/docs/    pages, with guides/ and policy/ sections
-shared/                      navbar shared by every site
-scripts/                     link checker, branding asset generator
-.github/workflows/           Build, Preview and Promote to production
-```
+<pre>
+<a href="sites">sites/</a>
+├── <a href="sites/xnat">xnat/</a>
+│   ├── <a href="sites/xnat/astro.config.mjs">astro.config.mjs</a>     site config, sidebar and legacy redirects
+│   ├── <a href="sites/xnat/public">public/</a>              static files
+│   └── <a href="sites/xnat/src">src/</a>
+│       ├── <a href="sites/xnat/src/content/docs">content/docs/</a>    pages and colocated images
+│       ├── <a href="sites/xnat/src/components">components/</a>      site components
+│       └── <a href="sites/xnat/src/styles">styles/</a>          site styling
+├── <a href="sites/pitschi">pitschi/</a>
+│   ├── <a href="sites/pitschi/astro.config.mjs">astro.config.mjs</a>     site config
+│   └── <a href="sites/pitschi/src">src/</a>
+│       ├── <a href="sites/pitschi/src/content/docs">content/docs/</a>    pages and images
+│       └── <a href="sites/pitschi/src/components">components/</a>      navbar links
+└── <a href="sites/hpc">hpc/</a>
+    ├── <a href="sites/hpc/astro.config.mjs">astro.config.mjs</a>     site config and sidebar
+    └── <a href="sites/hpc/src/content/docs">src/content/docs/</a>    pages, with guides/ and policy/ sections
+<a href="shared">shared/</a>                      navbar shared by every site
+<a href="scripts">scripts/</a>                     link checker, branding asset generator
+<a href=".github/workflows">.github/workflows/</a>           Build, Preview and Promote to production
+</pre>
