@@ -1,5 +1,7 @@
 Documentation for UQ Research Computing Centre (RCC) platforms, built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
 
+## Sites
+
 | Site | Folder | Production | Preview of `main` |
 | --- | --- | --- | --- |
 | XNAT | `sites/xnat` | https://docs.xnat.rcc.uq.edu.au | https://uq-rcc-xnat.pages.dev |
@@ -13,17 +15,20 @@ Documentation for UQ Research Computing Centre (RCC) platforms, built with [Astr
 
 There are three ways to update the docs
 
-### 1. Editing on GitHub
+### Editing on GitHub
 
-1. Open the page on its site and select **Edit page** at the bottom. GitHub opens the page's source file in its editor. If you do not have write access, GitHub offers to fork the repository first.
+> [!NOTE]
+> If you do not have write access to this repository, GitHub automatically asks you to fork it first, and your change arrives as a pull request instead.
+
+1. Open the page on its site and select **Edit page** at the bottom. GitHub opens the page's source file in its editor.
 2. Make your changes. Use the **Preview** tab to check the formatting.
-3. Select **Commit changes**, add a short message, and choose **Commit directly to the `main` branch**. The `main` preview updates in a few minutes. The live site only changes when someone runs **Promote to production**.
+3. Select **Commit changes**, add a short message, and choose **Commit directly to the `main` branch**. The [`main` preview](#sites) updates in 1 to 2 minutes. The live site only changes when someone runs **Promote to production**.
 
-To have a change reviewed before it reaches `main`, see [2. Using branches and pull requests](#2-using-branches-and-pull-requests).
+To have a change reviewed before it reaches `main`, see [Using branches and pull requests](#using-branches-and-pull-requests).
 
 Keep the block between the `---` lines at the top of the file. A page without a `title` there stops the whole site from building.
 
-### 2. Using branches and pull requests
+### Using branches and pull requests
 
 To review a change before it reaches `main`, choose **Create a new branch for this commit and start a pull request** when you commit, then open the pull request.
 
@@ -34,7 +39,7 @@ To review a change before it reaches `main`, choose **Create a new branch for th
 
 To preview a branch without a pull request, run the **Preview** workflow for it from the **Actions** tab.
 
-### 3. Local development
+### Local development
 
 Install once from the repository root, then run Astro from the site's folder:
 
